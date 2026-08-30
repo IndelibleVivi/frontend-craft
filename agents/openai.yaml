@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Craft"
+  short_description: "Build real frontends with evidence-led visual QA"
+  default_prompt: "Use $frontend-craft to build or refine this frontend from the repo's real product, design, and runtime authority, with ImageGen only when I explicitly request generated imagery."
