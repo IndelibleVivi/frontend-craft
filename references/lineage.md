@@ -103,21 +103,65 @@ Primary sources checked on 2026-09-21:
 
 ### Growing design records — 2026-09-21
 
-The learning method now separates a complete current-context read from a
-growing catalog of scoped experience. The optional read-only helper retrieves
-bounded lexical candidates, preserving record IDs, lifecycle, evidence basis,
-outcome, and limits. File edits remain explicit; no automatic session capture,
-preference inference, or embedding service is included. The shipped tests use
-synthetic records, including catalog growth and a known paraphrase miss; they
-do not establish real-world recall quality or improved aesthetic judgment.
+The first record increment separated a complete current-context read from a
+growing catalog of scoped experience, with bounded offline lexical retrieval.
+Its synthetic tests included catalog growth and a known cross-language
+paraphrase miss. That increment did not complete semantic recall or establish
+better aesthetic judgment.
 
 [Sentence Transformers semantic search documentation](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html)
 was checked on 2026-09-21 to distinguish lexical matching from semantic recall.
-Embeddings can support meaning-based retrieval and can run locally; a vector
-database or external service is not inherently required. This informs a
-possible growth path, not a dependency choice or a claim that this helper
-already performs semantic search. Any later index must remain derived from
-the canonical records and respect their current scope and lifecycle.
+The initially open backend decision was subsequently resolved to an optional
+Cloudflare Workers AI + Vectorize implementation. Canonical records remain
+local; the index is derived and explicitly synchronized. Current context is
+read in full, and remote candidates must resolve to current local evidence.
+
+### Intent, positive aims, and usable retrieval — 2026-09-21
+
+The next revision treats positive desires, invitations to explore, explicit
+requirements, local defects, and negative boundaries as different evidence
+within the same learning system. A serious request may be conversational or
+playful. Recording only objections loses what the person wanted to create.
+Requested or permitted qualities are retained without falsely labeling an
+unseen implementation accepted.
+
+The intent method reconstructs the desired experience, real content ownership,
+explicit versus inferred constraints, and observable success criteria before
+selecting a familiar visual pattern. An editable share artifact, for example,
+should carry the author's expression through controls, state, and export;
+sample copy must not become immutable renderer content.
+
+A renewed synthetic editor challenge exposed actual browser failures that
+source checks and a proxy rendering attempt had missed: text spacing and
+hierarchy, fixed sample content, and focus styling that contradicted the stated
+boundary. Coordinator browser inspection led to canonical renderer repairs,
+editable auxiliary content, and real export/mobile checks. These are bounded
+observations from one candidate, not an old/new controlled comparison or owner
+aesthetic acceptance.
+
+The owner then rejected the poster itself for both personal mismatch and weak
+visual execution. This exposed a method gap that more interaction checks could
+not close: evaluate task fit, visual craft, and personal fit independently;
+inspect the work outside its editor; and separate a scoped rejection from the
+agent's diagnosis of composition or typography. A familiar list of stylistic
+ingredients does not establish quality. The failed candidate remains failed;
+later revisions are not accepted examples unless actually evaluated as such.
+
+Cloudflare primary contracts checked for this implementation:
+
+- [Workers AI BGE-M3](https://developers.cloudflare.com/workers-ai/models/bge-m3/):
+  the selected multilingual embedding model; real `text` array requests were
+  checked separately from the documentation's presentation.
+- [Vectorize REST API](https://developers.cloudflare.com/api/resources/vectorize/):
+  index, vector, metadata-index and asynchronous mutation operations.
+- [Metadata filtering](https://developers.cloudflare.com/vectorize/reference/metadata-filtering/):
+  scope filtering and indexing requirements.
+- [Vectorize limits](https://developers.cloudflare.com/vectorize/platform/limits/):
+  bounded identifiers, metadata and query results.
+
+No private feedback transcript, account identifier, token, or personal case
+catalog is distributed with these mechanisms. The backend's operating and
+verification limits belong in [Cloudflare memory](cloudflare-memory.md).
 
 ### Primary sources checked for the initial method-family revision
 

@@ -2,20 +2,28 @@
 
 Use when reading, recording, revising, or retiring Frontend Craft design
 records, or when querying reusable experience cases. This is a small file-based
-method with a read-only helper; it is not an automatic memory service. Missing
-records are never a blocker.
+method; it is not an automatic memory service. Missing records are never a
+blocker.
+
+Verb scope: `query`, `show`, and `validate` are read-only and never modify
+records. `init` creates the first records if absent and never overwrites.
+`sync`/`doctor` are network verbs; `sync` is dry-run unless `--apply`. Editing
+records themselves always goes through your normal file tools.
 
 ## Two files, two jobs
 
 Both files live directly inside one caller-authorized root (for Codex, the
-operator's designated private FC directory). The helper reads only
+operator's designated private FC directory). The canonical read path opens only
 `context.md` and `cases.json` in that root; it does not recurse, follow
 references, or follow symlinks to those files.
 
+The optional Cloudflare path also reads `cloudflare.json`; sync maintains its
+derived `.fc-sync-state.json` in the same root.
+
 | File | Owns | Read policy |
 | --- | --- | --- |
-| `context.md` | The small, human-maintained **current** preferences and boundaries | Read **whole** on relevant design/revision work. Returned whole by every query |
-| `cases.json` | A growing, human-reviewed ledger of **reusable experience cases** | Reconciled and queried by scope, status, and literal terms |
+| `context.md` | The small, human-maintained **current** aims, preferences, and boundaries | Read **whole** on relevant design/revision work. Returned whole by every query |
+| `cases.json` | A growing, human-reviewed ledger of **reusable experience cases** | Reconciled and queried by scope/status, then literal terms or configured semantic recall |
 
 Do not copy `context.md` into `cases.json` or build a second preference
 profile. `context.md` remains the authority for current preferences; the case
@@ -29,7 +37,7 @@ lexical ceiling* below).
 
 - A relevant design or revision task: read `context.md` whole. It is short.
 - A task where a past case could change a concrete choice: query `cases.json`
-  by scope and terms.
+  by scope and relevant terms or a natural-language `--query` when configured.
 - You need a bounded listing of the current scope: query with no terms for a
   paged-by-`--limit` `scope_only` listing (not an exhaustive dump).
 - No `cases.json`: query reports `store_missing`; continue with `context.md`,
@@ -84,12 +92,22 @@ Field rules:
 
 ## Write, revise, retire (with existing file tools, not this helper)
 
-The helper is read-only. All edits go through your normal file-editing tools:
+Existing canonical records are edited through your normal file-editing tools:
 read the current file first, make the minimal change, read it back, and run
-`validate`.
+`validate`. The helper does not infer or rewrite their meaning. Synchronize an
+authorized configured index after a change; see the Cloudflare section below.
 
-- **Write** only when the task authorizes it. Worth recording: explicit
-  feedback, a clearly observed result, or a hypothesis/temporary compromise you
+To create the first `context.md`/`cases.json` in an authorized root, use the
+offline `init` verb (it never overwrites existing files):
+
+```bash
+python3 scripts/fc_memory.py init --root "<authorized-root>" \
+  --project lumen-notes --surface editor
+```
+
+- **Write** within existing task/storage authorization. Worth recording:
+  positive wishes, praise, objections, clarification, a clearly observed result,
+  or a hypothesis/temporary compromise you
   want to keep honestly labeled. State the true `basis` and `outcome`, and do
   not raise an observation, hypothesis, or temporary compromise to an owner
   preference. One clear "don't do this again" is enough to affect the next task
@@ -191,27 +209,33 @@ than permanently small:
   exists. That is honest, not a preference claim; `context.md` is still
   returned.
 
-Semantic or hybrid retrieval is a **future option to evaluate**, not a claim
-made now and not a placeholder adapter. A local embedding does not require a
-network or a vector database, so the gate is usefulness, not infrastructure:
+Semantic retrieval now ships as an optional Cloudflare layer (Workers AI
+embeddings + Vectorize). It is for the paraphrased/cross-language misses the
+lexical path cannot reach. It is opt-in and additive: `--term` stays lexical and
+offline, and the local records remain the only source of truth. See
+[Cloudflare memory](cloudflare-memory.md) for setup, sync, and the semantic
+query. The gate below is still the reason the semantic path exists, and still
+governs whether to extend it further:
 
 1. Collect real query-to-id pairs — the query a user actually asked and the
    case id that should have matched.
-2. Measure the lexical baseline first, so any semantic layer has a comparison.
-3. Only add a semantic or hybrid layer if measured misses justify it, and keep
-   scope/status filtering and canonical-record resolution ahead of any scored
-   candidate.
-4. If a derived index is ever introduced, rebuild or invalidate it on every
-   edit, replacement, retirement, or deletion, and re-verify the same contracts
-   (scope correctness, `active`-only recall, honest `no_match`, whole context).
+2. Measure the lexical baseline first, so the semantic layer has a comparison.
+3. Keep scope/status filtering and canonical-record resolution ahead of any
+   scored candidate (the shipped path already does this).
+4. Any derived index must be rebuilt or invalidated on every edit, replacement,
+   retirement, or deletion, and re-verify the same contracts (scope
+   correctness, `active`-only recall, honest `no_match`, whole context).
 
-Do not add an index field or cache before it serves a real implementation.
+Do not add a second index field or local cache before it serves a real
+implementation.
 
 ## Boundaries and limits
 
-- The helper reads only the given root and never writes, extracts, or promotes
-  preferences. It does not touch project `DESIGN.md` and does not install or
-  write anything into a global skill.
-- No network, database, cache, daemon, migration engine, or lock is involved,
-  and there is no guarantee that any of this runs automatically. The method
-  works only when it is read and applied deliberately.
+- The helper uses the given root and does not infer, extract, or promote
+  preferences. It does not touch project `DESIGN.md` or install anything into
+  a global skill. `init` creates absent files; sync maintains derived state.
+- Lexical queries, show, validate, and init are offline. Configured semantic
+  queries, doctor, sync application, and pending verification contact
+  Cloudflare; see its runbook for the exact data boundary. There is no daemon,
+  background collection, or guarantee of automatic execution: the method works
+  when the skill is loaded and the agent applies it.

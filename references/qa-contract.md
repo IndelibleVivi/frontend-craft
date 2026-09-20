@@ -122,6 +122,11 @@ calls for it; report the evidence actually available.
 
 ## Positive quality and revision preservation
 
+Inspect task fit, visual craft, and personal fit independently using
+[critique and revision](critique-revision.md). A result can fail basic
+composition while also missing the user's taste; do not collapse both into
+subjective preference or substitute technical checks for either judgment.
+
 Name the quality promised by this task and observe it in the actual medium:
 clear comparison in a dense tool, sustained reading rhythm, a distinctive
 composition, convincing material, or an expressive temporal sequence. Explain
@@ -146,7 +151,9 @@ phases where possible. A pixel diff detects change, not aesthetic merit.
 
 For visual works, follow [visual works](visual-works.md): inspect real exports
 and viewing scale, and observe motion across time rather than selecting one
-flattering frame. Do not replace the artwork's purpose with control QA alone.
+flattering frame. Inspect the artwork on its own, without a surrounding editor
+or device mockup masking a weak composition. Do not replace the artwork's
+purpose with control QA alone.
 
 ## Accessibility checks
 

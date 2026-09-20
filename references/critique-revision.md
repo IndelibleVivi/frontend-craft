@@ -37,7 +37,44 @@ next intervention. Preserve real functionality; do not preserve an unaccepted
 visual direction merely because a test fixture or the agent previously praised
 it. Meeting requested ingredients is not the same as executing them well.
 
-## Protect what already works
+## Distinguish craft from personal fit
+
+Evaluate three questions separately: does this serve the task and medium; is
+the visual execution coherent; does it fit the user's requested direction and
+scoped preferences? All three matter. Personalization does not excuse weak
+execution, and generic competence does not establish personal fit. An absence
+of recorded preferences leaves the craft obligation intact.
+
+Ground visual judgment in relationships visible in the work:
+
+| Relationship | Inspect in the actual artifact | A useful diagnosis names |
+| --- | --- | --- |
+| Attention and proportion | Dominant mass, subordinate information, focal point, and their relative scale | What competes, overwhelms, or fails to establish a subject |
+| Type and reading rhythm | Typeface roles, line breaks, leading, measure, punctuation, mixed scripts, and optical alignment | Why text feels monotonous, strained, accidental, or out of character |
+| Composition and space | Alignment, grouping, crop, intervals, edge tension, and distribution of visual weight | Where space is residual rather than purposeful, or groups lack a relationship |
+| Color, material, and imagery | Tonal structure, legibility, palette relationships, and the subject carried by any graphic | Why effects muddy hierarchy, or imagery fails to express the subject |
+| Detail consistency | Stroke weight, corners, icon scale, state treatment, and repeated motifs | Which details belong to a different visual grammar or feel unresolved |
+
+These are contextual principles, not a prescribed minimalist style or a numeric
+beauty score. Deliberate imbalance, coarse texture, dense composition, and
+unusual typography can succeed when their effect serves the brief. Name that
+effect and inspect it; saying a defect is intentional is not evidence.
+
+For an editor, inspect the produced work alone at its intended viewing size.
+A usable settings panel or attractive presentation frame cannot lend quality
+to a weak poster. Read the whole composition before zooming into details. A
+poster that is only a text block with added gradient and ornaments may satisfy
+an ingredient list while lacking a convincing subject, hierarchy, and rhythm.
+Replace the weak composing relationship; do not merely add decoration or
+remove a disliked border.
+
+Keep causal judgments distinct from owner feedback. “The owner rejected this
+poster” is evidence; “the oversized title and unrelated flourish weakened its
+composition” is an agent diagnosis to test. Do not store every craft failure
+as a personal dislike, infer that the owner is unusually demanding, or require
+the owner to supply a design lesson before making an informed correction.
+
+## Protect accepted qualities
 
 Identify accepted qualities at the level the user accepted: the composition,
 type rhythm, object behavior, palette, or workspace/work boundary. “I love the

@@ -2,8 +2,8 @@
 
 Frontend Craft is Faye & Cove's design-engineering method family for frontend
 interfaces and code-rendered visual works. One discoverable skill routes to
-focused methods for direction, App interaction, critique and revision, design
-records, visual works, and rendered verification. The aim is a useful first
+focused methods for deciphering intent, direction, App interaction, critique
+and revision, design records, visual works, and rendered verification. The aim is a useful first
 result and fewer corrections that miss the cause or lose accepted work. These
 are design goals, not a measured improvement claim.
 
@@ -13,6 +13,12 @@ repair stays a small repair; methods load only when they affect the work.
 
 ## What it protects
 
+- Natural, incomplete, or playful requests receive serious interpretation.
+  Positive aims drive design alongside explicit objections; requested,
+  inferred, permitted, observed, and accepted qualities remain distinct.
+- Task fit, visual craft, and personal fit are separate requirements. Memory
+  does not substitute for composition or typography, and technical success
+  does not establish aesthetic quality.
 - ImageGen is opt-in. It is used only when generated imagery is explicitly
   requested or a concrete raster-asset gap is explicitly approved.
 - Existing products keep their real architecture, behavior, data, routes,
@@ -50,6 +56,7 @@ they are not a mandatory pipeline or separate installed skills.
 
 | Method | Use when |
 | --- | --- |
+| [Decipher intent](references/intent-decipher.md) | Reconstructing a conversational request, desired experience, content ownership, and meaningful uncertainty |
 | [Design direction](references/design-direction.md) | Forming a new direction, composing from content, resolving a consequential design choice |
 | [App interaction](references/app-interaction.md) | Designing stateful flows, object/action semantics, direct manipulation, recovery, and complete task journeys |
 | [Critique and revision](references/critique-revision.md) | Diagnosing an unsatisfying render or making a feedback-driven correction |
@@ -73,8 +80,10 @@ flowchart LR
 Project `DESIGN.md` or an established equivalent owns accepted product choices
 and points to code-owned tokens. Personal feedback stays in an authorized
 private location; the package provides a maintenance method, not a background
-memory collector. Nothing automatically uploads, synchronizes, or publishes
-preference records. Skills guide agent behavior; they do not enforce a sandbox.
+memory collector. The optional Cloudflare backend requires explicit setup and
+data-transfer authorization; synchronization is a deliberate command with a
+dry-run plan before application. Skills guide agent behavior; they do not
+enforce a sandbox.
 
 For Codex operators who maintain scoped personal design context, the optional
 entrypoint is `${CODEX_HOME:-$HOME/.codex}/private-continuity/frontend-craft/context.md`.
@@ -84,22 +93,31 @@ use an explicitly designated private location. See
 [design learning](references/design-learning.md) for scope and maintenance.
 
 Current context is read in full; a growing case catalog is retrieved by scope
-and relevance. The optional Python standard-library
-[query helper](scripts/fc_memory.py) reads only an explicitly supplied private
-root, returns the complete context plus bounded lexical case matches, and
-distinguishes missing records from no matches. It never updates preferences,
-follows evidence links, scans chat history, or calls an embedding service.
-Lifecycle, evidence basis, and accepted/rejected outcome stay separate.
-[Memory operations](references/memory-operations.md) documents the record
-format, maintenance procedures, CLI commands, and limits. No preference data
-ships in the package. Semantic retrieval is an evaluated growth option, not a
-capability claimed by the lexical helper.
+and relevance. The Python standard-library [query helper](scripts/fc_memory.py)
+uses an explicitly supplied private root and returns the complete context plus
+bounded candidates. Offline lexical queries need no service. Natural-language
+queries use the configured Cloudflare Workers AI + Vectorize backend. The
+helper does not infer or rewrite preferences, follow evidence links, or scan
+chat history. Lifecycle, evidence basis, and outcome stay separate.
+
+[Memory operations](references/memory-operations.md) covers canonical records
+and maintenance. [Cloudflare memory](references/cloudflare-memory.md) covers
+setup, authentication, provisioning, sync, readiness, and recovery. Cloudflare
+receives allowlisted case retrieval text and natural-language queries for
+embedding; Vectorize stores derived vectors and compact metadata. Current
+context and evidence pointers stay local. No preference data ships here.
+
+Default queries respect project/surface boundaries. Explicit transfer queries
+can discover another project's mechanism while retaining its origin as an
+analogy. Positive desires, successful examples, objections, and provisional
+interpretations share one system; it is not a negative checklist. Similarity
+cannot promote a hypothesis to an instruction or an acceptance label.
 
 The platform contract supports transferable judgment but does not ship a native
 automation adapter. A browser screenshot cannot verify a native app or actual
 export. Native document/deck/image production continues through its appropriate
-artifact tool or skill. No browser, device lab, font bundle, image generator,
-or persistent preference database is included.
+artifact tool or skill. No browser, device lab, image generator, or font bundle
+is included. Canonical memory files stay user-controlled and portable; the optional remote index is rebuildable derived state.
 
 Maintainer-only [forward cases](references/behavior-cases.md) distinguish
 structural validation from observed behavior. The [lineage](references/lineage.md)
@@ -156,9 +174,21 @@ python3 scripts/fc_memory.py query --root "<authorized-root>" \
   --project "<project-slug>" --surface "<surface-name>" --term "<keyword>"
 ```
 
-The [record protocol](references/memory-operations.md) includes a synthetic
-schema example and the `show` and `validate` commands. Maintainers can check
-the helper with `python3 -m unittest discover -s tests -p 'test*.py'`.
+After authorized [Cloudflare setup](references/cloudflare-memory.md), use
+natural language, including a different language from the stored case:
+
+```bash
+python3 scripts/fc_memory.py query --root "<authorized-root>" \
+  --project "<project-slug>" --surface "artwork" \
+  --query "How can a share graphic carry the author's own expression?"
+```
+
+Add `--transfer` when deliberately seeking mechanisms from other projects;
+it does not import their preferences into the current project. The
+[record protocol](references/memory-operations.md) includes first-store setup,
+a synthetic schema example, maintenance, and `show` and `validate` commands.
+Maintainers can check the helper with
+`python3 -m unittest discover -s tests -p 'test*.py'`.
 
 ## Repository shape
 
@@ -167,19 +197,24 @@ The repository root is the installable skill directory:
 ```text
 README.md
 SKILL.md
+.gitignore
 agents/openai.yaml
 references/qa-contract.md
+references/intent-decipher.md
 references/design-direction.md
 references/app-interaction.md
 references/critique-revision.md
 references/design-learning.md
 references/memory-operations.md
+references/cloudflare-memory.md
 references/visual-works.md
 references/platform-evidence.md
 references/behavior-cases.md
 references/lineage.md
 scripts/fc_memory.py
+scripts/fc_cloudflare.py
 tests/test_fc_memory.py
+tests/test_fc_cloudflare.py
 ```
 
 Keep the directory intact when packaging so relative references stay portable.

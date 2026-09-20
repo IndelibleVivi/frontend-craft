@@ -18,6 +18,7 @@ without losing accepted work. These are goals, not measured success claims.
 | Situation | Read when applicable | Result |
 | --- | --- | --- |
 | A clear local implementation or repair | Core contract below; affected QA sections | Complete focused change |
+| Conversational requirements, unclear experience, conflicting cues, or broad aesthetic feedback | [Decipher intent](references/intent-decipher.md) | A grounded interpretation, explicit versus inferred constraints, and observable success criteria |
 | New or unresolved visual/interaction direction | [Design direction](references/design-direction.md) | Content-grounded direction and the decisive rendered slice, followed by the full requested surface |
 | An app flow, editor, direct manipulation, or confusing stateful controls | [App interaction](references/app-interaction.md) | Clear objects and actions, coherent state changes, recoverable operation, complete task paths |
 | “Too empty”, “feels like a demo”, critique, or feedback-driven revision | [Critique and revision](references/critique-revision.md) | Located cause, coherent correction, preserved accepted qualities |
@@ -62,6 +63,15 @@ recreate that machinery here.
   [memory operations](references/memory-operations.md). Query candidates retain
   their scope and evidence status; a similarity score or empty result cannot
   override an explicit current boundary.
+- Read for wanted outcomes as well as known objections. Retrieve by the
+  experience or mechanism the task needs, preserve positive requests even
+  before a result is accepted, and distinguish an invitation to explore from
+  approval of an unseen design. A rejection list is not a creative brief.
+- Judge task fit, visual craft, and personal fit separately. Preference memory
+  guides direction; it does not replace composition, typography, hierarchy,
+  or coherent execution. Diagnose these relationships with
+  [critique and revision](references/critique-revision.md), including when no
+  personal preferences are available.
 - Explicit current direction overrides inferred taste. Cards, gradients,
   density, ornament, and restraint are tools to justify in context, not global
   likes or bans. Genre conventions do not override an explicit user boundary.
@@ -148,8 +158,10 @@ unless the user asked for fixes.
   different localhost port is not evidence about the edited checkout.
 - Name the behavior and design boundaries that must remain unchanged.
 - Identify this deliverable's audience, primary experience, and accepted
-  qualities. Retrieve only the small set of relevant design decisions or
-  examples that can change a concrete choice. If another agent will implement,
+  qualities. For unresolved or conversational requirements, use
+  [intent deciphering](references/intent-decipher.md) before choosing a layout
+  or handing off implementation. Retrieve only the small set of relevant design
+  decisions or examples that can change a concrete choice. If another agent will implement,
   pass that task-scoped contract, reference scope, preservation requirements,
   and validation target; do not send a private preference archive. Delegation
   itself needs the host's authorization.
@@ -232,7 +244,8 @@ or release documentation whose behavior changed. Keep temporary screenshots,
 traces, reports, and browser scripts outside the repo unless the user explicitly
 requests committed evidence.
 
-When feedback changes accepted design knowledge, use
+When meaningful praise, rejection, clarification, delivery feedback, or a
+reusable observed result changes what a later task should do, use
 [design records and learning](references/design-learning.md). Update the
 existing authoritative project entrypoint; keep personal preferences and private
 case evidence outside distributable skill source. Do not promote silence,

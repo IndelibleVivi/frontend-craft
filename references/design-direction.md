@@ -5,7 +5,9 @@ clear existing-system change does not need a new direction exercise.
 
 ## Find what makes this work succeed
 
-Extract a compact working brief from available evidence: the deliverable and
+For conversational or unresolved requirements, first use
+[intent deciphering](intent-decipher.md). Extract a compact working brief from
+available evidence: the deliverable and
 viewing/usage context; audience and main task or experience; actual content;
 accepted constraints and qualities; the important unresolved choice. Keep it
 inline unless a maintained project record needs the result.
@@ -139,8 +141,11 @@ content and the intended viewing scale. Check the dominant hierarchy and the
 first meaningful action. Resolve obvious in-scope visual and functional defects
 internally; a first presentation may follow several internal iterations.
 
-Check execution, not a tally of stylistic ingredients. Large type can have
-weak rhythm; a gradient can flatten a composition; decorative labels can compete
+Check execution, not a tally of stylistic ingredients. Evaluate the craft
+relationships in [critique and revision](critique-revision.md) independently
+of personalization; an unknown taste profile does not lower the quality bar.
+Large type can have weak rhythm; a gradient can flatten a composition;
+decorative labels can compete
 with the actual subject. Inspect proportions, grouping, texture and active
 control states in context. Describe the quality as a supported agent judgment
 until the owner evaluates it; do not turn a technically successful sample into

@@ -5,9 +5,9 @@ carrying accepted decisions into future work. This is a file-based method, not
 an automatic memory service. Missing personal records are not a blocker.
 
 For concrete read, write, revision, retirement, and query procedures, use
-[memory operations](memory-operations.md). The local helper reads records and
-checks their structure; it never writes preferences or decides what the owner
-likes. Read-only tasks remain read-only.
+[memory operations](memory-operations.md). The helper validates canonical
+records and can maintain an explicitly configured derived search index; it
+never decides what the owner likes. Read-only tasks remain read-only.
 
 ## Keep three authorities separate
 
@@ -50,6 +50,9 @@ Update when the design truth changes, not after every CSS edit.
 ## Maintain a decision, not a transcript
 
 Before a durable write, identify the changed decision and its proper home.
+Meaningful praise, rejection, clarification, an observed reusable outcome, or
+a delivery preference can trigger this step; complete aesthetic acceptance is
+not required to record a rejection or a limited observation.
 Read the current record and the relevant existing entry before editing. Reuse
 the established subject and scope; a new task does not require a new file.
 Confirm what the available authorization covers, then store the smallest
@@ -71,14 +74,27 @@ nor a high retrieval score promotes its authority.
 
 ## Convert feedback into a useful next decision
 
-First distinguish a usability defect, an explicit project instruction, a
-personal preference, a delivery preference, and a causal hypothesis. A control
-that cannot be found usually needs an interface fix, not a personality theory.
+First distinguish a usability defect, a visual craft defect, an explicit
+project instruction, a personal preference, a delivery preference, and a causal
+hypothesis. A control that cannot be found usually needs an interface fix, not
+a personality theory. Weak hierarchy or unresolved typography may reveal a
+reusable craft lesson; they are not automatically evidence of a user's taste.
+Preserve the scoped rejection while recording any cause as an interpretation.
+
+Record positive intent as carefully as rejection: the wanted experience,
+authorship or customization the user wants, qualities to develop, and room
+for exploration. Keep **requested**, **permitted**, **observed**, and
+**accepted** distinct. An explicit wish can have `basis: explicit-feedback`
+and `outcome: unknown` until an actual result has been evaluated. Lack of a
+finished accepted artifact is not a reason to discard the wish. Explain these
+distinctions in the statement and next action; a rejection list alone is not
+a design brief.
 
 When a durable record is warranted, retain only enough to reuse it:
 
 ```text
 Context: task/genre, audience, surface, state, and relevant constraints
+Wanted result: what the user hopes to gain, express, control, or share
 Evidence: exact short feedback or a clearly marked paraphrase; artifact/version pointer
 Observation: what changed and what was actually accepted or rejected
 Interpretation: possible mechanism, explicitly separate from the user's words
@@ -142,24 +158,33 @@ current decisions and explicit routes; do not silently drop a still-applicable
 constraint to meet a token budget. Project-specific decisions belong in the
 project's authority rather than an ever-growing global brief.
 
-The optional [local query helper](../scripts/fc_memory.py) reads an explicitly
-selected root only. It returns the whole current context alongside bounded
-case matches. Scope and lifecycle filtering precede lexical ranking; keywords
-and aliases may be Chinese or English. Missing storage, invalid storage, no
-match, and truncated results have distinct meanings. A lexical miss is not
-evidence that no relevant preference or experience exists. Rephrase or expand
-keywords deliberately within the authorized scope; never compensate by
-searching unrelated private trees.
+The [query helper](../scripts/fc_memory.py) uses an explicitly selected root.
+It returns the whole current context alongside bounded case matches. Offline
+lexical queries remain available; the optional Cloudflare path uses Workers AI
+embeddings and Vectorize to retrieve natural-language paraphrases, including
+across languages. Follow [Cloudflare setup](cloudflare-memory.md) for the
+explicit configuration and data-transfer boundary. Missing or stale setup is
+not a successful semantic search, and a lexical fallback must not be disguised
+as one.
 
-Semantic retrieval may become useful as phrasing and languages vary. Evaluate
-it against real missed/paraphrased queries and misleading matches, including
-opposite preferences and superseded records. A future semantic or hybrid index
-must remain rebuildable from canonical records, preserve their IDs and current
-state, and reconcile edits/retirement before returning evidence. It must not
-replace the mandatory context read or turn similarity into authority. Vector
-embeddings can run locally; selecting a model, storage, or service requires its
-own evidence and any applicable data/cost authorization. See the operational
-reference for the currently shipped retrieval behavior and limitations.
+Default queries respect project/surface scope and active lifecycle. Use the
+explicit transfer option when looking for a reusable mechanism in another
+project; inspect the returned origin and treat the match as an analogy. Shared
+subject words or visual resemblance do not establish applicability. Check the
+actual problem, constraints, and causal limits before borrowing.
+
+Canonical files own meaning and status. Synchronize the derived index after
+changes, replacement, retirement, or deletion; returned remote candidates must
+resolve to a current local record and revision. Never upload context, raw
+sessions, or evidence pointers as a convenient search corpus. Semantic recall
+is approximate: evaluate paraphrases and misleading matches, including opposite
+preferences, rather than treating the nearest result as an instruction.
+
+With an authorized configured store, retrieve by the current problem when
+experience could alter the work. Inspect only the relevant candidates and
+retain their status. A useful trace is case → applicable mechanism → concrete
+design decision → rendered observation. This can stay in the existing private
+task record; do not make a new report or impose a search on every small edit.
 
 At task start, take the smallest relevant set by problem shape: object/control
 clarity, publication scale, text rhythm, spatial manipulation, or revision
