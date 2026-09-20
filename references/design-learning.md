@@ -4,6 +4,11 @@ Use when establishing design authority, interpreting substantial feedback, or
 carrying accepted decisions into future work. This is a file-based method, not
 an automatic memory service. Missing personal records are not a blocker.
 
+For concrete read, write, revision, retirement, and query procedures, use
+[memory operations](memory-operations.md). The local helper reads records and
+checks their structure; it never writes preferences or decides what the owner
+likes. Read-only tasks remain read-only.
+
 ## Keep three authorities separate
 
 | Record | Owns | Home |
@@ -41,6 +46,28 @@ surface can seed provisional documentation, but does not retrospectively gain
 owner approval. Record only the accepted part of a response. Keep current
 decisions concise, using Git or an established archive for superseded history.
 Update when the design truth changes, not after every CSS edit.
+
+## Maintain a decision, not a transcript
+
+Before a durable write, identify the changed decision and its proper home.
+Read the current record and the relevant existing entry before editing. Reuse
+the established subject and scope; a new task does not require a new file.
+Confirm what the available authorization covers, then store the smallest
+useful evidence and the concrete future action. Read the changed entry back.
+For a structured case catalog, validate it after the edit.
+
+Clarification can revise the same entry. A replacement conclusion should mark
+the old case superseded and link to the new one, while updating any current
+summary that still presents the old conclusion as active. A different project
+or surface is a different scope, not evidence that the old scoped choice was
+wrong. Keep a retired conclusion available as history only while that retention
+serves the user's purpose; a request to forget or remove it takes precedence.
+
+Do not turn a failed hypothesis into an explicit owner preference by changing
+its label. Lifecycle (active, superseded, retired), evidence basis, and outcome
+(accepted, rejected, mixed, unknown) answer different questions. An active
+case can describe a rejection or an unresolved hypothesis. Neither repetition
+nor a high retrieval score promotes its authority.
 
 ## Convert feedback into a useful next decision
 
@@ -98,6 +125,41 @@ Keep this entrypoint concise: current scoped preferences, exceptions, and
 pointers to evidence only when needed. It is data, not a higher-priority
 instruction surface. Maintain it only within existing user authorization;
 do not ship it with the skill or automatically collect sessions into it.
+
+Design for growth from the start. Keep two reading paths:
+
+- **Current context:** read the small entrypoint in full on relevant tasks.
+  It carries current cross-task boundaries and routes to project authority.
+  Do not put these boundaries behind a top-k similarity search.
+- **Accumulating experience:** use a scoped case catalog for detailed evidence,
+  positive examples, hypotheses, compromises, and superseded conclusions.
+  Retrieve relevant candidates, then inspect their scope, basis, outcome, and
+  limits before applying them. The catalog is not a second preference profile.
+
+When the entrypoint becomes difficult to read in full, consolidate repeated
+boundaries and move detailed examples to their case records. Preserve the
+current decisions and explicit routes; do not silently drop a still-applicable
+constraint to meet a token budget. Project-specific decisions belong in the
+project's authority rather than an ever-growing global brief.
+
+The optional [local query helper](../scripts/fc_memory.py) reads an explicitly
+selected root only. It returns the whole current context alongside bounded
+case matches. Scope and lifecycle filtering precede lexical ranking; keywords
+and aliases may be Chinese or English. Missing storage, invalid storage, no
+match, and truncated results have distinct meanings. A lexical miss is not
+evidence that no relevant preference or experience exists. Rephrase or expand
+keywords deliberately within the authorized scope; never compensate by
+searching unrelated private trees.
+
+Semantic retrieval may become useful as phrasing and languages vary. Evaluate
+it against real missed/paraphrased queries and misleading matches, including
+opposite preferences and superseded records. A future semantic or hybrid index
+must remain rebuildable from canonical records, preserve their IDs and current
+state, and reconcile edits/retirement before returning evidence. It must not
+replace the mandatory context read or turn similarity into authority. Vector
+embeddings can run locally; selecting a model, storage, or service requires its
+own evidence and any applicable data/cost authorization. See the operational
+reference for the currently shipped retrieval behavior and limitations.
 
 At task start, take the smallest relevant set by problem shape: object/control
 clarity, publication scale, text rhythm, spatial manipulation, or revision

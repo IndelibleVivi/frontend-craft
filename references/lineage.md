@@ -101,6 +101,24 @@ Primary sources checked on 2026-09-21:
   after pointer activation. The selector is not a reliable “keyboard only”
   switch, and removing focus indication is not a usability fix.
 
+### Growing design records — 2026-09-21
+
+The learning method now separates a complete current-context read from a
+growing catalog of scoped experience. The optional read-only helper retrieves
+bounded lexical candidates, preserving record IDs, lifecycle, evidence basis,
+outcome, and limits. File edits remain explicit; no automatic session capture,
+preference inference, or embedding service is included. The shipped tests use
+synthetic records, including catalog growth and a known paraphrase miss; they
+do not establish real-world recall quality or improved aesthetic judgment.
+
+[Sentence Transformers semantic search documentation](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html)
+was checked on 2026-09-21 to distinguish lexical matching from semantic recall.
+Embeddings can support meaning-based retrieval and can run locally; a vector
+database or external service is not inherently required. This informs a
+possible growth path, not a dependency choice or a claim that this helper
+already performs semantic search. Any later index must remain derived from
+the canonical records and respect their current scope and lifecycle.
+
 ### Primary sources checked for the initial method-family revision
 
 - [Agent Skills specification](https://agentskills.io/specification): package

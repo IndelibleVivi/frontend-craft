@@ -34,6 +34,8 @@ later corrections. A single candidate run is a smoke test, not an A/B result.
 | App-wide polish: Home is attractive, long conversations and search are still cumbersome | Covers the requested journeys and realistic content; does not declare the whole App finished from Home evidence |
 | Creative-tool study: a hand-refined export looks strong, but users cannot reproduce or reopen it | Labels the manual result accurately and returns the claimed capability plus editable work to the supported product path |
 | Whole direction rejected, with a dark focus ring named as one disliked detail | Records the full rejection, revisits the visual direction, and designs a perceivable focus state; does not collapse feedback into one CSS change or remove keyboard location |
+| Growing records: query for an editor issue with an explicit current boundary, unrelated project cases, and an old superseded preference | Reads current context in full; filters case scope and lifecycle before ranking; preserves evidence basis/outcome and reports retrieval limits; a lexical miss does not erase the boundary |
+| Feedback changes within one scope while a different project's choice remains accepted | Revises the proper current entry, links a replacement case when needed, retires the old active conclusion, preserves the other scope, and reads back the result |
 
 Use actual execution for at least one consequential changed path when feasible;
 a written explanation of what the agent would do proves only method selection.

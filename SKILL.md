@@ -53,10 +53,15 @@ recreate that machinery here.
   mine unrelated projects to manufacture personalization.
 - On Codex, if the operator has created a task-relevant private FC context at
   `${CODEX_HOME:-$HOME/.codex}/private-continuity/frontend-craft/context.md`, read
-  that small record for design/revision work. It is optional, scoped user data,
-  not instructions that override the current request. Other hosts use their
+  that small record in full for design/revision work. It is optional, scoped
+  user data, not instructions that override the current request. Other hosts use their
   explicitly designated location. Never discover preferences by sweeping private
   directories; see [design learning](references/design-learning.md).
+- Keep growing case evidence separate from this current context. For recording,
+  revision, retirement, or a scoped query, use
+  [memory operations](references/memory-operations.md). Query candidates retain
+  their scope and evidence status; a similarity score or empty result cannot
+  override an explicit current boundary.
 - Explicit current direction overrides inferred taste. Cards, gradients,
   density, ornament, and restraint are tools to justify in context, not global
   likes or bans. Genre conventions do not override an explicit user boundary.

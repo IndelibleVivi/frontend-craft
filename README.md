@@ -83,6 +83,18 @@ this package, and does not authorize historical chat mining. Other hosts can
 use an explicitly designated private location. See
 [design learning](references/design-learning.md) for scope and maintenance.
 
+Current context is read in full; a growing case catalog is retrieved by scope
+and relevance. The optional Python standard-library
+[query helper](scripts/fc_memory.py) reads only an explicitly supplied private
+root, returns the complete context plus bounded lexical case matches, and
+distinguishes missing records from no matches. It never updates preferences,
+follows evidence links, scans chat history, or calls an embedding service.
+Lifecycle, evidence basis, and accepted/rejected outcome stay separate.
+[Memory operations](references/memory-operations.md) documents the record
+format, maintenance procedures, CLI commands, and limits. No preference data
+ships in the package. Semantic retrieval is an evaluated growth option, not a
+capability claimed by the lexical helper.
+
 The platform contract supports transferable judgment but does not ship a native
 automation adapter. A browser screenshot cannot verify a native app or actual
 export. Native document/deck/image production continues through its appropriate
@@ -137,6 +149,17 @@ Other natural requests include “this works but feels confusing; repair the
 controls and preserve the artwork,” “help choose a direction from this content,”
 and “review this page without editing.” No separate method name is necessary.
 
+For an existing authorized record store, run from the skill directory:
+
+```bash
+python3 scripts/fc_memory.py query --root "<authorized-root>" \
+  --project "<project-slug>" --surface "<surface-name>" --term "<keyword>"
+```
+
+The [record protocol](references/memory-operations.md) includes a synthetic
+schema example and the `show` and `validate` commands. Maintainers can check
+the helper with `python3 -m unittest discover -s tests -p 'test*.py'`.
+
 ## Repository shape
 
 The repository root is the installable skill directory:
@@ -150,10 +173,13 @@ references/design-direction.md
 references/app-interaction.md
 references/critique-revision.md
 references/design-learning.md
+references/memory-operations.md
 references/visual-works.md
 references/platform-evidence.md
 references/behavior-cases.md
 references/lineage.md
+scripts/fc_memory.py
+tests/test_fc_memory.py
 ```
 
 Keep the directory intact when packaging so relative references stay portable.
