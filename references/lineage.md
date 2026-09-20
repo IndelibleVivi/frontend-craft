@@ -163,6 +163,22 @@ No private feedback transcript, account identifier, token, or personal case
 catalog is distributed with these mechanisms. The backend's operating and
 verification limits belong in [Cloudflare memory](cloudflare-memory.md).
 
+### Publication scale and authored content — 2026-09-21
+
+A subsequent browser challenge held the sample copy steady and inspected the
+work at a 320-pixel sharing width. Large native-canvas font values became tiny
+body and event-detail text. A replacement subject also inherited the sample's
+literal illustration, and a short quotation retained a long-format height.
+The revised tool exposed a deliberate illustration choice, recomposed the
+text-only variant, and sized text for the observed viewing condition.
+
+These observations sharpen the existing QA and visual-works methods: inspect
+effective reading size, challenge replacement content, and return a needed
+creative choice to supported controls and export. The critique method requires
+an evidence-backed agent judgment before handoff. This is a bounded revision
+comparison, not a controlled experiment on skill effectiveness, a universal
+font-size rule, or evidence of owner aesthetic acceptance.
+
 ### Primary sources checked for the initial method-family revision
 
 - [Agent Skills specification](https://agentskills.io/specification): package

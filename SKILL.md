@@ -236,6 +236,10 @@ do not justify endless polishing.
 
 Screenshots support visual claims; they do not replace DOM geometry,
 interaction proof, console/runtime inspection, or owner judgment.
+Give an evidence-backed agent judgment on the intended quality before handing
+off. Awaiting owner acceptance does not excuse an unresolved craft defect;
+use [critique and revision](references/critique-revision.md) to choose and test
+the next consequential change.
 
 ### 5. Close the changed truth
 

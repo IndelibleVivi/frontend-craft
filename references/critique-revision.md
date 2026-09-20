@@ -89,6 +89,15 @@ solving its layout.
 
 ## Compare the original problem
 
+Before revising, choose the highest-impact unresolved relationship and state
+an observable hypothesis: what the reader currently sees, why it frustrates
+the intended experience, and which composing decision should change. For
+example, shrinking an export to its sharing width may reveal that subordinate
+type is effectively unreadable even though the native SVG has large font
+numbers. Increasing contrast alone would leave that scale problem intact.
+Use a comparable render to judge the change and its tradeoff; do not call a
+different palette or a new motif progress without an improved relationship.
+
 Use comparable content, dimensions, font availability, state, and environment.
 For procedural work, reuse the input/seed when available; for motion, compare
 the meaningful phase as well as the sequence. Pixel differences show change,
@@ -107,3 +116,19 @@ unrelated areas. New user ideas are not automatically failed revisions.
 Meaningful acceptance or rejection can update the project's design entrypoint
 or scoped experience using [design learning](design-learning.md). A concrete
 defect can justify a regression case; no wording-only test can prove taste.
+
+## Own the design judgment before handoff
+
+Give a supported agent judgment about readiness: identify the quality that now
+works, the render that supports it, and any known defect that still prevents
+the requested experience. Fix discoverable in-scope defects before delivery.
+Owner approval remains a separate fact, but its absence does not excuse leaving
+obvious craft or content-fit problems for the owner to diagnose. A candidate
+label describes status; it does not lower the delivery standard.
+
+When repeated revisions cannot be distinguished as improvements, reopen the
+composing premise. Use a relevant supplied or authorized exemplar, or a small
+controlled comparison, to resolve the uncertain relationship. Keep the brief
+and content stable while comparing; changing copy to flatter a layout hides
+the failure. Do not add another batch of controls or cosmetic effects merely
+to have a new revision to show.

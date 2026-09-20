@@ -14,8 +14,12 @@ work; a vivid work does not authorize decorative complexity in every control.
 
 Use representative content from the product's core work types. One attractive
 cover must not quietly redefine a diagramming or publishing tool as a poster
-maker. A dashboard and a share card need their own composition even if they
-share a brand. Validate both the authoring workflow and its actual output.
+maker. Replace the sample with meaningfully different authored content before
+claiming that the format generalizes. Choose revealing short, long, or absent
+content where it could change composition; do not multiply every field into a
+ritual test matrix. A dashboard and a share card need their own composition
+even if they share a brand. Validate both the authoring workflow and its actual
+output.
 
 ## Choose the kind of visual change deliberately
 
@@ -55,6 +59,36 @@ authoring. Choose reliable defaults before delivery. Remove temporary tuning
 UI from the user path unless those controls have a real creative purpose; do
 not make the user finish the art direction by turning fifteen knobs. Preserve
 requested creative controls and their real behavior.
+
+## Carry the authored subject into the composition
+
+Distinguish reusable composition from subject-specific material. A shared grid,
+type system, or abstract motif can serve many subjects well. A literal scene,
+illustration, or sample slogan may instead carry meaning that contradicts a
+replacement subject. Text fitting inside the same boxes proves less than the
+work still communicating the intended message.
+
+- **Fixed illustration.** A baked scene carries a specific subject (a season, an
+  occasion, an open book). Decide whether it is a neutral ground or the work's
+  subject. If a replacement topic makes its meaning inappropriate, use the
+  product's supported selection, omission, or replacement behavior, or develop
+  the missing capability when it belongs to the requested tool. Do not pretend
+  a fixed illustration adapts automatically. An unillustrated alternative still
+  needs a considered composition; removing the scene must not leave a hole.
+- **Recurring marks.** A brand rule, footer line, or repeated motif may stay
+  fixed; decide deliberately, and do not let it become the only visual anchor
+  on a wide empty work.
+
+Judge each issue as functional, craft, content fitness, or personal taste;
+these carry different authority. An authored control that is missing, dead, or
+mislabeled, copy that does not survive an edit, and text clipped out of the
+frame are functional. Hierarchy, type scale, spacing, and the relation between
+graphic and copy are craft judgments. Whether it still suits an unrelated,
+mundane, or unexpected subject is content fitness. Which of two working illustrations you
+prefer can depend on taste. The agent remains responsible for grounded craft
+and content-fit judgments before handoff; owner approval is separate. Keep
+judgments and their uncertainty explicit, and add no universal rule that an
+accent, gradient, or illustration is forbidden.
 
 ## Turn visual exploration into product capability
 

@@ -155,6 +155,16 @@ flattering frame. Inspect the artwork on its own, without a surrounding editor
 or device mockup masking a weak composition. Do not replace the artwork's
 purpose with control QA alone.
 
+For an image or SVG shown smaller than its native canvas, judge type and fine
+detail after scaling. A useful diagnostic is
+`effective text size = source font size × displayed width / canvas width`;
+it explains why a large source number can still render too small. Inspect the
+actual output at the intended chat/feed/embed width and normal zoom. Define
+the reading requirement for that surface rather than treating one font-size
+threshold as a universal aesthetic or accessibility standard. If content
+cannot fit legibly, change composition, density, or an explicitly supported
+output format; do not silently erase text or assume readers will zoom.
+
 ## Accessibility checks
 
 Keep the pass proportional, but always inspect the semantics touched by the

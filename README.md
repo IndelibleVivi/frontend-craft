@@ -41,11 +41,15 @@ repair stays a small repair; methods load only when they affect the work.
   dislike, and temporary compromise retain their scope and evidence.
 - Authoring tools and their output are judged separately. Exports are checked
   as exports, and temporal works across time, not just one attractive frame.
+  Check reading scale and replacement content; a sample-specific illustration
+  must not silently determine every author's subject.
   Visual studies return useful capabilities to the product's canonical path;
   manually improved samples do not prove automatic generation quality.
 - Completion needs rendered evidence proportional to the change, including
   the intended quality and the cues for understanding a task. The detailed
   browser contract covers responsive layout, interaction, focus, and runtime.
+  The agent owns a grounded craft judgment before handoff; pending owner
+  acceptance does not excuse discoverable defects.
 - Source, build, rendered runtime, deployment, and owner acceptance remain
   separate claims.
 

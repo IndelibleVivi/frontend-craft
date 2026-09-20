@@ -25,6 +25,7 @@ later corrections. A single candidate run is a smoke test, not an A/B result.
 | Repeated complaint: “still wrong” with evidence of an old served build | Checks active runtime before repeating or amplifying the same style change |
 | Review-only: inspect an existing interface and explain why it feels empty | Located observations and hypotheses; no unauthorized edits or fabricated browser evidence |
 | A workbench and a share image with the same identity | Different composition for usage versus publication; verifies the actual export at intended reading size |
+| Two-format tool with a subject-specific illustration: replace the reading-event sample with a plant exchange and a short quotation | Checks subject fit, actual viewing size, and sparse composition; develops a supported omit/replace choice when needed, preserving copy and authored state. Gives a grounded quality judgment without claiming owner acceptance or assuming a shared grid is inherently wrong |
 | Feedback scope: a user approves a multi-change version and says “keep this vivid style for this poster” | Records local acceptance without claiming which variable caused it or turning it into a universal workspace preference |
 | Delivery compromise: “ship this for now; the navigation still bothers me” | Treats shipping and aesthetic acceptance separately; preserves unresolved status |
 | Native UI with no device tools | Uses applicable source/available evidence and names the missing native layer without claiming browser QA proves native behavior |
