@@ -1,4 +1,4 @@
 interface:
   display_name: "Frontend Craft"
-  short_description: "Build real frontends with evidence-led visual QA"
-  default_prompt: "Use $frontend-craft to build or refine this frontend from the repo's real product, design, and runtime authority, with ImageGen only when I explicitly request generated imagery."
+  short_description: "Design strong first drafts and refine with evidence"
+  default_prompt: "Use $frontend-craft to design, build, or refine this interface or visual work from its real content and purpose, preserve accepted qualities, and verify the rendered result; use ImageGen only when I explicitly request or approve it."

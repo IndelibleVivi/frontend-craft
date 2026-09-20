@@ -4,7 +4,8 @@ This is maintainer provenance, not a daily runtime checklist. `frontend-craft`
 uses original wording and a locally owned contract. External work supplies
 contrast and narrow mechanisms; it does not become automatic authority.
 
-Review date for the records below: 2026-08-30.
+Initial external-source review: 2026-08-30. Later method and source additions
+are dated individually below; historical pins have not silently been refreshed.
 
 ## Faye/Cove field practice
 
@@ -28,6 +29,100 @@ reader, dashboard, and reference-led surfaces:
 
 These practices land in the runtime method and QA contract. Project-specific
 names, release procedures, infrastructure, and private continuity do not.
+
+Added 2026-09-08: authoring-product visual work exposed two separate design
+targets, the workspace and the published work. A polished cover can obscure a
+product's other core artifact types; palette variants alone do not demonstrate
+distinct visual languages. The resulting method separates reader/surface/intent,
+graphic language, palette, and interface/work locale while respecting the
+product's existing semantic and layout owners. This is an observed local lesson,
+not evidence of effectiveness across future tasks or a universal aesthetic.
+
+## Method-family revision — 2026-09-20–21
+
+The local revision adds explicit methods for content-grounded direction,
+cause-level revision, scoped design learning, expressive visual works, and
+platform-specific evidence. Existing authoring-product lessons move into the
+visual-works method without losing their semantic/layout ownership boundary.
+
+Private discussion informed problem selection, but no transcript, personal
+preference profile, identifying case archive, or private artifact is included.
+The portable mechanism is independently worded and context-limited. Praise
+and rejection retain scope; a method case is not a universal preference.
+The standalone entry remains `frontend-craft`, with relative references in
+the same package. This source revision does not publish the public projection.
+
+The proposed outcome is less user repair work: an initially viable direction,
+corrections that address the cause, and continuity of accepted qualities.
+Behavioral cases define ways to challenge those mechanisms. They are not a
+claim that first-pass success or revision counts have improved empirically.
+
+A 2026-09-21 synthetic authoring-tool forward test exposed a narrower gap:
+mobile layout and interaction checks passed, yet alternating between a work
+and controls involved excessive scrolling and lost object context. The QA
+method now inspects cues at the actual working position and travel between
+frequently paired surfaces. This observation does not mandate tabs, sticky
+controls, or any single responsive layout for other products.
+
+### App and goal-directed making — 2026-09-21
+
+A bounded, authorized review of creative-editor, conversation, and archive
+work added an App interaction method: domain objects and action scope, truthful
+controls, view/draft/commit/output boundaries, continuous editing, and complete
+task journeys. Creative-tool studies also exposed the need to return visual
+discoveries to reproducible capabilities and findable editable works.
+
+Goal-directed making keeps a specific visual target active across iterations:
+read relationships from the reference, expose the gap in a real render, change
+the responsible mechanism, and compare again. Translating a visual language
+does not import the source product's whole task structure. This is a method
+for pursuing a goal, not a claim that resemblance or aesthetic quality has
+been measured successfully.
+
+Later owner feedback rejected the synthetic forward example's overall visual
+direction. Its interaction checks remain technical evidence, not aesthetic
+acceptance. The critique and QA methods now explicitly preserve the scope of
+whole-result rejection and examine active control states. A named disliked
+focus treatment does not justify removing focus visibility.
+
+Session excerpts, source paths, attribution, project-specific styles, personal
+preferences, and case reports remain private. The package contains generalized
+mechanisms only. Optional private-context retrieval makes a scoped decision
+available to later tasks without bundling a profile or collecting history.
+
+Primary sources checked on 2026-09-21:
+
+- [W3C: Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html)
+  requires visible keyboard focus and allows different indicator forms; it
+  does not mandate a particular dark outer ring. Indicator contrast and the
+  separate Focus Appearance criterion have their own requirements.
+- [MDN: :focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible)
+  describes user-agent heuristics, including text inputs that can show focus
+  after pointer activation. The selector is not a reliable “keyboard only”
+  switch, and removing focus indication is not a usability fix.
+
+### Primary sources checked for the initial method-family revision
+
+- [Agent Skills specification](https://agentskills.io/specification): package
+  structure, metadata, relative resources, and progressive disclosure support a
+  portable entrypoint with conditional references. It does not establish that
+  a host loaded those references or that the method succeeds.
+- [Playwright visual comparisons](https://playwright.dev/docs/test-snapshots):
+  rendering varies with environment. Hold comparison conditions steady; pixel
+  changes do not themselves establish aesthetic improvement. No screenshot
+  runner or new dependency is bundled here.
+- [W3C: Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html):
+  color alone must not convey essential information. Applied to changed state,
+  grouping, and feedback cues, without claiming a full accessibility audit.
+- [W3C: Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html):
+  SC 2.3.3 is AAA, concerns interaction-triggered motion, and distinguishes
+  essential animation and automatic-animation requirements. The method adopts
+  a reduced-motion quality contract without mislabeling it as a blanket AA rule
+  or deleting a visual work's purpose.
+
+These sources were checked on 2026-09-20. No vendor prose or external rule
+corpus was copied. Further research and papers mentioned in preparatory
+discussion were not used as verified support for this revision.
 
 ## OpenAI Build Web Apps 0.1.2
 

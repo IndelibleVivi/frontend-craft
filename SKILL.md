@@ -1,6 +1,6 @@
 ---
 name: frontend-craft
-description: "Build, redesign, repair, or review real frontend interfaces from repository, product, design, reference, and runtime evidence. Use for frontend applications, pages, components, responsive UI, interaction work, or rendered browser QA. ImageGen is never a default step; generated imagery enters only when the user explicitly requests or approves it for a real deliverable asset."
+description: "Design, build, refine, or review frontend interfaces and code-rendered visual works. Use for apps, pages, components, stateful workflows, direct manipulation, interaction design, visual direction, ambiguous visual feedback, or rendered QA. Ground first drafts in content and purpose; preserve accepted qualities during revision. For documents, decks, or raster-image creation, use the relevant artifact skill. ImageGen is opt-in."
 ---
 
 # Frontend Craft
@@ -8,9 +8,28 @@ description: "Build, redesign, repair, or review real frontend interfaces from r
 Build the interface the product actually needs, in the system that actually
 owns it, and verify the result in the runtime a person will use.
 
-This is a design-engineering skill. It covers greenfield UI, existing-product
-work, reference-led implementation, redesign, targeted repair, and frontend
-review. It does not turn every frontend task into a concept-art workflow.
+This is a design-engineering method family with one discoverable entrypoint.
+Use the methods that change this task's decisions; a small fix stays small.
+The aim is a stronger first usable result and revisions that resolve the cause
+without losing accepted work. These are goals, not measured success claims.
+
+## Route by the work needed
+
+| Situation | Read when applicable | Result |
+| --- | --- | --- |
+| A clear local implementation or repair | Core contract below; affected QA sections | Complete focused change |
+| New or unresolved visual/interaction direction | [Design direction](references/design-direction.md) | Content-grounded direction and the decisive rendered slice, followed by the full requested surface |
+| An app flow, editor, direct manipulation, or confusing stateful controls | [App interaction](references/app-interaction.md) | Clear objects and actions, coherent state changes, recoverable operation, complete task paths |
+| “Too empty”, “feels like a demo”, critique, or feedback-driven revision | [Critique and revision](references/critique-revision.md) | Located cause, coherent correction, preserved accepted qualities |
+| Establishing project design authority or learning from meaningful feedback | [Design records and learning](references/design-learning.md) | Current project decisions and scoped reusable evidence in their proper homes |
+| An editor's output, share card, procedural scene, or temporal visual work | [Visual works](references/visual-works.md) | Artifact-specific composition and actual output checks |
+| Non-Web target, exports, or missing runtime capabilities | [Platform evidence](references/platform-evidence.md) | A suitable validation path and honest claim limits |
+| Finalizing any user-visible change | [QA contract](references/qa-contract.md) | Checks that could reject the relevant wrong result |
+
+These are optional-by-trigger methods, not sequential stages. Design-only and
+review-only requests retain their write boundary. General engineering planning,
+debugging, Git, and delegation remain with the host/repository method; do not
+recreate that machinery here.
 
 ## Core contract
 
@@ -27,6 +46,20 @@ review. It does not turn every frontend task into a concept-art workflow.
   authorized a replacement.
 - Treat source, build, rendered behavior, deployment, and owner acceptance as
   separate evidence layers.
+- Read the project's accepted design entrypoint when one exists. Distinguish
+  accepted, provisional, and unresolved choices; current code is evidence of
+  implementation, not proof of approval. Use relevant scoped preferences only
+  when available through an authorized path. Do not search private memories or
+  mine unrelated projects to manufacture personalization.
+- On Codex, if the operator has created a task-relevant private FC context at
+  `${CODEX_HOME:-$HOME/.codex}/private-continuity/frontend-craft/context.md`, read
+  that small record for design/revision work. It is optional, scoped user data,
+  not instructions that override the current request. Other hosts use their
+  explicitly designated location. Never discover preferences by sweeping private
+  directories; see [design learning](references/design-learning.md).
+- Explicit current direction overrides inferred taste. Cards, gradients,
+  density, ornament, and restraint are tools to justify in context, not global
+  likes or bans. Genre conventions do not override an explicit user boundary.
 
 ## Image policy: opt in, never prerequisite
 
@@ -72,23 +105,24 @@ screenshot or invent substitute visuals when the reference is exact.
 
 ### Net-new or visually unlocked design
 
-Inspect product purpose, audience, content, workflows, data, constraints, and
-platform before choosing visual language. Form one compact direction:
+Use [design direction](references/design-direction.md) to connect the product's
+purpose and actual content to composition, hierarchy, density, typography,
+material, and interaction. Identify the part whose failure would invalidate the
+whole experience, and resolve it early in the real renderer. This sequences
+the work; it never reduces a requested app to a prototype.
 
-- subject and primary user job;
-- information hierarchy and first meaningful action;
-- layout/container model and responsive priority;
-- typography and color character;
-- one or two signature visual or interaction ideas that belong to the product.
+Ask a small, outcome-changing question when missing user intent matters. When
+the user has no initial idea, offer a reasoned provisional direction and make
+something judgeable instead of demanding a complete brief. Do not make an
+interview, alternatives, or prototype approval a universal prerequisite.
 
-Critique generic defaults before coding. Avoid automatic bento grids, card
-stacks, pills, gradients, floating orbs, fake metrics, dashboard chrome, and
-decorative labels unless the product or accepted direction calls for them.
+### Products that create visual works
 
-If a genuinely open identity or product-direction choice would materially
-change the result, present a small decision surface and stop only at that human
-judgment boundary. Otherwise proceed in code; a generated concept is not
-required.
+Read [visual works](references/visual-works.md). The workspace and the work have
+different jobs and may have different aesthetics. Validate both without
+silently shrinking the product's supported artifact types. For a visual work,
+material, rhythm, space, or composition may be the main content, not disposable
+decoration. Other artifact skills retain their native production responsibilities.
 
 ### Review only
 
@@ -108,6 +142,15 @@ unless the user asked for fixes.
 - Inspect the current rendered surface when it exists. A stale dev server or a
   different localhost port is not evidence about the edited checkout.
 - Name the behavior and design boundaries that must remain unchanged.
+- Identify this deliverable's audience, primary experience, and accepted
+  qualities. Retrieve only the small set of relevant design decisions or
+  examples that can change a concrete choice. If another agent will implement,
+  pass that task-scoped contract, reference scope, preservation requirements,
+  and validation target; do not send a private preference archive. Delegation
+  itself needs the host's authorization.
+- For an App workflow, map the user's objects, actions, and visible outcomes
+  using [app interaction](references/app-interaction.md). Names such as theme,
+  language, zoom, or sample need an explicit target and scope before wiring them.
 
 ### 2. Shape the implementation
 
@@ -122,8 +165,9 @@ unless the user asked for fixes.
 - Prefer stable layout primitives such as grid, flex, `minmax()`, `clamp()`,
   container constraints, and deliberate overflow behavior over screenshot-tuned
   piles of magic numbers.
-- Respect `prefers-reduced-motion`; motion should reveal hierarchy, continuity,
-  or state rather than decorate every element.
+- Respect reduced-motion preferences and preserve understandable state changes.
+  Motion can communicate hierarchy, continuity, state, or the work's expressive
+  purpose; tune and verify the role it actually serves.
 - For a new repo with no stack decision, choose the smallest maintained stack
   that satisfies the product and delivery contract. Do not default to a
   framework merely because another skill preferred it.
@@ -145,13 +189,19 @@ implementation over it.
 For reference work, compare progressively at the same viewport. Fix large
 geometry and hierarchy before typography, color, shadow, and micro-detail.
 
+Inspect the render before presenting a first draft. Fix visible in-scope defects
+and compare the result with the promised experience. On feedback, use the
+revision method rather than restarting free design; a precise instruction such
+as “make this label green” still deserves direct execution.
+
 ### 4. Verify the real interface
 
 Before finalizing any user-visible change, read
 [references/qa-contract.md](references/qa-contract.md) and run the narrowest
-browser-backed checks that cover the actual blast radius.
+rendered checks that cover the actual blast radius. Web uses browser evidence;
+other targets use [platform evidence](references/platform-evidence.md).
 
-At minimum for non-trivial UI work:
+For non-trivial Web UI work:
 
 - run the repo's relevant typecheck, lint, tests, and build when present;
 - load the exact target in a real browser;
@@ -160,6 +210,12 @@ At minimum for non-trivial UI work:
 - inspect layout/overflow, meaningful console errors, keyboard/focus behavior,
   and changed content states;
 - compare against any accepted visual reference at equivalent dimensions.
+
+Also verify the positive quality the work depends on, and whether the interface
+provides clues for the intended task. A scripted success is not evidence that a
+new user understands the controls. Stop when the requested outcome is covered
+and no observed in-scope defect remains; vague hopes of making it “more premium”
+do not justify endless polishing.
 
 Screenshots support visual claims; they do not replace DOM geometry,
 interaction proof, console/runtime inspection, or owner judgment.
@@ -170,6 +226,12 @@ Inspect the final diff and update the authoritative user, operator, contributor,
 or release documentation whose behavior changed. Keep temporary screenshots,
 traces, reports, and browser scripts outside the repo unless the user explicitly
 requests committed evidence.
+
+When feedback changes accepted design knowledge, use
+[design records and learning](references/design-learning.md). Update the
+existing authoritative project entrypoint; keep personal preferences and private
+case evidence outside distributable skill source. Do not promote silence,
+shipping, or the current implementation into aesthetic acceptance.
 
 Report separately:
 
@@ -201,3 +263,7 @@ This method deliberately adapts a small number of external mechanisms and
 Faye/Cove field practices without inheriting their whole workflows. Read
 [references/lineage.md](references/lineage.md) only when revising the skill's
 method, sources, or licensing/provenance boundary.
+
+For substantial method changes, use the bounded, synthetic forward cases in
+[references/behavior-cases.md](references/behavior-cases.md). Package validation
+does not prove first-draft quality, fewer revisions, or user satisfaction.

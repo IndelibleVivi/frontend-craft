@@ -5,6 +5,11 @@ frontend defect, or finalizing a user-visible frontend change. Scale the checks
 to the actual blast radius; do not turn a one-control fix into a whole-product
 audit.
 
+This file supplies the detailed Web checks. For native UI, canvas internals,
+installed shells, or exported works, also select the appropriate evidence in
+[platform evidence](platform-evidence.md). Do not relabel browser proof as
+device proof.
+
 ## Define the target
 
 Write down the target flow before testing:
@@ -77,9 +82,71 @@ Verify the resulting visible state, URL, focus target, data/state change, or
 feedback. A successful click command without a checked result is not
 interaction proof.
 
+For stateful App work, apply the relevant boundaries from
+[app interaction](app-interaction.md): inspection versus mutation, draft versus
+commit, gesture completion/cancel, meaningful undo, and reopen/save state. Check
+the state as well as its appearance. Exercise native text composition when it
+is part of the changed contract; a synthetic fill does not establish IME behavior.
+
 After navigation or a render that replaces nodes, refresh the DOM snapshot or
 reacquire locators before asserting the next state. A stale automation handle is
 test-harness evidence, not a product defect.
+
+## Task comprehension
+
+For a changed workflow or information hierarchy, choose a realistic goal
+without encoding the click path: for example, “move the photo left while
+keeping its crop window fixed.” Inspect the cues that let a person identify:
+
+- their location and the object currently affected;
+- the available action and its scope;
+- pending work and the result of the action;
+- how to exit, cancel, correct, or recover when the task requires it.
+
+Trace where each clue is visible before the action is taken. Hiding controls
+can make a screen quieter while making the task harder to discover. Check
+whether emphasis, grouping, wording, depth, and feedback match the user's job.
+Color or motion alone must not carry essential meaning.
+
+Judge those cues at the actual scroll/window position where the task occurs,
+not merely somewhere on the page. When a workflow alternates between a work
+and its controls, inspect the travel required and whether object/scope context
+survives. A responsive stack can pass overflow checks while making repeated
+editing cumbersome.
+
+Label an agent's inspection a cognitive walkthrough, not a user study. A
+maintainer who knows the implementation cannot stand in for a first-time user.
+Owner aesthetic approval, scripted task success, and observed comprehension
+are separate observations. Real user testing is required only when the task
+calls for it; report the evidence actually available.
+
+## Positive quality and revision preservation
+
+Name the quality promised by this task and observe it in the actual medium:
+clear comparison in a dense tool, sustained reading rhythm, a distinctive
+composition, convincing material, or an expressive temporal sequence. Explain
+what in the render supports the judgment; avoid ungrounded “premium” scores.
+
+For an explicit reference or aesthetic goal, use the goal loop in
+[design direction](design-direction.md). Compare the intended relationships,
+not only the presence of recognizable colors or motifs. Keep the original
+target visible when choosing the next implementation change.
+
+Keep functional correctness, task usability, and visual quality as separate
+results. Passing many interaction/layout checks does not increase the evidence
+for taste. An agent-authored brief, simulated praise, or preservation of a
+baseline cannot establish owner acceptance. When actual owner feedback rejects
+the visual result, update its current case status; retain technical evidence
+without continuing to present the artifact as an aesthetic success.
+
+After feedback-driven edits, recheck the original defect and the accepted
+qualities exposed to regression. Compare with equivalent content, dimensions,
+fonts, state, and environment; align procedural inputs and meaningful animation
+phases where possible. A pixel diff detects change, not aesthetic merit.
+
+For visual works, follow [visual works](visual-works.md): inspect real exports
+and viewing scale, and observe motion across time rather than selecting one
+flattering frame. Do not replace the artwork's purpose with control QA alone.
 
 ## Accessibility checks
 
@@ -97,6 +164,23 @@ change:
   overlay still returns focus to the live replacement control;
 - color is not the only carrier of state, and text/controls remain legible;
 - live updates announce themselves when users otherwise cannot perceive them.
+
+Design and inspect the active states as part of the visual system: text editing,
+object selection, validation, hover, and keyboard focus. A clean unfocused
+screenshot can conceal a visually disruptive working state. Focus visibility
+does not prescribe a dark, thick outer ring. Choose a clearly perceivable
+indicator that fits the component and its surroundings, keeping keyboard
+location distinguishable from selection or error. Do not solve a disliked
+indicator by removing focus visibility. On Web, `:focus-visible` follows browser
+heuristics; text inputs may match after a pointer click too. Inspect actual
+pointer and keyboard behavior rather than equating the selector with
+"keyboard only". Relevant primary sources are recorded in [lineage](lineage.md).
+
+For changed motion, test reduced-motion behavior and preserve clear state
+feedback. Distinguish interaction-triggered motion from automatic animation;
+the applicable controls differ. This focused check is not a claim of complete
+WCAG conformance. See the primary-source notes in [lineage](lineage.md) when
+changing the accessibility contract.
 
 Use automated accessibility tooling when it is already available or the blast
 radius warrants it, then inspect the affected interaction manually. A clean
@@ -120,6 +204,12 @@ accepted reference to satisfy generic taste rules.
 For net-new design, judge the render against the brief rather than an invented
 concept image: subject, audience, primary job, information hierarchy, visual
 direction, signature idea, real content, and responsive priority.
+
+For authoring products, inspect both the workspace and the work at its intended
+reading size. When comparing visual languages, hold content and palette steady
+so the graphic differences can be judged. When comparing palettes, verify that
+the color control does not also change structure or typography. Exercise
+interface and work languages independently when both are supported.
 
 ## Framework and performance routing
 
