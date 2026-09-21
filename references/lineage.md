@@ -49,8 +49,10 @@ Private discussion informed problem selection, but no transcript, personal
 preference profile, identifying case archive, or private artifact is included.
 The portable mechanism is independently worded and context-limited. Praise
 and rejection retain scope; a method case is not a universal preference.
-The standalone entry remains `frontend-craft`, with relative references in
-the same package. This source revision does not publish the public projection.
+The standalone entry remained `frontend-craft`, with relative references in
+the same package. At that stage, assembling a source revision and publishing
+the package were separate operations. This is historical provenance; current
+maintenance and installation authority is documented in the README.
 
 The proposed outcome is less user repair work: an initially viable direction,
 corrections that address the cause, and continuity of accepted qualities.
@@ -178,6 +180,13 @@ creative choice to supported controls and export. The critique method requires
 an evidence-backed agent judgment before handoff. This is a bounded revision
 comparison, not a controlled experiment on skill effectiveness, a universal
 font-size rule, or evidence of owner aesthetic acceptance.
+
+### Independent maintenance — 2026-09-21
+
+Frontend Craft is now maintained directly in this independent repository,
+which owns both the canonical skill source and its installable package.
+Accepted changes belong here. Installed copies remain separately updated
+artifacts; an older snapshot must not overwrite current repository work.
 
 ### Primary sources checked for the initial method-family revision
 

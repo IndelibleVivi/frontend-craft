@@ -130,15 +130,15 @@ agent self-review establishes human aesthetic acceptance or lower rework rates.
 
 ## Install for evaluation or authorized use
 
-In the private workshop, this directory is canonical source. Existing discovery
-links to it see source edits directly; separately copied installations require
-an authorized update. Validate the source/discovery path with the installed
-`skill-validate <skill-directory>` command when available, or the host's bundled
-skill validator. Read back the resolved path before claiming installation.
+This repository is the canonical source and installable package for Frontend
+Craft. Maintain source changes here; [AGENTS.md](AGENTS.md) describes the
+repository's source, data, and verification boundaries. Installation reads the
+published repository revision. An installed copy can lag behind it and requires
+an explicit update; a discovery link follows the checkout it resolves to.
 
-The dedicated public projection is distributed separately and may lag this
-workshop revision. The command below installs the published snapshot, not
-necessarily the method family described by the current workshop source:
+Validate the intended skill directory with `skill-validate <skill-directory>`
+when available, or the host's bundled skill validator. Read back the resolved
+installation path and revision before claiming an update is active.
 
 Ask Codex to install the skill from:
 
@@ -200,6 +200,7 @@ The repository root is the installable skill directory:
 
 ```text
 README.md
+AGENTS.md
 SKILL.md
 .gitignore
 agents/openai.yaml
