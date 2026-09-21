@@ -169,8 +169,9 @@ python3 scripts/fc_memory.py query --root "$FC_ROOT" \
 - `--transfer` drops the project filter but keeps surface, so another project's
   mechanism case can match. Each hit is labeled `analogy` with its origin
   `current_scope`; it is never promoted to a current preference.
-- Candidate count is bounded (`topK` capped at 100 with `returnMetadata: all`),
-  so it is not the count of all relevant records.
+- Candidate count is bounded (`topK` capped at 50 with `returnMetadata: all`,
+  the platform limit when metadata or values are returned), so it is not the
+  count of all relevant records.
 - A remote/auth failure is a transparent `remote_error`/`auth_error`; it is
   **never** silently downgraded to a lexical result.
 

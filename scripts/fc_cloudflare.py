@@ -49,8 +49,10 @@ METRIC = "cosine"
 WRANGLER_SPEC = "wrangler@4.135.0"
 SYNC_STATE_VERSION = 2
 
-# Vectorize metadata-filter limit: returnMetadata "all" is capped at topK<=100.
-MAX_TOPK = 100
+# Vectorize topK limits: returning values or metadata caps topK at 50; returning
+# neither caps it at 100. Queries here request returnMetadata="all" (needed for
+# local revision/scope validation), so the binding limit is 50.
+MAX_TOPK = 50
 DEFAULT_TOP_K = 20
 EMBED_BATCH = 64
 UPSERT_BATCH = 64
@@ -538,8 +540,9 @@ def query_vectors(
 ) -> Dict[str, Any]:
     """Query restricted by namespace AND project/surface filters.
 
-    ``topK`` is capped at MAX_TOPK because returnMetadata="all" is bounded by
-    the platform limit.
+    ``topK`` is capped at MAX_TOPK because ``returnMetadata="all"`` is bounded
+    by the platform's metadata-returning limit (50), which is lower than the
+    100 cap that applies only when neither values nor metadata are returned.
     """
     check_vector(vector)
     capped = max(1, min(int(top_k), MAX_TOPK))

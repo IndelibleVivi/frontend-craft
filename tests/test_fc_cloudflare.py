@@ -251,6 +251,25 @@ class QueryFilterTests(unittest.TestCase):
             FC.query_vectors(transport_with(sender), config(), [0.0] * 10, [], [], 5)
 
 
+class VectorizeTopKContractTests(unittest.TestCase):
+    def test_metadata_query_obeys_platform_boundary(self) -> None:
+        # https://developers.cloudflare.com/vectorize/platform/limits/
+        # Metadata-returning queries cap at 50. Expectations must not depend on
+        # FC.MAX_TOPK, or a wrong production constant would make the test pass.
+        for requested, expected in [(3, 3), (50, 50), (51, 50), (100000, 50)]:
+            with self.subTest(requested=requested):
+                sender = RecordingSender([(200, {"success": True, "result": {"matches": []}})])
+                FC.query_vectors(
+                    transport_with(sender), config(), [0.0] * 1024,
+                    [FC.project_key(config(), "lumen-notes")],
+                    [FC.surface_key(config(), "*")], top_k=requested,
+                )
+                payload = json.loads(sender.calls[0]["body"].decode("utf-8"))
+                self.assertEqual(payload["topK"], expected)
+                self.assertEqual(payload["returnMetadata"], "all")
+                self.assertFalse(payload["returnValues"])
+
+
 class ResolveHitTests(unittest.TestCase):
     def _reverse(self, cfg, cases):
         return FC.reverse_id_map(cfg, cases)
@@ -718,6 +737,36 @@ class CliSemanticTests(unittest.TestCase):
         self.assertIn("Dense tables.", payload["context"]["text"])
         self.assertEqual(payload["namespace"], config()["namespace"])
         self.assertTrue(all("lumen" not in k for k in payload["project_keys"]))
+
+    def test_cli_query_limit_reaches_capped_metadata_request(self) -> None:
+        # Literal Vectorize metadata cap (independent of FC.MAX_TOPK).
+        metadata_limit = 50
+        sender = self._patch([
+            ok_embed(1),
+            (200, {"success": True, "result": {"matches": self._hit_rows()}}),
+        ])
+        code, payload = self._run(
+            "query", "--root", str(self.root), "--project", "lumen-notes",
+            "--surface", "editor", "--query", "help", "--limit", "500")
+        self.assertEqual(code, MEM.EXIT_OK, payload)
+        self.assertEqual(payload["mode"], "semantic")
+        request = json.loads(sender.calls[1]["body"].decode("utf-8"))
+        self.assertEqual(request["topK"], metadata_limit)
+        self.assertEqual(request["returnMetadata"], "all")
+        # Metadata-dependent local validation still runs and keeps the candidate.
+        self.assertEqual(payload["cases"][0]["case"]["id"], "fc-help-cue")
+
+    def test_cli_query_limit_at_metadata_boundary_is_unchanged(self) -> None:
+        sender = self._patch([
+            ok_embed(1),
+            (200, {"success": True, "result": {"matches": self._hit_rows()}}),
+        ])
+        code, payload = self._run(
+            "query", "--root", str(self.root), "--project", "lumen-notes",
+            "--surface", "editor", "--query", "help", "--limit", "50")
+        self.assertEqual(code, MEM.EXIT_OK, payload)
+        request = json.loads(sender.calls[1]["body"].decode("utf-8"))
+        self.assertEqual(request["topK"], 50)
 
     def test_stale_hit_reported_not_returned(self) -> None:
         rows = [{"id": FC.remote_id(config(), "fc-help-cue"), "score": 0.9,
