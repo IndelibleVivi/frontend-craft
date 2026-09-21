@@ -49,6 +49,33 @@ space and repeatable comparison. Preserve user-authored content and relationship
 within its stated scope. Candidate browsing and choosing a result are different
 actions. Make candidates large enough for the differences users must judge.
 
+## Choose the control by value type
+
+Take the control from the value the person is actually setting, not from a
+visual preference. Ordered quantities are not categorical state or events: a
+magnitude, duration, or count is adjusted, while a category, status, or
+occurrence is chosen. A compact radio group can be the honest control for a
+small, discrete, mutually exclusive set, including ordered labels such as
+priority or level.
+
+- Match the control to the required precision. When the field needs an exact
+  number, date, or time, offer exact entry; a coarse slider or stepper cannot
+  express a precise value and should not stand in for one. When an approximate
+  adjustment is the real intent and the domain is continuous, a ranged control
+  is appropriate.
+- Do not force a mixed domain through one control. If status, magnitude, and
+  event/date coexist, they are separate inputs even when they share a panel; a
+  single scalar slider cannot carry a category, a size, and a timestamp
+  together.
+- Expose the exact underlying value for a ranged control when accuracy matters,
+  so the person can read and, where the product supports it, type the number.
+
+For custom drag interactions, an equivalent click/tap operation is a separate
+path from keyboard access. It might use the track, labeled values, exact input,
+or nearby movement controls; tapping a handle that still requires dragging
+does not suffice. Provide and verify the applicable alternatives without
+assuming that every drag edits a numeric value.
+
 ## Give each state change an owner
 
 Map the relevant layers in the existing implementation; don't introduce a new
@@ -72,6 +99,17 @@ while accidentally adding history, changing a shared object, or resetting
 authored geometry. When relationships are linked, test one change that should
 propagate and one property that should remain independent.
 
+For explicit-apply editing, Cancel discards this uncommitted change without
+reverting unrelated newer commits. A product-defined resumable draft can be
+retained if it remains distinguishable from committed work. State clearly when
+leaving a screen does not undo work already saved. Verify the particular
+promise rather than imposing one save model on every product.
+
+An update must preserve unrelated fields. Blank input is not automatically
+`0`, `false`, or an empty list; retain the value distinctions this product
+actually defines. Use [state and persistence contracts](state-contracts.md)
+to trace these promises through requests, stored facts, and reopening.
+
 ## Make repeated operation feel continuous
 
 Improve hierarchy through proximity, grouping, meaningful defaults, and
@@ -89,9 +127,22 @@ Try the action at a realistic pace and with real content:
   Do not assert a frame-rate improvement from a code change alone.
 - Distinguish scrolling, selecting/copying text, moving an object, and panning
   a canvas. Check the gesture transitions affected by the implementation,
-  including keyboard/numeric access where the interaction requires it.
+  including keyboard/numeric access where the interaction requires it. For a
+  custom drag, test an equivalent single-pointer non-drag path separately from
+  the keyboard path.
 - Check the actual current values when reopening a tool. A default “1×” that
   disagrees with the selected object undermines trust even if the slider moves.
+- Account for the observation and input burden the workflow places outside the
+  screen: what the person must recall, look up elsewhere, re-read, or
+  transcribe. Keep the identifiers, prior values, units, and context that a
+  realistic user cannot hold in their head available at the point of use; do
+  not mistake memorization for simplicity.
+- Distinguish overview, quick amendment, and deliberate full editing; identify
+  which the current entry actually serves. Give it the detail it needs and
+  retain access to fuller editing where supported. Do not add three modes by
+  default or make every amendment a trip into the heaviest surface. In repeated
+  input, establish why a value is useful now, where the answer comes from, and
+  what skipping means. Never invent a sync capability to hide transcription.
 - On narrow screens, keep the current object, result, and exit reachable at the
   working scroll position. Short viewport checks do not prove soft-keyboard or
   physical-device behavior; use [platform evidence](platform-evidence.md).
@@ -101,6 +152,18 @@ They answer different questions and should not all become the same heavy box.
 Use recognizable control shapes unless a custom form materially improves the
 task. Verify the active state visually as well as the resting screenshot;
 [QA](qa-contract.md) owns the focus visibility and keyboard checks.
+
+Feedback about success or failure must be truthful about what was stored, not
+only about the request. Do not show a committed or saved state while work is
+pending or after it failed; keep the person's work on failure, offer retry at
+the same scope, and report a partial result as partial rather than rounding it
+up to saved.
+
+An overview or quick-amendment control is not an invitation to strip a
+deliberate full-detail workflow the product intends. Simplify the summary only
+while every required field, choice, and expressive control still has a
+reachable path, and preserve ritual or expressive steps that carry meaning for
+this product rather than optimizing them away.
 
 ## Close the whole requested task path
 

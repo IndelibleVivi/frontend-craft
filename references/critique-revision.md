@@ -20,6 +20,7 @@ canvas composition and color.” It is a working judgment, not an approval form.
 | --- | --- | --- |
 | “Too empty” | Missing meaningful content, excessive container width, loose rhythm, or no focal anchor? | Restore missing content, rebalance region proportions, constrain line length, or strengthen the subject. |
 | “Too busy” | Too many simultaneous groups, equal emphasis, irrelevant state, or decoration competing with controls? | Reorganize hierarchy, put state near its object, or reveal contextually; retain discoverable actions. |
+| “All pills”, “like a questionnaire”, or “tiring to open” | Are repeated enclosures heavier than content; are different semantics flattened into one control shape; is this overview, quick entry, or deliberate full editing? | Regroup related information, restore hierarchy, and choose controls from meaning and precision. Inspect outside-screen lookup/transcription cost before changing the task path. |
 | “Feels like a demo” | Fake data, generic copy, repeated identical cards, missing real workflow, or weak composition? | Make the real task and content primary; complete stateful behavior or give the content a deliberate structure. |
 | “I don't know what I'm changing” | Is the selected object, editing scope, or result unclear? | Distinguish object and mode, connect control to result, provide exit/recovery cues. |
 | “Still not right” | Same defect, mistaken diagnosis, implementation not active, or a new request? | Reinspect evidence and select a different causal explanation before changing more values. |
@@ -28,6 +29,10 @@ These are diagnostic forks, not automatic translations. “Busy” does not alwa
 mean desaturate; “empty” does not always mean add cards. If observed evidence
 cannot distinguish two materially different intents, ask one concrete question
 with the affected region or alternatives. Continue independent clear fixes.
+An editing screenshot alone cannot establish that the product forces daily
+entry. Verify the trigger and workflow before changing information timing.
+Use [visual construction](visual-construction.md) to make the corrected
+relationships; preserve required detail and deliberate expressive character.
 
 If the whole visual direction is rejected, record that rejection at its actual
 scope. A named disliked detail is additional evidence, not permission to reduce

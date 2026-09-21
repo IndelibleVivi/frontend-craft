@@ -127,6 +127,14 @@ mistake ledger. A method belongs in the skill only when it changes a reusable
 decision and its applicability is understood. A single success is a case, not
 a universal rule or proof of causal improvement.
 
+Before adding a portable rule, test whether an existing method already explains
+the sample. A detailed critique can yield no new instruction. If the method
+exists but was not applied, repair its routing, making support, or behavioral
+case rather than paraphrasing it into another permanent rule. Add a mechanism
+only when it changes a future decision; retain the condition and a meaningful
+counterexample. One dense editing screen does not establish that all fields
+should be hidden or that all users dislike detailed recording.
+
 ## Retrieve lightly and preserve discovery
 
 Use an explicit retrieval entrypoint so a recorded boundary can affect the next

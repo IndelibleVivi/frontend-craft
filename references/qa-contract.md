@@ -21,6 +21,10 @@ Write down the target flow before testing:
 Confirm that the browser is serving the intended checkout/build. Record the
 actual URL, port/host, relevant data or fixture, and viewport. A running process
 or HTTP 200 does not prove the intended page, assets, or code are active.
+When this state needs to survive revisions, use
+[interface scenarios](interface-scenarios.md) to retain its entry, setup, action,
+and observations in the project's existing tooling. A saved screenshot alone
+does not make the state reproducible.
 
 ## Choose evidence-bearing viewports
 
@@ -87,6 +91,8 @@ For stateful App work, apply the relevant boundaries from
 commit, gesture completion/cancel, meaningful undo, and reopen/save state. Check
 the state as well as its appearance. Exercise native text composition when it
 is part of the changed contract; a synthetic fill does not establish IME behavior.
+For a save/update boundary, use [state and contracts](state-contracts.md) to
+check the affected stored facts and reopened view, including untouched data.
 
 After navigation or a render that replaces nodes, refresh the DOM snapshot or
 reacquire locators before asserting the next state. A stale automation handle is
@@ -181,6 +187,11 @@ change:
   overlay still returns focus to the live replacement control;
 - color is not the only carrier of state, and text/controls remain legible;
 - live updates announce themselves when users otherwise cannot perceive them.
+
+When a changed control requires dragging, provide an applicable single-pointer
+path without dragging as well as its keyboard support; keyboard access alone
+does not satisfy the non-drag pointer requirement. Inspect the actual control
+and applicable exceptions rather than adding an arbitrary alternate button.
 
 Design and inspect the active states as part of the visual system: text editing,
 object selection, validation, hover, and keyboard focus. A clean unfocused

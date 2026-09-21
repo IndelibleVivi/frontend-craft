@@ -188,6 +188,74 @@ which owns both the canonical skill source and its installable package.
 Accepted changes belong here. Installed copies remain separately updated
 artifacts; an older snapshot must not overwrite current repository work.
 
+### Construction and product evolution — 2026-09-22
+
+The family now separates direction selection from carrying that direction into
+real content and behavior. Build retains actual reference/candidate evidence
+and the scope of brief feedback. Evolve handles capability and content growth
+while preserving unaffected promises and user work. Visual construction adds
+concrete composition moves; State and contracts traces an interface promise
+through persistence; Interface scenarios preserves meaningful states for replay
+using existing project tools. The single installable entrypoint remains.
+
+Recurring-input analysis extends beyond visible clicks to lookup, recall, and
+transcription. Control choice follows value meaning and precision. A full-edit
+surface and a quick daily amendment can need different density while retaining
+the same capabilities. Visual hierarchy and interaction expectations share
+responsibility; neither richer expression nor deliberate ritual is a defect
+to remove by default.
+
+The engineering boundary follows the authorized task, not a frontend folder.
+Current source is evidence rather than approval of every existing behavior.
+Internal root-cause repairs can cross layers without a new FC gate; actual
+product meaning, stored-data changes, and external effects retain the caller's
+existing authority. FC does not bundle a second engineering workflow or require
+Servotab. The continuous-change forward case challenges these methods without
+making daily product work an evaluation campaign.
+
+Private discussion informed the questions; its transcript, third-party details,
+images, and personal judgments are not distributed. New wording is independently
+authored. The methods and scenario menu are not evidence that FC has achieved
+general visual quality, reduced rework, or readiness for a named release.
+
+A bounded synthetic notebook run then exposed failures despite method selection:
+the UI promised that clearing a populated number would remove it, while the
+receiver treated `null` as keep; unrelated note wording produced an invented
+confidence label; and a narrow layout avoided horizontal overflow while placing
+the daily subject below extensive introductory material. The method now makes
+the serializer/receiver example concrete, applies data truth to annotations,
+and checks the distance to the recurring task. Source guidance alone had not
+prevented those failures. Initial failure evidence and subsequent repair remain
+separate, and the synthetic feedback does not establish owner acceptance.
+
+The same exercise exposed a second evidence gap: a browser harness duplicated
+the API in a mock, its live-server mode performed no assertions, and setup
+reseeded the working records. Interface scenarios now distinguishes actual
+integrated replay from a successful no-op and keeps resettable test stores
+separate from continuing work. After repair, a coordinator observed real HTTP
+clear/save/reopen, cancel, failed-save retry, preserved unrelated facts, and
+usable finding controls with a larger synthetic collection. These bounded
+checks cover one visual direction and do not establish independent first-pass
+success, contrasting-style quality, or a general reduction in user rework.
+
+Primary sources checked on 2026-09-22 for narrow mechanisms:
+
+- [GOV.UK question pages](https://design-system.service.gov.uk/patterns/question-pages/):
+  justify requested information, avoid repeated entry, and permit uncertainty
+  where valid. Its government-service page pattern is not a universal layout.
+- [GOV.UK making prototypes](https://www.gov.uk/service-manual/design/making-prototypes):
+  select fidelity for the question and distinguish prototype code from production
+  suitability. FC does not import a mandatory prototype phase.
+- [W3C Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html):
+  an applicable non-drag single-pointer path is distinct from keyboard access;
+  providing one does not automatically verify the other.
+- [Storybook stories](https://storybook.js.org/docs/writing-stories):
+  retain component states with explicit inputs. FC borrows reproducibility,
+  without requiring Storybook or treating component evidence as whole-app proof.
+- [Playwright visual comparisons](https://playwright.dev/docs/test-snapshots):
+  comparable rendering conditions matter. Snapshot change or baseline approval
+  does not establish aesthetic improvement.
+
 ### Primary sources checked for the initial method-family revision
 
 - [Agent Skills specification](https://agentskills.io/specification): package

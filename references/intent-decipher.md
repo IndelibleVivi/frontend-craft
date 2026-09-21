@@ -28,6 +28,12 @@ works” protects that part, not every incidental color or layout choice around
 it. “Like this reference” needs its requested relationship established: exact
 replication, translated visual language, or one borrowed quality.
 
+Use available task context even without aesthetic history: private repeated
+use, public presentation, focused work, or a deliberate ritual each provides
+design evidence. None determines a palette or stereotype. Follow brief
+candidate feedback through [Build](build.md); a clear yes/no has usable scope
+even when the user gives no detailed rationale.
+
 Separate the requested outcome from a proposed solution. A request for tabs
 may explicitly require tabs; otherwise it may express a need to stop losing
 context between paired views. Respect a settled choice. Where the means remain

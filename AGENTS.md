@@ -9,6 +9,10 @@ separate layers, not alternative source owners.
 
 - `SKILL.md` owns routing and the shared method. `references/` owns focused
   methods and runbooks; load them only when they affect the current task.
+  Build owns reference-to-product continuity; Evolve owns product change;
+  App interaction owns the state-layer model; State and contracts owns tracing
+  persistence boundaries; QA owns checks; Interface scenarios owns replay.
+  Link these owners rather than copying their rules into new lifecycle leaves.
 - `scripts/fc_memory.py` owns the local record CLI. `scripts/fc_cloudflare.py`
   owns the optional Cloudflare transport and synchronization implementation.
 - Personal context, case catalogs, credentials, configuration, sync state,

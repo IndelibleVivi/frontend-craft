@@ -1,6 +1,6 @@
 ---
 name: frontend-craft
-description: "Design, build, refine, or review frontend interfaces and code-rendered visual works. Use for apps, pages, components, stateful workflows, direct manipulation, interaction design, visual direction, ambiguous visual feedback, or rendered QA. Ground first drafts in content and purpose; preserve accepted qualities during revision. For documents, decks, or raster-image creation, use the relevant artifact skill. ImageGen is opt-in."
+description: "Design, build, evolve, repair, or review frontend interfaces and code-rendered visual works. Use for apps, pages, components, interaction and visual direction, reference-to-product implementation, state/persistence defects, feedback-driven revision, or rendered QA. Ground making in content and purpose; preserve accepted qualities through product change. For documents, decks, or raster-image creation, use the relevant artifact skill. ImageGen is opt-in."
 ---
 
 # Frontend Craft
@@ -12,6 +12,9 @@ This is a design-engineering method family with one discoverable entrypoint.
 Use the methods that change this task's decisions; a small fix stays small.
 The aim is a stronger first usable result and revisions that resolve the cause
 without losing accepted work. These are goals, not measured success claims.
+FC owns the touched experience from intent and information through operation,
+feedback, and visual execution. It follows an evidenced cause across code
+layers while inheriting the caller's engineering and permission boundaries.
 
 ## Route by the work needed
 
@@ -20,12 +23,17 @@ without losing accepted work. These are goals, not measured success claims.
 | A clear local implementation or repair | Core contract below; affected QA sections | Complete focused change |
 | Conversational requirements, unclear experience, conflicting cues, or broad aesthetic feedback | [Decipher intent](references/intent-decipher.md) | A grounded interpretation, explicit versus inferred constraints, and observable success criteria |
 | New or unresolved visual/interaction direction | [Design direction](references/design-direction.md) | Content-grounded direction and the decisive rendered slice, followed by the full requested surface |
+| Making a new product or carrying references/prototypes into real content and behavior | [Build](references/build.md) | Selected qualities survive complete integrated task paths |
+| New capabilities, content growth, or a substantial change to an existing product | [Evolve](references/evolve.md) | Coherent new journeys with preserved user work and unaffected promises |
+| Composing hierarchy, typography, imagery, material, responsive layout, or motion | [Visual construction](references/visual-construction.md) | Concrete making moves and judged rendered relationships |
 | An app flow, editor, direct manipulation, or confusing stateful controls | [App interaction](references/app-interaction.md) | Clear objects and actions, coherent state changes, recoverable operation, complete task paths |
+| UI promises conflict with state ownership, update semantics, or persistence | [State and contracts](references/state-contracts.md) | Trace and repair action → request → saved fact → reopened view |
 | “Too empty”, “feels like a demo”, critique, or feedback-driven revision | [Critique and revision](references/critique-revision.md) | Located cause, coherent correction, preserved accepted qualities |
 | Establishing project design authority or learning from meaningful feedback | [Design records and learning](references/design-learning.md) | Current project decisions and scoped reusable evidence in their proper homes |
 | An editor's output, share card, procedural scene, or temporal visual work | [Visual works](references/visual-works.md) | Artifact-specific composition and actual output checks |
 | Non-Web target, exports, or missing runtime capabilities | [Platform evidence](references/platform-evidence.md) | A suitable validation path and honest claim limits |
 | Finalizing any user-visible change | [QA contract](references/qa-contract.md) | Checks that could reject the relevant wrong result |
+| Important states must be reproducible across revisions | [Interface scenarios](references/interface-scenarios.md) | Reopenable fixtures or paths using the project's existing tools |
 
 These are optional-by-trigger methods, not sequential stages. Design-only and
 review-only requests retain their write boundary. General engineering planning,
@@ -43,8 +51,10 @@ recreate that machinery here.
   or collection of inert controls is not a finished app unless that is the
   explicit deliverable.
 - Use the existing framework, package manager, component system, router, state
-  model, styling conventions, and accessibility semantics unless the user has
-  authorized a replacement.
+  model, styling conventions, and accessibility semantics as the starting
+  point. Preserve unaffected promises; an accepted requirement or evidenced
+  defect can require changes to their implementation. Follow the cause within
+  current authority rather than treating file/layer boundaries as new gates.
 - Treat source, build, rendered behavior, deployment, and owner acceptance as
   separate evidence layers.
 - Read the project's accepted design entrypoint when one exists. Distinguish
@@ -101,17 +111,21 @@ Choose the mode from evidence before changing code.
 
 ### Existing product or targeted repair
 
-The current product architecture and accepted visual system remain authority.
+The accepted product/design contract governs what to preserve and change.
 Inspect the affected route, components, data/state path, styles, and rendered
 failure. Make the smallest coherent change that completes the requested
-behavior; do not smuggle in a redesign.
+behavior; do not smuggle in a redesign. Current code is implementation evidence,
+including evidence of defects. Use [Evolve](references/evolve.md) when the
+request changes journeys or the product system rather than one local detail.
 
 ### Reference-led implementation
 
-The declared reference is visual authority for its stated scope; the current
-app is behavior authority. Preserve real controls, data, routes, handlers,
-semantics, and states while matching measured layout, typography, color,
-assets, density, and responsive behavior.
+The declared reference is visual authority for its stated scope; the accepted
+product contract governs behavior. Preserve unaffected controls, data, routes,
+handlers, semantics, and states while making the requested change and matching
+measured layout, typography, color, assets, density, and responsive behavior.
+Use [Build](references/build.md) to retain reference/candidate evidence and
+carry even brief yes/no feedback through real integration.
 
 When `$pixel-perfect-reference-ui` is installed and the user wants strict
 replication from a total screenshot, mockup, Figma export, or reference-image
@@ -171,6 +185,11 @@ unless the user asked for fixes.
 
 ### 2. Shape the implementation
 
+For new construction and prototype integration, use [Build](references/build.md).
+For changes to an existing product's capabilities or organization, use
+[Evolve](references/evolve.md). Both draw on specialized methods only where
+the actual task needs them; neither starts a second engineering workflow.
+
 - Derive structure from product content and workflows, not from a fashionable
   template.
 - Use a small coherent token and component system where repetition warrants
@@ -202,6 +221,12 @@ real data or an explicitly authorized deterministic fixture; do not present
 invented state as product truth. Preserve adjacent behavior and retire any
 superseded local path in the affected scope rather than layering a duplicate
 implementation over it.
+
+When a UI promise fails at a state or persistence boundary, follow
+[state and contracts](references/state-contracts.md) to the responsible owner.
+Use the host/repository method for the required engineering. Necessary internal
+adjustments proceed under existing authority; unresolved product meaning,
+destructive work, and external consequences retain their actual boundaries.
 
 For reference work, compare progressively at the same viewport. Fix large
 geometry and hierarchy before typography, color, shadow, and micro-detail.

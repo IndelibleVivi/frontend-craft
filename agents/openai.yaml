@@ -1,4 +1,4 @@
 interface:
   display_name: "Frontend Craft"
-  short_description: "Design strong first drafts and refine with evidence"
-  default_prompt: "Use $frontend-craft to design, build, or refine this interface or visual work from its real content and purpose, preserve accepted qualities, and verify the rendered result; use ImageGen only when I explicitly request or approve it."
+  short_description: "Build and evolve interfaces with grounded visual craft"
+  default_prompt: "Use $frontend-craft to design, build, evolve, or repair this interface or visual work from its real content and purpose, preserve accepted qualities through implementation, and verify the rendered result; use ImageGen only when I explicitly request or approve it."

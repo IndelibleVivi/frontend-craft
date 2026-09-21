@@ -44,6 +44,50 @@ later corrections. A single candidate run is a smoke test, not an A/B result.
 | Borrow a useful mechanism from a different project | Explicit transfer returns its origin as an analogy; default scope stays isolated and colors, branding, or local acceptance do not travel with the mechanism |
 | Playful request for editable share-card copy, attribution, numeral styling, and ornament, alongside two local layout complaints | Treats the request seriously, reconstructs the positive sharing/authorship goal, implements real editable ownership, and stores the wish as requested rather than falsely accepted; does not reduce it to a negative checklist or global ornament preference |
 | A functioning poster editor passes interaction checks, but its poster is rejected for both weak composition and personal mismatch | Inspects the work independently at publication scale, distinguishes task fit/craft/personal fit, and corrects a named visual relationship; records the rejection without turning a causal hypothesis or an entire visual ingredient into a personal prohibition |
+| Two versions of a workshop notebook: quick daily amendment versus deliberate full-detail editing, both with the same awkward boxed fields | Inspects the actual entry/trigger; improves hierarchy in both, reduces unnecessary burden only where appropriate, preserves all requested fields, distinguishes unset from zero, and does not invent event order from totals |
+| A selected candidate plus only “B works; remove the large title; continue” | Retains the actual B artifact and scoped feedback; integrates real content and behavior without reverting to a default library layout or inventing the reason for preference |
+| An attractive single-field editor backed by a whole-record replacement endpoint | Inspects the producer/consumer path; clears a previously populated value and reopens it, preserves untouched facts and explicit zero, makes cancellation truthful, repairs the responsible layer within actual authority, and does not reopen permission solely for crossing into API code |
+| The same content capability in restrained/airy and elaborate/playful briefs | Makes each direction coherent and usable without reducing the second to the first; judges task fit, craft, and specified direction separately |
+| A temporary browser override fixes the composition | Applies it to canonical source and reopens the normal route; a transient preview is not delivered implementation |
+
+## One product through continuous change
+
+Use a disposable local product with synthetic records when validating Build,
+Evolve, or State and contracts. Reuse existing local runtime and browser tools.
+Do not introduce a provider, paid service, or new evaluation platform. Preserve
+each phase's artifact before giving the next request; tell the agent only the
+current task, not the maintainer's later challenges or expected solution.
+
+An example sequence, adaptable to the relevant change:
+
+1. **Build:** a personal workshop notebook, supplied with a few uneven records,
+   missing observations, explicit zero values, and aggregate work durations.
+   Ask for a usable product with nearby amendments and full-detail access.
+   Give a concrete restrained or expressive brief, not an aesthetic vacuum.
+2. **Short feedback:** select the actual first candidate with one explicit
+   correction, such as removing an oversized heading. Keep this clearly labeled
+   simulated feedback in evaluation records; it is not owner acceptance.
+3. **Growth:** supply more records and add a meaningful grouping or finding
+   capability. The same product must retain edited work and a coherent task
+   path; adding another disconnected panel is not enough.
+4. **Small repair:** request one exact label or spacing change. Observe whether
+   the change remains local instead of restarting discovery or redesign.
+5. **Contract fault:** expose an actual fixture bug in partial updates or
+   cancellation, then ask for repair. Inspect both stored facts and reopen
+   behavior, not only the success message. If the candidate already prevents
+   that fault, report the prevention rather than manufacturing a failure.
+
+Keep important states replayable with [interface scenarios](interface-scenarios.md).
+Use the actual before/after render to assess a making move with
+[visual construction](visual-construction.md). If style breadth is being claimed,
+run a separately briefed contrasting direction with the same content ability;
+one successful style cannot establish the other.
+
+Observe completed tasks, lost or preserved chosen qualities, repeated defects,
+and necessary coordinator corrections. Report the phases actually executed
+and retain failures. A later patch does not retroactively make the first
+candidate pass. A small continuous-change smoke test establishes bounded
+behavioral evidence, not general first-draft quality or readiness for a release.
 
 Use actual execution for at least one consequential changed path when feasible;
 a written explanation of what the agent would do proves only method selection.

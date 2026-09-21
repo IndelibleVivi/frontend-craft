@@ -54,6 +54,8 @@ juxtaposition, a distinctive control, or temporal rhythm. Adding effects is
 only one possible move. Restraint and richness both need intentional structure;
 removing all ornament is not a universal route to quality. Explicitly requested
 cards or gradients should be designed well, not resisted as an aesthetic sin.
+Use [visual construction](visual-construction.md) for concrete making moves
+when turning these relationships into type, layout, graphics, and motion.
 
 ## Explore only consequential uncertainty
 
@@ -66,6 +68,11 @@ Make a consequential comparison perceptible at the actual viewing size. If the
 variants collapse into the same impression, revise the comparison before
 treating a selection as evidence of preference. Small but meaningful detail
 changes are valid; imperceptible alternatives do not test different directions.
+Match prototype fidelity to the uncertainty: representative content and size
+for layout, an operable path for interaction, and a filled/reopened state for
+return use. Keep alternatives comparably resolved so accidental defects do not
+decide the comparison. Preferences can emerge through use; a prototype need
+not merely confirm an already articulate taste profile.
 
 Do the implementation and rendering comparisons the agent can resolve itself.
 Bring a concrete choice to the user only for a remaining taste/value decision,
@@ -76,6 +83,9 @@ On strict reference work, measure the accepted composition rather than
 inventing alternatives. On inspiration-led work, name the borrowed relationship
 (for example, text/image tension), without importing unrelated branding,
 ornament, or behavior. A supplied image does not settle its authority by itself.
+Once a direction is selected, [Build](build.md) owns carrying its actual
+artifact and feedback into the product. Do not reduce that evidence to a few
+style adjectives or require the user to reapprove each implementation detail.
 
 ## Make toward an explicit visual goal
 

@@ -2,8 +2,9 @@
 
 Frontend Craft is Faye & Cove's design-engineering method family for frontend
 interfaces and code-rendered visual works. One discoverable skill routes to
-focused methods for deciphering intent, direction, App interaction, critique
-and revision, design records, visual works, and rendered verification. The aim is a useful first
+focused methods for deciphering intent, direction, building, evolution, visual
+construction, App interaction, state/persistence contracts, critique and
+revision, design records, visual works, and rendered verification. The aim is a useful first
 result and fewer corrections that miss the cause or lose accepted work. These
 are design goals, not a measured improvement claim.
 
@@ -21,10 +22,22 @@ repair stays a small repair; methods load only when they affect the work.
   does not establish aesthetic quality.
 - ImageGen is opt-in. It is used only when generated imagery is explicitly
   requested or a concrete raster-asset gap is explicitly approved.
-- Existing products keep their real architecture, behavior, data, routes,
-  semantics, and accepted visual system unless a replacement is authorized.
-- Reference-led work treats the reference as visual authority and the running
-  product as behavior authority.
+- Existing products preserve unaffected promises, user work, and accepted
+  qualities while making the requested change. Current implementation is
+  evidence, including evidence of defects; it does not freeze broken behavior.
+- Reference-led work treats the reference as visual authority for its stated
+  scope and the accepted product contract as behavior authority. Actual
+  candidate artifacts and brief feedback remain usable through implementation.
+- Build carries a direction into real content, state, and complete task paths.
+  Evolve integrates new capabilities and content growth without losing the
+  product's useful relationships or leaving parallel legacy paths active.
+- UI and UX share responsibility: information hierarchy, control form, timing,
+  and feedback affect the user's work. A cause can live across state, API, or
+  storage code; ordinary internal fixes inherit the current task's authority.
+  FC adds no separate approval process and requires no engineering plugin.
+- Concrete making methods support restrained, dense, rich, and playful work.
+  Control choice follows meaning and precision; reducing input burden does not
+  remove wanted detail, ritual, or expression.
 - Net-new design connects purpose and real content to attention, composition,
   density, typography, material, and interaction. Resolve the decisive quality
   early, then complete the whole requested surface.
@@ -62,23 +75,37 @@ they are not a mandatory pipeline or separate installed skills.
 | --- | --- |
 | [Decipher intent](references/intent-decipher.md) | Reconstructing a conversational request, desired experience, content ownership, and meaningful uncertainty |
 | [Design direction](references/design-direction.md) | Forming a new direction, composing from content, resolving a consequential design choice |
+| [Build](references/build.md) | Carrying keywords, references, selected prototypes, and limited feedback into a complete integrated product |
+| [Evolve](references/evolve.md) | Adding capabilities, accommodating growth, or changing an existing product while preserving unaffected promises |
+| [Visual construction](references/visual-construction.md) | Making hierarchy, typography, material, graphics, responsive relationships, and motion work |
 | [App interaction](references/app-interaction.md) | Designing stateful flows, object/action semantics, direct manipulation, recovery, and complete task journeys |
+| [State and contracts](references/state-contracts.md) | Tracing and repairing UI promises through requests, stored facts, and reopened views |
 | [Critique and revision](references/critique-revision.md) | Diagnosing an unsatisfying render or making a feedback-driven correction |
 | [Design records and learning](references/design-learning.md) | Maintaining accepted project decisions and scoped reusable experience |
 | [Visual works](references/visual-works.md) | Producing or editing share graphics, procedural/temporal works, or editor outputs |
 | [Platform evidence](references/platform-evidence.md) | Choosing a non-Web, shell, canvas, or export validation path; handling missing tools |
 | [QA contract](references/qa-contract.md) | Checking the real interface, comprehension cues, positive quality, and regressions |
+| [Interface scenarios](references/interface-scenarios.md) | Retaining repeatable states and interaction paths using existing project tooling |
 
 ```mermaid
 flowchart LR
   Request[Current request] --> FC[Frontend Craft]
   Design[Accepted project design] --> FC
   Private[Relevant authorized private evidence] --> FC
-  FC --> Methods[Task-selected methods]
-  Methods --> Result[Rendered interface or work]
+  FC --> Direction[Interpret and form direction]
+  FC --> Build
+  FC --> Evolve
+  FC --> Revise
+  Direction --> Build[Build the working experience]
+  Build --> Result[Rendered interface or work]
   Result --> Check[Observe quality and behavior]
   Check --> Revise[Focused revision when needed]
-  Revise --> Result
+  Revise --> Build
+  Result --> Evolve[Evolve with new needs]
+  Evolve --> Build
+  Scenarios[Reopenable product scenarios] --> Check
+  Engineering[Host engineering and permissions] -.-> Build
+  Engineering -.-> Evolve
 ```
 
 Project `DESIGN.md` or an established equivalent owns accepted product choices
@@ -127,6 +154,10 @@ Maintainer-only [forward cases](references/behavior-cases.md) distinguish
 structural validation from observed behavior. The [lineage](references/lineage.md)
 records field mechanisms and primary sources. Neither a synthetic example nor
 agent self-review establishes human aesthetic acceptance or lower rework rates.
+The continuous-change case follows one product through construction, short
+feedback, growth, a small repair, and a persistence defect. Scenarios reuse the
+project's tools; this package does not bundle an evaluation service, Storybook
+installation, browser runner, or automatic screenshot-baseline approval.
 
 ## Install for evaluation or authorized use
 
@@ -207,13 +238,18 @@ agents/openai.yaml
 references/qa-contract.md
 references/intent-decipher.md
 references/design-direction.md
+references/build.md
+references/evolve.md
+references/visual-construction.md
 references/app-interaction.md
+references/state-contracts.md
 references/critique-revision.md
 references/design-learning.md
 references/memory-operations.md
 references/cloudflare-memory.md
 references/visual-works.md
 references/platform-evidence.md
+references/interface-scenarios.md
 references/behavior-cases.md
 references/lineage.md
 scripts/fc_memory.py
