@@ -2,6 +2,8 @@
 
 [English](README.md) · [中文](README.zh-CN.md)
 
+![Frontend Craft — 冰淇淋色系的像素工作台。](docs/visuals/banner-canon.svg)
+
 Frontend Craft（FC）是 Faye & Cove 为前端界面与代码渲染视觉作品维护的设计工程方法集合。一个 skill 入口按任务加载具体方法，覆盖理解需求、确定方向、构建、演进、修复、设计记录，以及真实界面的视觉验证。
 
 它面向正在构建或维护真实产品界面的人——应用、页面、组件、流程，以及产品产出的视觉作品——也包括只想要一次懂设计的改动、而非整体重做的人。它不是模板生成器，也不需要先生成概念图才能开始。
@@ -59,7 +61,31 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 
 以上是 FC 能处理的一类提示词示例，不是该技能已产出的结果。预期得到的是完整的、被请求的界面，而不是外壳、静态稿或无效控件；交付应提供与改动相称的渲染证据。源码、构建、渲染行为、部署，以及你自己的认可，始终是相互区分的声明，而认可与否的权威仍然是你。
 
+## 亲手试试这些示例
+
+先看[可交互的风格展示](examples/showcase/README.md)：像素冰淇淋店、阅读刊物，以及生成式视觉工作台。每个场景都有不同的构图与真正可用的控件。[像素 banner 合集](docs/visuals/README.md)展示的是仓库自己的冰淇淋配色，不要求其他产品也采用同一风格。
+
+| Soft Scoop · 像素小店 | Offscreen · 阅读小刊 | Chromatic Field · 程序艺术 |
+| --- | --- | --- |
+| [![可选择口味与数量的像素冰淇淋店](docs/visuals/showcase-scoop.zh-CN.png)](examples/showcase/README.md) | [![可切换完整原创随笔的阅读小刊](docs/visuals/showcase-offscreen.zh-CN.png)](examples/showcase/README.md) | [![可调密度、变化与动态的程序线场](docs/visuals/showcase-field.zh-CN.png)](examples/showcase/README.md) |
+
+**让请求变得可见。** 沿着一个合成笔记编辑器的改动，从需求看到行内帮助，再亲手编辑、保存、丢弃草稿与重新打开笔记。切换中英文不会改写你的笔记内容。
+
+[![笔记编辑器交互演示：需求说明与可实际操作的控件](docs/visuals/workflow-preview.zh-CN.png)](examples/workflow/README.md)
+
+在仓库根目录用 Python 3 运行：
+
+```bash
+python3 -m http.server 4182 --bind 127.0.0.1
+```
+
+然后在浏览器打开[风格展示](http://127.0.0.1:4182/examples/showcase/)或[笔记工作流](http://127.0.0.1:4182/examples/workflow/)。示例无需依赖、模型调用或账号，不发起外部请求。保存的笔记留在当前浏览器；如果持久存储不可用，会明确显示仅在本次会话保存。示意的“改动前”和可操作的编辑器均为人工编写的示例，不是 FC 自主执行的录像，也不是质量评测。见[演示说明与存储细节](examples/workflow/README.md)。
+
 ## 方法导航
+
+![架构：当前依据引导 skill 路由与宿主执行；本地记录和经授权的派生云索引均为可选](docs/visuals/architecture.zh-CN.svg)
+
+箭头表示方法引导与反馈关系，不是强制执行流水线。[视觉语言与架构来源映射](docs/visuals/README.md)说明了这些关系，以及可编辑的图稿。
 
 [SKILL.md](SKILL.md) 是日常入口，负责路由与共享契约。各参考文件负责聚焦方法；每个都有自己的触发条件，它们不是必需的流水线，也不是单独安装的技能。按意图分组：
 
@@ -110,4 +136,4 @@ python3 -m unittest discover -s tests -p 'test*.py'
 
 本仓库既是权威源（`main`），也是可安装的包。已安装的副本与发现链接是关于同一份源的不同层，而不是它的替代归属方：副本可能落后，需要有意更新；发现链接跟随实际解析到的修订。请分别报告源、已发布提交、安装、实际执行与所有者认可。历史机制来源与外部来源评审记录在 [references/lineage.md](references/lineage.md)。
 
-FC 是**源码可见（source-available），并非 OSI 认可的开源许可**。项目原创材料采用两层许可：功能性技能指令、方法参考、配置、脚本、测试与合成记录数据采用[SUL-1.0](LICENSE)；说明性文档——中英文 README、示例 README、lineage 与许可声明——采用 [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md)。[LICENSING.md](LICENSING.md)是权威的路径映射，包含确切范围。上游来源保留其自身条款，链接或致谢并不重新许可它们。
+FC 是**源码可见（source-available），并非 OSI 认可的开源许可**。项目原创材料采用两层许可：功能性技能指令、方法参考、配置、脚本、测试、合成记录数据与交互示例代码采用[SUL-1.0](LICENSE)；说明性文档与视觉资产——README、banner、架构图、demo 截图、lineage 与许可声明——采用 [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md)。[LICENSING.md](LICENSING.md)是权威的路径映射，包含确切范围。上游来源保留其自身条款，链接或致谢并不重新许可它们。

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Frontend Craft — Three small worlds</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#scene-content" data-i18n="skip">Skip to the example</a>
+  <header class="gallery-bar">
+    <a class="gallery-home" href="../../README.md" aria-label="Frontend Craft README"><span class="gallery-name">Frontend Craft</span></a>
+    <nav class="scene-nav" aria-label="Examples" data-i18n-aria="examples">
+      <button type="button" data-scene="scoop" aria-pressed="true"><span class="scene-number">01</span> Soft Scoop</button>
+      <button type="button" data-scene="offscreen" aria-pressed="false"><span class="scene-number">02</span> Offscreen</button>
+      <button type="button" data-scene="field" aria-pressed="false"><span class="scene-number">03</span> Chromatic Field</button>
+    </nav>
+    <div class="gallery-tools"><a class="workflow-link" href="../workflow/index.html" data-i18n="workflow">Note workflow ↗</a><button class="language-button" type="button" id="language-toggle" aria-label="切换为中文">中文</button></div>
+  </header>
+  <main id="scene-content" tabindex="-1">
+    <section class="scene scoop-scene" id="scene-scoop" aria-labelledby="scoop-title">
+      <header class="scoop-masthead">
+        <div class="scoop-wordmark"><span class="pixel-flower" aria-hidden="true">✳</span> SOFT SCOOP</div>
+        <span class="scoop-motto" data-i18n="scoopMotto">Little scoops. Big feelings.</span>
+        <span class="scoop-stamp" data-i18n="scoopStamp">HAPPINESS, SCOOPED DAILY</span>
+      </header>
+      <div class="scoop-layout">
+        <div class="scoop-display">
+          <div class="scoop-intro"><p class="pixel-eyebrow" data-i18n="scoopEyebrow">A SMALL SCOOP OF SUMMER</p><h1 id="scoop-title" data-i18n="scoopTitle">Life’s better<br>with sprinkles.</h1></div>
+          <div class="scoop-art-wrap">
+            <span class="pixel-spark spark-one" aria-hidden="true">✦</span><span class="pixel-spark spark-two" aria-hidden="true">✧</span>
+            <span class="scoop-art-note" data-i18n="scoopArtNote">100% good mood</span>
+            <svg class="ice-cream-art" viewBox="0 0 160 190" role="img" aria-labelledby="ice-cream-title" shape-rendering="crispEdges">
+              <title id="ice-cream-title">A strawberry ice cream in a golden waffle cone, drawn in pixels</title>
+              <ellipse cx="82" cy="175" rx="45" ry="7" fill="#ddb49b" opacity=".35"/>
+              <path d="M44 91H120V105H116V117H110V129H104V141H98V153H92V165H86V174H78V165H72V153H66V141H60V129H54V117H48V105H44Z" fill="#9a583b"/>
+              <path d="M50 96H114V108H108V120H102V132H96V144H90V156H84V166H80V156H74V144H68V132H62V120H56V108H50Z" fill="#e8a25c"/>
+              <path d="M54 100H60V106H66V112H72V118H78V124H84V130H90V136H96V130H90V124H84V118H78V112H72V106H66V100H60V96H54ZM84 96H90V102H96V108H102V114H108V108H102V102H96V96ZM66 124H72V130H78V136H84V142H90V148H84V142H78V136H72V130H66Z" fill="#f9cb7f"/>
+              <path d="M102 96H108V102H102V108H96V114H90V120H84V126H78V132H72V138H66V132H72V126H78V120H84V114H90V108H96V102H102ZM78 96H84V102H78V108H72V114H66V120H60V114H66V108H72V102H78ZM96 126H102V132H96V138H90V144H84V150H78V156H74V150H78V144H84V138H90V132H96Z" fill="#b67343"/>
+              <path d="M57 36H66V29H91V34H104V42H115V53H123V66H127V84H121V95H112V101H103V97H94V104H82V98H72V104H59V98H48V93H40V82H36V65H41V51H48V42H57Z" fill="var(--ice-shadow)"/>
+              <path d="M58 42H69V35H87V40H101V47H111V57H119V70H121V83H113V91H102V89H94V96H83V89H71V96H61V89H50V84H44V70H47V57H54V49H58Z" fill="var(--ice-main)"/>
+              <path d="M58 49H66V43H82V48H73V55H64V64H56V78H49V65H53V56H58Z" fill="var(--ice-light)"/>
+              <path d="M98 73H105V82H98V87H86V82H94V77H98Z" fill="var(--ice-shadow)"/>
+              <g class="ice-toppings" fill="var(--ice-detail)"><path d="M75 45H81V51H75ZM103 53H108V60H103ZM64 74H70V79H64ZM83 66H88V73H83ZM109 78H114V84H109ZM78 87H83V93H78Z"/><path d="M55 60H60V64H55ZM92 45H97V49H92Z" fill="var(--ice-light)"/></g>
+              <path d="M72 29V24H83V20H95V25H89V30H81V35H76V29Z" fill="#527d57"/>
+              <path d="M79 18H85V24H79ZM85 12H91V18H85Z" fill="#567049"/>
+              <path d="M79 20H86V26H79Z" fill="#d75251"/>
+            </svg>
+            <div class="scoop-flavor-label"><span class="tiny-pixel" aria-hidden="true"></span><span id="display-flavor">Berry Sunday</span><span class="tiny-pixel" aria-hidden="true"></span></div>
+          </div>
+          <p class="scoop-display-caption" data-i18n="scoopCaption">Made of pixels. Best enjoyed with a smile.</p>
+        </div>
+        <div class="scoop-order">
+          <p class="pixel-eyebrow" data-i18n="scoopMenu">THE GOOD STUFF</p>
+          <h2 data-i18n="scoopChoose">Find your flavor.</h2>
+          <p class="scoop-order-intro" data-i18n="scoopDescription">One golden waffle cone. One happy scoop.<br>One very important decision.</p>
+          <fieldset class="flavor-picker"><legend data-i18n="flavorLegend">Pick a flavor</legend>
+            <label class="flavor-choice"><input type="radio" name="flavor" value="berry" checked><span class="flavor-dot berry-dot" aria-hidden="true"></span><span class="flavor-copy"><strong data-i18n="berryName">Berry Sunday</strong><span data-i18n="berryNote">Strawberry & a little daydream</span></span><span class="flavor-price">$5.50</span><span class="flavor-check" aria-hidden="true">✓</span></label>
+            <label class="flavor-choice"><input type="radio" name="flavor" value="vanilla"><span class="flavor-dot vanilla-dot" aria-hidden="true"></span><span class="flavor-copy"><strong data-i18n="vanillaName">Vanilla Cloud</strong><span data-i18n="vanillaNote">Soft, sweet, wonderfully simple</span></span><span class="flavor-price">$5.00</span><span class="flavor-check" aria-hidden="true">✓</span></label>
+            <label class="flavor-choice"><input type="radio" name="flavor" value="mint"><span class="flavor-dot mint-dot" aria-hidden="true"></span><span class="flavor-copy"><strong data-i18n="mintName">Mint to Be</strong><span data-i18n="mintNote">Cool mint, tiny chocolate treasures</span></span><span class="flavor-price">$6.00</span><span class="flavor-check" aria-hidden="true">✓</span></label>
+          </fieldset>
+          <div class="quantity-row"><label for="quantity" data-i18n="quantityLabel">How many cones?</label><div class="quantity-control"><button type="button" id="quantity-down" aria-label="One fewer cone" data-i18n-aria="quantityDown" disabled>−</button><output id="quantity" aria-live="polite">1</output><button type="button" id="quantity-up" aria-label="One more cone" data-i18n-aria="quantityUp">+</button></div></div>
+          <div class="scoop-total"><div><span data-i18n="yourScoop">YOUR HAPPY LITTLE TOTAL</span><p id="order-description">1 × Berry Sunday</p></div><output id="order-total" aria-live="polite" aria-label="Total" data-i18n-aria="total">$5.50</output></div>
+          <p class="scoop-footnote"><span aria-hidden="true">♡</span> <span data-i18n="scoopLocal">A make-believe shop. No orders or payments.</span></p>
+        </div>
+      </div>
+      <footer class="scoop-footer"><span data-i18n="scoopFooter">A GOOD DAY STARTS WITH A LITTLE TREAT.</span><span aria-hidden="true">✳ &nbsp; ✳ &nbsp; ✳</span></footer>
+    </section>
+    <section class="scene offscreen-scene" id="scene-offscreen" aria-labelledby="offscreen-title" hidden>
+      <header class="journal-masthead"><div class="journal-meta"><span data-i18n="journalLabel">AN INDEPENDENT READING JOURNAL</span><span data-i18n="journalIssue">VOL. 01 — THE EVERYDAY ISSUE</span></div><h1 id="offscreen-title">Offscreen<span aria-hidden="true">.</span></h1><div class="journal-tagline"><span data-i18n="journalTagline">For the things you notice when you look away.</span><span data-i18n="journalRoom">A little room to think ↙</span></div></header>
+      <div class="journal-layout">
+        <aside class="journal-contents"><p class="journal-section-label" data-i18n="inThisIssue">IN THIS ISSUE</p><nav aria-label="Essays" data-i18n-aria="essays"><button type="button" class="essay-choice" data-essay="walking" aria-current="true"><span class="essay-number">01</span><span><strong data-i18n="walkingTitle">The art of walking nowhere</strong><small data-i18n="walkingCategory">Attention · A short essay</small></span><span class="essay-arrow" aria-hidden="true">↗</span></button><button type="button" class="essay-choice" data-essay="window"><span class="essay-number">02</span><span><strong data-i18n="windowTitle">A window left open</strong><small data-i18n="windowCategory">Home · A short essay</small></span><span class="essay-arrow" aria-hidden="true">↗</span></button><button type="button" class="essay-choice" data-essay="paper"><span class="essay-number">03</span><span><strong data-i18n="paperTitle">Things we keep on paper</strong><small data-i18n="paperCategory">Memory · A short essay</small></span><span class="essay-arrow" aria-hidden="true">↗</span></button></nav><p class="journal-aside-note" data-i18n="journalAside">No rush.<br>There is nowhere else<br>you need to be.</p><svg class="journal-daisy" viewBox="0 0 100 130" fill="none" aria-hidden="true"><path d="M49 118C39 91 59 75 49 51M50 90C30 88 23 76 22 71C39 69 48 77 50 90ZM49 79C61 61 75 66 80 62C78 76 63 81 49 79Z" stroke="currentColor" stroke-width="1.3"/><g stroke="currentColor" stroke-width="1.3"><ellipse cx="48" cy="29" rx="8" ry="17"/><ellipse cx="48" cy="29" rx="8" ry="17" transform="rotate(60 48 43)"/><ellipse cx="48" cy="29" rx="8" ry="17" transform="rotate(120 48 43)"/><ellipse cx="48" cy="29" rx="8" ry="17" transform="rotate(180 48 43)"/><ellipse cx="48" cy="29" rx="8" ry="17" transform="rotate(240 48 43)"/><ellipse cx="48" cy="29" rx="8" ry="17" transform="rotate(300 48 43)"/></g><circle cx="48" cy="43" r="7" fill="#d59556" stroke="currentColor" stroke-width="1.3"/></svg></aside>
+        <article class="journal-article" aria-labelledby="essay-title"><div class="article-kicker"><span id="essay-category">ON ATTENTION</span><span id="essay-index">ESSAY 01 / 03</span></div><h2 id="essay-title">The art of<br><em>walking nowhere.</em></h2><p class="article-deck" id="essay-deck"></p><div class="article-byline"><span data-i18n="byline">Words from the Offscreen desk</span><span class="article-ornament" aria-hidden="true">✳</span></div><div class="article-body" id="essay-body"></div><div class="article-end"><span aria-hidden="true">❦</span><span data-i18n="essayEnd">A small thought to take with you.</span></div><button type="button" class="next-essay" id="next-essay"><span data-i18n="readNext">Read the next essay</span><span aria-hidden="true">→</span></button></article>
+      </div>
+      <footer class="journal-footer"><span>Offscreen.</span><span data-i18n="journalFooter">Less noise. More noticing.</span></footer>
+    </section>
+    <section class="scene field-scene" id="scene-field" aria-labelledby="field-title" hidden>
+      <header class="field-header"><h1 id="field-title">CHROMATIC<br><span>FIELD</span></h1><div class="field-intro"><p data-i18n="fieldIntro">The space between<br>order and surprise.</p><span data-i18n="fieldStudio">AN INTERACTIVE LINE STUDY</span></div><span class="field-symbol" aria-hidden="true">✳</span></header>
+      <figure class="field-figure"><svg id="line-field" viewBox="0 0 1200 570" role="img" aria-labelledby="field-art-title field-art-description"><title id="field-art-title">Chromatic wave field</title><desc id="field-art-description">Colored lines form an undulating wave.</desc><defs><linearGradient id="field-gradient" x1="0%" y1="30%" x2="100%" y2="70%"><stop offset="0%" stop-color="#e8c382"/><stop offset="30%" stop-color="#e78878"/><stop offset="64%" stop-color="#b391ec"/><stop offset="100%" stop-color="#89a8e9"/></linearGradient></defs><g id="field-lines" fill="none" stroke="url(#field-gradient)" stroke-width="1.35"/></svg><figcaption><span data-i18n="fieldCaption">A quiet kind of infinite.</span><span id="variation-caption">VARIATION 01</span></figcaption></figure>
+      <div class="field-controls"><div class="density-control"><label for="density" data-i18n="density">Line density</label><input type="range" id="density" min="24" max="88" value="56" step="1"><output for="density" id="density-value">56</output></div><div class="field-actions"><button type="button" id="new-variation"><span class="variation-icon" aria-hidden="true">↗</span><span data-i18n="newVariation">New variation</span></button><button type="button" id="toggle-motion"><span id="motion-icon" aria-hidden="true">Ⅱ</span><span id="motion-label">Pause motion</span></button></div></div>
+      <footer class="field-footer"><span data-i18n="fieldHint">Follow a line. See where it takes you.</span><span id="motion-note" data-i18n="fieldMotion">Move slowly. Change freely.</span></footer>
+    </section>
+  </main>
+  <footer class="gallery-footer"><span data-i18n="authored">Authored synthetic examples of interface craft; not a quality benchmark or an autonomous agent run.</span><span>HTML · CSS · SVG · JS</span></footer>
+</body>
+</html>

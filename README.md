@@ -2,6 +2,8 @@
 
 [English](README.md) · [中文](README.zh-CN.md)
 
+![Frontend Craft — an ice-cream-colored pixel atelier.](docs/visuals/banner-canon.svg)
+
 Frontend Craft (FC) is Faye & Cove's design-engineering method family for
 frontend interfaces and code-rendered visual works. It is one skill that routes
 to focused methods for understanding a request, forming a direction, building,
@@ -96,7 +98,46 @@ the change. Source, build, rendered behavior,
 deployment, and your own acceptance remain separate claims, and you remain the
 authority on acceptance.
 
+## Explore the examples
+
+Start with the [interactive style gallery](examples/showcase/README.md): a
+pixel ice-cream shop, a reading journal, and a generative visual studio. Each
+has a different composition and real controls. The
+[pixel banner collection](docs/visuals/README.md) shows the repository's own
+ice-cream palette; it is not a style imposed on other products.
+
+| Soft Scoop · pixel shop | Offscreen · reading journal | Chromatic Field · procedural art |
+| --- | --- | --- |
+| [![Pixel ice cream with working flavor and quantity controls](docs/visuals/showcase-scoop.en.png)](examples/showcase/README.md) | [![Reading journal with original essays](docs/visuals/showcase-offscreen.en.png)](examples/showcase/README.md) | [![Procedural line field with density and motion controls](docs/visuals/showcase-field.en.png)](examples/showcase/README.md) |
+
+**A request, made visible.** Follow one synthetic note-editor change from the
+brief to visible inline help, then edit, save, discard a draft, and reopen a
+note yourself. Switch between English and Chinese without changing your note.
+
+[![Interactive note-editor workflow with the brief and working controls](docs/visuals/workflow-preview.en.png)](examples/workflow/README.md)
+
+Run from the repository root with Python 3:
+
+```bash
+python3 -m http.server 4182 --bind 127.0.0.1
+```
+
+Then open the [style gallery](http://127.0.0.1:4182/examples/showcase/) or the
+[note workflow](http://127.0.0.1:4182/examples/workflow/) in your browser.
+The demos have no
+dependencies, model calls, accounts, or external requests. Saved notes stay in
+this browser; when persistent storage is unavailable, it explicitly reports
+session-only storage. The illustrated “before” and the working editor are
+manually authored examples, not a recorded autonomous FC run or a quality
+benchmark. See the [walkthrough and storage details](examples/workflow/README.md).
+
 ## Method navigation
+
+![Architecture: current evidence guides the skill router and host execution; local records and an authorized derived cloud index are optional](docs/visuals/architecture.en.svg)
+
+The arrows describe guidance and feedback, not a mandatory execution pipeline.
+The [visual language and architecture source map](docs/visuals/README.md)
+explain the relationships and the editable artwork.
 
 [SKILL.md](SKILL.md) is the daily entrypoint and owns routing and the shared
 contract. The references own focused methods; each has its own trigger, and
@@ -215,10 +256,11 @@ recorded in [references/lineage.md](references/lineage.md).
 
 FC is **source-available, not open source under an OSI-approved license**.
 Project-original material is offered under two layered licenses: functional
-skill instructions, method references, configuration, scripts, tests, and
-synthetic record data under [SUL-1.0](LICENSE); and the explanatory
-documentation — these README files, the examples README, the lineage, and the
-licensing notices — under
+skill instructions, method references, configuration, scripts, tests,
+synthetic record data, and interactive example code under [SUL-1.0](LICENSE);
+and explanatory
+documentation and visual assets — README files, banners, architecture diagrams,
+demo screenshots, the lineage, and licensing notices — under
 [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md). [LICENSING.md](LICENSING.md) is the
 authoritative path map and holds the exact scope. Upstream sources retain their
 own terms, and links or acknowledgements do not relicense them.

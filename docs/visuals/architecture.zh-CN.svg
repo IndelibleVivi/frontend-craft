@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1470" viewBox="0 0 960 1470" lang="zh-CN" role="img" aria-labelledby="title desc" data-readability-background="#FFF3E2">
+<title id="title">Frontend Craft — 架构</title>
+<desc id="desc">当前请求、已接受的设计与仓库及运行时为宿主提供依据。单一 skill 入口按任务加载方法，指导产品改动与渲染验证。可选本地记录提供有范围的证据；经明确授权的 Cloudflare 索引是派生状态，当前上下文始终保留在本地。</desc>
+<style>
+text { font-family: 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #493E68; }
+.mono { font-family: 'SFMono-Regular', Consolas, 'Noto Sans Mono', monospace; }
+.rule { fill: none; stroke: #C7B8CA; stroke-width: 2; }
+</style>
+<rect width="960" height="1470" fill="#FFF3E2"/>
+<g id="heading"><text x="48" y="74" font-size="56" font-weight="600" fill="#493E68" text-anchor="start" data-readability="critical" class="" style="fill:#493E68">从意图到界面。</text>
+<text x="48" y="126" font-size="35" font-weight="400" fill="#685A76" text-anchor="start" data-readability="body" class="" style="fill:#685A76">一个入口，按任务选择方法。</text>
+<rect x="864" y="48" width="48" height="48" fill="#C888A9"/></g><g id="task-authority"><path d="M48 166 L912 166" fill="none" stroke="#C7B8CA" stroke-width="2"/><text x="48" y="208" font-size="30" font-weight="500" fill="#685A76" text-anchor="start" data-readability="supporting" class="" style="fill:#685A76">从当前依据出发</text>
+<text x="48" y="268" font-size="35" font-weight="500" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">当前请求</text>
+<text x="350" y="268" font-size="35" font-weight="500" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">已接受的设计</text>
+<text x="653" y="268" font-size="35" font-weight="500" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">仓库与运行时</text>
+<path d="M174 294 L174 320" fill="none" stroke="#62518C" stroke-width="3"/><path d="M480 294 L480 340" fill="none" stroke="#62518C" stroke-width="3"/><path d="M-13 -8 L0 0 L-13 8" transform="translate(480 340) rotate(90.0)" fill="none" stroke="#62518C" stroke-width="3"/><path d="M784 294 L784 320" fill="none" stroke="#62518C" stroke-width="3"/><path d="M174 320 H784" fill="none" stroke="#62518C" stroke-width="3"/></g><g id="canonical-skill"><rect x="48" y="356" width="864" height="340" fill="#EEE7F6"/><path d="M48 386 V356 H78 M882 356 H912 V386 M912 666 V696 H882 M78 696 H48 V666" fill="none" stroke="#62518C" stroke-width="4"/><text x="78" y="402" font-size="30" font-weight="500" fill="#62518C" text-anchor="start" data-readability="supporting" class="" style="fill:#62518C">权威 skill 包</text>
+<text x="78" y="468" font-size="58" font-weight="600" fill="#493E68" text-anchor="start" data-readability="critical" class="" style="fill:#493E68">SKILL.md</text>
+<text x="78" y="513" font-size="35" font-weight="400" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">只加载当前任务需要的方法。</text>
+<path d="M78 548 L882 548" fill="none" stroke="#C7B8CA" stroke-width="2"/><text x="78" y="602" font-size="38" font-weight="600" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">理解</text>
+<text x="78" y="650" font-size="30" font-weight="400" fill="#685A76" text-anchor="start" data-readability="supporting" class="" style="fill:#685A76">意图与方向</text>
+<text x="360" y="602" font-size="38" font-weight="600" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">制作</text>
+<text x="360" y="650" font-size="30" font-weight="400" fill="#685A76" text-anchor="start" data-readability="supporting" class="" style="fill:#685A76">构建与演进</text>
+<text x="642" y="602" font-size="38" font-weight="600" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">观察</text>
+<text x="642" y="650" font-size="30" font-weight="400" fill="#685A76" text-anchor="start" data-readability="supporting" class="" style="fill:#685A76">验证与修订</text>
+</g><g id="host-execution"><path d="M480 698 L480 758" fill="none" stroke="#62518C" stroke-width="3"/><path d="M-13 -8 L0 0 L-13 8" transform="translate(480 758) rotate(90.0)" fill="none" stroke="#62518C" stroke-width="3"/><text x="48" y="812" font-size="30" font-weight="500" fill="#62518C" text-anchor="start" data-readability="supporting" class="" style="fill:#62518C">宿主 agent 与产品</text>
+<text x="48" y="872" font-size="40" font-weight="600" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">修改真实产品</text>
+<text x="48" y="925" font-size="38" font-weight="500" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">渲染 · 操作 · 检查</text>
+<text x="48" y="981" font-size="35" font-weight="400" fill="#685A76" text-anchor="start" data-readability="body" class="" style="fill:#685A76">每次操作仍受宿主权限约束。</text>
+<path d="M720 925 H934 V510 H912 M925 502 L912 510 L925 518" fill="none" stroke="#62518C" stroke-width="3"/><text x="758" y="808" font-size="35" font-weight="600" fill="#62518C" text-anchor="middle" data-readability="body" class="" style="fill:#62518C">继续修订</text>
+<text x="758" y="850" font-size="30" font-weight="400" fill="#62518C" text-anchor="middle" data-readability="supporting" class="" style="fill:#62518C">按需进行</text>
+</g><g id="optional-records"><path d="M48 1024 L912 1024" fill="none" stroke="#C7B8CA" stroke-width="2" stroke-dasharray="10 8"/><text x="48" y="1075" font-size="30" font-weight="500" fill="#685A76" text-anchor="start" data-readability="supporting" class="" style="fill:#685A76">供宿主使用的可选证据</text>
+<text x="48" y="1130" font-size="40" font-weight="600" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">本地记录</text>
+<text x="48" y="1173" font-size="30" font-weight="400" fill="#493E68" text-anchor="start" data-readability="supporting" class="mono" style="fill:#493E68">fc_memory.py</text>
+<text x="48" y="1215" font-size="32" font-weight="400" fill="#493E68" text-anchor="start" data-readability="supporting" class="mono" style="fill:#493E68">context.md</text>
+<text x="48" y="1257" font-size="32" font-weight="400" fill="#493E68" text-anchor="start" data-readability="supporting" class="mono" style="fill:#493E68">cases.json</text>
+<text x="48" y="1299" font-size="35" font-weight="400" fill="#685A76" text-anchor="start" data-readability="body" class="" style="fill:#685A76">按范围检索</text>
+<path d="M355 1247 L524 1247" fill="none" stroke="#62518C" stroke-width="3" stroke-dasharray="9 7"/><path d="M-13 -8 L0 0 L-13 8" transform="translate(524 1247) rotate(0.0)" fill="none" stroke="#62518C" stroke-width="3"/><text x="542" y="1130" font-size="40" font-weight="600" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">Cloudflare</text>
+<text x="542" y="1180" font-size="35" font-weight="400" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">Workers AI</text>
+<text x="542" y="1226" font-size="35" font-weight="400" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">+ Vectorize</text>
+<text x="542" y="1299" font-size="35" font-weight="400" fill="#685A76" text-anchor="start" data-readability="body" class="" style="fill:#685A76">派生索引</text>
+<text x="48" y="1352" font-size="35" font-weight="500" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">仅经授权的案例文本与查询可传出。</text>
+<text x="48" y="1399" font-size="35" font-weight="400" fill="#493E68" text-anchor="start" data-readability="body" class="" style="fill:#493E68">当前上下文与证据指针留在本地。</text>
+</g><g id="closing-rule"><path d="M48 1434 L912 1434" fill="none" stroke="#C7B8CA" stroke-width="2"/><path d="M48 1426 L48 1442" fill="none" stroke="#62518C" stroke-width="3"/><path d="M912 1426 L912 1442" fill="none" stroke="#C888A9" stroke-width="3"/></g></svg>

@@ -1,0 +1,1355 @@
+:root {
+  color-scheme:light;
+  font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+  color:#262622;
+  background:#ebeae6;
+  font-synthesis:none
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0
+}
+button,input {
+  font:inherit
+}
+button,a,input {
+  -webkit-tap-highlight-color:transparent
+}
+button {
+  cursor:pointer
+}
+button:disabled {
+  cursor:default
+}
+a {
+  color:inherit
+}
+button:focus-visible,a:focus-visible,input:focus-visible {
+  outline:3px solid #256b9a;
+  outline-offset:5px
+}
+button:focus:not(:focus-visible) {
+  outline:none
+}
+button {
+  color:inherit
+}
+button:disabled {
+  opacity:.35
+}
+[hidden] {
+  display:none!important
+}
+.skip-link {
+  position:fixed;
+  left:16px;
+  top:-100px;
+  z-index:20;
+  padding:12px;
+  background:white
+}
+.skip-link:focus {
+  top:8px
+}
+.gallery-bar {
+  min-height:74px;
+  background:#f7f7f3;
+  border-bottom:1px solid #d8d8d2;
+  display:flex;
+  align-items:center;
+  gap:30px;
+  padding:12px 30px;
+  position:relative;
+  z-index:2
+}
+.gallery-home {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  flex-shrink:0
+}
+.gallery-name {
+  font-size:12px;
+  font-weight:700
+}
+.scene-nav {
+  display:flex;
+  align-items:center;
+  gap:5px;
+  margin:auto
+}
+.scene-nav button {
+  border:0;
+  background:transparent;
+  border-radius:5px;
+  font-size:12px;
+  white-space:nowrap;
+  padding:12px 14px;
+  color:#63665e
+}
+.scene-nav button[aria-pressed=true] {
+  background:#e8e9e1;
+  color:#252c22
+}
+.scene-nav button:hover {
+  background:#eeeee8
+}
+.scene-number {
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  margin-right:6px;
+  color:#7c8274
+}
+.gallery-tools {
+  display:flex;
+  align-items:center;
+  gap:22px
+}
+.workflow-link {
+  font-size:11px;
+  text-decoration:none;
+  white-space:nowrap
+}
+.workflow-link:hover {
+  text-decoration:underline
+}
+.language-button {
+  border:1px solid #cecec7;
+  background:transparent;
+  border-radius:4px;
+  padding:8px 10px;
+  font-size:11px;
+  white-space:nowrap
+}
+.gallery-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:18px 30px;
+  font-size:10px;
+  color:#696c62;
+  line-height:1.6
+}
+.gallery-footer>span:last-child {
+  white-space:nowrap;
+  font-family:"Courier New",monospace;
+  letter-spacing:1px
+}
+main:focus {
+  outline:none
+}
+.scene {
+  min-height:780px
+}
+/* Soft Scoop: a pixel sweet shop, built around the cone and its menu. */
+.scoop-scene {
+  --ice-main:#f19aa3;
+  --ice-light:#ffd5cd;
+  --ice-shadow:#c7657d;
+  --ice-detail:#aa455b;
+  background:#fff6df;
+  color:#493726;
+  padding:0 56px;
+  max-width:1600px;
+  margin:auto
+}
+.scoop-masthead {
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:2px solid #e4d3ad;
+  gap:20px
+}
+.scoop-wordmark {
+  font:900 21px/1 "Courier New",monospace;
+  letter-spacing:-1px;
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+.pixel-flower {
+  font-family:Arial,sans-serif;
+  color:#d27165;
+  font-size:35px
+}
+.scoop-motto {
+  font:italic 15px Georgia,serif;
+  color:#876650
+}
+.scoop-stamp {
+  font:10px "Courier New",monospace;
+  letter-spacing:1px
+}
+.scoop-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:70px;
+  padding:46px 0 52px;
+  align-items:center
+}
+.scoop-display {
+  min-width:0;
+  position:relative
+}
+.pixel-eyebrow {
+  font:bold 10px/1.5 "Courier New",monospace;
+  letter-spacing:1.6px;
+  margin:0 0 17px
+}
+.scoop-intro h1 {
+  font:bold clamp(38px,4.15vw,62px)/1.04 "Courier New",monospace;
+  letter-spacing:-4px;
+  margin:0;
+  max-width:600px;
+  color:#513b2c
+}
+.scoop-art-wrap {
+  position:relative;
+  background:#f4d7c4;
+  border-radius:48% 48% 8px 8px;
+  margin:36px 26px 0;
+  height:343px;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-image:linear-gradient(90deg,#ffffff16 1px,transparent 1px),linear-gradient(#ffffff16 1px,transparent 1px);
+  background-size:24px 24px
+}
+.ice-cream-art {
+  height:326px;
+  max-width:100%;
+  width:300px;
+  margin-top:-21px;
+  filter:drop-shadow(9px 8px 0 #c596741b)
+}
+.scoop-art-note {
+  position:absolute;
+  right:-15px;
+  top:66px;
+  font:italic 13px Georgia,serif;
+  transform:rotate(9deg);
+  background:#fff6df;
+  padding:10px 11px;
+  box-shadow:3px 3px 0 #d5b38e
+}
+.pixel-spark {
+  position:absolute;
+  color:#fcfff1;
+  font-size:40px;
+  line-height:1
+}
+.spark-one {
+  left:16%;
+  top:74px
+}
+.spark-two {
+  right:12%;
+  bottom:82px;
+  font-size:32px
+}
+.scoop-flavor-label {
+  font:bold 13px "Courier New",monospace;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  position:absolute;
+  bottom:17px
+}
+.tiny-pixel {
+  width:5px;
+  height:5px;
+  background:#b47162;
+  box-shadow:5px 0 #b47162,0 5px #b47162,5px 5px #b47162
+}
+.scoop-display-caption {
+  font:10px "Courier New",monospace;
+  text-align:center;
+  color:#876b54;
+  margin:17px 0 0
+}
+.scoop-order {
+  padding-top:10px;
+  min-width:0
+}
+.scoop-order>.pixel-eyebrow {
+  color:#a66350
+}
+.scoop-order h2 {
+  font:italic 39px/1.1 Georgia,"Songti SC",serif;
+  letter-spacing:-1.2px;
+  margin:0 0 16px
+}
+.scoop-order-intro {
+  font-size:12px;
+  line-height:1.8;
+  color:#826c55;
+  margin:0 0 27px
+}
+.flavor-picker {
+  padding:0;
+  margin:0;
+  border:0;
+  min-width:0
+}
+.flavor-picker legend {
+  font:bold 10px "Courier New",monospace;
+  letter-spacing:1px;
+  margin-bottom:12px
+}
+.flavor-choice {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  position:relative;
+  padding:17px 13px;
+  margin-bottom:9px;
+  border:1px solid #decba5;
+  border-radius:4px;
+  cursor:pointer;
+  background:#fff9e9;
+  min-width:0
+}
+.flavor-choice:has(input:checked) {
+  background:#f9dfd4;
+  border-color:#bf7e64;
+  box-shadow:3px 3px 0 #d8b390
+}
+.flavor-choice:hover {
+  border-color:#bf7e64
+}
+.flavor-choice input {
+  position:absolute;
+  opacity:0;
+  width:1px;
+  height:1px
+}
+.flavor-choice:has(input:focus-visible) {
+  outline:3px solid #965639;
+  outline-offset:3px
+}
+.flavor-dot {
+  width:24px;
+  height:24px;
+  flex-shrink:0;
+  clip-path:polygon(25% 0,75% 0,75% 12%,88% 12%,88% 25%,100% 25%,100% 75%,88% 75%,88% 88%,75% 88%,75% 100%,25% 100%,25% 88%,12% 88%,12% 75%,0 75%,0 25%,12% 25%,12% 12%,25% 12%);
+  box-shadow:inset -5px -5px #0002
+}
+.berry-dot {
+  background:#ec9da4
+}
+.vanilla-dot {
+  background:#f2d387
+}
+.mint-dot {
+  background:#a1c6ac
+}
+.flavor-copy {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  flex:1;
+  min-width:0
+}
+.flavor-copy strong {
+  font:bold 13px "Courier New",monospace
+}
+.flavor-copy>span {
+  font-size:10px;
+  line-height:1.5;
+  color:#816b56
+}
+.flavor-price {
+  font:12px "Courier New",monospace;
+  white-space:nowrap
+}
+.flavor-check {
+  width:12px;
+  font-size:13px;
+  opacity:0
+}
+.flavor-choice:has(input:checked) .flavor-check {
+  opacity:1
+}
+.quantity-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:24px 0 22px;
+  font:12px "Courier New",monospace;
+  gap:16px
+}
+.quantity-control {
+  display:flex;
+  align-items:center;
+  gap:0;
+  background:#fff9e9;
+  border:1px solid #dcc7a1;
+  border-radius:3px
+}
+.quantity-control button {
+  background:none;
+  border:0;
+  font-size:21px;
+  width:35px;
+  height:36px
+}
+.quantity-control button:hover:not(:disabled) {
+  background:#f7e5c4
+}
+.quantity-control output {
+  min-width:27px;
+  text-align:center;
+  font-weight:bold;
+  font-size:14px
+}
+.scoop-total {
+  border-top:2px dashed #d5bd96;
+  border-bottom:2px dashed #d5bd96;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:20px 0
+}
+.scoop-total>div>span {
+  font:9px "Courier New",monospace;
+  letter-spacing:1px
+}
+.scoop-total p {
+  font:12px "Courier New",monospace;
+  margin:8px 0 0
+}
+.scoop-total>output {
+  font:bold 33px "Courier New",monospace;
+  letter-spacing:-2px;
+  white-space:nowrap
+}
+.scoop-footnote {
+  display:flex;
+  gap:6px;
+  justify-content:center;
+  align-items:center;
+  font-size:10px;
+  color:#886c55;
+  margin:18px 0 0;
+  line-height:1.5
+}
+.scoop-footnote>span:first-child {
+  font-size:21px
+}
+.scoop-footer {
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border-top:2px solid #e4d3ad;
+  font:10px/1.7 "Courier New",monospace;
+  letter-spacing:1.4px
+}
+.scoop-footer>span:last-child {
+  color:#ca806b;
+  font-size:21px
+}
+/* Offscreen: typographic pace, a contents rail, and an uninterrupted essay. */
+.offscreen-scene {
+  background:#f3f0e7;
+  color:#2d3028;
+  padding:38px 7% 0;
+  max-width:1600px;
+  margin:auto;
+  font-family:Georgia,"Songti SC","STSong",serif
+}
+.journal-meta {
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  font:9px/1.5 Arial,"PingFang SC",sans-serif;
+  letter-spacing:1.4px
+}
+.journal-masthead h1 {
+  font-size:clamp(82px,12.5vw,172px);
+  line-height:1;
+  letter-spacing:-10px;
+  font-weight:normal;
+  margin:17px 0 20px
+}
+.journal-masthead h1>span {
+  color:#b8643b
+}
+.journal-tagline {
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  border-top:1px solid #383b31;
+  border-bottom:1px solid #bebfb2;
+  padding:17px 0;
+  font-size:15px;
+  font-style:italic
+}
+.journal-tagline>span:last-child {
+  font-size:11px;
+  color:#777d6a
+}
+.journal-layout {
+  display:grid;
+  grid-template-columns:minmax(175px,.29fr) minmax(0,1fr);
+  gap:68px;
+  padding:47px 0 65px
+}
+.journal-contents {
+  border-right:1px solid #cbcbbd;
+  padding-right:32px
+}
+.journal-section-label {
+  font:9px Arial,"PingFang SC",sans-serif;
+  letter-spacing:1.4px;
+  margin:3px 0 19px
+}
+.essay-choice {
+  display:flex;
+  gap:10px;
+  text-align:left;
+  background:none;
+  border:0;
+  border-bottom:1px solid #d2d2c5;
+  padding:20px 0;
+  width:100%;
+  font-family:inherit;
+  color:#858a7b
+}
+.essay-number {
+  font:9px/1.6 Arial,sans-serif;
+  margin-top:3px
+}
+.essay-choice>span:nth-child(2) {
+  flex:1
+}
+.essay-choice strong {
+  font-size:17px;
+  line-height:1.3;
+  font-weight:normal
+}
+.essay-choice small {
+  display:block;
+  font:9px/1.6 Arial,"PingFang SC",sans-serif;
+  margin-top:9px;
+  color:#73796a
+}
+.essay-choice[aria-current=true] {
+  color:#2d3028
+}
+.essay-choice[aria-current=true] strong {
+  font-style:italic
+}
+.essay-arrow {
+  font-family:Arial,sans-serif;
+  opacity:0;
+  font-size:16px
+}
+.essay-choice[aria-current=true] .essay-arrow,.essay-choice:hover .essay-arrow {
+  opacity:1
+}
+.essay-choice:hover {
+  color:#2d3028
+}
+.journal-aside-note {
+  font-size:16px;
+  line-height:1.6;
+  font-style:italic;
+  color:#727966;
+  margin:46px 0 0
+}
+.journal-daisy {
+  width:85px;
+  height:125px;
+  margin:12px 0 0 8px;
+  color:#666e59
+}
+.journal-article {
+  min-width:0;
+  max-width:790px
+}
+.article-kicker {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  font:9px Arial,"PingFang SC",sans-serif;
+  letter-spacing:1.4px;
+  color:#737b65;
+  margin-bottom:27px
+}
+.journal-article h2 {
+  font-size:clamp(38px,4.55vw,64px);
+  line-height:1.06;
+  letter-spacing:-2.8px;
+  font-weight:normal;
+  margin:0 0 24px;
+  max-width:800px
+}
+.journal-article h2 em {
+  font-weight:normal
+}
+.article-deck {
+  font-size:19px;
+  line-height:1.5;
+  color:#717764;
+  max-width:570px;
+  margin:0 0 24px;
+  font-style:italic
+}
+.article-byline {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  font:9px Arial,"PingFang SC",sans-serif;
+  color:#6b705f;
+  border-bottom:1px solid #cacbbd;
+  padding-bottom:18px;
+  margin-bottom:27px;
+  max-width:620px
+}
+.article-ornament {
+  font-size:24px;
+  color:#ac6844
+}
+.article-body {
+  max-width:620px
+}
+.article-body p {
+  font-size:16px;
+  line-height:1.84;
+  margin:0 0 21px;
+  text-wrap:pretty
+}
+.article-body p:first-child:first-letter {
+  font-size:63px;
+  line-height:.84;
+  float:left;
+  margin:9px 10px 0 0;
+  color:#9a5b3a
+}
+.article-body p:last-child {
+  margin-bottom:0
+}
+.article-end {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:7px;
+  max-width:620px;
+  margin:34px 0 28px;
+  font-size:11px;
+  font-style:italic;
+  color:#7d846d
+}
+.article-end>span:first-child {
+  font-size:26px
+}
+.next-essay {
+  max-width:620px;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  border:0;
+  border-top:1px solid #c1c4b3;
+  background:transparent;
+  padding:20px 0 3px;
+  text-align:left;
+  font-size:12px;
+  font-family:inherit
+}
+.next-essay>span:last-child {
+  font-size:23px
+}
+.next-essay:hover {
+  color:#9a5b3a
+}
+.journal-footer {
+  padding:23px 0;
+  border-top:1px solid #b9beac;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+  gap:30px;
+  color:#757c67
+}
+.journal-footer>span:first-child {
+  font-style:italic;
+  font-size:23px
+}
+.journal-footer>span:last-child {
+  font-style:italic
+}
+/* Chromatic Field: the artwork owns the space;
+the controls sit at its edge. */
+.field-scene {
+  background:#101113;
+  color:#ecece5;
+  padding:42px 54px 0;
+  position:relative;
+  max-width:1600px;
+  margin:auto;
+  overflow:hidden;
+  min-height:800px;
+  color-scheme:dark
+}
+.field-header {
+  display:flex;
+  justify-content:space-between;
+  gap:35px;
+  align-items:flex-start;
+  position:relative;
+  z-index:1
+}
+.field-header h1 {
+  font:700 25px/1.02 Arial,sans-serif;
+  letter-spacing:-1.1px;
+  margin:0
+}
+.field-header h1 span {
+  font-weight:400;
+  letter-spacing:6.8px
+}
+.field-intro {
+  margin-right:auto;
+  margin-left:85px
+}
+.field-intro p {
+  font:24px/1.25 Georgia,"Songti SC",serif;
+  letter-spacing:-.5px;
+  margin:0 0 12px
+}
+.field-intro>span {
+  font:8px "Courier New",monospace;
+  letter-spacing:2px;
+  color:#818386
+}
+.field-symbol {
+  font-size:44px;
+  line-height:1;
+  font-weight:200;
+  color:#a69acb
+}
+.field-figure {
+  margin:-22px -22px 0;
+  position:relative
+}
+.field-figure svg {
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:330px;
+  overflow:visible
+}
+.field-figure figcaption {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+  padding:0 22px;
+  color:#919196;
+  font:9px "Courier New",monospace;
+  letter-spacing:1.2px;
+  margin-top:-25px
+}
+.field-figure figcaption>span:first-child {
+  font:italic 15px Georgia,"Songti SC",serif;
+  letter-spacing:0;
+  color:#c0c0c2
+}
+.field-controls {
+  border-top:1px solid #37373c;
+  border-bottom:1px solid #37373c;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  padding:25px 0;
+  margin-top:32px
+}
+.density-control {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex:1;
+  max-width:440px;
+  min-width:0;
+  font-size:11px
+}
+.density-control label {
+  white-space:nowrap
+}
+.density-control input {
+  width:100%;
+  min-width:75px;
+  height:20px;
+  accent-color:#bbb0df;
+  cursor:pointer
+}
+.density-control output {
+  font:11px "Courier New",monospace;
+  min-width:20px;
+  color:#c5c0d4
+}
+.field-actions {
+  display:flex;
+  gap:10px
+}
+.field-actions button {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  font-size:11px;
+  border:1px solid #4d4c56;
+  background:#242329;
+  border-radius:2px;
+  height:42px;
+  padding:0 18px;
+  white-space:nowrap;
+  min-width:146px
+}
+.field-actions button:first-child {
+  background:#d7cfec;
+  border-color:#d7cfec;
+  color:#292331
+}
+.field-actions button:hover {
+  background:#33313b
+}
+.field-actions button:first-child:hover {
+  background:#e9e1fc
+}
+.variation-icon {
+  font-size:21px;
+  line-height:1
+}
+.field-actions button>span:first-child {
+  width:17px
+}
+#motion-icon {
+  font-weight:bold;
+  font-size:13px
+}
+.field-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:28px;
+  padding:23px 0 26px;
+  font-size:9px;
+  line-height:1.5;
+  color:#787a80
+}
+.field-footer>span:first-child {
+  color:#aaabb1
+}
+.field-scene :focus-visible {
+  outline-color:#e4d4ff
+}
+html[lang=zh-CN] .scoop-intro h1 {
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:clamp(36px,3.8vw,55px);
+  letter-spacing:-2px;
+  line-height:1.18
+}
+html[lang=zh-CN] .scoop-order h2 {
+  font-style:normal;
+  font-size:36px
+}
+html[lang=zh-CN] .scoop-order-intro {
+  line-height:1.9
+}
+html[lang=zh-CN] .journal-article h2 {
+  font-family:"Songti SC","STSong",serif;
+  font-size:clamp(38px,4vw,56px);
+  line-height:1.25;
+  letter-spacing:0
+}
+html[lang=zh-CN] .article-body p {
+  font-size:17px;
+  line-height:2
+}
+html[lang=zh-CN] .article-body p:first-child:first-letter {
+  font-size:57px;
+  line-height:1.1;
+  margin-top:5px
+}
+html[lang=zh-CN] .article-deck {
+  font-style:normal;
+  line-height:1.8;
+  font-size:18px
+}
+html[lang=zh-CN] .essay-choice strong {
+  line-height:1.7
+}
+html[lang=zh-CN] .field-intro p {
+  line-height:1.5
+}
+@media(min-width:1500px) {
+  .scene {
+    border-left:1px solid #dedbd1;
+    border-right:1px solid #dedbd1
+  }
+}
+@media(max-width:1100px) {
+  .gallery-bar {
+    gap:10px;
+    padding:12px 20px
+  }
+  .gallery-name {
+    display:none
+  }
+  .gallery-tools {
+    gap:13px
+  }
+  .scene-nav button {
+    padding:11px 9px
+  }
+  .scoop-scene {
+    padding:0 35px
+  }
+  .scoop-layout {
+    gap:40px
+  }
+  .scoop-stamp {
+    display:none
+  }
+  .scoop-intro h1 {
+    letter-spacing:-3px
+  }
+  .scoop-art-wrap {
+    margin-left:0;
+    margin-right:0
+  }
+  .scoop-art-note {
+    right:-6px;
+    font-size:11px
+  }
+  .scoop-order h2 {
+    font-size:34px
+  }
+  .journal-layout {
+    gap:40px
+  }
+  .journal-contents {
+    padding-right:22px
+  }
+  .offscreen-scene {
+    padding-left:5%;
+    padding-right:5%
+  }
+  .field-scene {
+    padding:36px 36px 0;
+    min-height:740px
+  }
+  .field-intro {
+    margin-left:40px
+  }
+  .field-controls {
+    gap:25px
+  }
+  .density-control {
+    gap:12px
+  }
+  .field-actions button {
+    min-width:130px;
+    padding:0 13px
+  }
+  .field-figure {
+    margin-top:0
+  }
+  .field-figure figcaption {
+    margin-top:-10px
+  }
+}
+@media(max-width:760px) {
+  .gallery-bar {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:10px;
+    padding:13px 18px 9px
+  }
+  .gallery-name {
+    display:inline;
+    font-size:11px
+  }
+    .gallery-tools {
+    gap:16px
+  }
+  .workflow-link {
+    font-size:10px
+  }
+  .language-button {
+    padding:6px 9px
+  }
+  .scene-nav {
+    grid-column:1/-1;
+    grid-row:2;
+    width:100%;
+    justify-content:space-between;
+    gap:3px
+  }
+  .scene-nav button {
+    font-size:10px;
+    padding:10px 9px;
+    flex:1
+  }
+  .scene-number {
+    font-size:9px;
+    margin-right:4px
+  }
+  .gallery-footer {
+    padding:17px 18px;
+    display:block;
+    font-size:9px
+  }
+  .gallery-footer>span:last-child {
+    display:block;
+    margin-top:8px;
+    font-size:8px
+  }
+  .scoop-scene {
+    padding:0 22px
+  }
+  .scoop-masthead {
+    height:67px
+  }
+  .scoop-wordmark {
+    font-size:17px;
+    gap:6px
+  }
+  .pixel-flower {
+    font-size:29px
+  }
+  .scoop-motto {
+    font-size:12px;
+    max-width:95px;
+    text-align:right;
+    line-height:1.4
+  }
+  .scoop-layout {
+    grid-template-columns:1fr;
+    gap:37px;
+    padding:29px 0 32px
+  }
+  .scoop-intro h1 {
+    font-size:46px;
+    letter-spacing:-3.6px
+  }
+  .pixel-eyebrow {
+    font-size:9px;
+    letter-spacing:1.1px;
+    margin-bottom:13px
+  }
+  .scoop-art-wrap {
+    height:294px;
+    max-width:440px;
+    margin:28px auto 0
+  }
+  .ice-cream-art {
+    height:286px;
+    width:250px;
+    margin-top:-15px
+  }
+  .scoop-art-note {
+    top:45px;
+    right:-7px
+  }
+  .scoop-art-note {
+    font-size:11px
+  }
+  .spark-one {
+    top:56px;
+    left:12%
+  }
+  .spark-two {
+    right:10%;
+    bottom:84px
+  }
+  .scoop-flavor-label {
+    font-size:12px;
+    bottom:14px
+  }
+  .scoop-display-caption {
+    font-size:9px;
+    margin-top:15px
+  }
+  .scoop-order {
+    padding-top:0
+  }
+  .scoop-order h2 {
+    font-size:36px;
+    margin-bottom:12px
+  }
+  .scoop-order-intro {
+    font-size:12px;
+    margin-bottom:23px
+  }
+  .flavor-choice {
+    padding:16px 12px;
+    gap:11px
+  }
+  .flavor-copy strong {
+    font-size:13px
+  }
+  .flavor-copy>span {
+    font-size:10px
+  }
+  .scoop-footer {
+    font-size:8px;
+    letter-spacing:.7px;
+    min-height:61px
+  }
+  .scoop-footer>span:last-child {
+    font-size:17px;
+    white-space:nowrap
+  }
+  .offscreen-scene {
+    padding:26px 22px 0
+  }
+  .journal-meta {
+    font-size:7px;
+    letter-spacing:.9px;
+    gap:12px
+  }
+  .journal-meta>span:last-child {
+    text-align:right;
+    max-width:124px
+  }
+  .journal-masthead h1 {
+    font-size:87px;
+    letter-spacing:-6px;
+    margin:19px 0 18px
+  }
+  .journal-tagline {
+    font-size:13px;
+    line-height:1.6;
+    padding:12px 0
+  }
+  .journal-tagline>span:last-child {
+    display:none
+  }
+  .journal-layout {
+    grid-template-columns:1fr;
+    gap:34px;
+    padding:23px 0 40px
+  }
+  .journal-contents {
+    border-right:0;
+    padding:0
+  }
+  .journal-section-label {
+    font-size:8px;
+    margin:0 0 11px
+  }
+  .journal-contents nav {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px
+  }
+  .essay-choice {
+    gap:0;
+    display:block;
+    border-bottom:1px solid #c6c8b9;
+    padding:0 0 14px;
+    position:relative
+  }
+  .essay-choice[aria-current=true] {
+    border-bottom:2px solid #6d765e
+  }
+  .essay-number {
+    font-size:8px;
+    display:block;
+    margin:0 0 8px
+  }
+  .essay-choice strong {
+    font-size:13px;
+    line-height:1.25;
+    display:block;
+    min-height:48px
+  }
+  .essay-choice small {
+    font-size:7px;
+    margin-top:7px;
+    line-height:1.5;
+    min-height:21px
+  }
+  .essay-arrow {
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:12px
+  }
+  .journal-aside-note,.journal-daisy {
+    display:none
+  }
+  .article-kicker {
+    font-size:8px;
+    letter-spacing:1px;
+    margin-bottom:23px
+  }
+  .journal-article h2 {
+    font-size:43px;
+    letter-spacing:-1.8px;
+    line-height:1.08;
+    margin-bottom:22px
+  }
+  .article-deck {
+    font-size:18px;
+    margin-bottom:23px;
+    line-height:1.55
+  }
+  .article-byline {
+    font-size:8px;
+    padding-bottom:16px;
+    margin-bottom:25px
+  }
+  .article-body p {
+    font-size:16px;
+    line-height:1.82;
+    margin-bottom:21px
+  }
+  .article-body p:first-child:first-letter {
+    font-size:57px
+  }
+  .journal-footer {
+    font-size:11px
+  }
+  .journal-footer>span:first-child {
+    font-size:22px
+  }
+  .field-scene {
+    padding:30px 22px 0;
+    min-height:720px
+  }
+  .field-header {
+    gap:18px;
+    flex-wrap:wrap
+  }
+  .field-header h1 {
+    font-size:20px;
+    letter-spacing:-.7px
+  }
+  .field-header h1 span {
+    letter-spacing:5px
+  }
+  .field-intro {
+    margin-left:auto;
+    margin-right:0;
+    max-width:175px
+  }
+  .field-intro p {
+    font-size:18px;
+    margin-bottom:11px;
+    letter-spacing:-.4px
+  }
+  .field-intro>span {
+    font-size:6px;
+    letter-spacing:1px
+  }
+  .field-symbol {
+    display:none
+  }
+  .field-figure {
+    margin:12px -110px 0
+  }
+  .field-figure svg {
+    height:365px;
+    min-height:0;
+    width:100%;
+    object-fit:cover
+  }
+  .field-figure figcaption {
+    padding:0 110px;
+    margin-top:-11px;
+    gap:15px;
+    font-size:7px;
+    letter-spacing:.7px
+  }
+  .field-figure figcaption>span:first-child {
+    font-size:12px
+  }
+  .field-controls {
+    flex-direction:column;
+    align-items:stretch;
+    gap:21px;
+    padding:24px 0;
+    margin-top:27px
+  }
+  .density-control {
+    max-width:none;
+    gap:18px;
+    width:100%;
+    font-size:11px
+  }
+  .density-control input {
+    height:24px
+  }
+  .field-actions {
+    gap:10px
+  }
+  .field-actions button {
+    flex:1;
+    min-width:0;
+    font-size:11px;
+    height:43px;
+    gap:8px;
+    padding:0 12px
+  }
+  .field-footer {
+    font-size:8px;
+    padding:19px 0 22px;
+    align-items:flex-start;
+    gap:25px
+  }
+  .field-footer>span {
+    max-width:145px
+  }
+  html[lang=zh-CN] .scoop-intro h1 {
+    font-size:40px;
+    line-height:1.22
+  }
+  html[lang=zh-CN] .scoop-motto {
+    font-size:11px
+  }
+  html[lang=zh-CN] .journal-article h2 {
+    font-size:37px;
+    line-height:1.28
+  }
+  html[lang=zh-CN] .essay-choice strong {
+    font-size:13px;
+    min-height:44px
+  }
+  html[lang=zh-CN] .essay-choice small {
+    font-size:8px
+  }
+  html[lang=zh-CN] .article-deck {
+    font-size:17px
+  }
+  html[lang=zh-CN] .article-body p {
+    font-size:17px;
+    line-height:1.95
+  }
+  html[lang=zh-CN] .field-intro p {
+    font-size:17px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior:auto!important
+  }
+}

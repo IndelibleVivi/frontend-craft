@@ -2,6 +2,11 @@
 
 [English README](../README.md) · [中文说明](../README.zh-CN.md)
 
+For a visual, hands-on product example, open the
+[interactive style gallery](showcase/README.md) or the
+[note-editor workflow](workflow/README.md). The walkthrough below
+focuses on the optional record helper.
+
 The core Frontend Craft skill works without a record store. This example lets
 you inspect its optional Python helper using two entirely fictional cases.
 It demonstrates retrieval boundaries, not frontend quality or real feedback.

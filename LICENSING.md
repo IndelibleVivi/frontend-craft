@@ -10,8 +10,8 @@ project-original material; the project's authorship credit is **Faye & Cove**.
 | Material | Paths | License |
 | --- | --- | --- |
 | Functional skill instructions and method/runbook references | `SKILL.md`, `AGENTS.md`, `references/` except `references/lineage.md` | [SUL-1.0](LICENSE) |
-| Host configuration, helpers, tests, CI, and synthetic record data | `agents/`, `scripts/`, `tests/`, `.github/`, `.gitignore`, `examples/memory/` | [SUL-1.0](LICENSE) |
-| Explanatory documentation, including diagrams within these files | `README.md`, `README.zh-CN.md`, `examples/README.md`, `references/lineage.md`, `LICENSING.md`, `LICENSE-DOCUMENTATION.md` | [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md) |
+| Host configuration, helpers, tests, CI, synthetic record data, artwork rendering scripts, and functional demos | `agents/`, `scripts/`, `tests/`, `.github/`, `.gitignore`, `examples/memory/`, `examples/workflow/` and `examples/showcase/` except their `README.md` files | [SUL-1.0](LICENSE) |
+| Explanatory documentation and visual assets, including banners, architecture diagrams, and demo screenshots | `README.md`, `README.zh-CN.md`, `examples/README.md`, `examples/workflow/README.md`, `examples/showcase/README.md`, `docs/visuals/`, `references/lineage.md`, `LICENSING.md`, `LICENSE-DOCUMENTATION.md` | [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md) |
 
 The Markdown method and runbook references are part of the instructions an
 agent executes, so their classification follows their functional role rather

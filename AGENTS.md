@@ -21,6 +21,20 @@ separate layers, not alternative source owners.
 - `examples/memory/` is a public synthetic fixture, not an operator record
   store. Keep its walkthrough and CLI assertions aligned; never put personal
   feedback or credentials into it.
+- `examples/workflow/` owns the standalone, synthetic interactive demo. Keep
+  its English and Chinese UI aligned and preserve draft/save/reopen behavior.
+  It makes no model calls and is not evidence of an autonomous FC run.
+- `examples/showcase/` owns the independent interactive style gallery. Its
+  authored scenes demonstrate different compositions and controls, not an
+  autonomous FC run or measured design-quality improvement.
+- `scripts/render_banners.py` owns the hand-authored pixel glyphs, sprites,
+  palettes, and scenes; `docs/visuals/banner-*.svg` are its derived exports.
+  Re-render them after source changes. Do not replace these with ImageGen
+  assets. The full project name is the title; FC is not a separate logo.
+- `docs/visuals/architecture.*.svg` are directly editable diagram sources;
+  the visual README maps claims to their method/helper owners. Preview PNGs
+  are derived browser captures of the demos, not alternate UI sources.
+  Refresh both language captures after visible demo changes.
 - Local tests do not authorize external provisioning, writes, or private-data
   transfer. Preserve the caller's actual authorization for live operations.
 - Do not replace current source with an older package or installation snapshot.
@@ -33,6 +47,13 @@ separate layers, not alternative source owners.
   independently of the implementation constant they check.
 - Run `skill-validate .` when available for skill/package changes, and inspect
   local reference links and `git diff --check` for changed documentation.
+- For demo changes, verify the affected interactions in a browser: note
+  editing/save/reopen/discard, shop selection/totals, article navigation, or
+  line-field controls and reduced motion. Check language switching, keyboard
+  focus, and wide/narrow layouts for the changed demo.
+- For diagram changes, inspect both languages at full and intended embed
+  sizes; keep live text, accessible descriptions, and source-backed
+  relationships. Pixel banners use authored glyph paths with text equivalents.
 - Update README for supported behavior, installation, ownership, or data-flow
   changes, and the relevant method/runbook for operational changes. Keep dated
   provenance in `references/lineage.md` distinct from current instructions.

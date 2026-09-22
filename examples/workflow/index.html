@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>A request, made visible.</title>
+  <meta name="description" content="A synthetic Frontend Craft walkthrough: one note-editor request, the inline help it produced, and a working editor you can try.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#workspace">
+  <span data-lang="en">Skip to the working editor</span><span data-lang="zh" lang="zh-CN">跳到可编辑的编辑器</span>
+</a>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <p class="wordmark">
+      <svg class="mark" viewBox="0 0 40 40" width="26" height="26" aria-hidden="true" focusable="false">
+        <circle class="mark__ring" cx="20" cy="20" r="14.5"></circle>
+        <path class="mark__cross" d="M20 1.5V38.5M1.5 20H38.5"></path>
+        <path class="mark__accent" d="M20 20V1.5"></path>
+      </svg>
+      <span class="wordmark__text">
+        <span class="wordmark__name">Frontend Craft</span>
+        <span class="wordmark__sub">
+          <span data-lang="en">Worked example</span><span data-lang="zh" lang="zh-CN">工作示例</span>
+        </span>
+      </span>
+    </p>
+
+    <a class="gallery-link" href="../showcase/index.html"><span data-lang="en">Style gallery ↗</span><span data-lang="zh" lang="zh-CN">风格展示 ↗</span></a>
+    <button type="button" id="lang-toggle" class="langbtn" aria-label="切换到中文界面">
+      <span aria-hidden="true">EN</span><span class="langbtn__sep" aria-hidden="true">·</span><span aria-hidden="true">中文</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="brief">
+    <div class="brief__head">
+      <h1 class="brief__title">
+        <span data-lang="en">A request, made visible.</span>
+        <span data-lang="zh" lang="zh-CN">让一个请求被看见。</span>
+      </h1>
+      <p class="brief__lede" data-lang="en">
+        One synthetic note-editor request, the inline help it produced, and the
+        editor itself — runnable here. Manually authored as a Frontend Craft
+        walkthrough; not a recording of an automated run.
+      </p>
+      <p class="brief__lede" data-lang="zh" lang="zh-CN">
+        一个合成的笔记编辑器请求、它带来的行内帮助，以及这个编辑器本身 —— 就在这里运行。
+        这是人工编写的 Frontend Craft 走查示例，并非自动化执行的录像。
+      </p>
+    </div>
+
+    <ol class="steps" id="stepper" role="tablist" aria-label="Walkthrough steps">
+      <li role="presentation">
+        <button type="button" role="tab" id="tab-1" class="steps__tab" data-step="1"
+                aria-selected="true" aria-controls="step-1">
+          <span class="steps__num" aria-hidden="true">01</span>
+          <span class="steps__label">
+            <span class="steps__title" data-lang="en">The brief</span>
+            <span class="steps__title" data-lang="zh" lang="zh-CN">任务</span>
+            <span class="steps__sub" data-lang="en">what was requested</span>
+            <span class="steps__sub" data-lang="zh" lang="zh-CN">被提出的要求</span>
+          </span>
+        </button>
+      </li>
+      <li role="presentation">
+        <button type="button" role="tab" id="tab-2" class="steps__tab" data-step="2"
+                aria-selected="false" aria-controls="step-2">
+          <span class="steps__num" aria-hidden="true">02</span>
+          <span class="steps__label">
+            <span class="steps__title" data-lang="en">The change</span>
+            <span class="steps__title" data-lang="zh" lang="zh-CN">改动</span>
+            <span class="steps__sub" data-lang="en">before and after</span>
+            <span class="steps__sub" data-lang="zh" lang="zh-CN">改动前后</span>
+          </span>
+        </button>
+      </li>
+      <li role="presentation">
+        <button type="button" role="tab" id="tab-3" class="steps__tab" data-step="3"
+                aria-selected="false" aria-controls="step-3">
+          <span class="steps__num" aria-hidden="true">03</span>
+          <span class="steps__label">
+            <span class="steps__title" data-lang="en">Try it</span>
+            <span class="steps__title" data-lang="zh" lang="zh-CN">自己试</span>
+            <span class="steps__sub" data-lang="en">use the editor</span>
+            <span class="steps__sub" data-lang="zh" lang="zh-CN">使用编辑器</span>
+          </span>
+        </button>
+      </li>
+    </ol>
+
+    <div class="panels">
+
+      <section class="panel" id="step-1" role="tabpanel" aria-labelledby="tab-1"
+               tabindex="-1" data-step-panel="1">
+        <p class="panel__index">
+          <span data-lang="en">Step 01 / 03</span><span data-lang="zh" lang="zh-CN">第 01 / 03 步</span>
+        </p>
+        <h2 class="panel__title">
+          <span data-lang="en">The brief</span><span data-lang="zh" lang="zh-CN">任务</span>
+        </h2>
+        <p class="panel__body" data-lang="en">
+          A request names an object, a condition, and a boundary. Here the note
+          editor's toolbar is the object, narrow screens are the condition, and
+          the existing note text, controls and artwork are the boundary.
+        </p>
+        <p class="panel__body" data-lang="zh" lang="zh-CN">
+          一个请求会指明对象、条件与边界。这里对象是笔记编辑器的工具栏，条件是窄屏，
+          边界是已有的笔记正文、控件和插图。
+        </p>
+
+        <div class="request">
+          <p class="request__label">
+            <span data-lang="en">Synthetic request used for this example</span>
+            <span data-lang="zh" lang="zh-CN">本示例使用的合成请求</span>
+          </p>
+          <blockquote class="request__text" data-lang="en" lang="en">
+            “Make essential toolbar help visible on narrow screens. Preserve the
+            note text, controls and artwork.”
+          </blockquote>
+          <blockquote class="request__text" data-lang="zh" lang="zh-CN">让必要的工具栏帮助在窄屏上直接可见。保留笔记正文、控件与插图。</blockquote>
+        </div>
+
+        <dl class="facts">
+          <div class="facts__row">
+            <dt><span data-lang="en">Object</span><span data-lang="zh" lang="zh-CN">对象</span></dt>
+            <dd><span data-lang="en">The note editor's toolbar</span><span data-lang="zh" lang="zh-CN">笔记编辑器的工具栏</span></dd>
+          </div>
+          <div class="facts__row">
+            <dt><span data-lang="en">Condition</span><span data-lang="zh" lang="zh-CN">条件</span></dt>
+            <dd><span data-lang="en">Narrow screens, without depending on hover</span><span data-lang="zh" lang="zh-CN">窄屏，不依赖悬停</span></dd>
+          </div>
+          <div class="facts__row">
+            <dt><span data-lang="en">Boundary</span><span data-lang="zh" lang="zh-CN">边界</span></dt>
+            <dd><span data-lang="en">Note text, controls and artwork stay as they are</span><span data-lang="zh" lang="zh-CN">笔记正文、控件与插图保持原样</span></dd>
+          </div>
+          <div class="facts__row">
+            <dt><span data-lang="en">Done when</span><span data-lang="zh" lang="zh-CN">算作完成</span></dt>
+            <dd><span data-lang="en">The help sits beside the controls it explains</span><span data-lang="zh" lang="zh-CN">帮助就写在它所解释的控件旁边</span></dd>
+          </div>
+        </dl>
+
+        <p class="panel__note" data-lang="en">
+          Step 2 shows what the request changed. The working editor is already the
+          delivered one — start typing now, or use step 2 to compare.
+        </p>
+        <p class="panel__note" data-lang="zh" lang="zh-CN">
+          第 2 步展示这个请求改动了什么。可操作的编辑器已经是交付后的版本 ——
+          可以直接开始输入，或用第 2 步做对比。
+        </p>
+      </section>
+
+      <section class="panel" id="step-2" role="tabpanel" aria-labelledby="tab-2"
+               tabindex="-1" data-step-panel="2" hidden>
+        <p class="panel__index">
+          <span data-lang="en">Step 02 / 03</span><span data-lang="zh" lang="zh-CN">第 02 / 03 步</span>
+        </p>
+        <h2 class="panel__title">
+          <span data-lang="en">The change</span><span data-lang="zh" lang="zh-CN">改动</span>
+        </h2>
+        <p class="panel__body" data-lang="en">
+          Hover-only help failed the condition, so the change spells the essential
+          help out inside the toolbar row itself. The toolbar keeps the same three
+          actions; nothing was added to the note editor's feature set. The left
+          picture is a labelled illustration. The working editor shows the change; use its controls to try it.
+        </p>
+        <p class="panel__body" data-lang="zh" lang="zh-CN">
+          只靠悬停的帮助不满足条件，所以改动把必要的提示直接写进工具栏这一行。
+          工具栏仍然只有同样的三个操作，笔记编辑器的功能没有增加。
+          左侧是标注清楚的示意图，可操作的编辑器展示了这次改动，可以直接试用。
+        </p>
+
+        <div class="compare">
+          <figure class="compare__side compare__side--before">
+            <figcaption class="compare__caption">
+              <span class="tag tag--vermilion"><span data-lang="en">Before — illustration</span><span data-lang="zh" lang="zh-CN">改动前 —— 示意图</span></span>
+              <span class="compare__hint" data-lang="en">A drawing of the old state: help existed only on hover.</span>
+              <span class="compare__hint" data-lang="zh" lang="zh-CN">旧状态的示意图：帮助只在悬停时出现。</span>
+            </figcaption>
+            <div class="mockup" aria-hidden="true">
+              <p class="mockup__name"><span data-lang="en">Notebook</span><span data-lang="zh" lang="zh-CN">笔记本</span></p>
+              <p class="mockup__rows">
+                <span class="mockup__icon"><span data-lang="en">Save</span><span data-lang="zh" lang="zh-CN">保存</span></span>
+                <span class="mockup__icon"><span data-lang="en">Reopen</span><span data-lang="zh" lang="zh-CN">重新打开</span></span>
+                <span class="mockup__icon"><span data-lang="en">Discard</span><span data-lang="zh" lang="zh-CN">放弃</span></span>
+                <span class="mockup__caption"><span data-lang="en">Help was hidden behind hover.</span><span data-lang="zh" lang="zh-CN">帮助藏在悬停提示中。</span></span>
+              </p>
+            </div>
+          </figure>
+
+
+        </div>
+      </section>
+
+      <section class="panel" id="step-3" role="tabpanel" aria-labelledby="tab-3"
+               tabindex="-1" data-step-panel="3" hidden>
+        <p class="panel__index">
+          <span data-lang="en">Step 03 / 03</span><span data-lang="zh" lang="zh-CN">第 03 / 03 步</span>
+        </p>
+        <h2 class="panel__title">
+          <span data-lang="en">Try it</span><span data-lang="zh" lang="zh-CN">自己试</span>
+        </h2>
+        <p class="panel__body" data-lang="en">
+          This is the delivered editor. Help is written beside the three toolbar
+          actions, so it stays visible without hovering. Edit the note, then use
+          the toolbar's own Save, Reopen and Discard actions below.
+        </p>
+        <p class="panel__body" data-lang="zh" lang="zh-CN">
+          这就是交付出来的编辑器，帮助就写在工具栏的三个操作旁边，不需要悬停也能看见。
+          修改笔记后，使用下方工具栏自带的“保存 / 重新打开 / 放弃”操作。
+        </p>
+      </section>
+
+      <!-- The single working subject. Built once, never duplicated. -->
+      <div class="workspace" id="workspace" tabindex="-1">
+        <div class="livehost" id="host-1"></div>
+        <p class="a11y-status" id="status-live" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p data-lang="en">
+    Everything here is local and synthetic: no dependencies, external requests,
+    model calls, accounts, or bundled fonts. Your note is stored only in this
+    browser under the key <code>fc.workflow.demoNote.v1</code>.
+  </p>
+  <p data-lang="zh" lang="zh-CN">
+    本页全部为本地合成内容：没有依赖、外部请求、模型调用、账号或自带字体。
+    你的笔记只保存在这个浏览器里，键名为 <code>fc.workflow.demoNote.v1</code>。
+  </p>
+</footer>
+
+<!-- The editor is authored once and cloned into the visible slot,
+     so exactly one editable note exists in the page at any time. -->
+<template id="editor-template">
+  <article class="editor">
+    <div class="editor__bar" role="group" aria-label="Note actions">
+      <p class="editor__name">
+        <span data-lang="en">Notebook</span><span data-lang="zh" lang="zh-CN">笔记本</span>
+      </p>
+      <div class="editor__actions">
+        <button type="button" class="act act--primary" data-act="save">
+          <span data-lang="en">Save</span><span data-lang="zh" lang="zh-CN">保存</span>
+        </button>
+        <button type="button" class="act" data-act="reopen">
+          <span data-lang="en">Reopen</span><span data-lang="zh" lang="zh-CN">重新打开</span>
+        </button>
+        <button type="button" class="act" data-act="discard">
+          <span data-lang="en">Discard draft</span><span data-lang="zh" lang="zh-CN">放弃草稿</span>
+        </button>
+      </div>
+    </div>
+
+    <!--
+      The change under study: the meaning of each toolbar action is written in
+      a normal sentence next to it, instead of being hidden in a tooltip or an
+      aria-label. The coloured "?" is decorative; the sentence is the content.
+    -->
+    <ul class="help" aria-label="What the toolbar actions do">
+      <li class="help__item">
+        <span class="help__mark" aria-hidden="true">?</span>
+        <span class="help__text" data-lang="en">Save — store this note in this browser.</span>
+        <span class="help__text" data-lang="zh" lang="zh-CN">保存 —— 把这则笔记存到这个浏览器里。</span>
+      </li>
+      <li class="help__item">
+        <span class="help__mark" aria-hidden="true">?</span>
+        <span class="help__text" data-lang="en">Reopen — load the last stored copy back into the editor.</span>
+        <span class="help__text" data-lang="zh" lang="zh-CN">重新打开 —— 把最近保存的副本读回编辑器。</span>
+      </li>
+      <li class="help__item">
+        <span class="help__mark help__mark--muted" aria-hidden="true">?</span>
+        <span class="help__text" data-lang="en">Discard draft — return the editor to that stored copy; nothing is written or deleted.</span>
+        <span class="help__text" data-lang="zh" lang="zh-CN">放弃草稿 —— 让编辑器退回那份副本；不写入、也不删除任何内容。</span>
+      </li>
+    </ul>
+
+    <div class="editor__fields">
+      <label class="field" for="note-title">
+        <span class="field__label">
+          <span data-lang="en">Note title</span><span data-lang="zh" lang="zh-CN">笔记标题</span>
+        </span>
+        <input id="note-title" class="field__input" type="text" autocomplete="off"
+               spellcheck="false" data-field="title">
+      </label>
+
+      <label class="field" for="note-body">
+        <span class="field__label">
+          <span data-lang="en">Note body</span><span data-lang="zh" lang="zh-CN">笔记正文</span>
+        </span>
+        <textarea id="note-body" class="field__input field__input--body" rows="6"
+                  spellcheck="false" data-field="body"></textarea>
+      </label>
+
+      <p class="editor__state">
+        <span class="state__dot" aria-hidden="true"></span>
+        <span class="state__label" id="note-state">
+          <span data-lang="en">Example note — not saved yet</span>
+          <span data-lang="zh" lang="zh-CN">示例笔记 —— 尚未保存</span>
+        </span>
+        <span class="state__meta" id="note-count"></span>
+      </p>
+    </div>
+  </article>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
