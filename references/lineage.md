@@ -7,6 +7,11 @@ contrast and narrow mechanisms; it does not become automatic authority.
 Initial external-source review: 2026-08-30. Later method and source additions
 are dated individually below; historical pins have not silently been refreshed.
 
+Public licensing was added on 2026-09-22: the project-original functional skill
+uses SUL-1.0, while the explanatory documents named in
+[LICENSING.md](../LICENSING.md), including this lineage, use CC BY-NC-SA 4.0.
+This does not change the third-party rights or historical observations below.
+
 ## Faye/Cove field practice
 
 The local kernel comes from repeated frontend and PWA work across product,

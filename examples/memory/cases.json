@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "lumen-visible-help",
+      "title": "Visible help beside the editor",
+      "updated": "2026-09-22",
+      "scope": {"project": "lumen-notes", "surface": "editor"},
+      "status": "active",
+      "basis": "explicit-feedback",
+      "outcome": "rejected",
+      "statement": "In this fictional scenario, hover-only help was rejected because it was hard to find.",
+      "next_action": "Keep essential help beside the control, then check it in the actual narrow layout.",
+      "limits": "A synthetic example, not real feedback or a universal ban on tooltips.",
+      "evidence": ["Synthetic scenario authored for this public example; no external receipt."],
+      "keywords": ["help", "editor", "提示"]
+    },
+    {
+      "id": "orchard-visible-help",
+      "title": "Help within reach of a selected object",
+      "updated": "2026-09-22",
+      "scope": {"project": "orchard", "surface": "editor"},
+      "status": "active",
+      "basis": "hypothesis",
+      "outcome": "unknown",
+      "statement": "In another fictional editor, keeping help near the selection may reduce travel between the object and its controls.",
+      "next_action": "Try the relationship with real product content and inspect the render before adopting it.",
+      "limits": "An untested analogy from a different project; it cannot establish the current user's preferences.",
+      "evidence": ["Synthetic hypothesis authored for this public example; no observed result."],
+      "keywords": ["help", "editor", "proximity"]
+    }
+  ]
+}

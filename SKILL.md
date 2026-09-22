@@ -1,5 +1,6 @@
 ---
 name: frontend-craft
+license: "SUL-1.0 for the functional skill; see LICENSING.md for documentation and third-party boundaries."
 description: "Design, build, evolve, repair, or review frontend interfaces and code-rendered visual works. Use for apps, pages, components, interaction and visual direction, reference-to-product implementation, state/persistence defects, feedback-driven revision, or rendered QA. Ground making in content and purpose; preserve accepted qualities through product change. For documents, decks, or raster-image creation, use the relevant artifact skill. ImageGen is opt-in."
 ---
 

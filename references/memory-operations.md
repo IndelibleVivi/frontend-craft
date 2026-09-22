@@ -1,5 +1,9 @@
 # Memory operations
 
+For a runnable, entirely synthetic first example, see the
+[offline walkthrough](../examples/README.md). Its public fixture demonstrates
+scope, transfer, and honest no-match results; keep real records outside the repo.
+
 Use when reading, recording, revising, or retiring Frontend Craft design
 records, or when querying reusable experience cases. This is a small file-based
 method; it is not an automatic memory service. Missing records are never a
