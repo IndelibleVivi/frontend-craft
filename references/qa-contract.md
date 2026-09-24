@@ -151,7 +151,10 @@ the visual result, update its current case status; retain technical evidence
 without continuing to present the artifact as an aesthetic success.
 
 After feedback-driven edits, recheck the original defect and the accepted
-qualities exposed to regression. Compare with equivalent content, dimensions,
+qualities exposed to regression. Use the coverage found through
+[critique and revision](critique-revision.md#choose-coverage-and-depth-separately):
+check representative consumers of the changed treatment and any semantic
+exception it could accidentally erase. Compare with equivalent content, dimensions,
 fonts, state, and environment; align procedural inputs and meaningful animation
 phases where possible. A pixel diff detects change, not aesthetic merit.
 

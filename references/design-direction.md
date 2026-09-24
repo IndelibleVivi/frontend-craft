@@ -146,6 +146,14 @@ changing the mechanisms needed to reach it.
 
 ## Make the first presentation earn its place
 
+Choose the positive quality worth making, including when no reference or taste
+history exists. Beauty, delight, atmosphere, and expressive character can be
+the requested outcome in their own right. An orderly layout with no obvious
+defects may still lack that quality. Ask what holds the composition together
+and what makes it specific to this content; develop that relationship rather
+than adding a generic signature flourish. Routine settings, editing, search,
+and populated return states deserve the same care as a landing page.
+
 Before showing it, inspect the decisive quality in the render, with actual
 content and the intended viewing scale. Check the dominant hierarchy and the
 first meaningful action. Resolve obvious in-scope visual and functional defects
@@ -161,8 +169,12 @@ control states in context. Describe the quality as a supported agent judgment
 until the owner evaluates it; do not turn a technically successful sample into
 a taste reference for future work without that evidence.
 
-Keep iteration economical: identify the current defect, make a coherent change,
-observe it, then stop if the brief is satisfied. Label any remaining limitation.
+Keep iteration economical: identify the weakest consequential relationship,
+choose a move capable of changing it, and inspect whether the intended effect
+actually improved. If a stronger dose of the same styling cannot help, reopen
+the composition or means of expression internally before presenting another
+near-identical version. Stop when the brief is satisfied; iteration count is
+not evidence of quality. Label any remaining limitation.
 Do not hide incomplete work behind a conservative design, a proposal label, a
 large settings panel, or reduced scope. When a prototype was the requested
 deliverable, state what it demonstrates and what is not integrated.

@@ -39,6 +39,24 @@ repetition warrants them, but do not create a theme engine for every style the
 skill might encounter. Two separate products can be beautifully different
 without either supporting the other's visual system.
 
+## Choose controls and graphic means
+
+Choose the means of expression from the job before tuning the existing widget.
+If a few meaningful choices need comparison, visible semantic options may serve
+better than a collapsed menu; if a long option set needs compact selection, the
+menu may be right. [App interaction](app-interaction.md) owns that control decision.
+Likewise, a typographic composition, an authored SVG, a real image crop, or a
+procedural field can establish different subjects and rhythms. Use the product's
+available visual language and the actual content to choose; the user need not
+name a drawing technique before the agent can use it.
+
+A graphic earns its place through the relationship it creates: orienting a
+section, expressing character, connecting related content, or providing a focal
+subject. Adding an illustration beside an unchanged weak form may leave the
+complaint intact. Recompose the graphic, text, controls, and responsive behavior
+together where needed. Code-native graphics stay within the task's scope;
+[ImageGen remains opt-in](../SKILL.md#image-policy-opt-in-never-prerequisite).
+
 ## Make information-bearing graphics truthful
 
 Decide whether a mark conveys data, operation, identity, or decoration.

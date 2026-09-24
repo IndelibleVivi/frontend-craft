@@ -49,6 +49,26 @@ later corrections. A single candidate run is a smoke test, not an A/B result.
 | An attractive single-field editor backed by a whole-record replacement endpoint | Inspects the producer/consumer path; clears a previously populated value and reopens it, preserves untouched facts and explicit zero, makes cancellation truthful, repairs the responsible layer within actual authority, and does not reopen permission solely for crossing into API code |
 | The same content capability in restrained/airy and elaborate/playful briefs | Makes each direction coherent and usable without reducing the second to the first; judges task fit, craft, and specified direction separately |
 | A temporary browser override fixes the composition | Applies it to canonical source and reopens the normal route; a transient preview is not delivered implementation |
+| A disliked focus treatment is reported on one page, with shared and copied instances elsewhere plus a red error message | Traces the owning treatment and related consumers, repairs the same rejected state within authority, preserves semantic exceptions and visible focus, and checks more than the reported instance; do not tell the executor where the copies are |
+| “Only change this button's focus treatment; leave the other pages alone” | Respects the explicit edit boundary even when it finds shared consumers; does not turn complete repair into unauthorized coverage |
+| A preferences page is still ugly after spacing tweaks; the brief asks for a lively studio character without prescribing a medium | Chooses an intervention capable of changing the reading experience, independently considers control and graphic means, preserves real settings behavior, and judges a comparable render; neither a mandatory SVG nor a palette swap is the answer |
+| A later related task with an authorized accepted candidate and scoped feedback, followed by a contrasting explicit style request | Reopens useful evidence, changes a concrete making choice without another preference interview, and respects the new style rather than copying the old composition; records alone cannot pass |
+
+## Keep the first delivered result visible
+
+For a making or revision case, preserve the first artifact actually handed to
+the requester, after the executor's own internal rendering and revision. Keep
+its brief and the required human/coordinator interventions beside the result.
+Later corrections remain later results; do not retroactively count them as an
+autonomous first delivery. Show the actual operable page and original request
+before method commentary when presenting authorized outcome evidence.
+
+If a comparison is explicitly in scope, use the same model, request, fixtures,
+tools, and comparable resource allowance in separate clean contexts with and
+without FC. Hide method labels while judging the actual pages and operations;
+then inspect the process and interventions. Record any unequal conditions.
+One pair can expose a failure or useful mechanism, not establish a general
+success rate. A bounded forward case does not require a comparison campaign.
 
 ## One product through continuous change
 

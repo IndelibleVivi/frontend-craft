@@ -107,6 +107,13 @@ Keep evidence private as required; a pointer is often enough. An inaccessible
 artifact does not become verified merely because a note links to it. Do not
 invent an exact quote from a summary.
 
+For visual feedback, keep the actual candidate recoverable through authorized
+screenshots, source versions, or a reopenable state, and attach feedback to that
+version and scope. “B works” must not survive only as “prefers clean design”.
+[Build](build.md) owns carrying the selected artifact into implementation;
+the record points to it rather than duplicating it or assuming a mutable URL
+still shows the accepted version.
+
 One clear “don't do this again” is enough to respect the stated boundary now.
 Do not require repeated objections. Broader interpretations remain tentative.
 Praise deserves the same attention as failure: retain the successful artifact
@@ -193,6 +200,15 @@ experience could alter the work. Inspect only the relevant candidates and
 retain their status. A useful trace is case → applicable mechanism → concrete
 design decision → rendered observation. This can stay in the existing private
 task record; do not make a new report or impose a search on every small edit.
+
+Close this loop during ordinary work within existing authorization: the user
+should not need to say “remember this”, tag cases, or remind the agent to look
+them up. On reuse, reopen the relevant artifact when available and check whether
+the new choice carries the useful relationship under the new constraints.
+Retrieval alone is not evidence of better output. A remembered mechanism should
+expand the agent's repertoire; do not turn one accepted composition into a
+template for every future product or ask a preference questionnaire to justify
+using evidence already available. Current direction still wins.
 
 At task start, take the smallest relevant set by problem shape: object/control
 clarity, publication scale, text rhythm, spatial manipulation, or revision

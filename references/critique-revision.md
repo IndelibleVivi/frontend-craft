@@ -79,6 +79,36 @@ composition” is an agent diagnosis to test. Do not store every craft failure
 as a personal dislike, infer that the owner is unusually demanding, or require
 the owner to supply a design lesson before making an informed correction.
 
+## Choose coverage and depth separately
+
+Trace the reported treatment to its owning component, selector, token, or
+duplicated implementation. Inspect the related consumers in this product before
+choosing where to fix it. When they express the same rejected decision in the
+same role/state, correct those instances within the task's authority; do not
+wait for the user to find each one. An explicit “only this control/page” limits
+the edit. Follow the source relationship, not a whole-site audit or a search
+and replace of every matching color.
+
+Distinguish semantic exceptions: focus, selection, error, destructive action,
+and brand decoration are not interchangeable. A common design decision may
+need different treatments for a text field, link, and checkbox. Change the
+canonical shared owner where appropriate, remove superseded local overrides,
+and inspect the reported instance plus representative affected consumers.
+
+Independently choose how deeply the experience needs to change:
+
+| Evidence | Appropriate intervention |
+| --- | --- |
+| The same defective focus treatment appears on several routes | Repair that state across its relevant consumers; preserve each route's composition |
+| One settings page still reads as an undifferentiated administrative form | Recompose that page's grouping, control choice, reading order, and graphic relationships; other routes may need no redesign |
+| One named spacing or label adjustment with the rest accepted | Make and verify that adjustment directly |
+
+Before committing to a move, ask whether doing it perfectly could resolve the
+complaint. A perfectly aligned menu arrow cannot change a rejected form-like
+reading experience. Use [visual construction](visual-construction.md) to choose
+a more capable move when the current one cannot reach the goal. This is a
+causal decision, not a fixed number of rejections before a redesign.
+
 ## Protect accepted qualities
 
 Identify accepted qualities at the level the user accepted: the composition,
@@ -108,7 +138,8 @@ For procedural work, reuse the input/seed when available; for motion, compare
 the meaningful phase as well as the sequence. Pixel differences show change,
 not improvement. Explain the result in terms of the defect, not just the edit.
 
-After correction, revisit the reported region and the nearest likely regression:
+After correction, revisit the reported region, the related instances identified
+above, and the nearest likely regression:
 the main task, accepted composition, adjacent responsive state, focus return,
 or export as applicable. Record an unresolved cause honestly. Do not claim
 human comprehension from your own successful click sequence.

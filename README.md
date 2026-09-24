@@ -14,9 +14,9 @@ components, flows, and the visual works a product produces — including anyone
 who wants a design-aware change without a full redesign. It is not a template
 generator and does not need generated concept art to begin.
 
-The aim is a useful first result and revisions that fix the cause instead of
-losing already-accepted work. Those are design goals, not measured improvement
-claims.
+The aim is a visually compelling, usable first result, revisions that fix the
+cause without losing accepted work, and less repeated correction as relevant
+experience accumulates. Those are design goals, not measured improvement claims.
 
 The English edition is canonical. The [Chinese edition](README.zh-CN.md)
 maintains the same capabilities, commands, boundaries, and rights in Chinese.
@@ -34,7 +34,8 @@ maintains the same capabilities, commands, boundaries, and rights in Chinese.
   requests, stored facts, and reopened views to its real owner.
 - **Revise from feedback.** Diagnose the cause of “this works but feels
   confusing”, “too empty”, or “fix the spacing, keep the artwork”, and preserve
-  what was already accepted.
+  what was already accepted. Trace related instances of a rejected treatment
+  and choose separately how widely to repair and how deeply to recompose.
 - **Review only.** Inspect source and rendered behavior and report located
   findings without editing anything.
 

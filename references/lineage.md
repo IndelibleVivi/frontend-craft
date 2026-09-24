@@ -43,6 +43,22 @@ graphic language, palette, and interface/work locale while respecting the
 product's existing semantic and layout owners. This is an observed local lesson,
 not evidence of effectiveness across future tasks or a universal aesthetic.
 
+### Revision coverage and making initiative — 2026-09-25
+
+A supplied field discussion distinguished the reach of a repair from the depth
+of its intervention. The portable method traces related consumers of the same
+rejected treatment while retaining explicit local scope and semantic exceptions.
+It also tests whether the chosen making move can change the rejected experience,
+including reconsidering control and graphic means without waiting for the user
+to prescribe a medium. Existing first-presentation and learning methods now
+connect positive visual quality and recoverable candidate evidence to those
+decisions. No personal style, project history, or raw discussion is published.
+
+The forward-case menu adds these discriminating situations and separates the
+first delivered artifact from later coached corrections. This is method source
+and a validation design, not evidence of improved aesthetic quality or reduced
+human intervention across tasks.
+
 ## Method-family revision — 2026-09-20–21
 
 The local revision adds explicit methods for content-grounded direction,

@@ -11,8 +11,9 @@ owns it, and verify the result in the runtime a person will use.
 
 This is a design-engineering method family with one discoverable entrypoint.
 Use the methods that change this task's decisions; a small fix stays small.
-The aim is a stronger first usable result and revisions that resolve the cause
-without losing accepted work. These are goals, not measured success claims.
+The aim is a visually compelling, usable first result and revisions that resolve
+the cause without losing accepted work. Relevant experience should reduce what
+the user needs to repeat. These are goals, not measured success claims.
 FC owns the touched experience from intent and information through operation,
 feedback, and visual execution. It follows an evidenced cause across code
 layers while inheriting the caller's engineering and permission boundaries.
@@ -114,8 +115,12 @@ Choose the mode from evidence before changing code.
 
 The accepted product/design contract governs what to preserve and change.
 Inspect the affected route, components, data/state path, styles, and rendered
-failure. Make the smallest coherent change that completes the requested
-behavior; do not smuggle in a redesign. Current code is implementation evidence,
+failure. For a rejected treatment or unresolved visual complaint, use
+[critique and revision](references/critique-revision.md) to choose coverage and
+intervention depth separately: a reported location is a starting point, while
+an explicit “only here” remains a boundary. Make the
+smallest coherent change that resolves the actual complaint; a broad visual
+rejection can require recomposition. Current code is implementation evidence,
 including evidence of defects. Use [Evolve](references/evolve.md) when the
 request changes journeys or the product system rather than one local detail.
 
