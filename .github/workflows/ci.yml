@@ -22,5 +22,7 @@ jobs:
           python-version: '3.13'
       - name: Test helpers and public example
         run: python3 -m unittest discover -s tests -p 'test*.py'
+      - name: Test the workflow demo's storage behavior
+        run: node tests/test_workflow_app.js
       - name: Check patch whitespace
         run: git show --format= --check HEAD

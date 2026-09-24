@@ -127,8 +127,9 @@ Then open the [style gallery](http://127.0.0.1:4182/examples/showcase/) or the
 [note workflow](http://127.0.0.1:4182/examples/workflow/) in your browser.
 The demos have no
 dependencies, model calls, accounts, or external requests. Saved notes stay in
-this browser; when persistent storage is unavailable, it explicitly reports
-session-only storage. The illustrated “before” and the working editor are
+this browser; a refused write retains an explicitly page-only copy. Read
+failures preserve the draft and recovery copy, and later actions retry storage.
+The illustrated “before” and the working editor are
 manually authored examples, not a recorded autonomous FC run or a quality
 benchmark. See the [walkthrough and storage details](examples/workflow/README.md).
 
@@ -235,11 +236,14 @@ Update both README editions when the shared contract changes.
 
 ```bash
 python3 -m unittest discover -s tests -p 'test*.py'
+node tests/test_workflow_app.js
 ```
 
-This runs the offline helper and public-example tests. The
-[CI workflow](.github/workflows/ci.yml) runs the same suite on Python 3.13 with
-read-only contents permission and no secrets or live Cloudflare calls; its
+These run the offline helper/public-memory-example tests and the workflow
+demo's actual JavaScript with DOM/storage doubles. The latter requires Node.js
+and does not render a browser. The [CI workflow](.github/workflows/ci.yml) runs
+the Python suite on Python 3.13 and the workflow checks on the runner's Node.js,
+with read-only contents permission and no secrets or live Cloudflare calls; its
 result does not establish skill activation, rendered design quality, or live
 service readiness. For skill or package changes, run `skill-validate .` when
 available, then check reference links and `git diff --check` for changed

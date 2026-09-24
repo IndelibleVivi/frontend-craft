@@ -51,6 +51,9 @@ separate layers, not alternative source owners.
   editing/save/reopen/discard, shop selection/totals, article navigation, or
   line-field controls and reduced motion. Check language switching, keyboard
   focus, and wide/narrow layouts for the changed demo.
+- For workflow storage/state changes, also run `node tests/test_workflow_app.js`.
+  It executes the real app with DOM/storage doubles; it does not establish
+  browser rendering or accessibility behavior.
 - For diagram changes, inspect both languages at full and intended embed
   sizes; keep live text, accessible descriptions, and source-backed
   relationships. Pixel banners use authored glyph paths with text equivalents.
@@ -64,8 +67,9 @@ separate layers, not alternative source owners.
 - `LICENSING.md` owns the path-level rights map. Functional instructions and
   helpers use SUL-1.0; the listed explanatory documents use CC BY-NC-SA 4.0.
   Classify new surfaces by role and preserve third-party terms and provenance.
-- `.github/workflows/ci.yml` runs the offline helper and public-example tests
-  on Python 3.13, without secrets or live Cloudflare calls. Its result does not
+- `.github/workflows/ci.yml` runs the offline helper and memory-example tests
+  on Python 3.13 and workflow behavior checks on the runner's Node.js, without
+  secrets or live Cloudflare calls. Its result does not
   establish skill activation, rendered design quality, or live service readiness.
 - Report source, published commit, installation, actual execution, and owner
   acceptance separately. Package validity and test counts do not prove design

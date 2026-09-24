@@ -79,7 +79,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 python3 -m http.server 4182 --bind 127.0.0.1
 ```
 
-然后在浏览器打开[风格展示](http://127.0.0.1:4182/examples/showcase/)或[笔记工作流](http://127.0.0.1:4182/examples/workflow/)。示例无需依赖、模型调用或账号，不发起外部请求。保存的笔记留在当前浏览器；如果持久存储不可用，会明确显示仅在本次会话保存。示意的“改动前”和可操作的编辑器均为人工编写的示例，不是 FC 自主执行的录像，也不是质量评测。见[演示说明与存储细节](examples/workflow/README.md)。
+然后在浏览器打开[风格展示](http://127.0.0.1:4182/examples/showcase/)或[笔记工作流](http://127.0.0.1:4182/examples/workflow/)。示例无需依赖、模型调用或账号，不发起外部请求。保存的笔记留在当前浏览器；写入被拒绝时会保留明确标注的页面内副本。读取失败会保留草稿与恢复副本，后续操作仍会重试存储。示意的“改动前”和可操作的编辑器均为人工编写的示例，不是 FC 自主执行的录像，也不是质量评测。见[演示说明与存储细节](examples/workflow/README.md)。
 
 ## 方法导航
 
@@ -128,9 +128,10 @@ python3 scripts/fc_memory.py query --root "<authorized-root>" \
 
 ```bash
 python3 -m unittest discover -s tests -p 'test*.py'
+node tests/test_workflow_app.js
 ```
 
-它运行离线助手与公开示例测试。[CI 工作流](.github/workflows/ci.yml) 以只读的 contents 权限在 Python 3.13 上运行同一套测试，不使用密钥或实时 Cloudflare 调用；其结果不证明技能激活、渲染设计品质或线上服务就绪。技能或包的改动请在可用时运行 `skill-validate .`，然后检查引用链接与 `git diff --check`。
+这两条命令分别运行离线助手／公开记忆示例测试，以及用 DOM 和存储替身驱动真实 JavaScript 的 workflow 检查。后者需要 Node.js，不渲染浏览器。[CI 工作流](.github/workflows/ci.yml) 使用 Python 3.13 和 runner 已有的 Node.js 运行这些检查，contents 权限只读，不使用密钥或实时 Cloudflare 调用；其结果不证明技能激活、渲染设计品质或线上服务就绪。技能或包的改动请在可用时运行 `skill-validate .`，然后检查引用链接与 `git diff --check`。
 
 ## 源、归属与权利
 

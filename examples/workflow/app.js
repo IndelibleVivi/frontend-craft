@@ -40,43 +40,48 @@
   var editor = null;       /* the single live .editor element */
   var refs = null;         /* its inner elements */
 
-  var storage = probeStorage();
+  var stor = openStore();
 
-  /* `saved`  — last copy written to this browser, or null when none exists.
+  /* `saved`  — last confirmed copy, including a page-only save after refusal.
+     `known`  — current storage evidence, or "session" for a page-only save.
      `draft`  — what the editor currently shows.
-     `baseline` — where Discard sends the editor: the stored copy when one
-                  exists, otherwise the example note. */
-  var saved = storage.available ? readRecord() : null;
+     `baseline` — where Discard sends the editor: the last confirmed copy when
+                  one exists, otherwise the example note. */
+  var startup = stor.read();
+  var saved = startup.record;
+  var known = startup.status;
   var baseline = saved ? copyOf(saved) : copyOf(EXAMPLE);
   var draft = copyOf(baseline);
 
   /* == Storage ============================================================
-     localStorage can be unavailable (some file:// policies, private windows)
-     or refuse a write (quota). Both cases degrade to an honest in-memory
-     session instead of a false "saved" claim. */
+     Each attempt reaches real storage. A failure is not evidence of absence
+     and does not permanently disable a later read or write. */
 
-  function probeStorage() {
-    try {
-      window.localStorage.getItem(KEY);
-    } catch (err) {
-      return { available: false, read: function () { return null; },
-               write: function () { return false; } };
-    }
+  function openStore() {
     return {
-      available: true,
       read: function () {
-        try { return window.localStorage.getItem(KEY); } catch (err) { return null; }
+        var raw;
+        try {
+          raw = window.localStorage.getItem(KEY);
+        } catch (err) {
+          return { status: "unknown", record: null };
+        }
+        if (raw === null) {
+          return { status: "absent", record: null };
+        }
+        var parsed = parseRecord(raw);
+        if (!parsed) return { status: "unreadable", record: null };
+        return { status: "stored", record: parsed };
       },
       write: function (text) {
-        try { window.localStorage.setItem(KEY, text); return true; }
-        catch (err) { return false; }
+        try { window.localStorage.setItem(KEY, text); return "ok"; }
+        catch (err) { return "blocked"; }
       }
     };
   }
 
-  function readRecord() {
-    var raw = storage.read();
-    if (!raw) return null;
+  /* An unusable stored value differs from a failed storage read. */
+  function parseRecord(raw) {
     try {
       var parsed = JSON.parse(raw);
       if (!parsed || typeof parsed.title !== "string" || typeof parsed.body !== "string") {
@@ -158,16 +163,32 @@
     refs.body.value = note.body;
   }
 
-  /* The status line is derived by comparison every time, never asserted. */
+  /* Storage evidence takes precedence over matching a cached copy. */
   function updateState() {
     var state, label, meta = "";
+    var current = !!saved && sameNote(draft, saved);
 
-    if (!storage.available) {
+    if (known === "unknown") {
+      state = "unknown";
+      label = current
+        ? t("Couldn't read this browser's storage — showing the last confirmed copy",
+            "无法读取本浏览器存储 —— 当前显示最近确认的副本")
+        : t("Couldn't read this browser's storage — your draft is held on this page",
+            "无法读取本浏览器存储 —— 草稿保留在当前页面");
+    } else if (known === "unreadable") {
+      state = "unreadable";
+      label = t("The saved note could not be read — try Save to replace it",
+                "已保存的笔记无法读取 —— 可用“保存”替换它");
+    } else if (known === "session") {
       state = "session";
-      label = saved && sameNote(draft, saved)
+      label = current
         ? t("Saved for this page only — reload will lose it", "仅保存到当前页面 —— 刷新后会丢失")
         : t("Unsaved draft — browser storage unavailable", "未保存的草稿 —— 浏览器存储不可用");
-    } else if (saved && sameNote(draft, saved)) {
+    } else if (known === "absent" && saved) {
+      state = "draft";
+      label = t("No note in browser storage — local copy retained",
+                "浏览器中没有笔记 —— 本地副本仍保留在当前页面");
+    } else if (current) {
       state = "saved";
       label = t("Saved in this browser", "已保存在本浏览器");
       if (saved.at) meta = timeText(saved.at);
@@ -188,7 +209,7 @@
 
   function updateCount() {
     var total = refs.title.value.length + refs.body.value.length;
-    var stamp = storage.available && saved && sameNote(draft, saved) && saved.at
+    var stamp = known === "stored" && saved && sameNote(draft, saved) && saved.at
       ? timeText(saved.at) + " · " : "";
     refs.stateMeta.textContent = stamp + t(total + " characters", total + " 个字符");
   }
@@ -204,8 +225,9 @@
      note is kept as an in-memory session copy so the work is not lost, and
      the interface says exactly that. */
 
-  function commit(note, at) {
+  function commit(note, at, status) {
     saved = { title: note.title, body: note.body, at: at };
+    known = status;
     baseline = copyOf(note);
     draft = copyOf(note);
   }
@@ -213,27 +235,18 @@
   function saveNote() {
     var note = currentDraft();
     var at = new Date().toISOString();
+    var payload = JSON.stringify({ title: note.title, body: note.body, at: at });
 
-    if (!storage.available) {
-      commit(note, at);
-      updateState();
-      updateCount();
-      announce(t("Saved for this session only. It will be lost when the page reloads.",
-                 "仅保存到本次会话，刷新页面后会丢失。"));
-      return;
-    }
-
-    if (storage.write(JSON.stringify({ title: note.title, body: note.body, at: at }))) {
-      commit(note, at);
+    if (stor.write(payload) === "ok") {
+      commit(note, at, "stored");
       updateState();
       updateCount();
       announce(t("Note saved in this browser.", "笔记已保存在本浏览器。"));
       return;
     }
 
-    /* Refused write: keep the work in memory and disclose the limit. */
-    commit(note, at);
-    storage.available = false;
+    /* Keep an explicit page-only copy without disabling later storage calls. */
+    commit(note, at, "session");
     updateState();
     updateCount();
     announce(t("This browser refused to save. The note is kept for this session only.",
@@ -241,23 +254,47 @@
   }
 
   function reopenNote() {
-    /* Read persistence again when it is available, so another tab or a
-       previous visit is honoured rather than a stale in-memory cache. */
-    var source = storage.available ? readRecord() : saved;
+    var result = stor.read();
+    var source = result.status === "stored" ? result.record : null;
+    var sessionCopy = known === "session" && saved ? copyOf(saved) : null;
+
     if (!source) {
-      announce(t("No saved note exists yet. Save one first.",
-                 "还没有已保存的笔记，请先保存。"));
+      if (sessionCopy) {
+        /* Quota can reject writes while reads still succeed with no usable
+           record. Reopen the page-held copy without claiming persistence. */
+        draft = copyOf(sessionCopy);
+        writeDraft(draft);
+        announce(t("Reopened the copy kept for this session.",
+                   "已重新打开本次会话保留的副本。"));
+      } else if (result.status === "absent") {
+        known = "absent";
+        announce(saved
+          ? t("No note is currently stored in this browser. Your draft and local copy are unchanged.",
+              "本浏览器当前没有已保存的笔记。草稿和页面内副本均保持不变。")
+          : t("No saved note exists yet. Save one first.",
+              "还没有已保存的笔记，请先保存。"));
+      } else if (result.status === "unreadable") {
+        known = "unreadable";
+        announce(t("The saved note couldn't be read. Your note is unchanged; Save will replace that copy.",
+                   "已保存的笔记无法读取。笔记保持不变；点击“保存”会替换那份副本。"));
+      } else {
+        known = "unknown";
+        announce(t("Couldn't read this browser's storage. Your note and the last confirmed copy are unchanged; try Reopen again.",
+                   "无法读取本浏览器存储。笔记与最近确认的副本都保持不变，可再试一次“重新打开”。"));
+      }
+      updateState();
+      updateCount();
       return;
     }
+
     saved = source;
+    known = "stored";
     baseline = copyOf(source);
     draft = copyOf(source);
     writeDraft(draft);
     updateState();
     updateCount();
-    announce(storage.available
-      ? t("Reopened the saved note.", "已重新打开保存的笔记。")
-      : t("Reopened the copy kept for this session.", "已重新打开本次会话保留的副本。"));
+    announce(t("Reopened the saved note.", "已重新打开保存的笔记。"));
   }
 
   function discardDraft() {
