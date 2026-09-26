@@ -7,6 +7,11 @@ For a visual, hands-on product example, open the
 [note-editor workflow](workflow/README.md). The walkthrough below
 focuses on the optional record helper.
 
+For a focused making reference, try the
+[choice-and-result study](showcase/README.md#making-study-choice-and-result):
+an operable mechanism with content stress cases, source, and applicability
+limits, rather than a style to copy wholesale.
+
 The core Frontend Craft skill works without a record store. This example lets
 you inspect its optional Python helper using two entirely fictional cases.
 It demonstrates retrieval boundaries, not frontend quality or real feedback.

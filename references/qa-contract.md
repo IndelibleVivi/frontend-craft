@@ -258,13 +258,8 @@ rulebook for unrelated CSS or content work.
 ## Evidence and handoff
 
 Store temporary screenshots, traces, and scripts outside the repo unless the
-user asked for committed artifacts. Before handoff, state:
-
-- target flow, runtime, and viewport(s);
-- checks run and their fresh results;
-- interaction and visible-state evidence;
-- remaining untested flows or intentional deviations;
-- whether the claim is source-complete, build-verified, browser-verified,
-  deployed/activated, or owner/device accepted.
-
-Never collapse those claim levels into a single "done".
+user asked for committed artifacts. Report the changed experience, fresh checks,
+and material gaps. Include the target flow, runtime, viewport, or interaction
+evidence needed to assess those claims; a small fix does not need a full report
+template. Keep source, build, browser, activation, and owner/device acceptance
+distinct wherever they matter. Do not let "done" imply an unverified layer.

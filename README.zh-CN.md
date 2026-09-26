@@ -23,7 +23,7 @@ Frontend Craft（FC）是 Faye & Cove 为前端界面与代码渲染视觉作品
 
 方法只在影响当前任务时加载，因此一个清晰的小修复就保持为小修复。
 
-ImageGen 是可选路径：仅在明确要求生成图像，或明确批准生成某个确实需要的 raster 素材后使用。
+依据内容与体验选择排版、代码原生图形、摄影或其他媒介；代码绘制无需等到素材搜索失败才使用。明确参考与必需品牌素材继续约束对应范围。ImageGen 是可选路径：仅在明确要求生成图像，或明确批准生成某个确实需要的 raster 素材后使用。
 
 ## 安装
 
@@ -65,6 +65,8 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 
 先看[可交互的风格展示](examples/showcase/README.md)：像素冰淇淋店、阅读刊物，以及生成式视觉工作台。每个场景都有不同的构图与真正可用的控件。[像素 banner 合集](docs/visuals/README.md)展示的是仓库自己的冰淇淋配色，不要求其他产品也采用同一风格。
 
+遇到具体制作问题时，可以打开[选项与结果研究](examples/showcase/README.md#making-study-choice-and-result)：尝试可见选项与即时结果的关系，再改变文案长度和选项数量。源码与反例说明何时适合借用这项机制；它不是用户已接受的风格，也不是质量基准。
+
 | Soft Scoop · 像素小店 | Offscreen · 阅读小刊 | Chromatic Field · 程序艺术 |
 | --- | --- | --- |
 | [![可选择口味与数量的像素冰淇淋店](docs/visuals/showcase-scoop.zh-CN.png)](examples/showcase/README.md) | [![可切换完整原创随笔的阅读小刊](docs/visuals/showcase-offscreen.zh-CN.png)](examples/showcase/README.md) | [![可调密度、变化与动态的程序线场](docs/visuals/showcase-field.zh-CN.png)](examples/showcase/README.md) |
@@ -79,7 +81,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 python3 -m http.server 4182 --bind 127.0.0.1
 ```
 
-然后在浏览器打开[风格展示](http://127.0.0.1:4182/examples/showcase/)或[笔记工作流](http://127.0.0.1:4182/examples/workflow/)。示例无需依赖、模型调用或账号，不发起外部请求。保存的笔记留在当前浏览器；写入被拒绝时会保留明确标注的页面内副本。读取失败会保留草稿与恢复副本，后续操作仍会重试存储。示意的“改动前”和可操作的编辑器均为人工编写的示例，不是 FC 自主执行的录像，也不是质量评测。见[演示说明与存储细节](examples/workflow/README.md)。
+然后在浏览器打开[风格展示](http://127.0.0.1:4182/examples/showcase/)或[笔记工作流](http://127.0.0.1:4182/examples/workflow/)。示例无需依赖、模型调用或账号，不发起外部请求。保存的笔记留在当前浏览器；写入被拒绝时会保留明确标注的页面内副本，重新打开另一份浏览器笔记后仍可通过恢复操作取回它。读取失败会保留草稿与恢复副本，后续操作仍会重试存储。示意的“改动前”和可操作的编辑器均为人工编写的示例，不是 FC 自主执行的录像，也不是质量评测。见[演示说明与存储细节](examples/workflow/README.md)。
 
 ## 方法导航
 

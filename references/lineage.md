@@ -59,6 +59,17 @@ first delivered artifact from later coached corrections. This is method source
 and a validation design, not evidence of improved aesthetic quality or reduced
 human intervention across tasks.
 
+### Media choice and useful handoffs — 2026-09-26
+
+Review of the current entrypoint found an ordering ambiguity: code-native
+visuals shared a ranked list with asset sources. The revised policy separates
+choosing an expressive medium from obtaining any assets it needs, while
+preserving explicit references and ImageGen opt-in. The entrypoint and QA
+handoff now keep evidence layers distinct without requiring every small change
+to enumerate irrelevant layers. These are bounded corrections to the method;
+they do not establish that the earlier wording caused a particular design
+failure or that shorter instructions improve output.
+
 ## Method-family revision — 2026-09-20–21
 
 The local revision adds explicit methods for content-grounded direction,

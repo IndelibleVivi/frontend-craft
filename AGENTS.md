@@ -54,6 +54,8 @@ separate layers, not alternative source owners.
 - For workflow storage/state changes, also run `node tests/test_workflow_app.js`.
   It executes the real app with DOM/storage doubles; it does not establish
   browser rendering or accessibility behavior.
+- For the choice-and-result study, check selection/result agreement, long
+  labels, expanded versus compact option sets, and state across language changes.
 - For diagram changes, inspect both languages at full and intended embed
   sizes; keep live text, accessible descriptions, and source-backed
   relationships. Pixel banners use authored glyph paths with text equivalents.

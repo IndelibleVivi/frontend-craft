@@ -57,6 +57,14 @@ complaint intact. Recompose the graphic, text, controls, and responsive behavior
 together where needed. Code-native graphics stay within the task's scope;
 [ImageGen remains opt-in](../SKILL.md#image-policy-opt-in-never-prerequisite).
 
+When a few options need comparison and their effects are hard to connect, open
+the [choice-and-result making study](../examples/showcase/README.md#making-study-choice-and-result).
+It isolates the visible-choice → immediate-result relationship from Soft Scoop
+and lets the reader change content length and option count. Inspect the working
+state at the intended width before borrowing the mechanism; the example's
+styling is not a prescription. Its source and counterexample belong with the
+study, rather than in a new general control rule.
+
 ## Make information-bearing graphics truthful
 
 Decide whether a mark conveys data, operation, identity, or decoration.

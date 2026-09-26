@@ -42,7 +42,10 @@ maintains the same capabilities, commands, boundaries, and rights in Chinese.
 Methods load only when they affect the current task, so a clear small fix stays
 a small fix.
 
-ImageGen is opt-in: use it only when generated imagery is explicitly requested
+Choose typography, code-native graphics, photography, or other media from the
+content and experience; drawing with code is not a fallback after asset search.
+Required references and brand assets retain their authority. ImageGen is
+opt-in: use it only when generated imagery is explicitly requested
 or a concrete required raster asset is explicitly approved.
 
 ## Install
@@ -107,6 +110,12 @@ has a different composition and real controls. The
 [pixel banner collection](docs/visuals/README.md) shows the repository's own
 ice-cream palette; it is not a style imposed on other products.
 
+For a specific making problem, open the
+[choice-and-result study](examples/showcase/README.md#making-study-choice-and-result).
+Try how visible options relate to their immediate result, then change content
+length and option count. The source and counterexample explain when to borrow
+that relationship; the study is not an owner-approved style or quality benchmark.
+
 | Soft Scoop · pixel shop | Offscreen · reading journal | Chromatic Field · procedural art |
 | --- | --- | --- |
 | [![Pixel ice cream with working flavor and quantity controls](docs/visuals/showcase-scoop.en.png)](examples/showcase/README.md) | [![Reading journal with original essays](docs/visuals/showcase-offscreen.en.png)](examples/showcase/README.md) | [![Procedural line field with density and motion controls](docs/visuals/showcase-field.en.png)](examples/showcase/README.md) |
@@ -127,7 +136,8 @@ Then open the [style gallery](http://127.0.0.1:4182/examples/showcase/) or the
 [note workflow](http://127.0.0.1:4182/examples/workflow/) in your browser.
 The demos have no
 dependencies, model calls, accounts, or external requests. Saved notes stay in
-this browser; a refused write retains an explicitly page-only copy. Read
+this browser; a refused write retains an explicitly page-only copy, with a
+restore action if reopening a different browser-saved note displaces it. Read
 failures preserve the draft and recovery copy, and later actions retry storage.
 The illustrated “before” and the working editor are
 manually authored examples, not a recorded autonomous FC run or a quality

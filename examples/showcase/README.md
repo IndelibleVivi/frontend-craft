@@ -49,6 +49,47 @@ in-memory state, and the procedural line field). A syntax check is:
 node --check examples/showcase/app.js
 ```
 
+## Making study: choice and result
+
+Open the [interactive study](studies/choice-and-result/index.html), served at
+[the local study URL](http://127.0.0.1:4182/examples/showcase/studies/choice-and-result/)
+with the same server command above. This is a focused making reference, separate
+from the three gallery scenes.
+
+| English, 1440 × 1000 | 中文，1440 × 1000 |
+| --- | --- |
+| [![Choice and result study](../../docs/visuals/study-choice-result.en.png)](studies/choice-and-result/index.html) | [![选项与结果研究](../../docs/visuals/study-choice-result.zh-CN.png)](studies/choice-and-result/index.html) |
+
+**Problem:** a person needs to compare a few options and understand what their
+selection changes. Soft Scoop supplies an inspectable example: its native
+flavor group, selected item, description, illustration, and total stay related.
+The study borrows that relationship, not the ice-cream theme or pixel styling.
+
+Try a selection, change the content length, then increase the option set and
+inspect the result at a narrow width. The useful mechanism is visible comparison
+with nearby feedback. It works while the differences fit a readable working
+area; long descriptions and larger sets can push the result away. A compact
+chooser reduces that distance at the cost of hiding simultaneous comparison.
+Inspect the actual alternatives rather than treating a particular option count
+as a universal breakpoint or an expanded radio group as always superior.
+
+Source: [structure](studies/choice-and-result/index.html),
+[layout](studies/choice-and-result/styles.css), and
+[state and content](studies/choice-and-result/app.js). The study has paired
+English/Chinese content, uses only page-local state, and resets on reload.
+Switching language or presentation preserves selection. Returning from twelve
+options to three retains an available subject, otherwise it selects Tide.
+On narrow screens the compact live result stays above the choices; long
+English text can use about a third of the tested 390 × 844 viewport.
+It has no backend, external assets, model calls, or storage writes. Its
+synthetic content and construction choices are teaching material, not a
+quality benchmark, recorded user preference, or owner-approved visual style.
+
+**中文制作参考：选项与结果。** 使用上面的同一本地服务打开
+[交互研究页](studies/choice-and-result/index.html)。它研究少量选项的可见比较与即时结果之间的关系，取材于 Soft Scoop 的口味选择、说明、图形与总价联动，不移植冰淇淋主题或像素皮肤。
+
+先选择一个选项，再换成长文案、增加选项，并在窄屏检查结果。展开选择适合差异能在可读的操作范围内共同呈现的情况；长说明与较多选项可能把结果推远。紧凑选择减少占用，但会牺牲同时比较。请观察具体内容与实际渲染，不把某个数量当作通用阈值，也不把 radio 当作固定答案。上方链接可查看结构、布局和状态源码。切换语言或呈现方式保留选择；从十二项回到三项时，会保留仍在集合中的主题，否则选中“潮汐”。窄屏上的精简结果留在选项上方，最长英文内容约占已测 390 × 844 视口的三分之一。页面英中配对，只有页内状态，刷新重置；无后端、外部素材、模型调用或存储写入。合成材料用于解释制作机制，不构成质量评测、用户偏好记录或已被用户接受的视觉风格。
+
 ## 中文说明
 
 这里有三个人工编写的虚构前端示例，用不同的构图与真实可操作的交互，展示界面设计的变化范围。它们并非质量基准，也不代表 Frontend Craft 自主运行的成果。

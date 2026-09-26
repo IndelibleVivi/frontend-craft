@@ -93,12 +93,15 @@ recreate that machinery here.
 Do not call ImageGen to begin frontend work, establish taste, make a ritual
 moodboard, or satisfy a workflow gate.
 
-Prefer, in order, the assets and media that belong to the product:
+Choose the medium from the content, interaction, and visual goal. Typography,
+HTML/CSS, SVG, canvas, and procedural drawing are first-class making choices;
+they do not wait for an asset search to fail. Photography or other supplied
+imagery may be the right medium when the subject calls for it.
 
-1. supplied brand, product, content, screenshot, or reference assets;
-2. existing repo assets and design tokens;
-3. real content or licensed/public assets whose use is authorized;
-4. code-native HTML/CSS, SVG, canvas, charts, diagrams, or procedural visuals.
+When the chosen medium needs assets, prefer relevant user-supplied and existing
+project assets before other authorized real or licensed/public sources. Explicit
+references and required brand assets still govern their stated scope; media
+choice is not permission to replace them.
 
 ImageGen is an adjacent, opt-in asset route. Use it only when the user
 explicitly asks for generated imagery, or after a concrete required raster-asset
@@ -286,13 +289,11 @@ existing authoritative project entrypoint; keep personal preferences and private
 case evidence outside distributable skill source. Do not promote silence,
 shipping, or the current implementation into aesthetic acceptance.
 
-Report separately:
-
-- source behavior changed;
-- focused checks and build passed or failed;
-- rendered desktop/mobile and interaction checks passed or failed;
-- deployment/runtime activation performed or not performed;
-- owner/device/aesthetic acceptance confirmed or still open.
+Report what changed, the checks that support it, and any material remaining
+limitation. Keep source, build, render, activation, and owner acceptance distinct
+when those claims matter; they are evidence distinctions, not a required set of
+headings. A small change can have a short handoff. Mention an unperformed step
+when it is requested or could otherwise be mistaken for completed work.
 
 ## Hard failures
 

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An authored, synthetic Frontend Craft study of choices, visible outcomes, and the cost of content growth.">
+  <title>Choice & result — Frontend Craft making study</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#experiment" data-copy="skip">Skip to the experiment</a>
+  <header class="masthead">
+    <a class="brand" href="../../index.html">Frontend Craft <span aria-hidden="true">↗</span></a>
+    <span class="series" data-copy="series">MAKING STUDY / 01</span>
+    <button type="button" id="language" lang="zh-CN" aria-label="切换为中文">中文</button>
+  </header>
+  <main>
+    <div class="intro">
+      <p class="eyebrow" data-copy="eyebrow">CHOICE → RESULT</p>
+      <h1 data-copy="title">Keep the choice<br>in the picture.</h1>
+      <div class="intro-note"><p data-copy="intro">A few options can tell a complete story. Add more words or more choices, and that relationship needs another shape.</p><a href="#experiment" data-copy="start">Try the relationship ↓</a></div>
+    </div>
+
+    <section class="experiment" id="experiment" aria-labelledby="experiment-title" tabindex="-1">
+      <div class="experiment-heading"><h2 id="experiment-title" data-copy="experimentTitle">One cover. A changing set of choices.</h2><span class="synthetic" data-copy="synthetic">AUTHORED · SYNTHETIC</span></div>
+      <div class="conditions">
+        <fieldset><legend><span class="step">1</span> <span data-copy="setLabel">Change the set</span></legend><div class="segments"><label><input type="radio" name="volume" value="few" checked><span data-copy="few">3 options</span></label><label><input type="radio" name="volume" value="many"><span data-copy="many">12 options</span></label></div></fieldset>
+        <fieldset><legend><span class="step">2</span> <span data-copy="lengthLabel">Stretch the words</span></legend><div class="segments"><label><input type="radio" name="length" value="short" checked><span data-copy="short">Short copy</span></label><label><input type="radio" name="length" value="long"><span data-copy="long">Long copy</span></label></div></fieldset>
+        <div class="condition-note" id="condition-note"></div>
+      </div>
+      <div class="workbench">
+        <div class="selection">
+          <div class="selection-heading"><span class="step">3</span><h3 data-copy="choose">Choose a cover subject</h3><span class="selection-count" id="count">03</span></div>
+          <div class="presentation" id="presentation" hidden><span data-copy="presentationLabel">Show the set as</span><div class="segments"><label><input type="radio" name="presentation" value="open" checked><span data-copy="open">Visible options</span></label><label><input type="radio" name="presentation" value="compact"><span data-copy="compact">Compact menu</span></label></div></div>
+          <fieldset id="visible-options"><legend class="sr-only" data-copy="choose">Choose a cover subject</legend><div id="option-list"></div></fieldset>
+          <div id="compact-options" hidden><label for="subject" data-copy="menuLabel">Cover subject — all 12 options</label><select id="subject"></select><p class="compact-note" data-copy="compactNote">The menu saves space; descriptions are no longer visible together. The selected subject stays in the result.</p></div>
+          <p class="selection-foot" id="selection-foot"></p>
+        </div>
+        <aside class="result" aria-labelledby="result-label">
+          <div class="result-heading"><span id="result-label" data-copy="resultLabel">THE RESULT · LIVE</span><span class="result-arrow" aria-hidden="true">↗</span></div>
+          <div class="cover" id="cover">
+            <div class="cover-meta"><span data-copy="coverSeries">A SMALL ATLAS</span><span id="cover-id">01</span></div>
+            <div class="cover-art" id="cover-art" aria-hidden="true"></div>
+            <div class="cover-copy"><p data-copy="coverKicker">NOTICING THE EVERYDAY</p><h3 id="cover-title"></h3><p id="cover-deck"></p></div>
+            <div class="cover-bottom"><span data-copy="coverFooter">An imaginary field guide</span><span aria-hidden="true">↳</span></div>
+          </div>
+          <div class="result-caption"><span class="result-dot" aria-hidden="true"></span><div><p class="result-status" id="result-status" aria-live="polite" aria-atomic="true"></p><p data-copy="resultNote">Title, drawing and description come from the same selected record.</p></div></div>
+        </aside>
+      </div>
+      <div class="observation"><span class="observation-mark" aria-hidden="true">↳</span><div><h3 id="observation-title"></h3><p id="observation-copy"></p></div></div>
+    </section>
+
+    <section class="reading" aria-labelledby="reading-title">
+      <div class="reading-intro"><p class="eyebrow" data-copy="readingEyebrow">TAKE THE RELATIONSHIP, NOT THE SKIN</p><h2 id="reading-title" data-copy="readingTitle">Keep identity close.<br>Let the form change.</h2><p data-copy="readingIntro">A useful choice explains both “which one?” and “what changed?” The control alone cannot do all of that work.</p></div>
+      <div class="notes">
+        <article><span>01</span><div><h3 data-copy="fitTitle">When it earns the space</h3><p data-copy="fit">A small, mutually exclusive set with useful differences. Visible labels and descriptions support comparison; a nearby result makes the consequence inspectable.</p></div></article>
+        <article><span>02</span><div><h3 data-copy="breakTitle">Where it starts to strain</h3><p data-copy="break">Long descriptions increase the distance between choices. A large set demands scrolling. On a phone, a result after the full list can disappear from the working position.</p></div></article>
+        <article><span>03</span><div><h3 data-copy="costTitle">What the alternative costs</h3><p data-copy="cost">A menu keeps a long set compact, but hides alternatives until opened and weakens side-by-side comparison. If people need several choices, use a multi-select pattern; if they need an exact quantity, use a numeric control.</p></div></article>
+      </div>
+    </section>
+    <details class="source-notes"><summary><span data-copy="sourceTitle">Follow the mechanism in the source</span><span aria-hidden="true">+</span></summary><div class="source-grid"><p data-copy="sourceIntro">One selected ID drives every output. Changing language translates that same record; it does not choose another one. Short and long copy are authored variants. Reloading resets this study.</p><ol><li><a href="index.html" download>index.html ↓</a><span data-copy="htmlNote">Semantic radio groups, a native menu and the result region.</span></li><li><a href="styles.css" download>styles.css ↓</a><span data-copy="cssNote">A shared workbench on wide screens; a compact live result above choices on phones.</span></li><li><a href="app.js" download>app.js ↓</a><span data-copy="jsNote">Synthetic bilingual records, selected ID and a single result renderer.</span></li></ol></div></details>
+  </main>
+  <footer class="footer"><p><span data-copy="provenance">Adapted relationship from</span> <a href="../../index.html">Soft Scoop ↗</a><span data-copy="provenanceEnd">: visible choices and an immediate, named result.</span></p><p data-copy="boundary">Synthetic teaching material, not a recording of a real product workflow or a design-quality benchmark.</p></footer>
+</body>
+</html>
