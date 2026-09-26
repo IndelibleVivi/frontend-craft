@@ -26,6 +26,8 @@ const EXAMPLE_TITLE = "Studio notes — letterpress proof";
 
 /* --- a minimal element stand-in ------------------------------------------ */
 
+let lastFocused = null;
+
 function el(tag, attrs = {}) {
   const node = {
     tagName: tag.toUpperCase(),
@@ -34,12 +36,13 @@ function el(tag, attrs = {}) {
     value: attrs.value ?? "",
     textContent: "",
     hidden: false,
+    focusCalls: [],
     listeners: {},
     setAttribute(k, v) { this._attrs[k] = String(v); },
     getAttribute(k) { return Object.prototype.hasOwnProperty.call(this._attrs, k) ? this._attrs[k] : null; },
     addEventListener(type, fn) { (this.listeners[type] = this.listeners[type] || []).push(fn); },
     appendChild(child) { this.children.push(child); return child; },
-    focus() {},
+    focus() { this.focusCalls.push(this); lastFocused = this; },
     querySelector() { return null; },
     querySelectorAll() { return []; },
     dispatch(type, extra = {}) {
@@ -80,6 +83,7 @@ function makeStorage(records = {}, plan = () => "ok") {
 /* --- build the DOM the demo expects and run the real source -------------- */
 
 function makeEnv({ records = {}, plan } = {}) {
+  lastFocused = null;
   const live = el("p");
   const langToggle = el("button");
   const stepper = el("ol");
@@ -95,6 +99,10 @@ function makeEnv({ records = {}, plan } = {}) {
   const save = el("button");
   const reopen = el("button");
   const discard = el("button");
+  const recover = el("div");
+  recover.hidden = true;   /* the real markup carries the hidden attribute */
+  const recoverText = el("p");
+  const recoverButton = el("button");
   const editor = el("article");
   const bar = el("div");
   const help = el("ul");
@@ -106,6 +114,9 @@ function makeEnv({ records = {}, plan } = {}) {
     '[data-act="save"]': save,
     '[data-act="reopen"]': reopen,
     '[data-act="discard"]': discard,
+    "#recover": recover,
+    "#recover-text": recoverText,
+    '[data-act="recover"]': recoverButton,
     ".editor__bar": bar,
     ".help": help,
   })[sel] ?? null;
@@ -157,11 +168,14 @@ function makeEnv({ records = {}, plan } = {}) {
   return {
     storage, doc, win, rootEl,
     title, body, stateLabel, stateMeta, save, reopen, discard, live, langToggle,
+    recover, recoverText, recoverButton,
+    get activeElement() { return lastFocused; },
     setTitle(v) { title.value = v; title.dispatch("input"); },
     setBody(v) { body.value = v; body.dispatch("input"); },
     clickReopen() { reopen.dispatch("click"); },
     clickSave() { save.dispatch("click"); },
     clickDiscard() { discard.dispatch("click"); },
+    clickRecover() { recoverButton.dispatch("click"); },
     clickLang() { langToggle.dispatch("click"); },
   };
 }
@@ -468,6 +482,151 @@ check("a malformed stored record is not mistaken for a failed read", () => {
   env.setTitle("Replacement");
   env.clickSave();
   eq(env.live.textContent, "Note saved in this browser.", "Save replaces the unusable copy");
+});
+
+/* ========================================================================
+ * 5. A refused write is a real page-only copy, kept apart from storage.
+ *
+ * Reported scenario: real record A exists, the visitor edits B, the write is
+ * refused, and Reopen then returns the old A. B must survive that read and stay
+ * reachable, without inventing a history system or a second storage key.
+ * ====================================================================== */
+
+check("no recovery entry appears before a refused write", () => {
+  const env = makeEnv({ records: { [KEY]: record("A", "body A") } });
+  eq(env.stateLabel.textContent, "Saved in this browser", "loads the stored copy");
+  eq(env.recover.hidden, true, "nothing was refused, so there is nothing to recover");
+  env.setTitle("Ordinary draft");
+  eq(env.recover.hidden, true, "an ordinary draft is not a page-only recovery");
+});
+
+check("a refused write survives a later successful read and restores truthfully", () => {
+  let denyWrite = true;
+  const env = makeEnv({
+    records: { [KEY]: record("A", "body A") },
+    plan: (kind) => kind === "setItem" && denyWrite ? "throw" : "ok",
+  });
+
+  env.setTitle("B title");
+  env.setBody("B body");
+  env.clickSave();                  // refused -> page-only copy B
+  eq(env.stateLabel.textContent, "Saved for this page only — reload will lose it",
+     "the refused write is session-only");
+  eq(env.recover.hidden, true, "no conflict while the editor already shows that copy");
+
+  env.clickReopen();                // a real read returns A
+  eq(env.title.value, "A", "Reopen still reaches real storage and loads A");
+  eq(env.body.value, "body A", "the stored body is what Reopen loads");
+  eq(env.recover.hidden, false, "the refused page copy is offered for recovery");
+  ok(/page-only copy/.test(env.live.textContent),
+    "the held copy is announced: " + env.live.textContent);
+
+  env.recoverButton.focus();
+  ok(env.activeElement === env.recoverButton, "precondition: the restore button holds focus");
+  env.clickRecover();
+  eq(env.title.value, "B title", "recovery truly brings back the page-only title");
+  eq(env.body.value, "B body", "recovery truly brings back the page-only body");
+  eq(env.stateLabel.textContent, "Draft — differs from the saved note",
+     "the restored copy reads as a draft, not as a browser save");
+  eq(env.recover.hidden, true, "the entry hides once the editor already shows that copy");
+  eq(env.title.focusCalls.length, 1, "recovery moves focus to the real title field");
+  ok(env.activeElement === env.title, "focus does not stay on the hidden restore button");
+});
+
+check("the page-only copy survives repeated reads, discard and language switching", () => {
+  const env = makeEnv({
+    records: { [KEY]: record("A", "body A") },
+    plan: (kind) => kind === "setItem" ? "throw" : "ok",
+  });
+  env.setTitle("B title");
+  env.clickSave();                  // refused
+  env.clickReopen();                // loads A
+  eq(env.recover.hidden, false, "offered after the read");
+
+  env.clickReopen();
+  eq(env.title.value, "A", "each Reopen keeps loading the real store");
+  eq(env.recover.hidden, false, "repeated reads do not dissolve the page copy");
+
+  env.clickDiscard();
+  eq(env.title.value, "A", "Discard returns to the browser-saved copy");
+  eq(env.recover.hidden, false, "Discard keeps the page copy recoverable");
+
+  env.clickLang();
+  eq(env.rootEl.getAttribute("lang"), "zh-CN", "the language switch applies");
+  eq(env.title.value, "A", "the language switch leaves the note alone");
+  eq(env.recover.hidden, false, "the recovery entry stays in place across the switch");
+  ok(/[\u4e00-\u9fff]/.test(env.recoverText.textContent),
+     "the recovery sentence is localized: " + env.recoverText.textContent);
+
+  env.clickRecover();
+  eq(env.title.value, "B title", "recovery still works after a language switch");
+});
+
+check("a newer refused save replaces the previous page-only copy", () => {
+  const env = makeEnv({ plan: (kind) => kind === "setItem" ? "throw" : "ok" });
+  env.setTitle("First refused");
+  env.clickSave();
+  env.setTitle("Second refused");
+  env.clickSave();
+  env.setTitle("A later draft");
+  eq(env.recover.hidden, false, "a differing draft exposes the held copy");
+  env.clickRecover();
+  eq(env.title.value, "Second refused", "the newest refused copy is the one kept");
+});
+
+check("an identical refused save raises no false conflict", () => {
+  const env = makeEnv({
+    records: { [KEY]: record("Same", "same body") },
+    plan: (kind) => kind === "setItem" ? "throw" : "ok",
+  });
+  env.setTitle("Same");
+  env.setBody("same body");
+  env.clickSave();                  // refused, but identical to the stored note
+  env.clickReopen();                // loads the same stored note
+  eq(env.title.value, "Same", "the stored note is loaded");
+  eq(env.recover.hidden, true, "identical copies are not a conflict");
+  env.setTitle("Same edited");
+  eq(env.recover.hidden, true, "an edit does not turn an identical copy into a conflict");
+});
+
+check("a successful save ends the recovery need", () => {
+  let denyWrite = true;
+  const env = makeEnv({
+    records: { [KEY]: record("A", "body A") },
+    plan: (kind) => kind === "setItem" && denyWrite ? "throw" : "ok",
+  });
+  env.setTitle("B title");
+  env.clickSave();                  // refused -> page-only copy held
+  env.clickReopen();                // loads A, page copy offered
+  eq(env.recover.hidden, false, "the page copy is still offered");
+
+  denyWrite = false;
+  env.setTitle("C title");
+  env.clickSave();                  // a real save
+  eq(env.live.textContent, "Note saved in this browser.", "the real save is announced");
+  eq(env.recover.hidden, true, "a successful save clears the recovery need");
+  eq(JSON.parse(env.storage.records.get(KEY)).title, "C title",
+     "the saved note is the current one");
+  env.clickReopen();
+  eq(env.title.value, "C title", "Reopen now loads the newly saved note");
+  eq(env.recover.hidden, true, "no stale page copy is offered after a real save");
+});
+
+check("recovery, language switching and Discard never write to storage", () => {
+  const env = makeEnv({
+    records: { [KEY]: record("A", "body A") },
+    plan: (kind) => kind === "setItem" ? "throw" : "ok",
+  });
+  env.setTitle("B title");
+  env.clickSave();                  // the one refusal this scenario writes
+  env.clickReopen();
+  const writes = env.storage.calls.filter((c) => c[0] === "setItem").length;
+  env.clickLang();
+  env.clickRecover();
+  env.setTitle("Another draft");
+  env.clickDiscard();
+  const after = env.storage.calls.filter((c) => c[0] === "setItem").length;
+  eq(after, writes, "recovery, language switching and Discard must not write to storage");
 });
 
 /* --- run ----------------------------------------------------------------- */

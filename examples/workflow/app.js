@@ -46,12 +46,17 @@
      `known`  — current storage evidence, or "session" for a page-only save.
      `draft`  — what the editor currently shows.
      `baseline` — where Discard sends the editor: the last confirmed copy when
-                  one exists, otherwise the example note. */
+                  one exists, otherwise the example note.
+     `pageCopy` — the note from the most recent refused write. It is held apart
+                  from `saved`/`baseline` so a later successful read cannot erase
+                  it: only a successful Save clears it, and a newer refused write
+                  replaces it. */
   var startup = stor.read();
   var saved = startup.record;
   var known = startup.status;
   var baseline = saved ? copyOf(saved) : copyOf(EXAMPLE);
   var draft = copyOf(baseline);
+  var pageCopy = null;
 
   /* == Storage ============================================================
      Each attempt reaches real storage. A failure is not evidence of absence
@@ -142,7 +147,10 @@
       body: editor.querySelector("#note-body"),
       save: editor.querySelector('[data-act="save"]'),
       reopen: editor.querySelector('[data-act="reopen"]'),
-      discard: editor.querySelector('[data-act="discard"]')
+      discard: editor.querySelector('[data-act="discard"]'),
+      recover: editor.querySelector("#recover"),
+      recoverText: editor.querySelector("#recover-text"),
+      recoverButton: editor.querySelector('[data-act="recover"]')
     };
 
     refs.title.addEventListener("input", onInput);
@@ -150,6 +158,7 @@
     refs.save.addEventListener("click", saveNote);
     refs.reopen.addEventListener("click", reopenNote);
     refs.discard.addEventListener("click", discardDraft);
+    refs.recoverButton.addEventListener("click", recoverPageCopy);
   }
 
   /* == Note state ======================================================== */
@@ -205,6 +214,7 @@
     editor.setAttribute("data-state", state);
     refs.stateLabel.textContent = label;
     refs.stateMeta.textContent = meta;
+    updateRecovery();
   }
 
   function updateCount() {
@@ -212,6 +222,42 @@
     var stamp = known === "stored" && saved && sameNote(draft, saved) && saved.at
       ? timeText(saved.at) + " · " : "";
     refs.stateMeta.textContent = stamp + t(total + " characters", total + " 个字符");
+  }
+
+  /* == Page-only recovery =================================================
+     A refused write leaves a copy on this page. It is offered back whenever
+     restoring it would really change the editor and it is not already the
+     confirmed browser copy, so identical copies never raise a false conflict. */
+
+  function hasPageRecovery() {
+    if (!pageCopy) return false;
+    if (sameNote(pageCopy, draft)) return false;
+    if (known === "stored" && saved && sameNote(pageCopy, saved)) return false;
+    return true;
+  }
+
+  function updateRecovery() {
+    var show = hasPageRecovery();
+    refs.recover.hidden = !show;
+    if (!show) return;
+    refs.recoverText.textContent = known === "stored"
+      ? t("A refused save kept this page-only copy, separate from the note saved in this browser.",
+          "一次被拒绝的保存留下了这份仅本页副本，它与浏览器中已保存的笔记分开保留。")
+      : t("A refused save kept this page-only copy. It is not in this browser's storage.",
+          "一次被拒绝的保存留下了这份仅本页副本，它不在浏览器存储中。");
+  }
+
+  function recoverPageCopy() {
+    if (!pageCopy) return;
+    draft = copyOf(pageCopy);
+    writeDraft(draft);
+    updateState();
+    updateCount();
+    /* Leaving focus on the now-hidden restore button would strand it. Hand it
+       to a real editable field; the default focus scrolls it into view. */
+    refs.title.focus();
+    announce(t("Restored the page-only copy. It is not saved in this browser.",
+               "已恢复仅本页副本，它尚未保存在浏览器中。"));
   }
 
   function onInput() {
@@ -238,6 +284,8 @@
     var payload = JSON.stringify({ title: note.title, body: note.body, at: at });
 
     if (stor.write(payload) === "ok") {
+      /* A real save settles the note, so any earlier page-only copy is done. */
+      pageCopy = null;
       commit(note, at, "stored");
       updateState();
       updateCount();
@@ -245,7 +293,9 @@
       return;
     }
 
-    /* Keep an explicit page-only copy without disabling later storage calls. */
+    /* Keep an explicit page-only copy without disabling later storage calls.
+       A newer refusal replaces whatever the previous page-only copy held. */
+    pageCopy = copyOf(note);
     commit(note, at, "session");
     updateState();
     updateCount();
@@ -294,7 +344,10 @@
     writeDraft(draft);
     updateState();
     updateCount();
-    announce(t("Reopened the saved note.", "已重新打开保存的笔记。"));
+    announce(hasPageRecovery()
+      ? t("Reopened the saved note. The page-only copy from a refused save is still kept here.",
+          "已重新打开保存的笔记。被拒绝保存的那份仅本页副本仍保留在这里。")
+      : t("Reopened the saved note.", "已重新打开保存的笔记。"));
   }
 
   function discardDraft() {

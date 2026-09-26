@@ -616,3 +616,13 @@ main {
 html[lang="en"] body [data-lang="zh"],
 html[lang="zh-CN"] body [data-lang="en"],
 [hidden] { display: none !important; }
+
+/* The page-only recovery strip stays distinct from ordinary toolbar actions. */
+.recover { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; padding: .85rem 1.4rem; border-bottom: 1px solid #E2CDB0; background: #FBF3E8; }
+.recover__text { flex: 1 1 15rem; min-width: 0; margin: 0; color: #8A4A1E; font-size: .82rem; line-height: 1.55; }
+.act--recover { border-color: #C79A64; background: #FFFDF8; color: #8A4A1E; }
+.act--recover:hover { border-color: #8A4A1E; background: #F5E6D2; }
+
+@media (max-width: 620px) {
+  .recover { padding: .75rem 1rem; }
+}

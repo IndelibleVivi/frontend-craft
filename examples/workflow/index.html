@@ -283,6 +283,15 @@
       </li>
     </ul>
 
+    <!-- Only shown when a refused write still holds a page-only copy that is
+         worth getting back. The sentence names the two copies it sits between. -->
+    <div class="recover" id="recover" hidden>
+      <p class="recover__text" id="recover-text"></p>
+      <button type="button" class="act act--recover" data-act="recover" aria-describedby="recover-text">
+        <span data-lang="en">Restore page copy</span><span data-lang="zh" lang="zh-CN">恢复页内副本</span>
+      </button>
+    </div>
+
     <div class="editor__fields">
       <label class="field" for="note-title">
         <span class="field__label">
