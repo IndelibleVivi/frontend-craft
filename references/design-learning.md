@@ -142,6 +142,23 @@ only when it changes a future decision; retain the condition and a meaningful
 counterexample. One dense editing screen does not establish that all fields
 should be hidden or that all users dislike detailed recording.
 
+## Retain a useful making capability
+
+A successful whole can be retained at its actual scale: content, composition,
+materials, use sequence, implementation, and conditions. Do not reduce it to
+isolated color or font preferences. A repeatable researched/practiced unit may
+become a [style slot](style-slots.md), while its personal feedback remains in
+the private evidence store. General craft knowledge can also come from
+[primary sources and making recipes](reference-sources.md); users need not
+supply a complaint before the agent learns a useful method.
+
+On later use, identify what this evidence changes in the opening direction or
+implementation, then inspect the resulting work. Retain a failed transfer and
+narrow its conditions rather than applying the same skin more forcefully.
+A user's new idea is not rescue work; repeating an established boundary or
+having to prescribe an ordinary missing technique may be. Preserve concrete
+examples of such intervention when evaluating whether the method helps.
+
 ## Retrieve lightly and preserve discovery
 
 Use an explicit retrieval entrypoint so a recorded boundary can affect the next

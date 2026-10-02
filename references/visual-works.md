@@ -43,6 +43,14 @@ showcase renderer that makes examples better than the product can reproduce.
 
 ## Solve the expressive center
 
+For an exhibition, visual demo, or showcase, the work's expressive impact is
+the primary deliverable. Make a compelling scene at its actual viewing scale;
+let explanations and experiment settings support it without taking over the
+composition. A teaching page and a showpiece have different success conditions.
+Choose deliberately from the brief before allocating most of the frame to
+prose, controls, or a small specimen. Functional checks cannot accept the
+central visual promise.
+
 Determine which quality makes this work worth viewing: spatial depth, optical
 material, editorial rhythm, a revealing relationship, motion, or response to
 touch. Render that quality early. Do not surround an unresolved subject with

@@ -1,7 +1,7 @@
 ---
 name: frontend-craft
 license: "SUL-1.0 for the functional skill; see LICENSING.md for documentation and third-party boundaries."
-description: "Design, build, evolve, repair, or review frontend interfaces and code-rendered visual works. Use for apps, pages, components, interaction and visual direction, reference-to-product implementation, state/persistence defects, feedback-driven revision, or rendered QA. Ground making in content and purpose; preserve accepted qualities through product change. For documents, decks, or raster-image creation, use the relevant artifact skill. ImageGen is opt-in."
+description: "Design, build, evolve, repair, or review frontend interfaces and code-rendered visual works. Use for apps, pages, components, interaction and visual direction, reference-to-product implementation, state/persistence defects, feedback-driven revision, or rendered QA. Ground making in content and purpose; preserve accepted qualities through product change. For documents, decks, or raster-image creation, use the relevant artifact skill. Choose and produce materials within the task's actual permissions."
 ---
 
 # Frontend Craft
@@ -18,6 +18,22 @@ FC owns the touched experience from intent and information through operation,
 feedback, and visual execution. It follows an evidenced cause across code
 layers while inheriting the caller's engineering and permission boundaries.
 
+## Own the whole experience
+
+For new work and substantial redesign, form a provisional whole from the
+purpose, scoped preferences, representative content, and inspectable references.
+Decide what carries the experience, what supports it, which objects persist
+through use, and how materials give those relationships expression. Make
+ordinary reversible design decisions; missing design vocabulary or an asset
+library does not make the user responsible for basic art direction.
+
+Move between the whole and its details in the renderer. Compose space, action
+expectations, repeated use, and materials together. A component is an
+implementation unit, not sufficient evidence of a successful experience.
+A local repair keeps its scope while respecting those surrounding relationships.
+Use existing working context for these decisions; no additional brief form,
+mandatory concept approval, or design-system project is needed.
+
 ## Route by the work needed
 
 | Situation | Read when applicable | Result |
@@ -27,6 +43,8 @@ layers while inheriting the caller's engineering and permission boundaries.
 | New or unresolved visual/interaction direction | [Design direction](references/design-direction.md) | Content-grounded direction and the decisive rendered slice, followed by the full requested surface |
 | Making a new product or carrying references/prototypes into real content and behavior | [Build](references/build.md) | Selected qualities survive complete integrated task paths |
 | New capabilities, content growth, or a substantial change to an existing product | [Evolve](references/evolve.md) | Coherent new journeys with preserved user work and unaffected promises |
+| A making decision lacks a usable positive reference or concrete technique | [Reference sources and making recipes](references/reference-sources.md) | Relevant visual/behavior evidence and a conditional implementation move, followed by making |
+| Reusing or establishing a researched, practiced design unit at any scale | [Style slots](references/style-slots.md) | A repeatable result with materials, fixed relationships, variation, and evidence of its actual scope |
 | Composing hierarchy, typography, imagery, material, responsive layout, or motion | [Visual construction](references/visual-construction.md) | Concrete making moves and judged rendered relationships |
 | An app flow, editor, direct manipulation, or confusing stateful controls | [App interaction](references/app-interaction.md) | Clear objects and actions, coherent state changes, recoverable operation, complete task paths |
 | UI promises conflict with state ownership, update semantics, or persistence | [State and contracts](references/state-contracts.md) | Trace and repair action → request → saved fact → reopened view |
@@ -88,27 +106,33 @@ recreate that machinery here.
   density, ornament, and restraint are tools to justify in context, not global
   likes or bans. Genre conventions do not override an explicit user boundary.
 
-## Image policy: opt in, never prerequisite
+## Visual materials and asset production
 
-Do not call ImageGen to begin frontend work, establish taste, make a ritual
-moodboard, or satisfy a workflow gate.
+Choose and produce materials as part of composition: actual content, type,
+icons, imagery, texture, authored graphics, procedural or spatial work, and
+motion where useful. Decide their roles before freezing the layout: subject,
+identity, structure, orientation, surface, or feedback. A typographic work can
+be complete without pictures; an image-led direction needs an actual subject.
 
-Choose the medium from the content, interaction, and visual goal. Typography,
-HTML/CSS, SVG, canvas, and procedural drawing are first-class making choices;
-they do not wait for an asset search to fail. Photography or other supplied
-imagery may be the right medium when the subject calls for it.
+Select the medium from the intended effect and available runtime. Use relevant
+supplied/project resources, appropriately reusable sources, code-native drawing,
+or image generation under the task's and host's existing permissions. Respect
+accepted references and required brand assets. A visible reference is not a
+redistribution grant; keep provenance and rights with reused material.
 
-When the chosen medium needs assets, prefer relevant user-supplied and existing
-project assets before other authorized real or licensed/public sources. Explicit
-references and required brand assets still govern their stated scope; media
-choice is not permission to replace them.
+Image generation is an optional asset-making route, never a required opening
+ritual or substitute for working UI. Where generation is already authorized,
+do not add a separate per-asset approval gate. Ask only at a genuine unresolved
+boundary such as new cost or private-data transfer, and honor explicit bans and
+tool-specific rules. When a needed asset cannot be obtained, make a suitable
+replacement or revise the provisional direction within scope; do not silently
+ship its empty slot as the completed design.
 
-ImageGen is an adjacent, opt-in asset route. Use it only when the user
-explicitly asks for generated imagery, or after a concrete required raster-asset
-gap is identified and the user explicitly approves generation for that asset.
-Its output must enter the real deliverable and still pass the same provenance,
-asset, layout, and browser checks. The absence of supplied imagery is not, by
-itself, a reason to generate any.
+Bring decisive materials into a real slice early enough to change layout.
+Check actual fonts, crop, focal point, stroke/letter relationships, responsive
+composition, loading, and working states. Treat audio as content, feedback, or
+optional atmosphere according to the product; provide appropriate user control
+and non-audio feedback. Playback/listening evidence is needed for sound claims.
 
 ## Resolve the work mode
 

@@ -133,6 +133,14 @@ Inspect task fit, visual craft, and personal fit independently using
 composition while also missing the user's taste; do not collapse both into
 subjective preference or substitute technical checks for either judgment.
 
+Inspect the complete composition and use episode that carry the promise:
+entry, repeated attempts, changed intent, result, and the supported return.
+Check whether action cues predicted the outcome and whether real material,
+content growth, and responsive reflow preserve the same important relationships.
+For affected assets, inspect crop, focus, font fallback, stroke/letter weight,
+loading, and working-state contrast together; a successful network request is
+not material-quality evidence. Listen to actual playback before judging audio.
+
 Name the quality promised by this task and observe it in the actual medium:
 clear comparison in a dense tool, sustained reading rhythm, a distinctive
 composition, convincing material, or an expressive temporal sequence. Explain

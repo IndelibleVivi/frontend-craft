@@ -11,8 +11,8 @@ evolving, repairing, recording, and visually checking real interfaces.
 
 It is for people building or maintaining a real product surface — apps, pages,
 components, flows, and the visual works a product produces — including anyone
-who wants a design-aware change without a full redesign. It is not a template
-generator and does not need generated concept art to begin.
+who wants a design-aware change without a full redesign. It can reuse practiced
+design units and does not need generated concept art to begin.
 
 The aim is a visually compelling, usable first result, revisions that fix the
 cause without losing accepted work, and less repeated correction as relevant
@@ -23,6 +23,13 @@ maintains the same capabilities, commands, boundaries, and rights in Chinese.
 
 ## What it does
 
+- **Own the whole experience.** Connect composition, action expectations,
+  continuous use, and visual materials; make ordinary reversible design
+  decisions without requiring a user-supplied component or asset checklist.
+- **Use positive making knowledge.** Select references and conditional recipes,
+  or reuse practiced [style slots](references/style-slots.md) with their actual
+  implementation, materials, conditions, and evidence. Slots can span a whole
+  experience or one technique; they do not impose a theme engine.
 - **Build from real content.** Create a page, component, app shell, or flow from
   the product's actual content and purpose, not placeholder data or fashionable
   scaffolding.
@@ -44,9 +51,17 @@ a small fix.
 
 Choose typography, code-native graphics, photography, or other media from the
 content and experience; drawing with code is not a fallback after asset search.
-Required references and brand assets retain their authority. ImageGen is
-opt-in: use it only when generated imagery is explicitly requested
-or a concrete required raster asset is explicitly approved.
+Required references and brand assets retain their authority. Produce needed
+materials within the task's and host's actual permissions. ImageGen is optional;
+existing authorization does not need a second per-asset approval. Explicit
+restrictions, new costs, private-data transfer, and tool-specific requirements
+still govern. Inspect materials in the real layout and working states.
+
+[Reference sources and making recipes](references/reference-sources.md) connect
+problems to concrete moves, examples, and limits. Selected UI UX Pro Max ideas
+are incorporated without requiring another installation. Soundings or connected
+reference libraries can help with a specific investigation when available;
+none is required to start, and no external corpus or private gallery ships here.
 
 ## Install
 
@@ -87,8 +102,8 @@ prompt (the note editor and its details are illustrative):
 Use $frontend-craft to add essential inline help to this note editor's toolbar,
 visible on narrow screens without a hover. Preserve the existing note text,
 controls, and artwork, and use the current stack. Verify editing, saving, and
-reopening a note, keyboard focus, and both a wide and a narrow viewport. Do not
-use ImageGen unless I explicitly approve a required generated asset.
+reopening a note, keyboard focus, and both a wide and a narrow viewport. Choose
+any needed materials within this task's permissions.
 ```
 
 Other requests route themselves: “this works but feels confusing — repair the
@@ -110,11 +125,12 @@ has a different composition and real controls. The
 [pixel banner collection](docs/visuals/README.md) shows the repository's own
 ice-cream palette; it is not a style imposed on other products.
 
-For a specific making problem, open the
-[choice-and-result study](examples/showcase/README.md#making-study-choice-and-result).
-Try how visible options relate to their immediate result, then change content
-length and option count. The source and counterexample explain when to borrow
-that relationship; the study is not an owner-approved style or quality benchmark.
+Explore [Liquid Matter](examples/showcase/README.md#making-study-choice-and-result),
+an interactive iridescent sculpture. Turn it, pause it, and change its subject.
+Optional collection settings reveal the choice/result mechanism without taking
+over the artwork. It uses local WebGL and authored source, with no external
+assets; reduced motion starts paused. These are authored demonstrations, not
+owner-approved styles or evidence of autonomous first-draft quality.
 
 | Soft Scoop · pixel shop | Offscreen · reading journal | Chromatic Field · procedural art |
 | --- | --- | --- |
@@ -158,6 +174,8 @@ intent:
 
 - **Understand the request:** [decipher intent](references/intent-decipher.md),
   [design direction](references/design-direction.md).
+- **Find a making solution:** [reference sources and recipes](references/reference-sources.md),
+  [style slots](references/style-slots.md).
 - **Make the change:** [build](references/build.md), [evolve](references/evolve.md),
   [visual construction](references/visual-construction.md),
   [app interaction](references/app-interaction.md).

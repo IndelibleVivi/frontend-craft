@@ -30,6 +30,21 @@ palette or a different graphic language. A brief object-specific restatement
 often resolves the ambiguity without an interview. A new interpretation must
 not silently replace the product's central purpose.
 
+## Shape the expectation before the action
+
+Make shape, label, placement, and current state express the operation: navigate,
+expand, switch, preview, commit, or manipulate. A preview should not silently
+commit and a disclosure should not unexpectedly take the user elsewhere. Use
+platform conventions as evidence; a library default cannot settle product meaning.
+
+Follow a meaningful episode from entry through attempts, comparison, correction,
+result, and return where promised. Preserve object identity and orientation
+across transitions. Let a person redirect or interrupt reversible interaction
+when the product supports it; an animation should not lock input merely to
+finish its performance. State must remain truthful when a newer action arrives.
+Judge intentional pauses and expressive motion by the product's purpose, not
+only by click count. See [continuity recipe](reference-sources.md#continuity).
+
 ## Match each control to a truthful contract
 
 For each consequential action, establish:

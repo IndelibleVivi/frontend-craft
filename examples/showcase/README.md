@@ -51,44 +51,44 @@ node --check examples/showcase/app.js
 
 ## Making study: choice and result
 
-Open the [interactive study](studies/choice-and-result/index.html), served at
-[the local study URL](http://127.0.0.1:4182/examples/showcase/studies/choice-and-result/)
-with the same server command above. This is a focused making reference, separate
-from the three gallery scenes.
+**Liquid Matter** is a standalone interactive artwork: an iridescent folded
+sculpture, large expressive typography, and a small collection of variations.
+Open [the work](studies/choice-and-result/index.html) at
+[its local URL](http://127.0.0.1:4182/examples/showcase/studies/choice-and-result/)
+using the server above. Drag or use the arrow keys on the sculpture to turn it,
+pause its motion, or reset the view.
 
 | English, 1440 × 1000 | 中文，1440 × 1000 |
 | --- | --- |
-| [![Choice and result study](../../docs/visuals/study-choice-result.en.png)](studies/choice-and-result/index.html) | [![选项与结果研究](../../docs/visuals/study-choice-result.zh-CN.png)](studies/choice-and-result/index.html) |
+| [![Liquid Matter, iridescent interactive sculpture](../../docs/visuals/study-choice-result.en.png)](studies/choice-and-result/index.html) | [![流动的物质，虹彩交互雕塑](../../docs/visuals/study-choice-result.zh-CN.png)](studies/choice-and-result/index.html) |
 
-**Problem:** a person needs to compare a few options and understand what their
-selection changes. Soft Scoop supplies an inspectable example: its native
-flavor group, selected item, description, illustration, and total stay related.
-The study borrows that relationship, not the ice-cream theme or pixel styling.
+The artwork leads; optional **Change the collection** settings expose the
+underlying choice-and-result experiment. Try three or twelve subjects, short
+or long titles, and visible choices versus a compact menu. Each selected ID
+drives the sculpture variation, name and description. Language and presentation
+changes keep selection; reducing twelve subjects to three retains an available
+subject, otherwise selects Tide. Reload resets the page. The twelve subjects
+are variations of one authored sculpture system, not twelve independent scenes.
 
-Try a selection, change the content length, then increase the option set and
-inspect the result at a narrow width. The useful mechanism is visible comparison
-with nearby feedback. It works while the differences fit a readable working
-area; long descriptions and larger sets can push the result away. A compact
-chooser reduces that distance at the cost of hiding simultaneous comparison.
-Inspect the actual alternatives rather than treating a particular option count
-as a universal breakpoint or an expanded radio group as always superior.
+WebGL draws the geometry and imagined reflective material at runtime; no model,
+image, font, library, or other asset is downloaded. The material is an artistic
+interpretation, not a physically accurate simulation. Motion starts paused for
+reduced-motion preferences, can be explicitly resumed, and stops drawing while
+the work is offscreen or the page is hidden. If WebGL is unavailable, the page
+reports that limitation and keeps the collection's text usable; it cannot show
+the sculpture. There is no backend, storage, model call, or sound.
 
-Source: [structure](studies/choice-and-result/index.html),
-[layout](studies/choice-and-result/styles.css), and
-[state and content](studies/choice-and-result/app.js). The study has paired
-English/Chinese content, uses only page-local state, and resets on reload.
-Switching language or presentation preserves selection. Returning from twelve
-options to three retains an available subject, otherwise it selects Tide.
-On narrow screens the compact live result stays above the choices; long
-English text can use about a third of the tested 390 × 844 viewport.
-It has no backend, external assets, model calls, or storage writes. Its
-synthetic content and construction choices are teaching material, not a
-quality benchmark, recorded user preference, or owner-approved visual style.
+The original [Soft Scoop](index.html) selection/result relationship remains a
+useful mechanism. Compact presentation saves space but hides alternatives;
+large visible sets require scrolling. The work's details and selected-description
+text remain available, but this does not make every alternative simultaneously
+visible. Source and reproduction details are in the
+[work's guide](studies/choice-and-result/README.md). This is authored demonstration
+work, not an autonomous FC benchmark or a record of owner aesthetic acceptance.
 
-**中文制作参考：选项与结果。** 使用上面的同一本地服务打开
-[交互研究页](studies/choice-and-result/index.html)。它研究少量选项的可见比较与即时结果之间的关系，取材于 Soft Scoop 的口味选择、说明、图形与总价联动，不移植冰淇淋主题或像素皮肤。
+**中文：流动的物质。** 打开[作品](studies/choice-and-result/index.html)，拖动或用方向键旋转虹彩雕塑，也可以暂停运动、重置视角。画面以作品为中心；下方“调整作品集合”可切换三/十二个主题、长短标题、展开选项/紧凑菜单。一个选中 ID 同时决定形态变化、名称与说明，语言与呈现方式切换保留选择。从十二项回到三项时保留仍在集合中的主题，否则选择“潮汐”；刷新重置。十二个主题是同一套雕塑系统的变化，不是十二个独立场景。
 
-先选择一个选项，再换成长文案、增加选项，并在窄屏检查结果。展开选择适合差异能在可读的操作范围内共同呈现的情况；长说明与较多选项可能把结果推远。紧凑选择减少占用，但会牺牲同时比较。请观察具体内容与实际渲染，不把某个数量当作通用阈值，也不把 radio 当作固定答案。上方链接可查看结构、布局和状态源码。切换语言或呈现方式保留选择；从十二项回到三项时，会保留仍在集合中的主题，否则选中“潮汐”。窄屏上的精简结果留在选项上方，最长英文内容约占已测 390 × 844 视口的三分之一。页面英中配对，只有页内状态，刷新重置；无后端、外部素材、模型调用或存储写入。合成材料用于解释制作机制，不构成质量评测、用户偏好记录或已被用户接受的视觉风格。
+WebGL 实时绘制形体与想象中的反光材质；不下载模型、图片、字体或依赖。材质属于艺术表达，不是物理模拟。系统要求减少动态时默认暂停，仍可主动播放；作品离开视口或页面隐藏时停止绘制。WebGL 不可用时会明确说明，文字集合仍可操作，雕塑无法显示。无后端、存储、模型调用或声音。紧凑菜单节省空间，也隐藏了同时比较的选项；源码机制与复现说明见[作品说明](studies/choice-and-result/README.md)。这是有指导制作的展示作品，不代表自主首稿质量，也不构成用户审美验收记录。
 
 ## 中文说明
 

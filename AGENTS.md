@@ -12,7 +12,11 @@ separate layers, not alternative source owners.
   Build owns reference-to-product continuity; Evolve owns product change;
   App interaction owns the state-layer model; State and contracts owns tracing
   persistence boundaries; QA owns checks; Interface scenarios owns replay.
-  Link these owners rather than copying their rules into new lifecycle leaves.
+  Reference sources owns conditional making recipes and source access limits;
+  Style slots owns repeatable units, their fixed/variable relationships and
+  evidence scope. Link these owners rather than copying their rules into new
+  lifecycle leaves. Research candidates and practiced mechanisms must not be
+  presented as owner-approved visual styles.
 - `scripts/fc_memory.py` owns the local record CLI. `scripts/fc_cloudflare.py`
   owns the optional Cloudflare transport and synchronization implementation.
 - Personal context, case catalogs, credentials, configuration, sync state,
@@ -27,6 +31,9 @@ separate layers, not alternative source owners.
 - `examples/showcase/` owns the independent interactive style gallery. Its
   authored scenes demonstrate different compositions and controls, not an
   autonomous FC run or measured design-quality improvement.
+  The choice-and-result route hosts Liquid Matter; its `sculpture.js` owns the
+  original WebGL renderer, motion, turning and visibility lifecycle. Keep that
+  work expressive while preserving its optional selection experiment.
 - `scripts/render_banners.py` owns the hand-authored pixel glyphs, sprites,
   palettes, and scenes; `docs/visuals/banner-*.svg` are its derived exports.
   Re-render them after source changes. Do not replace these with ImageGen
@@ -56,6 +63,8 @@ separate layers, not alternative source owners.
   browser rendering or accessibility behavior.
 - For the choice-and-result study, check selection/result agreement, long
   labels, expanded versus compact option sets, and state across language changes.
+  Renderer changes also need actual-frame checks for motion, pause, keyboard
+  turning, reduced motion, and hidden/offscreen rendering behavior.
 - For diagram changes, inspect both languages at full and intended embed
   sizes; keep live text, accessible descriptions, and source-backed
   relationships. Pixel banners use authored glyph paths with text equivalents.

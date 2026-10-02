@@ -70,6 +70,75 @@ to enumerate irrelevant layers. These are bounded corrections to the method;
 they do not establish that the earlier wording caused a particular design
 failure or that shorter instructions improve output.
 
+## Whole experience, positive making support, and slots — 2026-10-02
+
+This revision makes a provisional whole guide spatial composition, action
+expectations, continuous use, and material production. Existing direction,
+construction, interaction, build, critique, learning, and QA owners are extended
+in place. The material policy supersedes the earlier extra per-asset ImageGen
+approval rule: it inherits actual task/host authority and explicit restrictions,
+without requiring generation or widening cost/private-transfer permission.
+
+[Reference sources](reference-sources.md) now contains conditional making moves,
+source examples, and counterexamples. [Style slots](style-slots.md) preserves
+repeatable units at different scales with real material/source, fixed versus
+variable relationships, and scoped evidence. This adds no theme engine, remote
+service, compulsory research sequence, or separate skill installation.
+
+Primary-source review on this date covered:
+
+- [Atomic Design chapter 2](https://atomicdesign.bradfrost.com/chapter-2/) for
+  moving between whole pages, their parts, and real content; its five named
+  levels are not imported as a mandatory production sequence.
+- [Refactoring UI's public labels chapter](https://refactoringui.com/previews/labels-are-a-last-resort),
+  including rendered examples, for content recognition and the contrasting
+  attribute-lookup case. No book content or source images are redistributed.
+- [Butterick's typography introduction](https://practicaltypography.com/typography-in-ten-minutes.html)
+  for connected reading variables, without its font bans;
+  [CLReq](https://www.w3.org/TR/2026/DNOTE-clreq-20260901/) for Chinese layout
+  concerns, accurately retained as a Group Note Draft rather than a standard.
+- [Every Layout's Sidebar](https://every-layout.dev/layouts/sidebar/),
+  [Adobe ColorArea](https://react-spectrum.adobe.com/ColorArea), and
+  [W3C APG radios](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) for concrete
+  layout/control mechanisms and their distinct semantic conditions.
+- [IBM layout](https://www.ibm.com/design/language/layout/overview/) and
+  [illustration](https://www.ibm.com/design/language/illustration/tips-and-techniques/),
+  [Norman's signifiers](https://jnd.org/signifiers-not-affordances/),
+  [Apple's fluid-interface transcript](https://developer.apple.com/videos/play/wwdc2018/803/),
+  [audio overview](https://developer.apple.com/audio/), and
+  [Emil Kowalski's animation examples](https://emilkowal.ski/ui/good-vs-great-animations)
+  for relationships, pre-action cues, continuity, and media roles. Text/code
+  inspection does not establish playback, listening, or frame-by-frame testing.
+- [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): selected
+  typography, style, color, and app-interface rows and the design-system generator.
+  Independently worded adaptations cover script/role-aware font candidates,
+  material construction, semantic color pairs, and truthful local feedback.
+  Platform-specific snippets, industry prescriptions, numeric recipes,
+  conversion defaults, and corpus-wide authority are not adopted. The checked
+  root license is MIT (Next Level Builder, 2024); no substantial source or data
+  corpus is copied. Future substantial reuse must preserve upstream notices.
+- [Refero's public tool reference](https://github.com/referodesign/refero_skill/blob/master/skills/refero-design/references/mcp-tools.md)
+  for differentiating visual direction, actual screens, and flows. Its current
+  Styles coverage does not establish app-interior behavior. No paid gallery was
+  connected and no mandatory upstream research workflow is adopted.
+
+The older Codrops Grid Zoom article resolved to generic site content and its
+demo was unavailable through the research tool; the current tutorials index
+is retained only as a discovery route, not an observed interaction example.
+
+The local choice-and-result route now presents Liquid Matter, an authored
+WebGL sculpture with an optional selection experiment. The original shader
+uses a folded distance field and procedural studio reflections; the
+[MDN setup tutorial](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
+was consulted. No external shader, model, image or library is redistributed.
+The visual-work method distinguishes an exhibition’s expressive purpose from
+a teaching page. This remains authored, guided work. Its
+working mechanism is reusable under stated conditions; its visuals do not
+become owner-approved through this maintenance. The diagnostic and forward-case
+methods distinguish replication, discrimination, repair, first delivery, and
+transfer. Source completeness and limited practice do not prove a general
+improvement in first-draft quality or reduced human intervention.
+
 ## Method-family revision — 2026-09-20–21
 
 The local revision adds explicit methods for content-grounded direction,

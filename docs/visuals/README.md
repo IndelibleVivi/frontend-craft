@@ -59,6 +59,7 @@ minimum embed width of 360 CSS pixels.
 | Soft Scoop | [PNG](showcase-scoop.en.png) | [PNG](showcase-scoop.zh-CN.png) |
 | Offscreen | [PNG](showcase-offscreen.en.png) | [PNG](showcase-offscreen.zh-CN.png) |
 | Chromatic Field | [PNG](showcase-field.en.png) | [PNG](showcase-field.zh-CN.png) |
+| Liquid Matter · paused sculpture | [PNG](study-choice-result.en.png) | [PNG](study-choice-result.zh-CN.png) |
 
 The architecture SVGs are directly editable sources. After changes, inspect
 both languages at full size, at the intended embed width, and in grayscale.

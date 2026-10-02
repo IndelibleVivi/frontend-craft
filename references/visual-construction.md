@@ -3,7 +3,10 @@
 Use when composing a first result or when diagnosis identifies a relationship
 that needs to be remade. [Design direction](design-direction.md) chooses the
 goal; [critique](critique-revision.md) locates failures. This method supplies
-making moves to test in the renderer, not a style preset or ingredient list.
+making moves to test in the renderer. Use [source-backed recipes](reference-sources.md)
+when a relationship needs an implementation example and [style slots](style-slots.md)
+when a practiced unit can carry it. Reuse a fixed solution when it fits; preserve
+the relationships that make it work rather than copying ingredients blindly.
 
 ## Establish the subject and its supporting roles
 
@@ -12,6 +15,13 @@ main subject, related facts, next action, and secondary explanation. Sketch
 their spatial relationships directly in the target renderer when practical.
 Use real type, content lengths, images, and active controls early enough that
 they can change the composition.
+
+Judge color through area, value, placement, and adjacency as well as hue.
+Compare the weight of repeated elements in the populated composition: thirty
+subtle outlines can outweigh the article. Let type, image, and graphic material
+shape each other's position, crop, scale, and rhythm. A rich expressive subject
+may lead the page while the active editing state needs a quieter foreground.
+Return to the complete frame after changing a local treatment.
 
 Repeated outlines can make tiny pieces of content compete with the subject.
 Group by meaning first: shared alignment and proximity may carry a relationship
@@ -55,7 +65,8 @@ section, expressing character, connecting related content, or providing a focal
 subject. Adding an illustration beside an unchanged weak form may leave the
 complaint intact. Recompose the graphic, text, controls, and responsive behavior
 together where needed. Code-native graphics stay within the task's scope;
-[ImageGen remains opt-in](../SKILL.md#image-policy-opt-in-never-prerequisite).
+[material production](../SKILL.md#visual-materials-and-asset-production) uses
+the task's existing permissions, including any authorized image generation.
 
 When a few options need comparison and their effects are hard to connect, open
 the [choice-and-result making study](../examples/showcase/README.md#making-study-choice-and-result).

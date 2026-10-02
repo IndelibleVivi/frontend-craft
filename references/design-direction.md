@@ -26,6 +26,23 @@ quality of a reference matters. Do not force a questionnaire. A user who has
 no preference can delegate a reversible choice; state the assumption, make a
 judgeable slice, and keep provisional choices provisional.
 
+## Establish a positive destination
+
+Before decomposing open work, choose a provisional experience: the subject and
+attention order, the core use sequence, and the material that gives the work
+character. Preferences should affect these early choices, not only finishing
+colors. Keep a few consequential relationships visible while making; refine
+them when actual content or use contradicts the initial idea.
+
+Find a decisive reference when the available material cannot support a choice,
+or revisions keep returning to the same weak result. Use
+[reference sources](reference-sources.md) for making recipes and research routes,
+and [style slots](style-slots.md) for practiced units. Inspect the relevant
+screen, flow, image, or implementation; a text description cannot establish
+visual or temporal quality. Choose the main direction yourself within current
+authority, with other references contributing named, compatible relationships.
+Continue into making rather than delivering a reading list to the user.
+
 ## Compose from content
 
 Use real or explicitly authorized representative content early: long names,
@@ -43,6 +60,12 @@ Translate intent into concrete relationships, not a list of adjectives:
 | Color and material | What conveys identity, grouping, state, depth, or texture? | Does emphasis survive without color alone; does material read in the actual renderer? |
 | Interaction | What object is affected, how is scope shown, and where is the result? | Can the action be discovered and its result/recovery understood? |
 | Time | What is present immediately; how do entry, response, rest, and repetition feel? | Does motion clarify or express the work without obscuring action or requiring waiting? |
+
+Compare the whole in its entry, working, and return conditions where the
+product supports them. A welcome composition need not occupy every visit;
+attention may shift from a collection to the active object during editing.
+Choose key materials alongside these arrangements: test the real font, image
+or graphic subject before its space becomes a permanent empty placeholder.
 
 Choose a small coherent grammar: spacing relationships, type roles, alignment,
 surface hierarchy, and a distinctive idea justified by the subject. Use the

@@ -53,6 +53,30 @@ later corrections. A single candidate run is a smoke test, not an A/B result.
 | “Only change this button's focus treatment; leave the other pages alone” | Respects the explicit edit boundary even when it finds shared consumers; does not turn complete repair into unauthorized coverage |
 | A preferences page is still ugly after spacing tweaks; the brief asks for a lively studio character without prescribing a medium | Chooses an intervention capable of changing the reading experience, independently considers control and graphic means, preserves real settings behavior, and judges a comparable render; neither a mandatory SVG nor a palette swap is the answer |
 | A later related task with an authorized accepted candidate and scoped feedback, followed by a contrasting explicit style request | Reopens useful evidence, changes a concrete making choice without another preference interview, and respects the new style rather than copying the old composition; records alone cannot pass |
+| A showcase asks for beautiful or spectacular visual work | Makes the expressive subject and composition the primary deliverable, with controls and explanation in supporting roles; passing interaction tests cannot satisfy the visual promise |
+| Open design with no supplied artwork or reference, but a clear expressive purpose | Forms an overall direction, obtains or makes fitting material under existing authority, and completes actual content and use; does not ask the user to prescribe a medium or hand back links |
+| Image generation is authorized for the task, with no new cost/private transfer | Uses it if appropriate without an extra per-asset approval; does not require generation, weaken an explicit ban, or replace real controls with an image |
+| Several polished local patterns compete in a populated reader | Rebalances the whole composition and repeated visual weight, then follows search into context and back; individual component quality is insufficient |
+| A practiced slot meets different language, volume, or viewport conditions | Preserves its fixed relationship, adapts allowed variables, checks its limit and the whole; treats out-of-range use as a new trial, not inherited proof |
+
+## Diagnose a making failure before multiplying rules
+
+For maintenance, first establish the skill source and material actually loaded,
+the runtime used, and the earliest consequential decision that diverged.
+Choose a bounded probe only when it can distinguish the suspected cause:
+
+- Replicate visible relationships from an explicit reference with comparable
+  content and size: separate unread evidence and implementation faults from
+  free-direction weakness.
+- Compare two unlabeled comparable results, allowing both to fail: test whether
+  the agent can identify the consequential difference without its own rationale.
+- Revise a located problem while preserving accepted qualities: test the move
+  from diagnosis to working code rather than adding more evaluation adjectives.
+
+These are diagnostic options, not three mandatory phases. A guided repair, a
+new-content transfer, and an unassisted first result establish different things.
+When a comparison campaign is explicitly in scope, hold model, task, tools and
+budget comparable; few samples do not establish a general success rate.
 
 ## Keep the first delivered result visible
 

@@ -44,6 +44,13 @@ variation that challenges this design: uneven record lengths, missing values,
 an active edit, or an actual supported failure. Do not invent every possible
 edge case or postpone difficult content until the layout has hardened.
 
+Check the decisive material and runtime capability on this path early: the
+loaded font with real script, the actual image crop, the rendering effect,
+and its responsive counterpart. An unavailable image, font, or renderer may
+invalidate the direction; choose a feasible equivalent before expanding the
+shell. Carry useful source-backed recipes or [slots](style-slots.md) through
+this same path; a demonstrated local pattern still needs whole-scene judgment.
+
 Implement structure and behavior together:
 
 - Give the primary subject and action a deliberate spatial relationship using

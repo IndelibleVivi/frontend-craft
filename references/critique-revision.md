@@ -42,6 +42,14 @@ next intervention. Preserve real functionality; do not preserve an unaccepted
 visual direction merely because a test fixture or the agent previously praised
 it. Meeting requested ingredients is not the same as executing them well.
 
+When the current technique cannot produce a credible positive alternative,
+use [reference sources](reference-sources.md) to find a visible destination and
+a concrete making move. Inspect the task, reference, and artifact before
+rereading the author's rationale; eloquent explanations cannot repair an
+unconvincing result. A coupled problem can need joint changes to scale,
+material, layout, and state presentation. Recheck the whole use episode after
+the correction, including repetition and return where they caused the failure.
+
 ## Distinguish craft from personal fit
 
 Evaluate three questions separately: does this serve the task and medium; is
