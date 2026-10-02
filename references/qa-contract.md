@@ -133,6 +133,11 @@ Inspect task fit, visual craft, and personal fit independently using
 composition while also missing the user's taste; do not collapse both into
 subjective preference or substitute technical checks for either judgment.
 
+Revisit the concrete choices made from applicable personal context. Inspect
+the actual states and viewing conditions where each preference matters, not
+only the default screenshot. Record a remaining mismatch as unresolved;
+successful retrieval or a reference to the preference is not visual evidence.
+
 Inspect the complete composition and use episode that carry the promise:
 entry, repeated attempts, changed intent, result, and the supported return.
 Check whether action cues predicted the outcome and whether real material,

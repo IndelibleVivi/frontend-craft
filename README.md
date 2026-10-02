@@ -206,6 +206,11 @@ is read in full only for relevant design or revision work, only when present,
 and it stays outside this package. The package never mines chat history, sweeps
 private directories, or collects a background memory.
 
+When present, applicable preferences guide concrete design choices and the
+ordinary rendered QA pass; they are not gated on a matching case search or on
+the user repeating them. This is agent-applied guidance, not automatic host
+injection or a guarantee that a rendered result satisfies the preference.
+
 **Local helper (offline).** [`scripts/fc_memory.py`](scripts/fc_memory.py) is a
 Python-standard-library tool over an explicitly supplied private root. It
 returns the whole current context plus bounded candidates and never infers,

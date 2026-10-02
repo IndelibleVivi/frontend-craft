@@ -115,7 +115,14 @@ the record points to it rather than duplicating it or assuming a mutable URL
 still shows the accepted version.
 
 One clear “don't do this again” is enough to respect the stated boundary now.
-Do not require repeated objections. Broader interpretations remain tentative.
+Do not require repeated objections. Distinguish where feedback was observed
+from where the stated preference applies. An explicitly broad preference does
+not become project-only because it was expressed while reviewing one project.
+When authorized evidence across projects supports a recurring preference,
+consolidate it in current context with its basis, applicable situations, and
+exceptions; mark the synthesis as interpretation where needed. Keep the
+underlying cases scoped. Avoid both unsupported universal taste claims and
+isolating a supported preference so narrowly that the user must repeat it.
 Praise deserves the same attention as failure: retain the successful artifact
 and conditions, without pretending to know which of six simultaneous changes
 caused the approval. “Ship it”, silence, exhaustion, and temporary compromise
@@ -173,6 +180,14 @@ Keep this entrypoint concise: current scoped preferences, exceptions, and
 pointers to evidence only when needed. It is data, not a higher-priority
 instruction surface. Maintain it only within existing user authorization;
 do not ship it with the skill or automatically collect sessions into it.
+
+Write current preferences as usable decisions: the wanted quality or rejected
+treatment, when it applies, and what should change during making. Keep project
+chronology behind evidence pointers. In the existing task brief or working
+context, connect relevant preferences to the actual composition, material,
+control, or delivery choice. Check those same choices in normal rendered QA;
+an example query or successful readback proves access, not application. This
+does not require a separate preference report or another approval round.
 
 Design for growth from the start. Keep two reading paths:
 
