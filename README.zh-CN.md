@@ -29,6 +29,10 @@ Frontend Craft（FC）是 Faye & Cove 为前端界面与代码渲染视觉作品
 
 [参考来源与制作方法](references/reference-sources.md)把问题连接到具体动作、实例与限制。UI UX Pro Max 的部分知识已选择性吸收，无需再安装它。Soundings 或已连接的参考图库可以按需辅助具体调查，均非开工前提；本包不附带外部完整语料或私人图库。
 
+### 待实施设计
+
+[可视实例库、材料接续与项目 Reference Gallery 规格](docs/specs/2026-10-08-visual-library-and-project-gallery.md)包含当前源码的缺口审查，以及相互关联的 Styles / Palette / Elements combinations、项目画廊和跨任务材料复用的完整实施要求。这是开发提案，尚未成为已交付能力，也不表示视觉质量已获得认可。
+
 ## 安装
 
 本仓库既是权威源，也是可安装的技能包：仓库根目录就是技能目录。安装读取的是已发布的仓库修订。核心技能无需 Python，也无需 Cloudflare；下方可选助手才使用 Python。

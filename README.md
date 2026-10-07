@@ -63,6 +63,14 @@ are incorporated without requiring another installation. Soundings or connected
 reference libraries can help with a specific investigation when available;
 none is required to start, and no external corpus or private gallery ships here.
 
+### Proposed development
+
+[Visual library, materials, and project reference gallery spec](docs/specs/2026-10-08-visual-library-and-project-gallery.md)
+records a source-grounded gap audit and the proposed implementation of linked
+Styles / Palette / Elements combinations, project galleries, and material reuse
+across ordinary tasks. It is a development proposal, not a shipped capability or
+evidence of accepted visual quality. The specification is currently in Chinese.
+
 ## Install
 
 This repository is the canonical source and the installable skill package: the
