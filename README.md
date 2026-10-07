@@ -68,8 +68,11 @@ none is required to start, and no external corpus or private gallery ships here.
 [Visual library, materials, and project reference gallery spec](docs/specs/2026-10-08-visual-library-and-project-gallery.md)
 records a source-grounded gap audit and the proposed implementation of linked
 Styles / Palette / Elements combinations, project galleries, and material reuse
-across ordinary tasks. It is a development proposal, not a shipped capability or
-evidence of accepted visual quality. The specification is currently in Chinese.
+across ordinary tasks. Source-backed research, production materials, practiced
+slots, and expressive showcases have distinct roles; showcase briefs are not
+assigned by a quota of interaction types. The development direction is agreed,
+while these capabilities remain unimplemented and visual quality unaccepted.
+The specification is currently in Chinese.
 
 ## Install
 

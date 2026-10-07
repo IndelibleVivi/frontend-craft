@@ -31,7 +31,7 @@ Frontend Craft（FC）是 Faye & Cove 为前端界面与代码渲染视觉作品
 
 ### 待实施设计
 
-[可视实例库、材料接续与项目 Reference Gallery 规格](docs/specs/2026-10-08-visual-library-and-project-gallery.md)包含当前源码的缺口审查，以及相互关联的 Styles / Palette / Elements combinations、项目画廊和跨任务材料复用的完整实施要求。这是开发提案，尚未成为已交付能力，也不表示视觉质量已获得认可。
+[可视实例库、材料接续与项目 Reference Gallery 规格](docs/specs/2026-10-08-visual-library-and-project-gallery.md)包含当前源码的缺口审查，以及相互关联的 Styles / Palette / Elements combinations、项目画廊和跨任务材料复用的完整实施要求。有来源的研究、生产材料、已实践的 slots 和展示表现力的 showcase 分别承担不同职责，showcase 不按交互类别配额生成命题。开发方向已确认，相关能力仍待实现，视觉质量仍需实际判断。
 
 ## 安装
 
