@@ -200,6 +200,18 @@ Exit codes (matching the helper's actual behavior):
 | 4 | A required root/file is absent (`missing`) |
 | 5 | Invalid input: bad JSON, invalid UTF-8, or schema/version/supersession error |
 
+## Linking visual evidence and materials
+
+`fc_memory.py` continues to own context/cases and its configured derived search;
+it does not resolve media. For a case about a concrete visual result, include
+the exact catalog/item/revision and optional asset/preview ID in its existing
+evidence field, then use [catalog operations](catalog-operations.md) to open it.
+Do not add a new case schema or send material bytes through the case index.
+Use catalog queries independently for source fonts/images even when no feedback
+case matches. A local rejection affects its stated use, not the availability
+of every ingredient. Cross-host continuation requires actual local records and
+materials plus root bindings; a semantic match cannot establish that they arrived.
+
 ## Growth and the lexical ceiling
 
 The ledger will grow, so the baseline needs to stay correct and bounded rather

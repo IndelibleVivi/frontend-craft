@@ -10,13 +10,16 @@ project-original material; the project's authorship credit is **Faye & Cove**.
 | Material | Paths | License |
 | --- | --- | --- |
 | Functional skill instructions and method/runbook references | `SKILL.md`, `AGENTS.md`, `references/` except `references/lineage.md` | [SUL-1.0](LICENSE) |
-| Host configuration, helpers, tests, CI, synthetic record data, artwork rendering scripts, and functional demos | `agents/`, `scripts/`, `tests/`, `.github/`, `.gitignore`, `examples/memory/`, `examples/workflow/` and `examples/showcase/` except their `README.md` files | [SUL-1.0](LICENSE) |
+| Host configuration, helpers, tests, CI, synthetic record data, artwork rendering scripts, functional demos and technical specimens | `agents/`, `scripts/`, `tests/`, `.github/`, `.gitignore`, `requirements-fonts.txt`, `examples/memory/`, `examples/catalog/`, `examples/materials/`, `examples/workflow/` and `examples/showcase/` except their `README.md` files and the third-party font below | [SUL-1.0](LICENSE) |
+| Third-party Noto Sans SC font derivative | `examples/materials/noto-sans-sc-specimen.woff2` | [SIL Open Font License 1.1](examples/materials/OFL-NotoSansSC.txt); source, author notice and exact derivation in [ASSETS.json](examples/materials/ASSETS.json) |
 | Explanatory documentation and visual assets, including banners, architecture diagrams, and demo screenshots | `README.md`, `README.zh-CN.md`, `examples/README.md`, `examples/workflow/README.md`, `examples/showcase/README.md`, `examples/showcase/**/README.md`, `docs/specs/`, `docs/visuals/`, `references/lineage.md`, `LICENSING.md`, `LICENSE-DOCUMENTATION.md` | [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md) |
 
 The Markdown method and runbook references are part of the instructions an
 agent executes, so their classification follows their functional role rather
 than their file extension. The license texts themselves retain their original
 terms. Classify new material in this table when adding a new kind of surface.
+`examples/catalog/README.md` and `examples/materials/README.md` are explanatory
+documentation under CC BY-NC-SA 4.0, like the other example READMEs.
 
 SUL-1.0 permits personal, noncommercial, and internal business use and
 modification. Distribution or provision to others must be free of charge and

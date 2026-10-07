@@ -1,4 +1,4 @@
 interface:
   display_name: "Frontend Craft"
   short_description: "Build and evolve interfaces with grounded visual craft"
-  default_prompt: "Use $frontend-craft to design, build, evolve, or repair this interface or visual work from its real content and purpose, preserve accepted qualities through implementation, and verify the rendered result; actively choose references and make needed materials within the task's permissions."
+  default_prompt: "Use $frontend-craft to design, build, evolve, or repair this interface or visual work from its real content and purpose, preserve accepted qualities through implementation, and verify the rendered result; resolve and open relevant retained references/materials, make needed assets through authorized host tools, and preserve their exact project uses."

@@ -63,15 +63,34 @@ are incorporated without requiring another installation. Soundings or connected
 reference libraries can help with a specific investigation when available;
 none is required to start, and no external corpus or private gallery ships here.
 
-### Proposed development
+### References and materials that can be continued
 
-[Visual library, materials, and project reference gallery spec](docs/specs/2026-10-08-visual-library-and-project-gallery.md)
-records a source-grounded gap audit and the proposed implementation of linked
-Styles / Palette / Elements combinations, project galleries, and material reuse
-across ordinary tasks. Source-backed research, production materials, practiced
-slots, and expressive showcases have distinct roles; showcase briefs are not
-assigned by a quota of interaction types. The development direction is agreed,
-while these capabilities remain unimplemented and visual quality unaccepted.
+[Material production](references/material-production.md) connects a concrete
+asset brief to the host's installed production tool, actual output inspection,
+font coverage and source-to-variant continuation. [Reference recipes](references/reference-sources.md)
+include spatial/temporal composition and inspectable source routes; the package
+does not claim to have practiced every cited technique.
+
+The offline [catalog helper](references/catalog-operations.md) provides
+`query`, `show`, `resolve`, `register`, `validate` and `gallery`. It keeps exact
+reference/material revisions, project uses and immutable captures together.
+Styles / Palette / Elements combinations are roles over related records;
+downloads, adoption and scoped feedback retain different meanings. A generated
+project gallery includes its references and needed dependencies, not an entire
+shared material store. It is a local tool, with no account or automatic upload.
+
+The optional [font helper](scripts/fc_fonts.py) inspects local font metadata,
+axes and character coverage and produces WOFF2 plus a derivation manifest from
+explicit UTF-8 text inputs. It preserves the original and refuses to overwrite
+an earlier output. It requires the optional [fontTools environment](requirements-fonts.txt).
+A real OFL Chinese [font specimen](examples/materials/README.md) and a
+[synthetic catalog walkthrough](examples/catalog/README.md) make these paths
+inspectable. They are technical examples, not expressive showcases.
+
+The [development spec](docs/specs/2026-10-08-visual-library-and-project-gallery.md)
+keeps the full repertoire/showcase and natural-use goals visible. This tranche
+implements capabilities first. New showcases, accepted visual slots and live
+cross-host/natural-agent effectiveness are not completion claims of these tools.
 The specification is currently in Chinese.
 
 ## Install
@@ -186,14 +205,14 @@ intent:
 - **Understand the request:** [decipher intent](references/intent-decipher.md),
   [design direction](references/design-direction.md).
 - **Find a making solution:** [reference sources and recipes](references/reference-sources.md),
-  [style slots](references/style-slots.md).
+  [style slots](references/style-slots.md), [material production](references/material-production.md).
 - **Make the change:** [build](references/build.md), [evolve](references/evolve.md),
   [visual construction](references/visual-construction.md),
   [app interaction](references/app-interaction.md).
 - **Trace and fix:** [state and contracts](references/state-contracts.md),
   [critique and revision](references/critique-revision.md).
 - **Record and learn:** [design learning](references/design-learning.md),
-  [memory operations](references/memory-operations.md).
+  [memory operations](references/memory-operations.md), [catalog operations](references/catalog-operations.md).
 - **Produce and verify:** [visual works](references/visual-works.md),
   [platform evidence](references/platform-evidence.md),
   [QA contract](references/qa-contract.md),
@@ -232,6 +251,15 @@ python3 scripts/fc_memory.py query --root "<authorized-root>" \
   --project "<project-slug>" --surface "<surface-name>" --term "<keyword>"
 ```
 
+**Visual/material catalog (offline).** Use an explicitly located project or
+shared catalog and scoped root bindings. The helper resolves local files and
+copies selected media into a derived static gallery; it does not fetch external
+URLs or execute recipes. Private captures, paths and generated galleries stay
+local unless sharing is authorized. See the [runbook](references/catalog-operations.md)
+and [material example](examples/materials/README.md). The case schema and
+Cloudflare transport are unchanged; a remote vector match cannot move font or
+image files between hosts.
+
 **Cloudflare semantic recall (optional, network).**
 [`scripts/fc_cloudflare.py`](scripts/fc_cloudflare.py) adds semantic recall over
 the same local records: Workers AI embeds a small allowlisted slice of each
@@ -257,8 +285,9 @@ a private profile.
 - **Tests do not prove design quality.** Package validity and passing helper
   tests show conformance, not first-draft quality, aesthetic acceptance, or
   user satisfaction. A synthetic example or agent self-review proves neither.
-- **No bundled tooling.** No browser, device lab, image generator, font bundle,
-  native automation adapter, evaluation service, or automatic screenshot-baseline approval ships here;
+- **Host tools remain external.** No browser, device lab, image generator, full font library,
+  native automation adapter, evaluation service, or automatic screenshot-baseline
+  approval ships here. The font helper and finite OFL specimen are included;
   rendered checks use the tools a project already has. A browser screenshot
   cannot verify a native app or an actual export.
 - **Skills guide; they do not enforce.** A skill shapes agent behavior. It is
@@ -292,6 +321,15 @@ result does not establish skill activation, rendered design quality, or live
 service readiness. For skill or package changes, run `skill-validate .` when
 available, then check reference links and `git diff --check` for changed
 documentation.
+
+Font tests explicitly skip if fontTools is absent. To exercise them, install
+`requirements-fonts.txt` in an isolated environment or run:
+
+```bash
+uv run --with 'fonttools[woff]==4.60.1' python -m unittest discover -s tests -p 'test*.py'
+```
+
+CI installs this optional dependency before running the same Python suite.
 
 ## Source, ownership, and rights
 

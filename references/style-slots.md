@@ -10,7 +10,11 @@ A slot can cover a whole experience, a visual language, a local composition and
 interaction, or one precise making technique. These are useful scales, not a
 required hierarchy. A whole may be kept intact; a local mechanism need not
 carry its source product's entire skin. Do not create an application theme
-engine, registry service, or schema migration just to store these materials.
+engine or registry service just to store these materials. The optional local
+[catalog](catalog-operations.md) serves concrete query/resolve/gallery consumers:
+Styles, Palette and Elements combinations are views of related items and uses,
+not three duplicate stores. Its [synthetic walkthrough](../examples/catalog/README.md)
+checks the mechanism; it is not a positive visual repertoire.
 
 ## What makes a slot usable
 
@@ -40,6 +44,10 @@ Start from this task's purpose, actual content, relevant scoped preferences,
 and provisional whole. Choose a slot because it can carry a needed relationship,
 not merely because a keyword matched. Look at its actual instance before using
 it. Make ordinary reversible choices without asking the user to fill slots.
+Query the known catalogs by the required role/relationship, inspect the returned
+evidence scope, and resolve the selected revision's source, specimen, recipe and
+materials. Open the actual instance before adapting it. External research stays
+a candidate until a real application supplies practice evidence.
 
 Preserve its fixed core and adapt the permitted variables. If a new language,
 asset, content volume, state model, or viewport violates the demonstrated

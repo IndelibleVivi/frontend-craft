@@ -28,6 +28,77 @@ and source for implementation. If a source cannot be inspected, use another or
 label the missing evidence. Then continue the original making task. Available
 knowledge does not require research for a clear local fix.
 
+For references that will guide making or be revisited, retain the actual capture
+with its URL/source revision, viewport, state, and observation date through
+[catalog operations](catalog-operations.md). Record what was actually opened:
+source inspection, a screenshot and a played sequence prove different things.
+Open resolved media in the host's image/browser/media tool; CLI JSON does not put
+pixels into visual context. Keep source access failures explicit and move to an
+inspectable alternative when the missing evidence affects the choice.
+
+## Space and time as the composition
+
+**Use:** a site whose identity depends on arriving, moving through a scene,
+opening a collection, or carrying a selected object into a new arrangement.
+Identify the persistent object and what changes around it: scale, location,
+depth, neighbors, type, controls and camera. Sketch entry → active state → return
+with actual content. A timeline or a few frames plus transition source can reveal
+a relationship that a hero screenshot cannot.
+
+**Try:** a collection opens around its selected item; selection remains the
+identity while supporting material unfolds. Measure the resting layouts first,
+then interpolate the relationship. On narrow screens, compose a reachable sequence
+instead of shrinking a desktop stage. Choose native flow, sticky regions, CSS
+transforms, SVG, canvas or WebGL from what must actually move; a tutorial's
+renderer is not automatically the product's dependency. Keep ordinary navigation,
+focus/return, interrupted input, resize and reduced-motion endpoints usable.
+
+**See:** [Codrops Stack to Content Layout Transition](https://tympanus.net/codrops/2022/05/11/stack-to-content-layout-transition/)
+and its [slideshow source](https://github.com/codrops/ContentLayoutTransition/blob/ef96cdc22f1d7b8b426f73283c6c70e163eb9b29/src/js/slideshow.js)
+connect a selected stack item to a larger content arrangement, then back. Borrow
+the identity/layout relationship, not automatically its wheel interception or
+animation lock. Its experimental code is not evidence of production keyboard,
+reduced-motion or mobile behavior. The [MIT license](https://github.com/codrops/ContentLayoutTransition/blob/ef96cdc22f1d7b8b426f73283c6c70e163eb9b29/LICENSE)
+covers that repository's code; check media and dependencies separately.
+
+[Design Teardowns](https://github.com/YunyueLi/design-teardowns) provides another
+route from full works to captures, implementation evidence and reconstruction.
+The [Ungetsu source-method record](https://github.com/YunyueLi/design-teardowns/blob/2b70e11392a99beae42fdf564bae59f2d538597c/teardowns/ungetsu/出处与方法.md)
+separates extracted facts from interpretation and points to temporal captures.
+Its long-page capture limitation illustrates why a scroll-driven work needs
+state-by-state evidence. Open the cited source/capture for the needed claim;
+do not treat the teardown author's observation as your own or copy the site's
+identity. Captured assets have their own rights, irrespective of the research
+repository's license. The source methods were inspected here; the original
+site's live behavior was not revalidated by that inspection.
+
+## Find the material that can change the composition
+
+Search by the missing relationship and medium, then inspect a few different
+objects. These are accessible starting routes, not an exhaustive inventory or
+a recommended style. Use the exact asset's current provenance and terms.
+
+| Needed material | Starting route | Production decision |
+| --- | --- | --- |
+| Type and actual script coverage | Font author's specimens and official releases; [Google Fonts source](https://github.com/google/fonts) | Inspect the font file, axes and license; use [font production](material-production.md#fonts-inspect-subset-and-rebuild-when-text-changes) with real text |
+| Photography, illustration, historical art or vector source | Creator/museum collections and [Wikimedia Commons](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia) | Inspect the individual file/license, resolution, focal area and editable original; platform access is not a uniform reuse grant |
+| Surface, light or spatial scene | [Poly Haven](https://polyhaven.com/license) textures, HDRIs and models | Its assets are offered under CC0; that does not extend to website copy or example renders. Choose actual maps, scale and runtime budget |
+| Motion, footage or sound | Author's work and implementation, or [Freesound's license guidance](https://freesound.org/help/faq/#licenses) for sound discovery | Preserve the exact media, individual rights, duration and loop/playback conditions; listen/watch before judging |
+| Generated material or a composition sample | [AI Visual Prompt Cookbook](https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook) plus the host's installed production skill | Translate visible relationships into a task brief; distinguish a whole-poster prompt from a usable asset and code UI |
+
+The Cookbook's [prismatic material record](https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/9522b5ae06549b5fcf3ec28239ea91beefa6f4e5/styles/prismatic-glass-animal-weekend-editorial/style.json)
+separates subject variables, material/composition relationships and literal
+source content. Use that distinction when briefing; its palette, ratios, tiny
+type and full-poster format are not FC defaults. This is an inspected prompt
+record, not a locally practiced style or an inspected generated result. Its
+[license](https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/blob/9522b5ae06549b5fcf3ec28239ea91beefa6f4e5/LICENSE)
+does not establish rights in every referenced third-party image.
+
+Once chosen, use [material production](material-production.md) to acquire or
+produce within existing authority, inspect, apply and retain the exact original
+and derivative. Downloading a file is not applying it, and applying it is not
+evidence of owner acceptance. Store those facts separately.
+
 ## Content recognition before container styling
 
 **Use:** browsing records where title/subject lets the reader recognize an item.

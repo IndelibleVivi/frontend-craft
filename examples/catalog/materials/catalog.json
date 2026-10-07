@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "sample-materials",
+  "revision": 1,
+  "items": [
+    {
+      "id": "sample-title-font",
+      "revision": 1,
+      "title": "Synthetic title face (subset)",
+      "roles": [
+        "material"
+      ],
+      "summary": "A synthetic placeholder font file, not a real typeface.",
+      "source": {
+        "kind": "authored",
+        "note": "synthetic fixture file"
+      },
+      "tags": {
+        "media": [
+          "typography"
+        ],
+        "languages": [
+          "zh-Hans"
+        ]
+      },
+      "assets": [
+        {
+          "id": "web-subset",
+          "locator": {
+            "root": "catalog",
+            "path": "sample-title.woff2"
+          },
+          "file_type": "font/woff2",
+          "sha256": "f17c77c2a7e03f61d78305860eb83a911f934b1f66b65dde3729225a3bb5d98e",
+          "note": "synthetic bytes; exercise resolve/retain only"
+        }
+      ],
+      "rights": {
+        "status": "unknown",
+        "note": "synthetic; no real rights attached"
+      }
+    }
+  ],
+  "uses": []
+}

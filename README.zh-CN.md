@@ -29,9 +29,15 @@ Frontend Craft（FC）是 Faye & Cove 为前端界面与代码渲染视觉作品
 
 [参考来源与制作方法](references/reference-sources.md)把问题连接到具体动作、实例与限制。UI UX Pro Max 的部分知识已选择性吸收，无需再安装它。Soundings 或已连接的参考图库可以按需辅助具体调查，均非开工前提；本包不附带外部完整语料或私人图库。
 
-### 待实施设计
+### 可以继续使用的参考与材料
 
-[可视实例库、材料接续与项目 Reference Gallery 规格](docs/specs/2026-10-08-visual-library-and-project-gallery.md)包含当前源码的缺口审查，以及相互关联的 Styles / Palette / Elements combinations、项目画廊和跨任务材料复用的完整实施要求。有来源的研究、生产材料、已实践的 slots 和展示表现力的 showcase 分别承担不同职责，showcase 不按交互类别配额生成命题。开发方向已确认，相关能力仍待实现，视觉质量仍需实际判断。
+[材料生产](references/material-production.md)把具体素材 brief、宿主已安装的生产工具、实际产物检查、字体覆盖与原物→衍生物接续连起来。[参考制作路线](references/reference-sources.md)补充空间／时间编排及可检查的源码来源；引用存在不代表每项技法都已本地实践。
+
+离线 [catalog helper](references/catalog-operations.md)提供 `query`、`show`、`resolve`、`register`、`validate` 和 `gallery`。它保存准确的参考／材料版本、项目采用关系和不可变捕获。Styles / Palette / Elements combinations 是相互关联记录的角色；下载、采用与限定范围的反馈各自保留含义。项目画廊包含本项目参考及必要依赖，不摊开整个共享材料库；无需账号，也不自动上传。
+
+可选[字体助手](scripts/fc_fonts.py)检查本地字体元数据、轴和字符覆盖，并从显式 UTF-8 文字输入生成 WOFF2 与加工 manifest。原文件保留，已有产物拒绝覆盖；需要可选的 [fontTools 环境](requirements-fonts.txt)。实际 OFL 中文[字体样张](examples/materials/README.md)和[合成 catalog 操作示例](examples/catalog/README.md)用于检查这些路线，属于技术材料。
+
+[完整开发规格](docs/specs/2026-10-08-visual-library-and-project-gallery.md)继续保留 repertoire、showcase 和自然调用目标。本阶段先实现 capabilities；新 showcase、被接受的视觉 slots、真实跨宿主接续与自然 agent 使用效果，不由这些工具的完成自动成立。
 
 ## 安装
 
@@ -99,10 +105,10 @@ python3 -m http.server 4182 --bind 127.0.0.1
 [SKILL.md](SKILL.md) 是日常入口，负责路由与共享契约。各参考文件负责聚焦方法；每个都有自己的触发条件，它们不是必需的流水线，也不是单独安装的技能。按意图分组：
 
 - **理解请求：**[解读意图](references/intent-decipher.md)、[设计方向](references/design-direction.md)。
-- **找到制作解法：**[参考来源与制作方法](references/reference-sources.md)、[style slots](references/style-slots.md)。
+- **找到制作解法：**[参考来源与制作方法](references/reference-sources.md)、[style slots](references/style-slots.md)、[材料生产](references/material-production.md)。
 - **做出改动：**[构建](references/build.md)、[演进](references/evolve.md)、[视觉构造](references/visual-construction.md)、[应用交互](references/app-interaction.md)。
 - **追踪与修复：**[状态与契约](references/state-contracts.md)、[批评与修改](references/critique-revision.md)。
-- **记录与学习：**[设计记录与学习](references/design-learning.md)、[记忆操作](references/memory-operations.md)。
+- **记录与学习：**[设计记录与学习](references/design-learning.md)、[记忆操作](references/memory-operations.md)、[catalog 操作](references/catalog-operations.md)。
 - **产出与验证：**[视觉作品](references/visual-works.md)、[平台证据](references/platform-evidence.md)、[QA 契约](references/qa-contract.md)、[界面场景](references/interface-scenarios.md)。
 
 ## 可选记录与数据流
@@ -120,6 +126,8 @@ python3 scripts/fc_memory.py query --root "<authorized-root>" \
   --project "<project-slug>" --surface "<surface-name>" --term "<keyword>"
 ```
 
+**视觉／材料 catalog（离线）。** 使用明确定位的项目或共享 catalog，以及按集合限定的根绑定。助手解析本地文件、把所选媒体复制进派生静态画廊，不抓取外部 URL、不执行制作脚本。私人捕获、路径与生成画廊在获得分享授权前留在本地。操作见 [runbook](references/catalog-operations.md)与[材料示例](examples/materials/README.md)。案例 schema 和 Cloudflare transport 不变；远端向量命中不会把字体或图像文件搬到另一宿主。
+
 **Cloudflare 语义检索（可选，联网）。**[`scripts/fc_cloudflare.py`](scripts/fc_cloudflare.py) 为同一批本地记录增加语义检索： Workers AI 为每个案例的一小段白名单文本生成嵌入，Vectorize 存储派生向量与精简的 metadata。权威记录留在本地，且是唯一真相来源；远端索引是可重建的派生状态。该路径需要显式配置与显式的数据传输授权，同步会在 `--apply` 之前先给出 dry-run 计划。Cloudflare 接收用于嵌入的白名单案例检索文本与自然语言查询；当前上下文与证据指针留在本地，本仓库不附带任何偏好数据。见 [Cloudflare 记忆](references/cloudflare-memory.md)。
 
 仅使用虚构案例的合成离线演示见 [examples/README.md](examples/README.md)；它演示的是检索边界，不是设计品质或真实反馈。请把你自己的授权记录目录放在**本仓库之外**，绝不把公开样本改成私人档案。
@@ -128,7 +136,7 @@ python3 scripts/fc_memory.py query --root "<authorized-root>" \
 
 - **是目标，不是测量结果。** 更好的首个可用结果与更少返工，是预期目标，不是已被证明的改进率。
 - **测试不证明设计品质。** 包的有效性与通过的助手测试说明符合规范，不说明初稿品质、审美认可或用户满意度。合成示例或智能体自评同样不能证明这些。
-- **不捆绑工具。** 本包不附带浏览器、设备实验室、图像生成器、字体包、评估服务或自动截图基线审批，也不附带原生自动化 adapter；渲染检查使用项目已有的工具。浏览器截图无法验证原生应用或真实导出。
+- **宿主工具继续外置。** 本包不附带浏览器、设备实验室、图像生成器、完整字体库、评估服务或自动截图基线审批，也不附带原生自动化 adapter；包含字体 helper 和有限文字的 OFL 样张，渲染检查使用项目已有的工具。浏览器截图无法验证原生应用或真实导出。
 - **技能是引导，不是强制。** 技能塑造智能体行为，它不是沙箱，也不保证某个宿主加载或遵循了更新后的指令。
 - **分离的证据层。** 源码、构建、渲染运行时、部署与所有者认可，绝不合并为一个声明。
 
@@ -144,6 +152,14 @@ node tests/test_workflow_app.js
 ```
 
 这两条命令分别运行离线助手／公开记忆示例测试，以及用 DOM 和存储替身驱动真实 JavaScript 的 workflow 检查。后者需要 Node.js，不渲染浏览器。[CI 工作流](.github/workflows/ci.yml) 使用 Python 3.13 和 runner 已有的 Node.js 运行这些检查，contents 权限只读，不使用密钥或实时 Cloudflare 调用；其结果不证明技能激活、渲染设计品质或线上服务就绪。技能或包的改动请在可用时运行 `skill-validate .`，然后检查引用链接与 `git diff --check`。
+
+缺少 fontTools 时，字体测试会明确 skip。要运行它们，可在隔离环境安装 `requirements-fonts.txt`，或执行：
+
+```bash
+uv run --with 'fonttools[woff]==4.60.1' python -m unittest discover -s tests -p 'test*.py'
+```
+
+CI 先安装这个可选依赖，再运行同一个 Python suite。
 
 ## 源、归属与权利
 

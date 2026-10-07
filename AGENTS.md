@@ -19,6 +19,18 @@ separate layers, not alternative source owners.
   presented as owner-approved visual styles.
 - `scripts/fc_memory.py` owns the local record CLI. `scripts/fc_cloudflare.py`
   owns the optional Cloudflare transport and synchronization implementation.
+- `scripts/fc_catalog.py` owns versioned references/materials, project uses,
+  file resolution and derived galleries. Its operational contract is
+  `references/catalog-operations.md`; cases and preferences stay with the
+  existing memory owner. Recorded recipes are data, not executable hooks.
+- `scripts/fc_fonts.py` owns optional local font inspection and WOFF2 subsetting;
+  `requirements-fonts.txt` declares its isolated dependency. Originals and text
+  inputs remain source; versioned font outputs/manifests are derived. Material
+  production owns tool handoff and continuation, not a second generator.
+- `examples/catalog/` contains synthetic CLI/gallery fixtures, and
+  `examples/materials/` contains an OFL font derivative and technical specimen.
+  Neither is an expressive showcase or evidence of autonomous design quality.
+  Preserve the font's individual rights and pinned source in `ASSETS.json`.
 - Personal context, case catalogs, credentials, configuration, sync state,
   raw sessions, and evaluation traces stay outside this repository. Use only
   synthetic records in tests and portable placeholders in documentation.
@@ -54,6 +66,11 @@ separate layers, not alternative source owners.
   independently of the implementation constant they check.
 - Run `skill-validate .` when available for skill/package changes, and inspect
   local reference links and `git diff --check` for changed documentation.
+- For font helper changes run the Python suite in an environment with
+  `requirements-fonts.txt` installed; without it font tests explicitly skip.
+  For catalog/gallery changes cover version conflicts, interruption, exact
+  historical references, root rebinding and actual browser navigation/media.
+  For font specimen changes check actual loaded text/weight at wide/narrow sizes.
 - For demo changes, verify the affected interactions in a browser: note
   editing/save/reopen/discard, shop selection/totals, article navigation, or
   line-field controls and reduced motion. Check language switching, keyboard
