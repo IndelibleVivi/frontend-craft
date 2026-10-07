@@ -1,0 +1,34 @@
+{
+  "source_url": "https://github.com/google/fonts/blob/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+  "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+  "family": [
+    "Noto Sans SC Thin"
+  ],
+  "version": [
+    "Version 2.004-H2;hotconv 1.0.118;makeotfexe 2.5.65603"
+  ],
+  "axes": [
+    {
+      "tag": "wght",
+      "min": 100.0,
+      "default": 100.0,
+      "max": 900.0
+    }
+  ],
+  "license": "OFL-NotoSansSC.txt",
+  "output": {
+    "path": "noto-sans-sc-specimen.woff2",
+    "sha256": "49949c10a78d6a2d4bda74b95702ef5b1b4e9522c3f21f6702556a9c3cee39f3",
+    "bytes": 33236
+  },
+  "text_input": "specimen.txt",
+  "recipe": {
+    "tool": "fc_fonts.py",
+    "fonttools_version": "4.60.1",
+    "layout_features": "*",
+    "names": "all",
+    "hinting": "retained",
+    "allow_missing": false
+  },
+  "coverage": "Only specimen.txt. Retrieve the exact original to add new characters; this file is not a general Chinese body font."
+}

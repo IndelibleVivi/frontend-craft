@@ -12,6 +12,37 @@ uses SUL-1.0, while the explanatory documents named in
 [LICENSING.md](../LICENSING.md), including this lineage, use CC BY-NC-SA 4.0.
 This does not change the third-party rights or historical observations below.
 
+## Material and spatial capabilities — 2026-10-08
+
+The [reference route](reference-sources.md) adds independently expressed making
+relationships from inspected source documents:
+
+- [Design Teardowns](https://github.com/YunyueLi/design-teardowns/tree/2b70e11392a99beae42fdf564bae59f2d538597c):
+  the Ungetsu source/method record distinguishes extracted evidence, inference
+  and temporal captures. Its original website and captured third-party assets
+  were not revalidated or redistributed in this change.
+- [Codrops ContentLayoutTransition](https://github.com/codrops/ContentLayoutTransition/tree/ef96cdc22f1d7b8b426f73283c6c70e163eb9b29):
+  the article and slideshow source support selected-object layout continuity.
+  FC did not import the implementation, its interaction locks or dependencies.
+  The repository's MIT license was inspected; no live-demo behavior is claimed.
+- [AI Visual Prompt Cookbook](https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/tree/9522b5ae06549b5fcf3ec28239ea91beefa6f4e5):
+  the prismatic material record separates variable content, material/composition
+  relationships and literal source details. FC uses that distinction in its own
+  asset-brief method. No prompt corpus, source images, fixed ratios or preferred
+  aesthetic were imported. Its license was inspected, not generalized to images.
+
+[Material production](material-production.md) routes to the actual host skill
+instead of bundling another image generator. The optional font helper composes
+the official [fontTools subset API](https://fonttools.readthedocs.io/en/latest/subset/index.html)
+with local provenance and non-overwriting outputs; fontTools remains an optional
+dependency. The real Noto Sans SC derivative preserves the upstream OFL and
+[exact source record](../examples/materials/ASSETS.json).
+
+Catalog tests and the font specimen establish bounded technical behavior. They
+do not establish new practiced visual styles, natural agent effectiveness,
+cross-host activation or owner aesthetic acceptance. Showcase work remains a
+separate creative deliverable.
+
 ## Faye/Cove field practice
 
 The local kernel comes from repeated frontend and PWA work across product,

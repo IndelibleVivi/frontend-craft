@@ -77,6 +77,11 @@ The diagram is a conceptual guide to authority and interaction, not an automatic
 execution pipeline. The three method groups are a summary, not a required
 sequence or an exhaustive file inventory. The host agent chooses relevant
 instructions and performs authorized actions with its available tools.
+The record path drawn here describes context/case retrieval and its optional
+cloud index. The separate local reference/material catalog and font-production
+helpers are documented in [catalog operations](../../references/catalog-operations.md)
+and [material production](../../references/material-production.md); media does
+not travel through the case embedding path.
 
 | Visual relationship | Current source |
 | --- | --- |
@@ -99,6 +104,7 @@ Canon 是冰淇淋色系的像素小世界：奶油天空、薄荷和香芋色�
 三张 banner 都由仓库中的 Python 标准库脚本绘制，字形、sprite、坐标与配色可以直接修改。不使用 ImageGen、外部图片或字体。修改源脚本后重新生成 SVG，不把导出图当另一套源。架构图则保持原生 SVG 文字与明确的关系线，源文件可直接编辑。
 
 架构图表示方法引导与反馈关系，不是强制流水线。下方本地记录与 Cloudflare 均为可选路径；只有经授权的白名单案例文本与查询可以传出，当前上下文与证据指针留在本地。实际 demo 和风格展示的截图须从真实页面重新捕获。
+图中的记录路径是 context／cases 及可选云端索引。独立的本地参考／材料 catalog 和字体生产助手见上方操作文档；媒体不经过案例 embedding 路径。
 
 Original artwork and explanatory assets: **Frontend Craft — Faye & Cove**,
 under [CC BY-NC-SA 4.0](../../LICENSE-DOCUMENTATION.md). Functional rendering

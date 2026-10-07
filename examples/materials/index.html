@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FC font material specimen</title>
+<style>
+@font-face{font-family:Specimen;src:url(noto-sans-sc-specimen.woff2) format('woff2');font-weight:100 900;font-display:swap}
+*{box-sizing:border-box}body{margin:0;padding:clamp(20px,5vw,64px);background:#f2f4f7;color:#1c2432;font:16px/1.6 system-ui,sans-serif}main{max-width:960px;margin:auto}h1{font-size:24px}label{display:block;margin-block:24px 10px}input{max-width:100%;width:300px}section{border-block:1px solid #b4becc;padding-block:24px;margin-block:24px}.sample{font-family:Specimen,sans-serif;font-weight:400;overflow-wrap:anywhere}.title{font-size:clamp(28px,5vw,52px);line-height:1.4}.body{font-size:20px}a{color:#244da0}output{font-variant-numeric:tabular-nums}
+</style>
+<main>
+<h1>Font material / 字体材料</h1>
+<p>A technical specimen of the bundled Noto Sans SC subset. It covers the fixed text below; new copy must be rebuilt from the original. <span lang="zh-CN">本页用于核对实际字体、字重与字符覆盖。</span></p>
+<label for="weight">Weight / 字重 <output id="value">400</output></label>
+<input id="weight" type="range" min="100" max="900" step="100" value="400">
+<section aria-label="Font specimen">
+<p class="sample title">字体材料接续</p>
+<p class="sample body">中文标题与标点：新的内容，可以继续修改。<br>简体中文、混合排印、正文与数字。<br>宽窄布局；字重变化。</p>
+<p class="sample body" lang="en">Frontend Craft — Typeface specimen 0123456789<br>Source → subset → revised text</p>
+</section>
+<p><a href="noto-sans-sc-specimen.woff2" download>Font file</a> · <a href="specimen.txt">Exact text input</a> · <a href="ASSETS.json">Source and recipe</a> · <a href="OFL-NotoSansSC.txt">Font license</a></p>
+</main>
+<script>
+const weight=document.querySelector('#weight');
+weight.addEventListener('input',()=>{document.querySelector('#value').value=weight.value;document.querySelectorAll('.sample').forEach(p=>p.style.fontWeight=weight.value)});
+</script>
+</html>

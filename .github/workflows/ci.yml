@@ -20,7 +20,9 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.13'
-      - name: Test helpers and public example
+      - name: Install optional font test dependency
+        run: python3 -m pip install -r requirements-fonts.txt
+      - name: Test helpers and public examples
         run: python3 -m unittest discover -s tests -p 'test*.py'
       - name: Test the workflow demo's storage behavior
         run: node tests/test_workflow_app.js

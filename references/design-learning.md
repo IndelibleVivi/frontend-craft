@@ -9,6 +9,14 @@ For concrete read, write, revision, retirement, and query procedures, use
 records and can maintain an explicitly configured derived search index; it
 never decides what the owner likes. Read-only tasks remain read-only.
 
+References and production materials have a separate, optional
+[catalog](catalog-operations.md). It retains exact items, files, revisions and
+project uses; it does not own preferences. Put its location and explicitly named
+shared stores in the existing project/private entrypoint so later tasks can find
+them without scanning other projects. Acquisition and use can be registered
+without inventing feedback. A rejected result does not erase a reusable original
+font or image; retrieval keeps its independent material role and scoped history.
+
 ## Keep three authorities separate
 
 | Record | Owns | Home |
@@ -113,6 +121,11 @@ version and scope. “B works” must not survive only as “prefers clean desig
 [Build](build.md) owns carrying the selected artifact into implementation;
 the record points to it rather than duplicating it or assuming a mutable URL
 still shows the accepted version.
+When cataloged, name the exact `{catalog_id, item_id, revision}` and affected
+asset/preview in the existing case's evidence text. Keep the case schema and its
+scope intact; use the catalog resolver to open those objects. Do not migrate
+private feedback into a public gallery. A gallery contains its project uses and
+required dependencies, but the generator cannot decide publication rights.
 
 One clear “don't do this again” is enough to respect the stated boundary now.
 Do not require repeated objections. Distinguish where feedback was observed

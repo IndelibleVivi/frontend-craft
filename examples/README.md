@@ -2,6 +2,12 @@
 
 [English README](../README.md) · [中文说明](../README.zh-CN.md)
 
+For versioned references and materials, use the
+[synthetic catalog walkthrough](catalog/README.md). For actual Chinese font
+coverage and source-to-subset continuation, open the
+[font material specimen](materials/README.md). These exercise capabilities;
+they are separate from the expressive showcase work.
+
 For a visual, hands-on product example, open the
 [interactive style gallery](showcase/README.md) or the
 [note-editor workflow](workflow/README.md). The walkthrough below

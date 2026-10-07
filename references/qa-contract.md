@@ -187,6 +187,24 @@ threshold as a universal aesthetic or accessibility standard. If content
 cannot fit legibly, change composition, density, or an explicitly supported
 output format; do not silently erase text or assume readers will zoom.
 
+## Material and reference continuation
+
+When this change acquires, transforms or reuses decisive material, resolve its
+exact revision through [catalog operations](catalog-operations.md) and open the
+actual file in the relevant host tool. Check source → derivative → project use
+against the rendered result. Capture the viewed state and keep old captures
+immutable; a new screenshot must not retroactively replace feedback evidence.
+For font changes, check real new characters and loading through
+[material production](material-production.md), not only an unchanged title.
+
+For a continuation claim, reopen the project from its ordinary design entry,
+resolve the retained source, make the requested edit and inspect the new result.
+Missing, changed and unbound files must remain visible as such while available
+originals can still be used. Test an explicitly copied portable fixture when
+checking root rebinding; call it an offline portability check. Natural agent use,
+another actual host, successful file resolution, and improved design quality are
+separate claims. Do not run a new live model evaluation without its authorization.
+
 ## Accessibility checks
 
 Keep the pass proportional, but always inspect the semantics touched by the

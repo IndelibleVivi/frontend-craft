@@ -12,6 +12,15 @@ current product contract. Keep a retrievable version or authorized artifact
 pointer in the existing project design record when the work spans sessions.
 An adjective summary cannot substitute for seeing the chosen composition.
 
+When a project catalog exists, use [query/show/resolve](catalog-operations.md)
+to reopen its exact reference, source material and current project use. Open
+resolved captures in the host's visual tool; read making notes beside them.
+After acquisition or a meaningful change, register actual source/variant files
+and the specific adopted relationship. After integration, update the use with
+the real target and result capture. Keep downloaded, adopted and applied facts
+distinct; none marks a reference as owner-approved. Keep the catalog/gallery
+pointer in the existing design entrypoint, respecting its privacy boundary.
+
 | Input | Carry into implementation | Do not infer |
 | --- | --- | --- |
 | Keywords or short descriptions | Product-specific attention, density, reading, material, and interaction choices | A universal palette or template; that missing taste history means missing task context |
@@ -50,6 +59,8 @@ and its responsive counterpart. An unavailable image, font, or renderer may
 invalidate the direction; choose a feasible equivalent before expanding the
 shell. Carry useful source-backed recipes or [slots](style-slots.md) through
 this same path; a demonstrated local pattern still needs whole-scene judgment.
+Use [material production](material-production.md) when that path needs a concrete
+asset brief, an installed generation tool, or a reproducible font/image variant.
 
 Implement structure and behavior together:
 

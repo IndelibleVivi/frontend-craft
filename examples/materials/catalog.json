@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "id": "fc-material-samples",
+  "revision": 1,
+  "items": [
+    {
+      "id": "noto-sans-sc-original",
+      "revision": 1,
+      "title": "Noto Sans SC — pinned original",
+      "roles": [
+        "material"
+      ],
+      "source": {
+        "kind": "external",
+        "url": "https://github.com/google/fonts/blob/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+        "author": "Adobe / Noto contributors",
+        "version": "5e8a3ba899557829a76cfdac30fa512bda91d7ca"
+      },
+      "summary": "Original variable font; remote acquisition required before adding characters. The bundled WOFF2 is a separate derivative.",
+      "tags": {
+        "languages": [
+          "zh-CN",
+          "en"
+        ],
+        "media": [
+          "font"
+        ],
+        "terms": [
+          "cjk",
+          "variable",
+          "typography"
+        ]
+      },
+      "assets": [
+        {
+          "id": "original",
+          "url": "https://github.com/google/fonts/blob/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+          "file_type": "ttf",
+          "version": "Version 2.004-H2;hotconv 1.0.118;makeotfexe 2.5.65603",
+          "axes": {
+            "wght": [
+              100,
+              900
+            ]
+          },
+          "note": "Expected original SHA-256 is recorded in ASSETS.json; not locally bundled."
+        },
+        {
+          "id": "license",
+          "locator": {
+            "root": "catalog",
+            "path": "OFL-NotoSansSC.txt"
+          },
+          "file_type": "txt"
+        }
+      ],
+      "rights": {
+        "status": "known",
+        "license": "SIL OFL 1.1",
+        "url": "https://openfontlicense.org/",
+        "note": "Bundled license file retains the author notice."
+      }
+    },
+    {
+      "id": "noto-sans-sc-specimen",
+      "revision": 1,
+      "title": "Noto Sans SC — finite text WOFF2",
+      "roles": [
+        "material"
+      ],
+      "source": {
+        "kind": "authored",
+        "note": "Subset from the separately identified Noto original; not original font authorship."
+      },
+      "summary": "Real Chinese/mixed-script font material with a 100–900 weight axis. Covers specimen.txt only.",
+      "tags": {
+        "languages": [
+          "zh-CN",
+          "en"
+        ],
+        "media": [
+          "font"
+        ],
+        "tasks": [
+          "typography",
+          "text-revision"
+        ]
+      },
+      "assets": [
+        {
+          "id": "woff2",
+          "locator": {
+            "root": "catalog",
+            "path": "noto-sans-sc-specimen.woff2"
+          },
+          "sha256": "49949c10a78d6a2d4bda74b95702ef5b1b4e9522c3f21f6702556a9c3cee39f3",
+          "file_type": "woff2",
+          "axes": {
+            "wght": [
+              100,
+              900
+            ]
+          }
+        },
+        {
+          "id": "text",
+          "locator": {
+            "root": "catalog",
+            "path": "specimen.txt"
+          },
+          "file_type": "txt"
+        },
+        {
+          "id": "recipe",
+          "locator": {
+            "root": "catalog",
+            "path": "ASSETS.json"
+          },
+          "file_type": "json"
+        }
+      ],
+      "specimen": {
+        "entry": "index.html",
+        "notes": "README.md",
+        "locator": {
+          "root": "catalog",
+          "path": "index.html"
+        }
+      },
+      "making": {
+        "effect": "Inspect real glyph coverage and variable weight before applying a font.",
+        "carry": [
+          "Use the exact original when adding characters.",
+          "Keep the license with the derivative."
+        ],
+        "vary": [
+          "Text input",
+          "Weight",
+          "Measure"
+        ],
+        "limits": "Technical specimen, not a practiced visual style; shaping and general user-content coverage are not established."
+      },
+      "materials": [
+        {
+          "catalog_id": "fc-material-samples",
+          "item_id": "noto-sans-sc-original",
+          "revision": 1
+        }
+      ],
+      "derivation": {
+        "sources": [
+          {
+            "catalog_id": "fc-material-samples",
+            "item_id": "noto-sans-sc-original",
+            "revision": 1,
+            "asset_id": "original"
+          }
+        ],
+        "script": {
+          "root": "package",
+          "path": "scripts/fc_fonts.py"
+        },
+        "inputs": [
+          "specimen.txt"
+        ],
+        "outputs": [
+          "noto-sans-sc-specimen.woff2"
+        ],
+        "steps": [
+          "Inspect original and explicit UTF-8 input.",
+          "Subset to a fresh directory with the recorded fontTools version.",
+          "Check serialized cmap, then loaded font in Chromium."
+        ]
+      },
+      "rights": {
+        "status": "known",
+        "license": "SIL OFL 1.1",
+        "url": "https://openfontlicense.org/"
+      },
+      "evidence": {
+        "rendered": true,
+        "operated": true,
+        "observed": "2026-10-07T22:59:29Z",
+        "source": {
+          "runtime": "Chromium at 1440×1000 and 390×844",
+          "checks": "Loaded font, mixed text, keyboard weight 900 and overflow checked; technical evidence only."
+        }
+      }
+    }
+  ],
+  "uses": []
+}
