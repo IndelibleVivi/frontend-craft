@@ -54,6 +54,22 @@ separate layers, not alternative source owners.
   The choice-and-result route hosts Liquid Matter; its `sculpture.js` owns the
   original WebGL renderer, motion, turning and visibility lifecycle. Keep that
   work expressive while preserving its optional selection experiment.
+- `examples/products/` owns separately runnable product examples. Side A lives
+  in `music-library/`: `src/domain.ts` owns occurrence identity and recovery
+  semantics, `src/transfer.ts` owns import parsing/merge, and `src/player.ts` owns
+  the single audio controller, atomic import and local save. `src/App.tsx` owns
+  browsing and temporary views; `src/LibraryTransfer.tsx` owns the uncommitted
+  file and import confirmation. Keep playback above
+  routing, restore paused, and preserve independently editable duplicate tracks.
+  `fixtures/catalog.json` and `ASSETS.json` retain real recording identity and
+  individual asset rights. `scripts/render-covers.mjs` owns cover arrangements;
+  public cover SVGs and `evidence/*.png` are derived. Product screenshots use
+  `scripts/capture.mjs` and maintain both languages. Raw sessions/download caches
+  are not product assets. `scripts/prepare-media.mjs` owns explicit audio fetch/
+  transcode and offline readiness; audio binaries stay ignored. `catalog.json`
+  connects actual captured states and exact editable source; update source
+  digests/captures after a visible revision. This example does not prove
+  autonomous FC performance.
 - `scripts/render_banners.py` owns the hand-authored pixel glyphs, sprites,
   palettes, and scenes; `docs/visuals/banner-*.svg` are its derived exports.
   Re-render them after source changes. Do not replace these with ImageGen
@@ -93,6 +109,15 @@ separate layers, not alternative source owners.
 - For workflow storage/state changes, also run `node tests/test_workflow_app.js`.
   It executes the real app with DOM/storage doubles; it does not establish
   browser rendering or accessibility behavior.
+- For Side A changes, run the affected checks from `examples/products/`:
+  `npm run typecheck`, `npm test`, `npm run test:media`, `npm run build`, and
+  `npm run test:e2e`. Import changes cover preview/cancel, merge continuity,
+  paused replacement, missing tracks and write failure with the original intact.
+  Exercise actual media in wide/narrow browsing, queue editing, listening/return,
+  playlist persistence and paused restoration; cover affected failure paths.
+  Production preview and subdirectory serving are separate checks. Re-capture
+  visible changes after building. Do not infer subjective audio quality from
+  decoded signal or UI state. Product tests are separate from root helper CI.
 - For the choice-and-result study, check selection/result agreement, long
   labels, expanded versus compact option sets, and state across language changes.
   Renderer changes also need actual-frame checks for motion, pause, keyboard

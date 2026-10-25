@@ -89,7 +89,11 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 
 ## 亲手试试这些示例
 
-先看[可交互的风格展示](examples/showcase/README.md)：像素冰淇淋店、阅读刊物，以及生成式视觉工作台。每个场景都有不同的构图与真正可用的控件。[像素 banner 合集](docs/visuals/README.md)展示的是仓库自己的冰淇淋配色，不要求其他产品也采用同一风格。
+先看 **[Side A 音乐库](examples/products/music-library/README.md)**：八组原创示范合辑、24 首完整且有署名的录音。听一张唱片时可以翻看另一张，安排队列、建立歌单；重开后恢复位置，保持暂停。JSON 备份可先预览，再保留当前聆听并合并，或明确确认后暂停恢复。界面提供中英文，使用独立的 React/TypeScript/Vite 子包，见[运行说明](examples/products/README.md)。字体、封面与已准备音乐从本地加载，无账号、模型调用或流媒体请求。Git 不含录音；按文档明确执行 FFmpeg 准备命令后，本地约增加 56 MiB。[项目 catalog](examples/products/music-library/catalog.json)连接实际状态、可编辑实现、封面材料与字体。它是产品示例，不代表已被认可的视觉风格或经测量的 FC 改进。
+
+[![Side A：翻看 Soft Focus 时，Blue Hour 仍在播放](examples/products/music-library/evidence/20261025-browse-and-listen-wide.zh-CN.png)](examples/products/music-library/README.md)
+
+此前的[可交互风格展示](examples/showcase/README.md)保留像素冰淇淋店、阅读刊物，以及生成式视觉工作台。每个场景都有不同的构图与真正可用的控件。[像素 banner 合集](docs/visuals/README.md)展示的是仓库自己的冰淇淋配色，不要求其他产品也采用同一风格。
 
 再看看[《流动的物质》](examples/showcase/README.md#making-study-choice-and-result)：可以旋转、暂停、切换主题的虹彩雕塑。作品居于中心，集合设置按需展开，用来观察选择与结果的联系。使用本地 WebGL 与原创源码，无外部素材；系统要求减少动态时默认暂停。这些是有指导制作的展示作品，不代表已被用户认可的风格或自主首稿质量。
 
@@ -107,7 +111,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/inst
 python3 -m http.server 4182 --bind 127.0.0.1
 ```
 
-然后在浏览器打开[风格展示](http://127.0.0.1:4182/examples/showcase/)或[笔记工作流](http://127.0.0.1:4182/examples/workflow/)。示例无需依赖、模型调用或账号，不发起外部请求。保存的笔记留在当前浏览器；写入被拒绝时会保留明确标注的页面内副本，重新打开另一份浏览器笔记后仍可通过恢复操作取回它。读取失败会保留草稿与恢复副本，后续操作仍会重试存储。示意的“改动前”和可操作的编辑器均为人工编写的示例，不是 FC 自主执行的录像，也不是质量评测。见[演示说明与存储细节](examples/workflow/README.md)。
+然后在浏览器打开[风格展示](http://127.0.0.1:4182/examples/showcase/)或[笔记工作流](http://127.0.0.1:4182/examples/workflow/)。这两个早期静态示例无需依赖、模型调用或账号，不发起外部请求。保存的笔记留在当前浏览器；写入被拒绝时会保留明确标注的页面内副本，重新打开另一份浏览器笔记后仍可通过恢复操作取回它。读取失败会保留草稿与恢复副本，后续操作仍会重试存储。示意的“改动前”和可操作的编辑器均为人工编写的示例，不是 FC 自主执行的录像，也不是质量评测。见[演示说明与存储细节](examples/workflow/README.md)。
 
 ## 方法导航
 
@@ -149,7 +153,7 @@ python3 scripts/fc_memory.py query --root "<authorized-root>" \
 
 - **是目标，不是测量结果。** 更好的首个可用结果与更少返工，是预期目标，不是已被证明的改进率。
 - **测试不证明设计品质。** 包的有效性与通过的助手测试说明符合规范，不说明初稿品质、审美认可或用户满意度。合成示例或智能体自评同样不能证明这些。
-- **宿主工具继续外置。** 本包不附带浏览器、设备实验室、图像生成器、完整字体库、评估服务或自动截图基线审批，也不附带原生自动化 adapter；包含字体 helper 和有限文字的 OFL 样张；渲染检查使用项目已有的工具。浏览器截图无法验证原生应用或真实导出。
+- **宿主工具继续外置。** 本包不附带浏览器、设备实验室、图像生成器、完整字体库、评估服务或自动截图基线审批，也不附带原生自动化 adapter；包含字体 helper 和有限文字的 OFL 样张；渲染检查使用项目已有的工具。浏览器截图无法验证原生应用或真实导出。Side A 单独附带获许可的图形与字体，提供明确选择的音频准备命令，并声明其应用和测试依赖；核心 skill 不要求该示例的运行环境。
 - **技能是引导，不是强制。** 技能塑造智能体行为，它不是沙箱，也不保证某个宿主加载或遵循了更新后的指令。
 - **分离的证据层。** 源码、构建、渲染运行时、部署与所有者认可，绝不合并为一个声明。
 

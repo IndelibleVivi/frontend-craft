@@ -169,7 +169,22 @@ authority on acceptance.
 
 ## Explore the examples
 
-Start with the [interactive style gallery](examples/showcase/README.md): a
+Start with **[Side A](examples/products/music-library/README.md)**, a local music
+library with eight authored compilations and 24 complete, attributed recordings.
+Listen to one record while browsing another, arrange the queue, make a playlist,
+and reopen at the saved position, paused. Preview a JSON backup, merge it while
+listening, or explicitly restore it paused. It has English and Chinese UI and
+its own React/TypeScript/Vite package. See the [run instructions](examples/products/README.md).
+Fonts, covers and prepared music load locally; there are no accounts, model calls
+or streaming-service requests. Audio is excluded from Git: explicitly prepare
+the 24 recordings with the documented FFmpeg command (about 56 MiB). Its
+[project catalog](examples/products/music-library/catalog.json) connects actual
+states to editable implementation, cover materials and type.
+This is a product example, not an accepted visual style or a measured FC improvement.
+
+[![Side A: browsing Soft Focus while Blue Hour keeps playing](examples/products/music-library/evidence/20261025-browse-and-listen-wide.en.png)](examples/products/music-library/README.md)
+
+The earlier [interactive style gallery](examples/showcase/README.md) contains a
 pixel ice-cream shop, a reading journal, and a generative visual studio. Each
 has a different composition and real controls. The
 [pixel banner collection](docs/visuals/README.md) shows the repository's own
@@ -200,7 +215,7 @@ python3 -m http.server 4182 --bind 127.0.0.1
 
 Then open the [style gallery](http://127.0.0.1:4182/examples/showcase/) or the
 [note workflow](http://127.0.0.1:4182/examples/workflow/) in your browser.
-The demos have no
+These earlier static demos have no
 dependencies, model calls, accounts, or external requests. Saved notes stay in
 this browser; a refused write retains an explicitly page-only copy, with a
 restore action if reopening a different browser-saved note displaces it. Read
@@ -309,7 +324,10 @@ a private profile.
   native automation adapter, evaluation service, or automatic screenshot-baseline
   approval ships here. The font helper and finite OFL specimen are included;
   rendered checks use the tools a project already has. A browser screenshot
-  cannot verify a native app or an actual export.
+  cannot verify a native app or an actual export. Side A separately includes
+  licensed artwork/font files and an opt-in audio preparation command, and
+  declares its app/test dependencies; the core
+  skill does not require that demo's runtime.
 - **Skills guide; they do not enforce.** A skill shapes agent behavior. It is
   not a sandbox and does not guarantee a host loaded or followed the updated
   instructions.

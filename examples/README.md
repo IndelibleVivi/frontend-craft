@@ -14,9 +14,11 @@ coverage and source-to-subset continuation, open the
 [font material specimen](materials/README.md). These exercise capabilities;
 they are separate from the expressive showcase work.
 
-For a visual, hands-on product example, open the
-[interactive style gallery](showcase/README.md) or the
-[note-editor workflow](workflow/README.md). The walkthrough below
+For a complete local product, open **[Side A](products/music-library/README.md)**:
+eight compilations, real playback, browsing, editable queues and saved playlists.
+It has a [separate Node.js package](products/README.md).
+The earlier [interactive style gallery](showcase/README.md) and
+[note-editor workflow](workflow/README.md) remain focused mechanism examples. The walkthrough below
 focuses on the optional record helper.
 
 For a focused making reference, try the

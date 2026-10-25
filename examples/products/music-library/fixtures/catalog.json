@@ -1,0 +1,430 @@
+{
+  "tracks": [
+    {
+      "id": "usuan1100137",
+      "title": "Night on the Docks - Sax",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 174.05,
+      "audio": "assets/audio/usuan1100137.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Night%20on%20the%20Docks%20-%20Sax.mp3",
+      "isrc": "USUAN1100137",
+      "instruments": "Electric Piano, Tenor Sax"
+    },
+    {
+      "id": "usuan1100199",
+      "title": "I Knew a Guy",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 166.95,
+      "audio": "assets/audio/usuan1100199.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/I%20Knew%20a%20Guy.mp3",
+      "isrc": "USUAN1100199",
+      "instruments": "Drum Kit, Bass, Vibraphone"
+    },
+    {
+      "id": "usuan1100185",
+      "title": "Just As Soon",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 228.1,
+      "audio": "assets/audio/usuan1100185.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Just%20As%20Soon.mp3",
+      "isrc": "USUAN1100185",
+      "instruments": "Bass, Acoustic Guitar, Brushed Kit, Electric Piano, Tenor Sax"
+    },
+    {
+      "id": "usuan1300046",
+      "title": "Dream Culture",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 214.36,
+      "audio": "assets/audio/usuan1300046.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dream%20Culture.mp3",
+      "isrc": "USUAN1300046",
+      "instruments": "Piano, Percussion"
+    },
+    {
+      "id": "usuan1100235",
+      "title": "Evening Fall (Piano)",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 165.07,
+      "audio": "assets/audio/usuan1100235.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Evening%20Fall%20-%20Piano.mp3",
+      "isrc": "USUAN1100235",
+      "instruments": "Piano"
+    },
+    {
+      "id": "usuan1100039",
+      "title": "Touching Moments One - Pulse",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 102.47999999999999,
+      "audio": "assets/audio/usuan1100039.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Touching%20Moments%20One%20-%20Pulse.mp3",
+      "isrc": "USUAN1100039",
+      "instruments": "Piano"
+    },
+    {
+      "id": "usuan1200076",
+      "title": "Easy Lemon",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 126.38,
+      "audio": "assets/audio/usuan1200076.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Easy%20Lemon.mp3",
+      "isrc": "USUAN1200076",
+      "instruments": "Guitar, Bass, Drum Kit, Celesta, Marimba"
+    },
+    {
+      "id": "usuan1400037",
+      "title": "Carefree",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 205.14,
+      "audio": "assets/audio/usuan1400037.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carefree.mp3",
+      "isrc": "USUAN1400037",
+      "instruments": "Ukulele, Guitar, Marimba, Glockenspiel, Percussion"
+    },
+    {
+      "id": "usuan1600062",
+      "title": "On My Way",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 253.39,
+      "audio": "assets/audio/usuan1600062.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/On%20My%20Way.mp3",
+      "isrc": "USUAN1600062",
+      "instruments": "Bass, Guitar, Flutes, Clarinets, Vibraphone, Drums"
+    },
+    {
+      "id": "usuan1600018",
+      "title": "Floating Cities",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 184.06,
+      "audio": "assets/audio/usuan1600018.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Floating%20Cities.mp3",
+      "isrc": "USUAN1600018",
+      "instruments": "Synths, Percussion"
+    },
+    {
+      "id": "usuan1300039",
+      "title": "Lost Frontier",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 264.93,
+      "audio": "assets/audio/usuan1300039.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Lost%20Frontier.mp3",
+      "isrc": "USUAN1300039",
+      "instruments": "Violins, Cellos, Basses, Choir, French Horn, Percussion"
+    },
+    {
+      "id": "usuan1100617",
+      "title": "Impact Prelude",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 202.97,
+      "audio": "assets/audio/usuan1100617.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Impact%20Prelude.mp3",
+      "isrc": "USUAN1100617",
+      "instruments": "Percussion, Guitar, Synths"
+    },
+    {
+      "id": "usuan1600054",
+      "title": "Lobby Time",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 193.2,
+      "audio": "assets/audio/usuan1600054.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Lobby%20Time.mp3",
+      "isrc": "USUAN1600054",
+      "instruments": "Vibraphone, Piano, Bass, Drums"
+    },
+    {
+      "id": "usuan1100806",
+      "title": "Airport Lounge",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 307.67,
+      "audio": "assets/audio/usuan1100806.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Airport%20Lounge.mp3",
+      "isrc": "USUAN1100806",
+      "instruments": "Bass, Drum Kit, Electric Piano, Vibraphone"
+    },
+    {
+      "id": "usuan1200089",
+      "title": "Mining by Moonlight",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 203.66,
+      "audio": "assets/audio/usuan1200089.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Mining%20by%20Moonlight.mp3",
+      "isrc": "USUAN1200089",
+      "instruments": "Electric Piano, Bass, Drum Kit"
+    },
+    {
+      "id": "usuan1700069",
+      "title": "Bossa Antigua",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 283.35,
+      "audio": "assets/audio/usuan1700069.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Bossa%20Antigua.mp3",
+      "isrc": "USUAN1700069",
+      "instruments": "Guitar, Bass, Drums"
+    },
+    {
+      "id": "usuan1300010",
+      "title": "Local Forecast",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 165.22,
+      "audio": "assets/audio/usuan1300010.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Local%20Forecast.mp3",
+      "isrc": "USUAN1300010",
+      "instruments": "Piano, Bass, Drum Kit, Electric Piano, Flute, Trumpet, Percussion, Guitar"
+    },
+    {
+      "id": "usuan1300035",
+      "title": "George Street Shuffle",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 268.3,
+      "audio": "assets/audio/usuan1300035.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/George%20Street%20Shuffle.mp3",
+      "isrc": "USUAN1300035",
+      "instruments": "Vibraphone, Bass, Piano, Drum Kit"
+    },
+    {
+      "id": "usuan1100787",
+      "title": "Gymnopedie No. 1",
+      "artist": "Kevin MacLeod",
+      "composer": "Erik Satie",
+      "duration": 187.09,
+      "audio": "assets/audio/usuan1100787.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Gymnopedie%20No%201.mp3",
+      "isrc": "USUAN1100787",
+      "instruments": "Piano"
+    },
+    {
+      "id": "usuan1100786",
+      "title": "Gymnopedie No. 2",
+      "artist": "Kevin MacLeod",
+      "composer": "Erik Satie",
+      "duration": 159.03,
+      "audio": "assets/audio/usuan1100786.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Gymnopedie%20No%202.mp3",
+      "isrc": "USUAN1100786",
+      "instruments": "Piano"
+    },
+    {
+      "id": "usuan1100785",
+      "title": "Gymnopedie No. 3",
+      "artist": "Kevin MacLeod",
+      "composer": "Erik Satie",
+      "duration": 145.01,
+      "audio": "assets/audio/usuan1100785.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Gymnopedie%20No%203.mp3",
+      "isrc": "USUAN1100785",
+      "instruments": "Piano"
+    },
+    {
+      "id": "usuan1300036",
+      "title": "Pamgaea",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 168.57,
+      "audio": "assets/audio/usuan1300036.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Pamgaea.mp3",
+      "isrc": "USUAN1300036",
+      "instruments": "Synths"
+    },
+    {
+      "id": "usuan1100474",
+      "title": "Funkorama",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 201.46,
+      "audio": "assets/audio/usuan1100474.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Funkorama.mp3",
+      "isrc": "USUAN1100474",
+      "instruments": "Guitar, Bass, Drum Kit, Organ, Synth"
+    },
+    {
+      "id": "usuan1100111",
+      "title": "Plain Loafer",
+      "artist": "Kevin MacLeod",
+      "composer": "Kevin MacLeod",
+      "duration": 88.06,
+      "audio": "assets/audio/usuan1100111.m4a",
+      "sourceUrl": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Plain%20Loafer.mp3",
+      "isrc": "USUAN1100111",
+      "instruments": "Bass, Conga, Guitar, Drum Kit"
+    }
+  ],
+  "releases": [
+    {
+      "id": "blue-hour",
+      "title": "Blue Hour",
+      "titleZh": "蓝调时分",
+      "tag": "Jazz after dark",
+      "tagZh": "深夜爵士",
+      "color": "#263c68",
+      "trackIds": [
+        "usuan1100137",
+        "usuan1100199",
+        "usuan1100185"
+      ],
+      "cover": "assets/covers/blue-hour.svg",
+      "note": "Saxophone, walking bass and a quiet guitar. Three different ways to let the day end.",
+      "noteZh": "萨克斯、游走的低音与安静的吉他。让一天慢慢结束的三种方式。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 1,
+      "kind": "demo-compilation"
+    },
+    {
+      "id": "soft-focus",
+      "title": "Soft Focus",
+      "titleZh": "柔焦",
+      "tag": "Piano & stillness",
+      "tagZh": "钢琴与片刻安静",
+      "color": "#bc614c",
+      "trackIds": [
+        "usuan1300046",
+        "usuan1100235",
+        "usuan1100039"
+      ],
+      "cover": "assets/covers/soft-focus.svg",
+      "note": "Piano at the centre, with room left around every phrase. A small collection for an unhurried afternoon.",
+      "noteZh": "以钢琴为中心，为每个乐句留一点余地。献给不必匆忙的午后。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 2,
+      "kind": "demo-compilation"
+    },
+    {
+      "id": "daytrip",
+      "title": "Daytrip",
+      "titleZh": "出走一天",
+      "tag": "Acoustic / bright",
+      "tagZh": "原声 · 明亮",
+      "color": "#967123",
+      "trackIds": [
+        "usuan1200076",
+        "usuan1400037",
+        "usuan1600062"
+      ],
+      "cover": "assets/covers/daytrip.svg",
+      "note": "Guitar, ukulele and bright percussion. A pocket-sized soundtrack for taking the long way home.",
+      "noteZh": "吉他、尤克里里与明快的打击乐。绕一点远路回家，也很好。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 3,
+      "kind": "demo-compilation"
+    },
+    {
+      "id": "floating-cities",
+      "title": "Floating Cities",
+      "titleZh": "浮游城市",
+      "tag": "Electronic / cinematic",
+      "tagZh": "电子 · 电影感",
+      "color": "#4b6792",
+      "trackIds": [
+        "usuan1600018",
+        "usuan1300039",
+        "usuan1100617"
+      ],
+      "cover": "assets/covers/floating-cities.svg",
+      "note": "Synthesizers, orchestral textures and patient percussion. Three perspectives on an imagined horizon.",
+      "noteZh": "合成器、管弦织体与缓缓展开的打击乐。望向想象中地平线的三个角度。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 4,
+      "kind": "demo-compilation"
+    },
+    {
+      "id": "after-hours",
+      "title": "After Hours",
+      "titleZh": "夜深以后",
+      "tag": "Lounge / jazz",
+      "tagZh": "Lounge · 爵士",
+      "color": "#8b504e",
+      "trackIds": [
+        "usuan1600054",
+        "usuan1100806",
+        "usuan1200089"
+      ],
+      "cover": "assets/covers/after-hours.svg",
+      "note": "Vibraphone and electric piano keep good company. Put the next few minutes aside.",
+      "noteZh": "颤音琴与电钢琴作伴。把接下来的几分钟留给自己。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 5,
+      "kind": "demo-compilation"
+    },
+    {
+      "id": "good-company",
+      "title": "Good Company",
+      "titleZh": "好时光",
+      "tag": "Bossa / light jazz",
+      "tagZh": "Bossa · 轻爵士",
+      "color": "#4e7051",
+      "trackIds": [
+        "usuan1700069",
+        "usuan1300010",
+        "usuan1300035"
+      ],
+      "cover": "assets/covers/good-company.svg",
+      "note": "A little swing, a little sunshine. Guitar, flute and vibraphone take turns at the front.",
+      "noteZh": "一点摇摆，一点阳光。吉他、长笛与颤音琴轮流走到前面。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 6,
+      "kind": "demo-compilation"
+    },
+    {
+      "id": "slow-motion",
+      "title": "慢下来，在最后一班车开走之前",
+      "titleZh": "慢下来，在最后一班车开走之前",
+      "tag": "Three Gymnopédies",
+      "tagZh": "三首吉诺佩蒂",
+      "color": "#4c656a",
+      "trackIds": [
+        "usuan1100787",
+        "usuan1100786",
+        "usuan1100785"
+      ],
+      "cover": "assets/covers/slow-motion.svg",
+      "note": "Three Gymnopédies by Erik Satie, performed by Kevin MacLeod. Listen in sequence and leave the spaces intact.",
+      "noteZh": "埃里克·萨蒂的三首吉诺佩蒂，由 Kevin MacLeod 演奏。顺着曲序听下去，把间隙也留下。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 7,
+      "kind": "demo-compilation"
+    },
+    {
+      "id": "electric-garden",
+      "title": "Electric Garden",
+      "titleZh": "电气花园",
+      "tag": "Funk / electronic",
+      "tagZh": "Funk · 电子",
+      "color": "#774169",
+      "trackIds": [
+        "usuan1300036",
+        "usuan1100474",
+        "usuan1100111"
+      ],
+      "cover": "assets/covers/electric-garden.svg",
+      "note": "Sharp synths, elastic bass and a sideways sense of rhythm. A brighter corner of the collection.",
+      "noteZh": "清脆的合成音、弹性的贝斯与不循常规的节奏。音乐库里更鲜亮的一角。",
+      "credit": "Side A selections",
+      "artist": "Kevin MacLeod",
+      "number": 8,
+      "kind": "demo-compilation"
+    }
+  ]
+}

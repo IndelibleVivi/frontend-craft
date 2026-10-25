@@ -72,6 +72,27 @@ return, including version/history and compact disclosure. This technical
 interface and its palette are not an endorsed visual style or an expressive
 showcase. New content and another product still need whole-scene judgment.
 
+### A listening activity that survives collection work
+
+- **Scale/role:** whole product interaction and local compositions; the
+  [Side A product](../examples/products/music-library/README.md) keeps browsing,
+  current listening, upcoming queue and file preview as distinct objects.
+- **Instance/materials:** the [project catalog](../examples/products/music-library/catalog.json)
+  retains actual bilingual captures, editable React/TypeScript source, authored
+  cover arrangements and the local typeface. Bind `fc-side-a:package` to
+  `examples/products` when resolving source/render scripts.
+- **Fixed:** audio lifecycle above browsing; stable occurrence identity; a
+  listening view that returns to the originating object. File selection only
+  previews. A durable import commits before changing live state; merge retains
+  ongoing playback, while explicit replacement restores paused.
+- **Variable:** content, sleeve composition, type and color, density, and the
+  collection domain. Transfer summaries must describe the actual merge scope;
+  a different product cannot inherit these backup semantics by changing labels.
+- **Conditions/limits:** bounded local recording catalog, JSON library backup,
+  desktop/compact Chromium. This does not demonstrate personal music ingestion,
+  cross-tab coordination, general first-draft quality or owner aesthetic
+  acceptance. It is a practiced product candidate, not an endorsed style.
+
 ### Visible choice with a named live result
 
 - **Scale/role:** local composition and interaction; connects comparison to

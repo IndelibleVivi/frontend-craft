@@ -1,0 +1,11 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+output/
+
+.playwright-cli/
+
+# Rebuildable local recordings; source URLs and rights live in ASSETS.json.
+music-library/public/assets/audio/
+music-library/gallery/

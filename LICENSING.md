@@ -13,6 +13,9 @@ project-original material; the project's authorship credit is **Faye & Cove**.
 | Host configuration, helpers, tests, CI, synthetic record data, artwork rendering scripts, functional demos and technical specimens | `agents/`, `scripts/`, `tests/`, `.github/`, `.gitignore`, `requirements-fonts.txt`, `examples/memory/`, `examples/catalog/`, `examples/materials/`, `examples/workflow/` and `examples/showcase/` except their `README.md` files and the third-party font below | [SUL-1.0](LICENSE) |
 | Third-party Noto Sans SC font derivative | `examples/materials/noto-sans-sc-specimen.woff2` | [SIL Open Font License 1.1](examples/materials/OFL-NotoSansSC.txt); source, author notice and exact derivation in [ASSETS.json](examples/materials/ASSETS.json) |
 | Explanatory documentation and visual assets, including banners, architecture diagrams, and demo screenshots | `README.md`, `README.zh-CN.md`, `examples/README.md`, `examples/workflow/README.md`, `examples/showcase/README.md`, `examples/showcase/**/README.md`, `docs/specs/`, `docs/visuals/`, `references/lineage.md`, `LICENSING.md`, `LICENSE-DOCUMENTATION.md` | [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md) |
+| Product example code, configuration, tests, render/capture scripts and original compilation metadata | `examples/products/`, except the documentation and assets classified below | [SUL-1.0](LICENSE) |
+| Product explanations, asset manifests, screenshots, original cover arrangements and mark | `examples/products/**/*.md`, `examples/products/**/ASSETS.json`, `examples/products/**/evidence/*.png`, `examples/products/music-library/public/assets/covers/`, `examples/products/music-library/public/assets/mark.svg` | [CC BY-NC-SA 4.0](LICENSE-DOCUMENTATION.md), excluding incorporated third-party material |
+| Side A recordings, original source images, font and bundled runtime dependencies | `examples/products/music-library/public/assets/audio/`, `originals/` and `fonts/` under that same assets directory; `public/THIRD-PARTY-NOTICES.txt`; dependencies declared in `examples/products/package.json` | Individual terms in [ASSETS.json](examples/products/music-library/ASSETS.json), [OFL.txt](examples/products/music-library/public/assets/fonts/OFL.txt) and [runtime notices](examples/products/music-library/public/THIRD-PARTY-NOTICES.txt) |
 
 The Markdown method and runbook references are part of the instructions an
 agent executes, so their classification follows their functional role rather
@@ -25,6 +28,12 @@ source/data under SUL-1.0. `examples/reference-desk/README.md`, its `evidence/`
 captures, and `examples/materials/previews/` are explanatory material under
 CC BY-NC-SA 4.0. The Noto font retains its individual OFL terms; a specimen
 capture does not relicense the font file.
+
+Side A's Kevin MacLeod recordings retain CC BY 4.0. NASA and Library of Congress
+source material retains the conditions stated in the asset manifest. Cover
+arrangements do not replace those underlying rights, and no artist or
+institution endorsement is implied. Dependency and font notices must travel
+with redistributed builds.
 
 SUL-1.0 permits personal, noncommercial, and internal business use and
 modification. Distribution or provision to others must be free of charge and

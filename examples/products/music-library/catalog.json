@@ -1,0 +1,648 @@
+{
+  "version": 1,
+  "id": "fc-side-a",
+  "revision": 1,
+  "items": [
+    {
+      "id": "browse-while-listening",
+      "revision": 1,
+      "title": "Browse another object; keep the listening identity",
+      "roles": [
+        "combination",
+        "reference"
+      ],
+      "source": {
+        "kind": "authored",
+        "author": "Faye & Cove",
+        "note": "Operated local Side A product candidate with synthetic personal library data and real attributed recordings. Not an autonomous model run or approved style."
+      },
+      "summary": "Collection and album content can change while a persistent player identifies the current activity; listening view returns to the original browsing context.",
+      "tags": {
+        "tasks": [
+          "music-library",
+          "continuous-listening"
+        ],
+        "languages": [
+          "en",
+          "zh-CN"
+        ],
+        "media": [
+          "interface",
+          "typography"
+        ],
+        "terms": [
+          "state",
+          "recovery",
+          "playlist",
+          "music",
+          "continuation"
+        ]
+      },
+      "previews": [
+        {
+          "id": "browse-and-listen-wide.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-browse-and-listen-wide.en.png"
+          },
+          "digest": "137b67a5c5710c5a1236505a9d3969a32123a67e74444814e042b63912933ce2",
+          "label": "browse and listen wide.en",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "browse-and-listen-wide.en",
+            "taken_at": "2026-10-25T04:56:50Z"
+          }
+        },
+        {
+          "id": "browse-and-listen-wide.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-browse-and-listen-wide.zh-CN.png"
+          },
+          "digest": "e2707a5451f7ccf2b6384a92f042079ac61cbcfe8eeb751593fd68d3dc77ad7b",
+          "label": "browse and listen wide.zh CN",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "browse-and-listen-wide.zh-CN",
+            "taken_at": "2026-10-25T04:57:07Z"
+          }
+        },
+        {
+          "id": "album-narrow.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-album-narrow.en.png"
+          },
+          "digest": "21043310ef7f5d7ae53464eece29a1a1382351ed5213301500ec5fc588601890",
+          "label": "album narrow.en",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "album-narrow.en",
+            "taken_at": "2026-10-25T04:56:53Z"
+          }
+        },
+        {
+          "id": "album-narrow.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-album-narrow.zh-CN.png"
+          },
+          "digest": "b9fe6042dc72bb10640c1d7f5a10f69550194d28a37e7b11f4b4400763475ff4",
+          "label": "album narrow.zh CN",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "album-narrow.zh-CN",
+            "taken_at": "2026-10-25T04:57:08Z"
+          }
+        }
+      ],
+      "specimen": {
+        "entry": "From examples/products/: npm ci; npm run media:fetch; npm run dev. See README.md for prerequisites.",
+        "locator": {
+          "root": "catalog",
+          "path": "src/App.tsx"
+        }
+      },
+      "making": {
+        "effect": "Collection and album content can change while a persistent player identifies the current activity; listening view returns to the original browsing context.",
+        "carry": [
+          "The audio owner outlives browse routes.",
+          "Queue occurrence identities differ from recording identity.",
+          "Album cover, current recording and upcoming songs remain distinct; compact queue becomes a full panel."
+        ],
+        "vary": [
+          "Content, cover grammar, typeface, palette, number of tracks and listening atmosphere."
+        ],
+        "limits": "Practiced in this bounded local product, Chromium wide/narrow. Does not establish owner aesthetic acceptance, arbitrary audio imports, concurrent-tab coordination, or FC general effectiveness."
+      },
+      "materials": [
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "side-a-source",
+          "revision": 1
+        },
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "sleeves-and-type",
+          "revision": 1
+        }
+      ],
+      "rights": {
+        "status": "known",
+        "license": "CC BY-NC-SA 4.0 for captures and authored arrangements; SUL-1.0 for source; third-party assets retain their own terms",
+        "terms": "See ASSETS.json and LICENSING.md. No owner style acceptance is implied."
+      },
+      "evidence": {
+        "rendered": true,
+        "operated": true,
+        "observed": "2026-10-25T05:17:10Z"
+      }
+    },
+    {
+      "id": "preview-before-transfer",
+      "revision": 1,
+      "title": "Review a library; commit without interrupting listening",
+      "roles": [
+        "combination",
+        "reference"
+      ],
+      "source": {
+        "kind": "authored",
+        "author": "Faye & Cove",
+        "note": "Operated local Side A product candidate with synthetic personal library data and real attributed recordings. Not an autonomous model run or approved style."
+      },
+      "summary": "Show incoming and current collections before merge/restore; keep file preview separate from a durable commit.",
+      "tags": {
+        "tasks": [
+          "music-library",
+          "library-transfer"
+        ],
+        "languages": [
+          "en",
+          "zh-CN"
+        ],
+        "media": [
+          "interface",
+          "typography"
+        ],
+        "terms": [
+          "state",
+          "recovery",
+          "playlist",
+          "music",
+          "continuation"
+        ]
+      },
+      "previews": [
+        {
+          "id": "transfer-wide.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-transfer-wide.en.png"
+          },
+          "digest": "f798631877e5bf2f1b2886609c9522e0c35b073d23ab0de249b8ee29b372b59d",
+          "label": "transfer wide.en",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "transfer-wide.en",
+            "taken_at": "2026-10-25T04:56:58Z"
+          }
+        },
+        {
+          "id": "transfer-wide.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-transfer-wide.zh-CN.png"
+          },
+          "digest": "460f29d77cd821ea52efaffd7a958762085d54b3b1237493099d90e0e4890bc6",
+          "label": "transfer wide.zh CN",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "transfer-wide.zh-CN",
+            "taken_at": "2026-10-25T04:57:10Z"
+          }
+        },
+        {
+          "id": "transfer-narrow.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-transfer-narrow.en.png"
+          },
+          "digest": "90be69617fdb03c58d962d42f435e3146c8827c1b1e4439d0a9270803d0667c6",
+          "label": "transfer narrow.en",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "transfer-narrow.en",
+            "taken_at": "2026-10-25T04:56:58Z"
+          }
+        },
+        {
+          "id": "transfer-narrow.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-transfer-narrow.zh-CN.png"
+          },
+          "digest": "4eefdc3da754807e001f99710e5ca12e209cf50c394c5477146e5bf2d9693875",
+          "label": "transfer narrow.zh CN",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "transfer-narrow.zh-CN",
+            "taken_at": "2026-10-25T04:57:10Z"
+          }
+        },
+        {
+          "id": "restore-narrow.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-restore-narrow.en.png"
+          },
+          "digest": "89e6df239fbdc422e04919c52a895dc6b715d6ffd0007422711ea7bc0004fbec",
+          "label": "restore narrow.en",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "restore-narrow.en",
+            "taken_at": "2026-10-25T04:56:59Z"
+          }
+        },
+        {
+          "id": "restore-narrow.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/20261025-restore-narrow.zh-CN.png"
+          },
+          "digest": "44123fb8f30e2e47c290c095b006553c57026b3ce6cfbc7f9ac045d5d57fc852",
+          "label": "restore narrow.zh CN",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "restore-narrow.zh-CN",
+            "taken_at": "2026-10-25T04:57:10Z"
+          }
+        }
+      ],
+      "specimen": {
+        "entry": "From examples/products/: npm ci; npm run media:fetch; npm run dev. See README.md for prerequisites.",
+        "locator": {
+          "root": "catalog",
+          "path": "src/App.tsx"
+        }
+      },
+      "making": {
+        "effect": "Show incoming and current collections before merge/restore; keep file preview separate from a durable commit.",
+        "carry": [
+          "File selection never imports.",
+          "Merge keeps the current queue and media; replace has explicit confirmation and resumes paused.",
+          "The complete candidate saves before live state changes, so write failure leaves the previous state intact."
+        ],
+        "vary": [
+          "Collection domain, preview summaries and source file name; retain the actual scope of merge versus replacement."
+        ],
+        "limits": "Practiced in this bounded local product, Chromium wide/narrow. Does not establish owner aesthetic acceptance, arbitrary audio imports, concurrent-tab coordination, or FC general effectiveness."
+      },
+      "materials": [
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "side-a-source",
+          "revision": 1
+        },
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "sleeves-and-type",
+          "revision": 1
+        }
+      ],
+      "rights": {
+        "status": "known",
+        "license": "CC BY-NC-SA 4.0 for captures and authored arrangements; SUL-1.0 for source; third-party assets retain their own terms",
+        "terms": "See ASSETS.json and LICENSING.md. No owner style acceptance is implied."
+      },
+      "evidence": {
+        "rendered": true,
+        "operated": true,
+        "observed": "2026-10-25T05:17:10Z"
+      }
+    },
+    {
+      "id": "side-a-source",
+      "revision": 1,
+      "title": "Side A editable implementation and recording manifest",
+      "roles": [
+        "material"
+      ],
+      "source": {
+        "kind": "authored",
+        "author": "Faye & Cove",
+        "note": "Operated local Side A product candidate with synthetic personal library data and real attributed recordings. Not an autonomous model run or approved style."
+      },
+      "assets": [
+        {
+          "id": "App-tsx",
+          "locator": {
+            "root": "catalog",
+            "path": "src/App.tsx"
+          },
+          "sha256": "93a5f3135269518fd6dde795d771b9c57ca18291efba0d1af7617f4d430dcc95",
+          "file_type": "tsx"
+        },
+        {
+          "id": "LibraryTransfer-tsx",
+          "locator": {
+            "root": "catalog",
+            "path": "src/LibraryTransfer.tsx"
+          },
+          "sha256": "8f8ed9ff4f61a5353ca930c00a6995c39f1ed406b1ec47cbf490f44a9da20f92",
+          "file_type": "tsx"
+        },
+        {
+          "id": "styles-css",
+          "locator": {
+            "root": "catalog",
+            "path": "src/styles.css"
+          },
+          "sha256": "136ec5fff97bd499d07bf83aa73b65e8f0b432508bd7723270cb1ee38e19e0c5",
+          "file_type": "css"
+        },
+        {
+          "id": "domain-ts",
+          "locator": {
+            "root": "catalog",
+            "path": "src/domain.ts"
+          },
+          "sha256": "33a878961ffc72efde2153fccd5a0957201482ce8bf8029f64ffabe2b7539502",
+          "file_type": "ts"
+        },
+        {
+          "id": "player-ts",
+          "locator": {
+            "root": "catalog",
+            "path": "src/player.ts"
+          },
+          "sha256": "9c34eab444735c767ff2041515d5bf019f9773e3d5adb86a17aa054c62ed57de",
+          "file_type": "ts"
+        },
+        {
+          "id": "transfer-ts",
+          "locator": {
+            "root": "catalog",
+            "path": "src/transfer.ts"
+          },
+          "sha256": "51f7ab10908570f3ef0089f53e34db1296ce58305f7334072febf3e3274d0b7a",
+          "file_type": "ts"
+        },
+        {
+          "id": "catalog-json",
+          "locator": {
+            "root": "catalog",
+            "path": "fixtures/catalog.json"
+          },
+          "sha256": "c0c6ed5810746fc0a717f596105a759928423c930fdb1b9cb14a3ca53e04751b",
+          "file_type": "json"
+        },
+        {
+          "id": "ASSETS-json",
+          "locator": {
+            "root": "catalog",
+            "path": "ASSETS.json"
+          },
+          "sha256": "a875eb62123e97c493315b759a137b9b9d9d619d55f5aceb7b34c645a1f5e5f4",
+          "file_type": "json"
+        },
+        {
+          "id": "render-covers",
+          "locator": {
+            "root": "package",
+            "path": "scripts/render-covers.mjs"
+          },
+          "sha256": "982e4ba32bae79aa228866f47458ba20ddcc012d2406bfb9c5dbeb4c0099e138",
+          "file_type": "mjs"
+        },
+        {
+          "id": "prepare-media",
+          "locator": {
+            "root": "package",
+            "path": "scripts/prepare-media.mjs"
+          },
+          "sha256": "1cedc8deab3ef5fec087f23e0c364da1cc2019f005ae5eedd061d0a1305a2aa1",
+          "file_type": "mjs"
+        }
+      ],
+      "rights": {
+        "status": "known",
+        "license": "SUL-1.0 for source; CC BY-NC-SA 4.0 for ASSETS.json",
+        "terms": "Recording metadata preserves individual attribution; audio binaries must be prepared explicitly."
+      }
+    },
+    {
+      "id": "sleeves-and-type",
+      "revision": 1,
+      "title": "Authored sleeves and local DM Sans",
+      "roles": [
+        "material"
+      ],
+      "source": {
+        "kind": "authored",
+        "author": "Faye & Cove",
+        "note": "Operated local Side A product candidate with synthetic personal library data and real attributed recordings. Not an autonomous model run or approved style."
+      },
+      "assets": [
+        {
+          "id": "font",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/fonts/DM-Sans.ttf"
+          },
+          "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d",
+          "file_type": "ttf"
+        },
+        {
+          "id": "font-license",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/fonts/OFL.txt"
+          },
+          "sha256": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2",
+          "file_type": "txt"
+        },
+        {
+          "id": "after-hours",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/after-hours.svg"
+          },
+          "sha256": "30aebefff4a204cedebfe79bde5f3f27cfa40303f10ba541bd176f91ec0a6915",
+          "file_type": "svg"
+        },
+        {
+          "id": "blue-hour",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/blue-hour.svg"
+          },
+          "sha256": "fdb85f95e83ab4a77af5cbd6f67bd80771e6c87bbc0f5dd345eacf1f03572c97",
+          "file_type": "svg"
+        },
+        {
+          "id": "daytrip",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/daytrip.svg"
+          },
+          "sha256": "9b170b7f694fd9c01c08c718eefe2de5a01ef0cad0fe5972f169c48c8bec090b",
+          "file_type": "svg"
+        },
+        {
+          "id": "electric-garden",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/electric-garden.svg"
+          },
+          "sha256": "719247883f22107ff7d593c98f732e2560cc5063542def3e5a882c6359deb5a5",
+          "file_type": "svg"
+        },
+        {
+          "id": "floating-cities",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/floating-cities.svg"
+          },
+          "sha256": "09c853624145a89cd00e8f63893954035b11dd13c34f1094bc6e245e57fbea82",
+          "file_type": "svg"
+        },
+        {
+          "id": "good-company",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/good-company.svg"
+          },
+          "sha256": "b6d677b9cc03bcb2c65fdd6f02937b134acba0087bb1d12ddab4a66b91545244",
+          "file_type": "svg"
+        },
+        {
+          "id": "slow-motion",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/slow-motion.svg"
+          },
+          "sha256": "0bf970e776077e2c2373dc171057974d7a5ccafdd432c11ac5c249a56b20d62c",
+          "file_type": "svg"
+        },
+        {
+          "id": "soft-focus",
+          "locator": {
+            "root": "catalog",
+            "path": "public/assets/covers/soft-focus.svg"
+          },
+          "sha256": "bb388bee11fa7c725e1200a94070c27015d52c42fcacd05d64cf9075b31817c0",
+          "file_type": "svg"
+        }
+      ],
+      "derivation": {
+        "sources": [
+          {
+            "catalog_id": "fc-side-a",
+            "item_id": "side-a-source",
+            "revision": 1,
+            "asset_id": "render-covers"
+          }
+        ],
+        "script": {
+          "root": "package",
+          "path": "scripts/render-covers.mjs"
+        },
+        "steps": [
+          "The authored renderer reads retained original pictures and writes the eight SVG arrangements.",
+          "See ASSETS.json for each incorporated source and its terms; do not infer a single license over all materials."
+        ]
+      },
+      "rights": {
+        "status": "known",
+        "license": "OFL-1.1 for DM Sans; CC BY-NC-SA 4.0 for original cover arrangements with underlying image terms retained",
+        "terms": "See ASSETS.json and font-license asset."
+      }
+    }
+  ],
+  "uses": [
+    {
+      "id": "library-continuation",
+      "revision": 1,
+      "target": {
+        "project": "side-a",
+        "surface": "library",
+        "location": {
+          "path": "music-library/src/App.tsx",
+          "region": "browse, listening and JSON library transfer"
+        }
+      },
+      "references": [
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "browse-while-listening",
+          "revision": 1
+        },
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "preview-before-transfer",
+          "revision": 1
+        },
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "side-a-source",
+          "revision": 1
+        },
+        {
+          "catalog_id": "fc-side-a",
+          "item_id": "sleeves-and-type",
+          "revision": 1
+        }
+      ],
+      "relation": "Operated browsing/listening and backup preview/commit in the same complete local product; sources and materials retained for continued making.",
+      "status": "in-use",
+      "observed_at": "2026-10-25T05:17:10Z",
+      "evidence": {
+        "previews": [
+          {
+            "catalog_id": "fc-side-a",
+            "item_id": "preview-before-transfer",
+            "revision": 1,
+            "preview_id": "transfer-wide.en"
+          },
+          {
+            "catalog_id": "fc-side-a",
+            "item_id": "preview-before-transfer",
+            "revision": 1,
+            "preview_id": "transfer-narrow.zh-CN"
+          }
+        ]
+      }
+    }
+  ]
+}
