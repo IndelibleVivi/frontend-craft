@@ -4,6 +4,34 @@ This is maintainer provenance, not a daily runtime checklist. `frontend-craft`
 uses original wording and a locally owned contract. External work supplies
 contrast and narrow mechanisms; it does not become automatic authority.
 
+## 2026-10-25 — reference continuity and architecture comparison
+
+The comparison revisited Impeccable's [repository overview](https://github.com/pbakaus/impeccable)
+and the previously pinned
+[`crates/live/src/lib.rs`](https://github.com/pbakaus/impeccable/blob/9ffc1eafe5f2788c2fcc1e400373922255cb156a/crates/live/src/lib.rs)
+at `9ffc1eafe5f2788c2fcc1e400373922255cb156a`, with its
+[Apache-2.0 license](https://github.com/pbakaus/impeccable/blob/9ffc1eafe5f2788c2fcc1e400373922255cb156a/LICENSE).
+That file establishes the live dispatcher/module boundary, not the success of
+its individual operations. [Storybook Args](https://storybook.js.org/docs/writing-stories/args)
+(docs version 10.6, accessed 2026-10-25) supplied a complementary example of
+explicit, reproducible view inputs. The upstream systems were not installed or
+run; no source, rule corpus, artwork or documentation wording was copied.
+
+**Decision: ALREADY COVERED** for the need to keep selected states and source
+relationships available. FC already owned exact material identities and
+replayable task paths. Inspection of its actual generated gallery exposed the
+local missing implementation: details did not enter the URL, reload lost them,
+and adopted references were metadata without navigation. The Reference desk
+completes those paths in the existing static generator and host browser.
+
+The retained kernel is concrete state/source continuity through inspection and
+return. A separate live server, browser overlay, detector engine, source-write
+protocol or mandatory Storybook dependency would add ownership without solving
+a remaining requirement of this local tool. Those mechanisms are not adopted.
+Reopen that choice if an authorized real product task requires capabilities
+the current host and file-based path cannot provide. These observations do not
+compare design quality, model effectiveness or owner acceptance.
+
 Initial external-source review: 2026-08-30. Later method and source additions
 are dated individually below; historical pins have not silently been refreshed.
 
@@ -11,6 +39,37 @@ Public licensing was added on 2026-09-22: the project-original functional skill
 uses SUL-1.0, while the explanatory documents named in
 [LICENSING.md](../LICENSING.md), including this lineage, use CC BY-NC-SA 4.0.
 This does not change the third-party rights or historical observations below.
+
+## Material and spatial capabilities — 2026-10-08
+
+The [reference route](reference-sources.md) adds independently expressed making
+relationships from inspected source documents:
+
+- [Design Teardowns](https://github.com/YunyueLi/design-teardowns/tree/2b70e11392a99beae42fdf564bae59f2d538597c):
+  the Ungetsu source/method record distinguishes extracted evidence, inference
+  and temporal captures. Its original website and captured third-party assets
+  were not revalidated or redistributed in this change.
+- [Codrops ContentLayoutTransition](https://github.com/codrops/ContentLayoutTransition/tree/ef96cdc22f1d7b8b426f73283c6c70e163eb9b29):
+  the article and slideshow source support selected-object layout continuity.
+  FC did not import the implementation, its interaction locks or dependencies.
+  The repository's MIT license was inspected; no live-demo behavior is claimed.
+- [AI Visual Prompt Cookbook](https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook/tree/9522b5ae06549b5fcf3ec28239ea91beefa6f4e5):
+  the prismatic material record separates variable content, material/composition
+  relationships and literal source details. FC uses that distinction in its own
+  asset-brief method. No prompt corpus, source images, fixed ratios or preferred
+  aesthetic were imported. Its license was inspected, not generalized to images.
+
+[Material production](material-production.md) routes to the actual host skill
+instead of bundling another image generator. The optional font helper composes
+the official [fontTools subset API](https://fonttools.readthedocs.io/en/latest/subset/index.html)
+with local provenance and non-overwriting outputs; fontTools remains an optional
+dependency. The real Noto Sans SC derivative preserves the upstream OFL and
+[exact source record](../examples/materials/ASSETS.json).
+
+Catalog tests and the font specimen establish bounded technical behavior. They
+do not establish new practiced visual styles, natural agent effectiveness,
+cross-host activation or owner aesthetic acceptance. Showcase work remains a
+separate creative deliverable.
 
 ## Faye/Cove field practice
 

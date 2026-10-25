@@ -63,6 +63,56 @@ are incorporated without requiring another installation. Soundings or connected
 reference libraries can help with a specific investigation when available;
 none is required to start, and no external corpus or private gallery ships here.
 
+### References and materials that can be continued
+
+[Material production](references/material-production.md) connects a concrete
+asset brief to the host's installed production tool, actual output inspection,
+font coverage and source-to-variant continuation. [Reference recipes](references/reference-sources.md)
+include spatial/temporal composition and inspectable source routes; the package
+does not claim to have practiced every cited technique.
+
+The offline [catalog helper](references/catalog-operations.md) provides
+`query`, `show`, `resolve`, `register`, `validate` and `gallery`. It keeps exact
+reference/material revisions, project uses and immutable captures together.
+Styles / Palette / Elements combinations are roles over related records;
+downloads, adoption and scoped feedback retain different meanings. A generated
+project gallery includes its references and needed dependencies, not an entire
+shared material store. It is a local tool, with no account or automatic upload.
+The generated **Reference desk** connects exact material/result/history links,
+side-by-side inspection, real downloads, search and role filters. Detail and
+comparison links survive reload; browser Back/Escape return to the live origin.
+English/Chinese UI leaves authored record text intact. Compact screens give
+previews priority while keeping project uses in an accessible disclosure.
+
+The optional [font helper](scripts/fc_fonts.py) inspects local font metadata,
+axes and character coverage and produces WOFF2 plus a derivation manifest from
+explicit UTF-8 text inputs. It preserves the original and refuses to overwrite
+an earlier output. It requires the optional [fontTools environment](requirements-fonts.txt).
+A real OFL Chinese [font specimen](examples/materials/README.md) and a
+[synthetic catalog walkthrough](examples/catalog/README.md) make these paths
+inspectable. They are technical examples, not expressive showcases.
+
+Start with the [Reference desk project](examples/reference-desk/README.md): an
+actual catalogue linking this tool's source, captured states, palette,
+practiced interaction relationship and observed project use. Generate its local
+gallery from the repository root:
+
+```bash
+python3 scripts/fc_catalog.py gallery \
+  --catalog examples/reference-desk/catalog.json \
+  --root fc-reference-desk:package=. \
+  --out examples/reference-desk/gallery
+```
+
+The project guide has serving instructions and a reusable browser replay.
+Its pictured records are synthetic; the tool's captures and source are real.
+
+The [development spec](docs/specs/2026-10-08-visual-library-and-project-gallery.md)
+keeps the full repertoire/showcase and natural-use goals visible. This tranche
+implements capabilities first. New showcases, accepted visual slots and live
+cross-host/natural-agent effectiveness are not completion claims of these tools.
+The specification is currently in Chinese.
+
 ## Install
 
 This repository is the canonical source and the installable skill package: the
@@ -175,14 +225,14 @@ intent:
 - **Understand the request:** [decipher intent](references/intent-decipher.md),
   [design direction](references/design-direction.md).
 - **Find a making solution:** [reference sources and recipes](references/reference-sources.md),
-  [style slots](references/style-slots.md).
+  [style slots](references/style-slots.md), [material production](references/material-production.md).
 - **Make the change:** [build](references/build.md), [evolve](references/evolve.md),
   [visual construction](references/visual-construction.md),
   [app interaction](references/app-interaction.md).
 - **Trace and fix:** [state and contracts](references/state-contracts.md),
   [critique and revision](references/critique-revision.md).
 - **Record and learn:** [design learning](references/design-learning.md),
-  [memory operations](references/memory-operations.md).
+  [memory operations](references/memory-operations.md), [catalog operations](references/catalog-operations.md).
 - **Produce and verify:** [visual works](references/visual-works.md),
   [platform evidence](references/platform-evidence.md),
   [QA contract](references/qa-contract.md),
@@ -221,6 +271,15 @@ python3 scripts/fc_memory.py query --root "<authorized-root>" \
   --project "<project-slug>" --surface "<surface-name>" --term "<keyword>"
 ```
 
+**Visual/material catalog (offline).** Use an explicitly located project or
+shared catalog and scoped root bindings. The helper resolves local files and
+copies selected media into a derived static gallery; it does not fetch external
+URLs or execute recipes. Private captures, paths and generated galleries stay
+local unless sharing is authorized. See the [runbook](references/catalog-operations.md)
+and [material example](examples/materials/README.md). The case schema and
+Cloudflare transport are unchanged; a remote vector match cannot move font or
+image files between hosts.
+
 **Cloudflare semantic recall (optional, network).**
 [`scripts/fc_cloudflare.py`](scripts/fc_cloudflare.py) adds semantic recall over
 the same local records: Workers AI embeds a small allowlisted slice of each
@@ -246,8 +305,9 @@ a private profile.
 - **Tests do not prove design quality.** Package validity and passing helper
   tests show conformance, not first-draft quality, aesthetic acceptance, or
   user satisfaction. A synthetic example or agent self-review proves neither.
-- **No bundled tooling.** No browser, device lab, image generator, font bundle,
-  native automation adapter, evaluation service, or automatic screenshot-baseline approval ships here;
+- **Host tools remain external.** No browser, device lab, image generator, full font library,
+  native automation adapter, evaluation service, or automatic screenshot-baseline
+  approval ships here. The font helper and finite OFL specimen are included;
   rendered checks use the tools a project already has. A browser screenshot
   cannot verify a native app or an actual export.
 - **Skills guide; they do not enforce.** A skill shapes agent behavior. It is
@@ -268,19 +328,31 @@ rules with their existing owners rather than copying them into new leaves.
 Update both README editions when the shared contract changes.
 
 ```bash
-python3 -m unittest discover -s tests -p 'test*.py'
-node tests/test_workflow_app.js
+scripts/check
 ```
 
-These run the offline helper/public-memory-example tests and the workflow
-demo's actual JavaScript with DOM/storage doubles. The latter requires Node.js
-and does not render a browser. The [CI workflow](.github/workflows/ci.yml) runs
-the Python suite on Python 3.13 and the workflow checks on the runner's Node.js,
+This is the shared offline entry for contributors and CI: helper/catalogue and
+public-example tests, the workflow's actual JavaScript with DOM/storage doubles,
+gallery/browser-callback syntax, and patch whitespace. It requires Python and
+Node.js and does not launch a browser. The [CI workflow](.github/workflows/ci.yml)
+uses the same entry with Python 3.13 and the runner's Node.js,
 with read-only contents permission and no secrets or live Cloudflare calls; its
 result does not establish skill activation, rendered design quality, or live
 service readiness. For skill or package changes, run `skill-validate .` when
 available, then check reference links and `git diff --check` for changed
 documentation.
+
+Font tests explicitly skip if fontTools is absent. To exercise them, install
+`requirements-fonts.txt` in an isolated environment or run:
+
+```bash
+uv run --with 'fonttools[woff]==4.60.1' scripts/check
+```
+
+CI installs this optional dependency before running the same Python suite.
+Gallery interaction changes also require the [real browser replay](examples/reference-desk/README.md#replay-the-browser-contract)
+and visual inspection of the affected states; the offline entry checks neither
+rendering nor aesthetic acceptance.
 
 ## Source, ownership, and rights
 

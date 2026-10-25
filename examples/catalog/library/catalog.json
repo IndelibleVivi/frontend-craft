@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "id": "sample-library",
+  "revision": 2,
+  "items": [
+    {
+      "id": "reading-margin",
+      "revision": 1,
+      "title": "Reading and an active margin",
+      "roles": [
+        "style"
+      ],
+      "summary": "Continuous body copy with the note kept near its anchor.",
+      "source": {
+        "kind": "authored",
+        "note": "synthetic fixture scene"
+      },
+      "tags": {
+        "tasks": [
+          "reading"
+        ],
+        "languages": [
+          "zh-Hans"
+        ],
+        "media": [
+          "typography"
+        ]
+      },
+      "making": {
+        "effect": "quiet, continuous body with one active marginal note",
+        "carry": [
+          "measure stays readable",
+          "note sits beside its anchor"
+        ],
+        "vary": [
+          "accent hue",
+          "note width"
+        ],
+        "limits": "not for dense dashboards or many simultaneous notes"
+      },
+      "specimen": {
+        "entry": "open projects/reading-margin/index.html",
+        "notes": "synthetic; there is no running server in the fixture"
+      },
+      "palette": {
+        "roles": {
+          "base": {
+            "value": "#f7f5f1",
+            "area": "page"
+          },
+          "raised": {
+            "value": "#ffffff",
+            "area": "article column"
+          },
+          "text-primary": {
+            "value": "#1c1b19",
+            "background": "#ffffff"
+          },
+          "text-secondary": {
+            "value": "#8a857c",
+            "background": "#ffffff"
+          },
+          "accent": {
+            "value": "#2f5d50",
+            "foreground": "#f7f5f1"
+          },
+          "selected": {
+            "value": "#dce7e1",
+            "note": "active note marker"
+          }
+        },
+        "instance": {
+          "catalog_id": "sample-library",
+          "item_id": "reading-margin",
+          "revision": 2
+        },
+        "state": "note open"
+      },
+      "previews": [
+        {
+          "id": "wide",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "captures/reading-margin-wide.svg"
+          },
+          "capture": {
+            "viewport": [
+              1440,
+              900
+            ],
+            "coverage": "surface",
+            "state": "note open"
+          }
+        }
+      ],
+      "materials": [
+        {
+          "catalog_id": "sample-materials",
+          "item_id": "sample-title-font",
+          "revision": 1,
+          "asset_id": "web-subset"
+        }
+      ],
+      "evidence": {
+        "rendered": false,
+        "observed": "2026-10-07T16:00:00Z",
+        "source": {
+          "working_copy": "synthetic fixture, not rendered"
+        }
+      },
+      "rights": {
+        "status": "unknown",
+        "note": "synthetic fixture scene"
+      }
+    },
+    {
+      "id": "reading-margin",
+      "revision": 2,
+      "title": "Reading and an active margin",
+      "roles": [
+        "style"
+      ],
+      "summary": "Second revision changes only the accent hue; history stays readable.",
+      "source": {
+        "kind": "authored",
+        "note": "synthetic fixture scene"
+      },
+      "tags": {
+        "tasks": [
+          "reading"
+        ],
+        "languages": [
+          "zh-Hans"
+        ],
+        "media": [
+          "typography"
+        ]
+      },
+      "making": {
+        "effect": "quiet, continuous body with one active marginal note",
+        "carry": [
+          "measure stays readable",
+          "note sits beside its anchor"
+        ],
+        "vary": [
+          "accent hue",
+          "note width"
+        ],
+        "limits": "not for dense dashboards or many simultaneous notes"
+      },
+      "specimen": {
+        "entry": "open projects/reading-margin/index.html",
+        "notes": "synthetic; there is no running server in the fixture"
+      },
+      "palette": {
+        "roles": {
+          "base": {
+            "value": "#f4f2ee",
+            "area": "page"
+          },
+          "raised": {
+            "value": "#ffffff",
+            "area": "article column"
+          },
+          "text-primary": {
+            "value": "#191817",
+            "background": "#ffffff"
+          },
+          "text-secondary": {
+            "value": "#847f76",
+            "background": "#ffffff"
+          },
+          "accent": {
+            "value": "#7fc2ad",
+            "foreground": "#101214"
+          },
+          "selected": {
+            "value": "#e2ede8",
+            "note": "active note marker"
+          }
+        },
+        "instance": {
+          "catalog_id": "sample-library",
+          "item_id": "reading-margin",
+          "revision": 2
+        },
+        "state": "note open"
+      },
+      "previews": [
+        {
+          "id": "wide",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "captures/reading-margin-note.svg"
+          },
+          "capture": {
+            "viewport": [
+              1440,
+              900
+            ],
+            "coverage": "surface",
+            "state": "note open"
+          }
+        }
+      ],
+      "materials": [
+        {
+          "catalog_id": "sample-materials",
+          "item_id": "sample-title-font",
+          "revision": 1,
+          "asset_id": "web-subset"
+        }
+      ],
+      "evidence": {
+        "rendered": false,
+        "observed": "2026-10-07T16:00:00Z",
+        "source": {
+          "working_copy": "synthetic fixture, not rendered"
+        }
+      },
+      "rights": {
+        "status": "unknown",
+        "note": "synthetic fixture scene"
+      }
+    }
+  ],
+  "uses": []
+}

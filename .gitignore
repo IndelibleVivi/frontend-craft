@@ -1,2 +1,5 @@
 __pycache__/
 *.py[cod]
+.playwright-cli/
+output/
+examples/reference-desk/gallery/

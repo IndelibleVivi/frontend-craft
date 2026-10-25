@@ -119,6 +119,12 @@ causal decision, not a fixed number of rejections before a redesign.
 
 ## Protect accepted qualities
 
+Use the project's [catalog](catalog-operations.md), when present, to reopen the
+exact result and material versions behind feedback. Compare the cited scope;
+do not silently substitute today's page at a mutable URL. Keep a useful source
+material discoverable even if its earlier composition was rejected. Register a
+replacement as a new revision and update the actual project use after applying it.
+
 Identify accepted qualities at the level the user accepted: the composition,
 type rhythm, object behavior, palette, or workspace/work boundary. “I love the
 type” does not approve navigation. Preserve those qualities and required

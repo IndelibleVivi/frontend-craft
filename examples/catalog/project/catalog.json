@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "id": "sample-reader-project",
+  "revision": 1,
+  "items": [
+    {
+      "id": "reader-result",
+      "revision": 1,
+      "title": "Reader result after the style pass",
+      "roles": [
+        "reference"
+      ],
+      "summary": "Synthetic capture of the project surface; not a real render.",
+      "source": {
+        "kind": "authored",
+        "note": "synthetic fixture scene"
+      },
+      "tags": {
+        "tasks": [
+          "reading"
+        ],
+        "languages": [
+          "zh-Hans"
+        ],
+        "media": [
+          "typography"
+        ]
+      },
+      "previews": [
+        {
+          "id": "wide-note-open",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "captures/reader-result.svg"
+          },
+          "capture": {
+            "viewport": [
+              1440,
+              900
+            ],
+            "coverage": "surface",
+            "state": "note open"
+          }
+        }
+      ],
+      "evidence": {
+        "rendered": false,
+        "observed": "2026-10-07T16:00:00Z",
+        "source": {
+          "working_copy": "synthetic fixture, not rendered"
+        }
+      }
+    }
+  ],
+  "uses": [
+    {
+      "id": "reader-margin-use",
+      "revision": 1,
+      "target": {
+        "project": "sample-reader",
+        "surface": "reader",
+        "location": {
+          "path": "src/pages/Reader.tsx",
+          "region": "article and active note"
+        }
+      },
+      "references": [
+        {
+          "catalog_id": "sample-library",
+          "item_id": "reading-margin",
+          "revision": 2
+        },
+        {
+          "catalog_id": "sample-materials",
+          "item_id": "sample-title-font",
+          "revision": 1,
+          "asset_id": "web-subset"
+        }
+      ],
+      "relation": "Body stays continuous; the note sits near its anchor.",
+      "status": "in-use",
+      "observed_at": "2026-10-07T16:00:00Z",
+      "evidence": {
+        "source": {
+          "working_copy": "synthetic fixture after a reader revision"
+        },
+        "previews": [
+          {
+            "catalog_id": "sample-reader-project",
+            "item_id": "reader-result",
+            "revision": 1,
+            "preview_id": "wide-note-open"
+          }
+        ]
+      }
+    }
+  ]
+}

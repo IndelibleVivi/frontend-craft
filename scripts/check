@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# One offline verification entry for contributors and CI. Optional fonts use the
+# caller's isolated environment; no dependency or network installation happens here.
+set -euo pipefail
+repo_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$repo_dir"
+python3 -m unittest discover -s tests -p 'test*.py'
+node tests/test_workflow_app.js
+node --check assets/catalog/gallery.js
+node --check tests/browser/catalog.js
+git diff --check
+git show --format= --check HEAD

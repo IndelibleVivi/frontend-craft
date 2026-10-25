@@ -103,3 +103,14 @@ Canon 是冰淇淋色系的像素小世界：奶油天空、薄荷和香芋色�
 Original artwork and explanatory assets: **Frontend Craft — Faye & Cove**,
 under [CC BY-NC-SA 4.0](../../LICENSE-DOCUMENTATION.md). Functional rendering
 scripts and demos are covered separately in the [license map](../../LICENSING.md).
+
+## Reference and material tools
+
+The record diagrams describe context/case retrieval and optional cloud indexing.
+The separate local catalog and font-production paths are documented in
+[catalog operations](../../references/catalog-operations.md) and
+[material production](../../references/material-production.md). Media does not
+travel through the case embedding path.
+
+图中的记录路径表示 context／cases 和可选云端索引。本地参考／材料 catalog
+和字体生产助手见上方操作文档；媒体不经过案例 embedding 路径。

@@ -15,6 +15,11 @@ main subject, related facts, next action, and secondary explanation. Sketch
 their spatial relationships directly in the target renderer when practical.
 Use real type, content lengths, images, and active controls early enough that
 they can change the composition.
+For staged or spatial work, compose entry, active use and return around the same
+recognizable object. Decide which regions unfold, reflow or change depth, and
+what remains directly reachable at rest. [Spatial/time recipes](reference-sources.md#space-and-time-as-the-composition)
+connect this decision to inspectable implementations; [material production](material-production.md)
+turns the chosen medium into actual source and production files.
 
 Judge color through area, value, placement, and adjacency as well as hue.
 Compare the weight of repeated elements in the populated composition: thirty

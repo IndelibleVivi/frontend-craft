@@ -45,6 +45,8 @@ mandatory concept approval, or design-system project is needed.
 | New capabilities, content growth, or a substantial change to an existing product | [Evolve](references/evolve.md) | Coherent new journeys with preserved user work and unaffected promises |
 | A making decision lacks a usable positive reference or concrete technique | [Reference sources and making recipes](references/reference-sources.md) | Relevant visual/behavior evidence and a conditional implementation move, followed by making |
 | Reusing or establishing a researched, practiced design unit at any scale | [Style slots](references/style-slots.md) | A repeatable result with materials, fixed relationships, variation, and evidence of its actual scope |
+| A composition needs production assets, generated samples, font coverage or a new derivative | [Material production](references/material-production.md) | A tool-ready brief, actual inspected files and a reproducible source-to-variant path |
+| Finding, retaining or continuing exact references/materials across project work | [Catalog operations](references/catalog-operations.md) | Query/show/resolve, versioned registration and a project reference gallery |
 | Composing hierarchy, typography, imagery, material, responsive layout, or motion | [Visual construction](references/visual-construction.md) | Concrete making moves and judged rendered relationships |
 | An app flow, editor, direct manipulation, or confusing stateful controls | [App interaction](references/app-interaction.md) | Clear objects and actions, coherent state changes, recoverable operation, complete task paths |
 | UI promises conflict with state ownership, update semantics, or persistence | [State and contracts](references/state-contracts.md) | Trace and repair action → request → saved fact → reopened view |
@@ -134,6 +136,13 @@ replacement or revise the provisional direction within scope; do not silently
 ship its empty slot as the completed design.
 
 Bring decisive materials into a real slice early enough to change layout.
+Use [material production](references/material-production.md) for the concrete
+brief, installed tool handoff, font inspection/subsetting and derivative recovery.
+From the project's known design entrypoint, query its catalog and any explicitly
+designated shared store when those materials can change a decision. Resolve and
+open the actual relevant media, then apply it; preserve exact files and project
+uses through [catalog operations](references/catalog-operations.md). Do not scan
+unrelated projects or create a mandatory catalog for a clear small repair.
 Check actual fonts, crop, focal point, stroke/letter relationships, responsive
 composition, loading, and working states. Treat audio as content, feedback, or
 optional atmosphere according to the product; provide appropriate user control

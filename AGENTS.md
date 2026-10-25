@@ -19,6 +19,26 @@ separate layers, not alternative source owners.
   presented as owner-approved visual styles.
 - `scripts/fc_memory.py` owns the local record CLI. `scripts/fc_cloudflare.py`
   owns the optional Cloudflare transport and synchronization implementation.
+- `scripts/fc_catalog.py` owns versioned references/materials, project uses,
+  file resolution and derived galleries. Its operational contract is
+  `references/catalog-operations.md`; cases and preferences stay with the
+  existing memory owner. Recorded recipes are data, not executable hooks.
+  `assets/catalog/gallery.css` and `gallery.js` own the interface source;
+  the generator inlines them before publishing one atomic HTML entrypoint.
+  Do not patch generated galleries or add a parallel browser implementation.
+- `scripts/fc_fonts.py` owns optional local font inspection and WOFF2 subsetting;
+  `requirements-fonts.txt` declares its isolated dependency. Originals and text
+  inputs remain source; versioned font outputs/manifests are derived. Material
+  production owns tool handoff and continuation, not a second generator.
+- `examples/catalog/` contains synthetic CLI/gallery fixtures, and
+  `examples/materials/` contains an OFL font derivative and technical specimen.
+  Neither is an expressive showcase or evidence of autonomous design quality.
+  Preserve the font's individual rights and pinned source in `ASSETS.json`.
+- `examples/reference-desk/` records the actual generated tool, its UI source,
+  captured states, palette and observed use. Its pictured records remain
+  synthetic. Preserve this mechanism's scope; it is not an endorsed visual
+  style or evidence of autonomous FC effectiveness. New visible revisions
+  retain new captures and source digests rather than overwriting history.
 - Personal context, case catalogs, credentials, configuration, sync state,
   raw sessions, and evaluation traces stay outside this repository. Use only
   synthetic records in tests and portable placeholders in documentation.
@@ -49,11 +69,23 @@ separate layers, not alternative source owners.
 
 ## Verification and documentation
 
+- `scripts/check` is the shared offline entry for contributors and CI. It runs
+  helper/example tests, workflow behavior, gallery/browser-callback syntax and
+  whitespace checks. It never installs dependencies or launches a browser.
 - Run `python3 -m unittest discover -s tests -p 'test*.py'` for helper changes.
   For external API boundaries, assertions must encode the verified contract
   independently of the implementation constant they check.
 - Run `skill-validate .` when available for skill/package changes, and inspect
   local reference links and `git diff --check` for changed documentation.
+- For font helper changes run the Python suite in an environment with
+  `requirements-fonts.txt` installed; without it font tests explicitly skip.
+  For catalog/gallery changes cover version conflicts, interruption, exact
+  historical references, root rebinding and actual browser navigation/media.
+  `tests/browser/catalog.js` is the Playwright CLI callback for the generated
+  synthetic project fixture; run instructions live with the Reference desk.
+  Cover deep-link reload, comparison, browser history/focus, both UI languages
+  and wide/narrow layouts. Offline tests and browser inspection are separate.
+  For font specimen changes check actual loaded text/weight at wide/narrow sizes.
 - For demo changes, verify the affected interactions in a browser: note
   editing/save/reopen/discard, shop selection/totals, article navigation, or
   line-field controls and reduced motion. Check language switching, keyboard
@@ -78,8 +110,8 @@ separate layers, not alternative source owners.
 - `LICENSING.md` owns the path-level rights map. Functional instructions and
   helpers use SUL-1.0; the listed explanatory documents use CC BY-NC-SA 4.0.
   Classify new surfaces by role and preserve third-party terms and provenance.
-- `.github/workflows/ci.yml` runs the offline helper and memory-example tests
-  on Python 3.13 and workflow behavior checks on the runner's Node.js, without
+- `.github/workflows/ci.yml` installs the optional font-test dependency and
+  calls `scripts/check` on Python 3.13 and the runner's Node.js, without
   secrets or live Cloudflare calls. Its result does not
   establish skill activation, rendered design quality, or live service readiness.
 - Report source, published commit, installation, actual execution, and owner

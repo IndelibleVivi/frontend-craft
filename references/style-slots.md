@@ -10,7 +10,11 @@ A slot can cover a whole experience, a visual language, a local composition and
 interaction, or one precise making technique. These are useful scales, not a
 required hierarchy. A whole may be kept intact; a local mechanism need not
 carry its source product's entire skin. Do not create an application theme
-engine, registry service, or schema migration just to store these materials.
+engine or registry service just to store these materials. The optional local
+[catalog](catalog-operations.md) serves concrete query/resolve/gallery consumers:
+Styles, Palette and Elements combinations are views of related items and uses,
+not three duplicate stores. Its [synthetic walkthrough](../examples/catalog/README.md)
+checks the mechanism; it is not a positive visual repertoire.
 
 ## What makes a slot usable
 
@@ -40,6 +44,10 @@ Start from this task's purpose, actual content, relevant scoped preferences,
 and provisional whole. Choose a slot because it can carry a needed relationship,
 not merely because a keyword matched. Look at its actual instance before using
 it. Make ordinary reversible choices without asking the user to fill slots.
+Query the known catalogs by the required role/relationship, inspect the returned
+evidence scope, and resolve the selected revision's source, specimen, recipe and
+materials. Open the actual instance before adapting it. External research stays
+a candidate until a real application supplies practice evidence.
 
 Preserve its fixed core and adapt the permitted variables. If a new language,
 asset, content volume, state model, or viewport violates the demonstrated
@@ -53,6 +61,16 @@ on entry may need a different balance while editing or returning. [Build](build.
 owns integration; [QA](qa-contract.md) owns the affected checks.
 
 ## Current local entries
+
+The [Reference desk project record](../examples/reference-desk/README.md)
+adds a locally practiced **collection → exact context → return** combination,
+with actual captures, editable source, a palette used in that same tool, and
+an observed project use. Its catalogue is
+`examples/reference-desk/catalog.json`; bind `fc-reference-desk:package` to the
+package root when resolving it. The reusable part is contextual inspection and
+return, including version/history and compact disclosure. This technical
+interface and its palette are not an endorsed visual style or an expressive
+showcase. New content and another product still need whole-scene judgment.
 
 ### Visible choice with a named live result
 
@@ -72,9 +90,9 @@ owns integration; [QA](qa-contract.md) owns the affected checks.
   short/long copy and 3/12 options. Reload resets this study. It does not prove
   saving, search of huge collections, or exact numeric entry. A different
   domain should retain semantics rather than pretend these controls cover it.
-- **Evidence status:** an authored working mechanism and inspectable artwork;
-  visual treatment is a candidate, not an owner-approved style or autonomous
-  first-draft quality benchmark. See the [study guide](../examples/showcase/README.md#making-study-choice-and-result)
+- **Evidence status:** retained as an authored mechanism study. The existing
+  composition is not a recommended visual slot or an autonomous first-draft
+  quality benchmark. See the [study guide](../examples/showcase/README.md#making-study-choice-and-result)
   for the current reproduction path and claims.
 
 ### Iridescent folded sculpture
@@ -98,8 +116,9 @@ owns integration; [QA](qa-contract.md) owns the affected checks.
   optical accuracy, an arbitrary model renderer, or an accepted personal style.
 - **Evidence status:** implemented and rendered; actual pixels responded to
   keyboard rotation and time, stopped changing after pause, and the narrow
-  composition was revised for long text. This is a guided candidate technique;
-  owner aesthetic acceptance remains unverified.
+  composition was revised for long text. Retain those renderer observations as
+  technique evidence; the showcase composition is not an endorsed visual
+  reference. Personal feedback and its disposition remain in the private record.
 
 The [making recipes](reference-sources.md) provide source-grounded candidates
 at other scales. Their existence is not evidence that each has been practiced

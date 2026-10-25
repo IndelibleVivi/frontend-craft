@@ -1,0 +1,6 @@
+字体材料接续
+中文标题与标点：新的内容，可以继续修改。
+简体中文、混合排印、正文与数字。
+Frontend Craft — Typeface specimen 0123456789
+Source → subset → revised text
+宽窄布局；字重变化。

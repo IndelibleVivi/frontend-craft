@@ -1,0 +1,2 @@
+# Optional font inspection/subsetting, also used by CI for font regression tests.
+fonttools[woff]==4.60.1

@@ -1,0 +1,458 @@
+{
+  "version": 1,
+  "id": "fc-reference-desk",
+  "revision": 1,
+  "items": [
+    {
+      "id": "collection-context-return",
+      "revision": 1,
+      "title": "Collection → exact context → return",
+      "roles": [
+        "combination",
+        "reference"
+      ],
+      "source": {
+        "kind": "authored",
+        "note": "Actual Frontend Craft generated Reference desk, populated with the explicitly synthetic examples/catalog fixture. Screenshots show the real tool; their pictured sample records are invented."
+      },
+      "summary": "A working reference desk: current project use, exact material/result/history links, comparison and a recoverable return. Mechanism evidence, not an endorsed visual style.",
+      "tags": {
+        "tasks": [
+          "reference-continuation",
+          "gallery",
+          "collection-detail"
+        ],
+        "languages": [
+          "en",
+          "zh-CN"
+        ],
+        "media": [
+          "interface",
+          "typography"
+        ],
+        "terms": [
+          "history",
+          "focus",
+          "comparison",
+          "deep link",
+          "参考",
+          "材料",
+          "返回"
+        ]
+      },
+      "previews": [
+        {
+          "id": "wide.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-wide.en.png"
+          },
+          "digest": "07f002a88be4dafa076de3dce34403752cf599181832eb7e568263594062f6f0",
+          "label": "English collection",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "English collection",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        },
+        {
+          "id": "wide.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-wide.zh-CN.png"
+          },
+          "digest": "6624fcc61fe83f08c8e05b994578fda6236bf7b6cc3324a2e29256de907c98ad",
+          "label": "Chinese UI; authored record text unchanged",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "Chinese UI; authored record text unchanged",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        },
+        {
+          "id": "narrow.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-narrow.zh-CN.png"
+          },
+          "digest": "a5339e84b14b910acb51fee838fa2dbbdfb6d4338f36a8bd3b11bf06ffe401a4",
+          "label": "Chinese collection; adoption details folded",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "Chinese collection; adoption details folded",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        },
+        {
+          "id": "compare.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-compare.en.png"
+          },
+          "digest": "968a20b37649151d06fed11d803fbcbb27fc7749214fdf94ceabdd438b257c12",
+          "label": "Reference and result, fit to view",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "Reference and result, fit to view",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        },
+        {
+          "id": "compare.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-compare.zh-CN.png"
+          },
+          "digest": "b9bb199dd10592d3063d071f6af154cb54c981ac017b8aa2c75fa4225afca54a",
+          "label": "Chinese comparison",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "Chinese comparison",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        },
+        {
+          "id": "compare-narrow.zh-CN",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-compare-narrow.zh-CN.png"
+          },
+          "digest": "72bb9d3c2879e46dcee534413322eabc414de4e3db2b50e045b9402ea6967a08",
+          "label": "Chinese comparison; vertically stacked",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "full",
+            "state": "Chinese comparison; vertically stacked",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        },
+        {
+          "id": "narrow.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-narrow.en.png"
+          },
+          "digest": "76125e203de0ba9371afbb706c3704018d0fec6f32e093e4ef2e7cd2a22a8549",
+          "label": "English collection; adoption details folded",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "surface",
+            "state": "English collection; adoption details folded",
+            "taken_at": "2026-10-25T00:28:55Z"
+          }
+        },
+        {
+          "id": "compare-narrow.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-compare-narrow.en.png"
+          },
+          "digest": "790c395c3ae331b52030803d2a0512d1f55746f49854883fad8bc057f3498bf9",
+          "label": "English comparison; vertically stacked",
+          "capture": {
+            "viewport": [
+              390,
+              844
+            ],
+            "coverage": "full",
+            "state": "English comparison; vertically stacked",
+            "taken_at": "2026-10-25T00:28:56Z"
+          }
+        }
+      ],
+      "specimen": {
+        "entry": "Generate the examples/catalog project fixture; run instructions in README.md.",
+        "source": "scripts/fc_catalog.py and assets/catalog/",
+        "notes": "README.md",
+        "locator": {
+          "root": "package",
+          "path": "scripts/fc_catalog.py"
+        }
+      },
+      "making": {
+        "effect": "Inspect an actual reference or material without losing which exact project relation and version led there.",
+        "carry": [
+          "Stable object/revision identity survives detail, history, comparison and reload.",
+          "Source, use and result retain different meanings.",
+          "Previews lead; secondary adoption details fold on compact viewports.",
+          "Browser Back and Escape restore the live originating control."
+        ],
+        "vary": [
+          "Record content, collection size, language, palette and preview media.",
+          "Desktop uses a project rail; compact screens use an accessible disclosure."
+        ],
+        "limits": "This demonstrates a local read-only catalogue workflow. Synthetic pictured records do not establish a style repertoire, autonomous making quality, or owner taste acceptance."
+      },
+      "materials": [
+        {
+          "catalog_id": "fc-reference-desk",
+          "item_id": "reference-desk-source",
+          "revision": 1
+        }
+      ],
+      "rights": {
+        "status": "known",
+        "license": "SUL-1.0 for functional source and catalogue; CC BY-NC-SA 4.0 for captures",
+        "note": "Screenshots contain synthetic records, without private captures or external artwork."
+      },
+      "evidence": {
+        "rendered": true,
+        "operated": true,
+        "observed": "2026-10-25T00:26:53Z",
+        "source": {
+          "working_copy": "Reference desk source delivered with this package; captured before publication.",
+          "runtime": "Chromium 1440×1000 and 390×844",
+          "checks": "The public tests/browser/catalog.js callback exercises the real generated fixture. This is implementer verification, not independent user research or model-effect evaluation."
+        }
+      }
+    },
+    {
+      "id": "reference-desk-palette",
+      "revision": 1,
+      "title": "Reference desk — cool canvas and readable controls",
+      "roles": [
+        "palette"
+      ],
+      "source": {
+        "kind": "authored",
+        "note": "Concrete roles from assets/catalog/gallery.css; no universal palette recommendation."
+      },
+      "tags": {
+        "tasks": [
+          "reference-continuation"
+        ],
+        "languages": [
+          "en",
+          "zh-CN"
+        ],
+        "media": [
+          "interface",
+          "palette"
+        ]
+      },
+      "previews": [
+        {
+          "id": "wide.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-wide.en.png"
+          },
+          "digest": "07f002a88be4dafa076de3dce34403752cf599181832eb7e568263594062f6f0",
+          "label": "English collection",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "English collection",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        },
+        {
+          "id": "compare.en",
+          "kind": "screenshot",
+          "locator": {
+            "root": "catalog",
+            "path": "evidence/gallery-compare.en.png"
+          },
+          "digest": "968a20b37649151d06fed11d803fbcbb27fc7749214fdf94ceabdd438b257c12",
+          "label": "Reference and result, fit to view",
+          "capture": {
+            "viewport": [
+              1440,
+              1000
+            ],
+            "coverage": "surface",
+            "state": "Reference and result, fit to view",
+            "taken_at": "2026-10-25T00:26:53Z"
+          }
+        }
+      ],
+      "specimen": {
+        "entry": "Same generated Reference desk; see README.md.",
+        "source": "assets/catalog/gallery.css"
+      },
+      "making": {
+        "effect": "Let captured work lead against a quiet cool canvas while controls retain a readable ink and violet action accent.",
+        "carry": [
+          "Action/foreground pairs retain contrast against the actual canvas.",
+          "Selected role underline and keyboard location have separate cues."
+        ],
+        "vary": [
+          "Color roles and the amount of surrounding preview canvas."
+        ],
+        "limits": "Observed in this reference tool only; another work or a dark theme needs its own composition/contrast checks."
+      },
+      "palette": {
+        "roles": {
+          "base": {
+            "value": "#eef0f8",
+            "area": "Most of the workspace canvas"
+          },
+          "raised": {
+            "value": "#fafbff",
+            "area": "Inputs and buttons"
+          },
+          "text-primary": {
+            "value": "#252b42",
+            "background": "#eef0f8"
+          },
+          "text-secondary": {
+            "value": "#626b84",
+            "background": "#eef0f8"
+          },
+          "accent": {
+            "value": "#534a97",
+            "background": "#eef0f8"
+          },
+          "selected": {
+            "value": "#e5e2f6",
+            "foreground": "#252b42"
+          }
+        },
+        "instance": {
+          "catalog_id": "fc-reference-desk",
+          "item_id": "collection-context-return",
+          "revision": 1
+        },
+        "state": "Collection and reference/result comparison"
+      },
+      "materials": [
+        {
+          "catalog_id": "fc-reference-desk",
+          "item_id": "reference-desk-source",
+          "revision": 1
+        }
+      ],
+      "rights": {
+        "status": "known",
+        "note": "The terms follow the functional source and explanatory captures in LICENSING.md."
+      }
+    },
+    {
+      "id": "reference-desk-source",
+      "revision": 1,
+      "title": "Reference desk — editable UI source",
+      "roles": [
+        "material"
+      ],
+      "source": {
+        "kind": "authored",
+        "note": "One canonical CSS/JS implementation is inlined by fc_catalog.py into generated pages."
+      },
+      "tags": {
+        "tasks": [
+          "reference-continuation",
+          "gallery"
+        ],
+        "languages": [
+          "en",
+          "zh-CN"
+        ],
+        "media": [
+          "code"
+        ]
+      },
+      "assets": [
+        {
+          "id": "gallery.css",
+          "locator": {
+            "root": "package",
+            "path": "assets/catalog/gallery.css"
+          },
+          "file_type": "css",
+          "sha256": "108b6e621d19add03a0e14e2e886858f8d96cf1a4c7bdc4897051aa20c188b7e"
+        },
+        {
+          "id": "gallery.js",
+          "locator": {
+            "root": "package",
+            "path": "assets/catalog/gallery.js"
+          },
+          "file_type": "js",
+          "sha256": "7f70f45d430a17549cfb9a59d9eefb958a2133e50871eeb0aa05398419ef6145"
+        }
+      ],
+      "rights": {
+        "status": "known",
+        "license": "SUL-1.0",
+        "note": "Functional UI source. See the repository LICENSING.md."
+      }
+    }
+  ],
+  "uses": [
+    {
+      "id": "reference-desk-navigation",
+      "revision": 1,
+      "target": {
+        "project": "frontend-craft",
+        "surface": "generated-catalogue",
+        "location": {
+          "path": "assets/catalog/gallery.js",
+          "region": "Reference/detail/history/comparison navigation"
+        }
+      },
+      "references": [
+        {
+          "catalog_id": "fc-reference-desk",
+          "item_id": "reference-desk-source",
+          "revision": 1
+        }
+      ],
+      "relation": "Use exact record identities and URL/history state to retain context during reference and material inspection.",
+      "status": "in-use",
+      "observed_at": "2026-10-25T00:26:53Z",
+      "evidence": {
+        "rendered": true,
+        "operated": true,
+        "source": {
+          "runtime": "Local Chromium; tests/browser/catalog.js callback"
+        },
+        "previews": [
+          {
+            "catalog_id": "fc-reference-desk",
+            "item_id": "collection-context-return",
+            "revision": 1,
+            "preview_id": "wide.en"
+          }
+        ]
+      }
+    }
+  ]
+}

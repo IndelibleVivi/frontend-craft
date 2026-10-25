@@ -17,6 +17,12 @@ Use the project's existing story, component test, browser test, development
 route, or fixture mechanism. If none is needed, a reproducible recipe next to
 the relevant test/runbook is sufficient. A screenshot without its state and
 entry path is an observation, not a replayable scenario.
+If the project uses a [reference catalog](catalog-operations.md), link the exact
+item/revision/preview to this state and retain source materials. Keep ephemeral
+local preview URLs in the gallery's runtime view bindings rather than portable
+identity. For temporal work capture the transition endpoints and meaningful
+intermediate states, with the action needed to reach them; replay the return,
+resize and reduced-motion path where those relationships matter.
 
 ```text
 Purpose: amend one value while preserving the rest of a record
